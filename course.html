@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSCI 699: Confidential Computing - Spring 2025</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    h1, h2, h3 {
+      color: #990000; /* USC Cardinal */
+    }
+    a {
+      color: #990000; /* USC Cardinal */
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .section {
+      margin-bottom: 30px;
+    }
+    .section h2 {
+      border-bottom: 2px solid #FFCC00; /* USC Gold */
+      padding-bottom: 5px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+    table, th, td {
+      border: 1px solid #ddd;
+    }
+    th, td {
+      padding: 10px;
+      text-align: left;
+    }
+    th {
+      background-color: #990000; /* USC Cardinal */
+      color: white;
+    }
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+    .usc-header {
+      background-color: #990000; /* USC Cardinal */
+      color: white;
+      padding: 20px;
+      text-align: center;
+      border-radius: 8px 8px 0 0;
+    }
+    .usc-header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+    .usc-header p {
+      margin: 5px 0;
+      font-size: 1.2em;
+    }
+    .usc-logo {
+      width: 100px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- USC Header -->
+    <div class="usc-header">
+      <img src="./files/Shield.png" alt="USC Logo" class="usc-logo">
+      <p style="font-size: 24px; font-weight: bold;">
+          CSCI 699: Confidential Computing: Protecting Your Data on Cloud GPUs and CPUs
+      </p>
+      <p>Spring 2025 | Thursday 4:00-7:20pm</p>
+
+    </div>
+
+    <!-- Course Overview -->
+    <div class="section">
+      <h2>Course Overview</h2>
+      <p><strong>Units:</strong> 4.0</p>
+      <p><strong>Term—Day—Time:</strong> Spring 2025, Thursday 4:00-7:20pm</p>
+      <p><strong>Location:</strong> Social Sciences Building </p>
+      <p><strong>Instructor:</strong> Mengyuan Li</p>
+      <p><strong>Office:</strong> GCS 502A</p>
+      <p><strong>Office Hours:</strong> Wednesday 11am-12 pm, GCS, B2 floor-SB4</p>
+      <p><strong>Contact Info:</strong> <a href="mailto:mli49061@usc.edu">mli49061@usc.edu</a> (Please include “CSCI 699” in your email subject.)</p>
+      <p><strong>Teaching Assistant:</strong> TBD</p>
+    </div>
+
+    <!-- Course Description -->
+    <div class="section">
+      <h2>Course Description</h2>
+      <p>This course offers an in-depth study of confidential computing and privacy-preserving computational techniques, focusing on protecting data in cloud environments using both CPUs and GPUs. Students will explore the design and implementation of Trusted Execution Environments (TEEs) and examine various cloud services that support confidential computing, including secure enclaves, Confidential Virtual Machines (CVMs), and confidential GPUs.</p>
+    </div>
+
+    <!-- Learning Objectives -->
+    <div class="section">
+      <h2>Learning Objectives</h2>
+      <ul>
+        <li>A comprehensive understanding of confidential computing and TEE.</li>
+        <li>Gain experience in reading, analyzing, and critically evaluating research papers.</li>
+        <li>Understand and experiment with state-of-the-art systems related to TEEs and CVMs.</li>
+        <li>A better understanding of other common privacy-preserving computation techniques such as FL, MPC, and FHE.</li>
+        <li>Improve academic writing and presentation skills through assignments and the final project.</li>
+      </ul>
+    </div>
+
+    <!-- Grading Breakdown -->
+    <div class="section">
+      <h2>Grading Breakdown</h2>
+      <table>
+        <tr>
+          <th>Assessment Tool</th>
+          <th>% of Grade</th>
+        </tr>
+        <tr>
+          <td>Assignment 1</td>
+          <td>15%</td>
+        </tr>
+        <tr>
+          <td>Assignment 2</td>
+          <td>15%</td>
+        </tr>
+        <tr>
+          <td>Course Presentation</td>
+          <td>20%</td>
+        </tr>
+        <tr>
+          <td>Final Project</td>
+          <td>40%</td>
+        </tr>
+        <tr>
+          <td>Participation and Discussion</td>
+          <td>10%</td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- Course Schedule -->
+    <div class="section">
+      <h2>Course Schedule</h2>
+      <table>
+        <tr>
+          <th>Week</th>
+          <th>Date</th>
+          <th>Topics/Daily Activities</th>
+          <th>Readings/Preparation</th>
+          <th>Deliverables</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Jan 16</td>
+          <td>Introduction to Confidential Computing</td>
+          <td>Course syllabus, Introductory articles on cloud security</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Jan 23</td>
+          <td>Trusted Execution Environments</td>
+          <td>Relevant research papers about SGX, AMD SEV, and Nvidia CC</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Jan 30</td>
+          <td>Confidential Virtual Machines</td>
+          <td>Articles on CVMs and cloud implementations</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Feb 6</td>
+          <td>Programming with TEEs</td>
+          <td>Tutorial on VMs and QEMU</td>
+          <td>Assignment 1 Assigned</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Feb 13</td>
+          <td>Confidential Computing and Practical TEE Systems</td>
+          <td>2-3 relevant research papers</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>Feb 20</td>
+          <td>Hardware Attacks and Defenses - Side-Channel Attacks</td>
+          <td>2-3 relevant research papers</td>
+          <td>Assignment 1 Due</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>Feb 27</td>
+          <td>Hardware Attacks and Defenses - Meltdown and Spectre Vulnerabilities</td>
+          <td>2-3 relevant research papers</td>
+          <td>Assignment 2 Assigned</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>Mar 6</td>
+          <td>Confidential GPUs</td>
+          <td>2-3 relevant research papers about GPU vulnerabilities</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>Mar 13</td>
+          <td>Introduction to Privacy-Preserving Techniques</td>
+          <td>-</td>
+          <td>Assignment 2 Due</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>Mar 20</td>
+          <td>Final Project Midterm Presentations</td>
+          <td>-</td>
+          <td>Project Midterm Report Due</td>
+        </tr>
+        <tr>
+          <td>11</td>
+          <td>Mar 27</td>
+          <td>Secure Software Development Practices</td>
+          <td>2-3 relevant research papers about TEE side-channel Attacks</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>12</td>
+          <td>Apr 3</td>
+          <td>Balancing Security and Performance in Confidential Computing – CPU scenario</td>
+          <td>2-3 relevant research papers about TEE-based system optimization</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>13</td>
+          <td>Apr 10</td>
+          <td>Balancing Security and Performance in Confidential Computing – GPU scenario</td>
+          <td>2-3 relevant research papers about GPU-TEE-based Systems</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>14</td>
+          <td>Apr 17</td>
+          <td>Final Project Presentations</td>
+          <td>-</td>
+          <td>In-class presentations</td>
+        </tr>
+        <tr>
+          <td>15</td>
+          <td>Apr 24</td>
+          <td>Final Project Presentations</td>
+          <td>-</td>
+          <td>In-class presentations</td>
+        </tr>
+        <tr>
+          <td>Final</td>
+          <td>-</td>
+          <td>No Final Exam</td>
+          <td>-</td>
+          <td>Project Final Report Due</td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- Academic Integrity -->
+    <div class="section">
+      <h2>Academic Integrity</h2>
+      <p>This course follows the expectations for academic integrity as stated in the USC Student Handbook. Violations will result in disciplinary action.</p>
+    </div>
+
+    <!-- Support Systems -->
+    <div class="section">
+      <h2>Support Systems</h2>
+      <p>For counseling, mental health, and other support services, visit <a href="https://usc.edu">USC Support Systems</a>.</p>
+    </div>
+  </div>
+</body>
+</html>
