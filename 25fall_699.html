@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSCI 699: Understanding and Identifying Side-Channel Threats in Cloud and LLM Systems - Fall 2025</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    h1, h2, h3 {
+      color: #990000; /* USC Cardinal */
+    }
+    a {
+      color: #990000; /* USC Cardinal */
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .section {
+      margin-bottom: 30px;
+    }
+    .section h2 {
+      border-bottom: 2px solid #FFCC00; /* USC Gold */
+      padding-bottom: 5px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+    table, th, td {
+      border: 1px solid #ddd;
+    }
+    th, td {
+      padding: 10px;
+      text-align: left;
+    }
+    th {
+      background-color: #990000; /* USC Cardinal */
+      color: white;
+    }
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+    .usc-header {
+      background-color: #990000; /* USC Cardinal */
+      color: white;
+      padding: 20px;
+      text-align: center;
+      border-radius: 8px 8px 0 0;
+    }
+    .usc-header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+    .usc-header p {
+      margin: 5px 0;
+      font-size: 1.2em;
+    }
+    .usc-logo {
+      width: 100px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- USC Header -->
+    <div class="usc-header">
+      <img src="./files/Shield.png" alt="USC Logo" class="usc-logo">
+      <p style="font-size: 24px; font-weight: bold;">
+          CSCI 699: Understanding and Identifying Side-Channel Threats in Cloud and LLM Systems
+      </p>
+      <p>Fall 2025 | Thursday 3:30-6:50pm</p>
+
+    </div>
+
+    <!-- Course Overview -->
+    <div class="section">
+      <h2>Course Overview</h2>
+      <p><strong>Units:</strong> 4.0</p>
+      <p><strong>Term—Day—Time:</strong> Fall 2025, Thursday 3:30-6:50pm</p>
+      <p><strong>Location:</strong> DMC 211 </p>
+      <p><strong>Instructor:</strong> Mengyuan Li</p>
+      <p><strong>Office:</strong> GCS 502A</p>
+      <p><strong>Office Hours:</strong> Wednesday 11am-12 pm, GCS, B2 floor-SB9</p>
+      <p><strong>Contact Info:</strong> <a href="mailto:mli49061@usc.edu">mli49061@usc.edu</a> (Please include “CSCI 699” in your email subject.)</p>
+      <p><strong>Teaching Assistant:</strong> TBD</p>
+      <p><strong>Slides & Materials:</strong> Shared via the Google Drive folder</p>
+    </div>
+
+    <!-- Course Description -->
+    <div class="section">
+      <h2>Course Description</h2>
+      <p>This graduate seminar course provides an in-depth exploration of side-channel attacks with a focus on cloud computing environments and large language model (LLM) systems. We will examine how subtle indirect leakages (e.g., execution timing, cache usage, resource contention) can breach isolation barriers in multi-tenant clouds and reveal sensitive data from cryptographic operations, cloud VMs/containers, and even modern AI models. Students will study both foundational side-channel techniques (cache timing attacks, speculative execution vulnerabilities) and cutting-edge research on side channels targeting cloud infrastructure and LLM deployments.</p>
+    </div>
+
+    <!-- Learning Objectives -->
+    <div class="section">
+      <h2>Learning Objectives</h2>
+      <ul>
+        <li>Taxonomy & Fundamentals: Understand the taxonomy of side-channel attacks (timing, cache, power, etc.) and why they pose threats to secure cloud computing. Grasp fundamental techniques like cache Flush+Reload and Prime+Probe, branch prediction manipulation, and other microarchitectural exploits.</li>
+        <li>Cloud Multi-Tenancy Risks: Analyze how cloud features (VM co-residency, shared hardware like last-level caches, GPUs) enable cross-tenant side-channel leaks. </li>
+        <li>Speculative Execution Vulnerabilities: Comprehend transient execution attacks (e.g., Meltdown, Spectre) that exploit out-of-order and speculative execution to leak protected memory. </li>
+        <li>A better understanding of other common privacy-preserving computation techniques such as FL, MPC, and FHE.</li>
+        <li>Improve academic writing and presentation skills through assignments and the final project.</li>
+      </ul>
+    </div>
+
+    <!-- Grading Breakdown -->
+    <div class="section">
+      <h2>Grading Breakdown</h2>
+      <table>
+        <tr>
+          <th>Assessment Tool</th>
+          <th>% of Grade</th>
+        </tr>
+        <tr>
+          <td>Assignment 1</td>
+          <td>15%</td>
+        </tr>
+        <tr>
+          <td>Assignment 2</td>
+          <td>15%</td>
+        </tr>
+        <tr>
+          <td>Course Presentation</td>
+          <td>20%</td>
+        </tr>
+        <tr>
+          <td>Final Project</td>
+          <td>40%</td>
+        </tr>
+        <tr>
+          <td>Participation and Discussion</td>
+          <td>10%</td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- Course Schedule -->
+    <div class="section">
+      <h2>Course Schedule</h2>
+      <table>
+        <tr>
+          <th>Week</th>
+          <th>Date</th>
+          <th>Topics/Daily Activities</th>
+          <th>Readings/Preparation</th>
+          <th>Deliverables</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Aug 28</td>
+          <td>Introduction to Side Channel</td>
+          <td>Course syllabus, Introductory articles on cloud security</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Sept 04</td>
+          <td>Microarchitecture Side-channels</td>
+          <td>Relevant research papers about cache side channel</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Sept 11</td>
+          <td>Side Channels in Trusted Execution Environments (TEEs)</td>
+          <td>Articles on CVMs and cloud implementations</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Sept 18</td>
+          <td>Programming with fingerprinting webpages</td>
+          <td>Tutorial on VMs and QEMU (related website: <a href="https://bitgrounds.tech/posts/kvm-qemu-libvirt-virtualization/" target="_blank">QEMU and KVM</a>)</td>
+          <td>Assignment 1.1 Assigned</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Sept 25</td>
+          <td>Transient Execution Attacks; Assignment 1.2 Demo</td>
+          <td>2-3 relevant research papers</td>
+          <td>Assignment 1.1 Check-in/ Assignment 1.2 Assigned</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>Oct 2</td>
+          <td>Beyond microarchitecture side channel – Frequency, Port Contention, and Other Channels</td>
+          <td>2-3 relevant research papers</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>Oct 9</td>
+          <td>Side-Channel Attacks on GPUs</td>
+          <td>2-3 relevant research papers</td>
+          <td>Assignment 1 Due/Assignment 2.1 Assigned</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>Oct 16</td>
+          <td>Side-Channel Inference of ML Models (DNNs)</td>
+          <td>2-3 relevant research papers about GPU vulnerabilities</td>
+          <td>Assignment 2.1 Due/Assignment 2.2 Assigned</td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>Oct 23</td>
+          <td>Side Channels in Large Language Model Services</td>
+          <td>-</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>Oct 30</td>
+          <td>Programming with ML side-channel attacks</td>
+          <td>-</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>11</td>
+          <td>Nov 6</td>
+          <td>Secure Software Development Practices/ Project Midterm Presentation</td>
+          <td>2-3 relevant research papers about TEE side-channel Attacks</td>
+          <td>Project Midterm Report Due/Assignment 2.2 Due</td>
+        </tr>
+        <tr>
+          <td>12</td>
+          <td>Nov 13</td>
+          <td>Balancing Security and Performance in Confidential Computing – CPU scenario</td>
+          <td>2-3 relevant research papers about TEE-based system optimization</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>13</td>
+          <td>Nov 20</td>
+          <td>Mitigating cache side channels: introducing mitigations from architecture design level and detection tool level.</td>
+          <td>2-3 relevant research papers about GPU-TEE-based Systems</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>14</td>
+          <td>Nov 27</td>
+          <td>Lectures; Final Project Presentations</td>
+          <td>-</td>
+          <td>In-class presentations</td>
+        </tr>
+        <tr>
+          <td>15</td>
+          <td>Dec 4</td>
+          <td>Final Project Presentations</td>
+          <td>-</td>
+          <td>In-class presentations</td>
+        </tr>
+        <tr>
+          <td>16</td>
+          <td>Dec 11</td>
+          <td>Final Project Report Due</td>
+          <td>-</td>
+          <td>Project Final Report Due</td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- Academic Integrity -->
+    <div class="section">
+      <h2>Academic Integrity</h2>
+      <p>This course follows the expectations for academic integrity as stated in the USC Student Handbook. Violations will result in disciplinary action.</p>
+    </div>
+
+    <!-- Support Systems -->
+    <div class="section">
+      <h2>Support Systems</h2>
+      <p>For counseling, mental health, and other support services, visit <a href="https://usc.edu">USC Support Systems</a>.</p>
+    </div>
+  </div>
+</body>
+</html>
