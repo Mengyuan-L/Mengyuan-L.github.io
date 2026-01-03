@@ -1,372 +1,907 @@
 <!DOCTYPE html>
-<!-- saved from url=(0039)http://web.cse.ohio-state.edu/~li.7533/ -->
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="../public/bootstrap.min.css">
-		<link href="./Mengyuan&#39;s Homepage_files/css" rel="stylesheet">
-		<link rel="stylesheet" type="text/css" href="../public/style.css">
-		<script src="../public/jquery.min.js"></script>
-  		<script src="../public/popper.min.js"></script>
-  		<script src="../public/bootstrap.min.js"></script>
-
-		<meta name="google-site-verification" content="zdhqFpA0oKjkjctPEFDgbejj96u3NkxTf8JfEv7Bwqs">
-		
-    
-		<title>Mengyuan's Homepage</title>
-		<style type="text/css">
-		@media (min-width:1000px) { .container { width: 900px;} }
-		.container {
-			/*width: 900px;*/
-		    margin-right: auto;
-		    margin-left: auto;
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="google-site-verification" content="zdhqFpA0oKjkjctPEFDgbejj96u3NkxTf8JfEv7Bwqs">
+	<title>Mengyuan's Homepage</title>
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
 		}
-		body {margin:0;}
 
+		:root {
+			--green-color: #2d8650;
+			--green-light: #3da366;
+			--green-bg: #f0f7f2;
+			--green-border: #7fb896;
+		}
+
+		body {
+			font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+			line-height: 1.6;
+			color: #333;
+			background-color: #ffffff;
+			margin: 0;
+			padding: 0;
+			transition: background-color 0.3s ease, color 0.3s ease;
+		}
+
+		body.dark-mode {
+			background-color: #1a1a1a;
+			color: #f0f0f0;
+		}
+
+		body.dark-mode h1,
+		body.dark-mode h2,
+		body.dark-mode h3 {
+			color: #ffffff;
+		}
+
+		body.dark-mode p {
+			color: #e8e8e8;
+		}
+
+		body.dark-mode a {
+			color: #5ba3ff;
+		}
+
+		body.dark-mode a:hover {
+			color: #7bb5ff;
+		}
+
+		body.dark-mode .publication-item {
+			background: #252525;
+			border-left-color: var(--green-light);
+		}
+
+		body.dark-mode .publication-title {
+			color: #ffffff;
+		}
+
+		body.dark-mode .publication-authors {
+			color: #e0e0e0;
+		}
+
+		body.dark-mode .publication-venue {
+			color: #b0b0b0;
+		}
+
+		body.dark-mode .news-item {
+			background: #252525;
+			border-color: var(--green-light);
+			color: #f0f0f0;
+		}
+
+		body.dark-mode .news-content {
+			color: #f0f0f0;
+		}
+
+		body.dark-mode .news-date {
+			color: var(--green-light);
+		}
+
+
+		body.dark-mode .service-item {
+			border-bottom-color: #404040;
+		}
+
+		body.dark-mode .service-name {
+			color: #f0f0f0;
+		}
+
+		body.dark-mode .service-year {
+			color: #c0c0c0;
+		}
+
+		body.dark-mode h3 {
+			color: #f0f0f0;
+		}
+
+		@media (min-width:1000px) { 
+			.container { 
+				width: 900px;
+			} 
+		}
+
+		.container {
+			margin-right: auto;
+			margin-left: auto;
+			padding: 0 20px;
+		}
+
+		/* Navigation */
 		.navbar {
-		  overflow: hidden;
-		  background-color: #333;
-		  position: fixed;
-		  top: 0;
-		  width: 100%;
+			background-color: #f8f9fa;
+			backdrop-filter: blur(10px);
+			position: fixed;
+			top: 0;
+			width: 100%;
+			padding: 15px 0;
+			z-index: 1000;
+			border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+			box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+		}
+
+		body.dark-mode .navbar {
+			background-color: #2a2a2a;
+			border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+			box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+		}
+
+		.navbar-content {
+			max-width: 1200px;
+			margin: 0 auto;
+			padding: 0 20px;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			gap: 30px;
+		}
+
+		.navbar-links {
+			display: flex;
+			align-items: center;
+			gap: 30px;
 		}
 
 		.navbar a {
-		  float: left;
-		  display: block;
-		  color: #f2f2f2;
-		  text-align: center;
-		  padding: 14px 16px;
-		  text-decoration: none;
-		  font-size: 17px;
+			color: #333;
+			text-decoration: none;
+			font-size: 15px;
+			transition: color 0.3s ease;
+			font-weight: 400;
+		}
+
+		body.dark-mode .navbar a {
+			color: #f0f0f0;
+		}
+
+		.navbar a:first-child {
+			font-weight: 600;
+			font-size: 18px;
+			color: #333;
+		}
+
+		body.dark-mode .navbar a:first-child {
+			color: #ffffff;
 		}
 
 		.navbar a:hover {
-		  background: #ddd;
-		  color: black;
+			color: var(--green-color);
 		}
-		@media (max-width: 767px) { 
-    		.navbar{
-        		display:none;
-        		navbar-collapse;
-        	}
-    	}
-}
-/*		.main {
-		  padding: 16px;
-		  margin-top: 60px;
-		  height: 1500px;  
-		}*/
 
-		</style>
-	</head>
-	
-	<body>
-		<div class="empty">
-			<br>
-			<br>
-			<br>
-		</div>
-		<!-- <div class="navbar navbar-default navbar-fixed-top navbar-fixed-width"> -->
+		body.dark-mode .navbar a:hover {
+			color: var(--green-light);
+		}
 
-		<div class="navbar navbar-expand-sm navbar-light"> 
-			<div class="collapse navbar-collapse">
-				<a href="./index.html"><font size="4">Mengyuan Li</font></a>
+		/* Dark Mode Toggle */
+		.theme-toggle {
+			background: none;
+			border: 1px solid #ccc;
+			border-radius: 20px;
+			padding: 6px 12px;
+			cursor: pointer;
+			font-size: 14px;
+			color: #333;
+			transition: all 0.3s ease;
+			display: flex;
+			align-items: center;
+			gap: 6px;
+		}
+
+		body.dark-mode .theme-toggle {
+			border-color: #666;
+			color: #e0e0e0;
+		}
+
+		.theme-toggle:hover {
+			background: rgba(0, 0, 0, 0.05);
+		}
+
+		body.dark-mode .theme-toggle:hover {
+			background: rgba(255, 255, 255, 0.1);
+		}
+
+		.empty {
+			height: 70px;
+		}
+
+		/* Main Content */
+
+		.intro-content {
+			display: flex;
+			gap: 30px;
+			align-items: flex-start;
+			margin-bottom: 12px;
+		}
+
+		.intro-text {
+			flex: 1;
+		}
+
+		.intro-image {
+			flex-shrink: 0;
+		}
+
+		.intro-image img {
+			width: 200px;
+			height: 200px;
+			object-fit: cover;
+			border-radius: 8px;
+			box-shadow: 0 4px 12px rgba(45, 134, 80, 0.2);
+		}
+
+		body.dark-mode .intro-image img {
+			box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+		}
+
+		h1 {
+			font-size: 36px;
+			font-weight: 600;
+			color: #333;
+			margin-bottom: 15px;
+		}
+
+		h2 {
+			font-size: 24px;
+			font-weight: 600;
+			color: #333;
+			margin: 18px 0 10px 0;
+			padding-bottom: 8px;
+			border-bottom: 3px solid var(--green-border);
+		}
+
+		body.dark-mode h2 {
+			border-bottom-color: var(--green-light);
+		}
+
+		h3 {
+			font-size: 20px;
+			font-weight: 500;
+			color: #555;
+			margin: 20px 0 12px 0;
+		}
+
+		p {
+			font-size: 16px;
+			margin-bottom: 12px;
+			color: #444;
+		}
+
+		a {
+			color: #0066cc;
+			text-decoration: none;
+			transition: color 0.3s ease;
+		}
+
+		a:hover {
+			color: #0052a3;
+			text-decoration: underline;
+		}
+
+		/* News Section */
+
+		.news-container {
+			position: relative;
+			overflow: hidden;
+		}
+
+		.news-scroll {
+			display: flex;
+			gap: 18px;
+			overflow-x: auto;
+			overflow-y: hidden;
+			padding: 15px 0;
+			scroll-behavior: smooth;
+			-webkit-overflow-scrolling: touch;
+			scrollbar-width: thin;
+			scrollbar-color: var(--green-border) #f0f0f0;
+		}
+
+		.news-scroll::-webkit-scrollbar {
+			height: 8px;
+		}
+
+		.news-scroll::-webkit-scrollbar-track {
+			background: #f0f0f0;
+			border-radius: 4px;
+		}
+
+		.news-scroll::-webkit-scrollbar-thumb {
+			background: var(--green-border);
+			border-radius: 4px;
+		}
+
+		.news-scroll::-webkit-scrollbar-thumb:hover {
+			background: var(--green-light);
+		}
+
+		.news-item {
+			flex: 0 0 300px;
+			background: var(--green-bg);
+			padding: 18px;
+			border-radius: 8px;
+			border: 1px solid var(--green-border);
+			box-shadow: 0 2px 8px rgba(45, 134, 80, 0.15);
+			transition: transform 0.3s ease, box-shadow 0.3s ease;
+		}
+
+		.news-item:hover {
+			transform: translateY(-3px);
+			box-shadow: 0 6px 20px rgba(45, 134, 80, 0.25);
+			border-color: var(--green-light);
+		}
+
+		body.dark-mode .news-item {
+			box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+		}
+
+		body.dark-mode .news-item:hover {
+			box-shadow: 0 6px 20px rgba(61, 163, 102, 0.3);
+		}
+
+		.news-date {
+			font-size: 13px;
+			color: var(--green-color);
+			margin-bottom: 8px;
+			font-weight: 600;
+		}
+
+		.news-content {
+			font-size: 15px;
+			color: #333;
+			line-height: 1.5;
+		}
+
+		/* Sections */
+		.section {
+			margin: 18px 0;
+		}
+
+		#intro {
+			padding: 20px 0 8px 0;
+		}
+
+		#aboutme {
+			margin-bottom: 8px;
+		}
+
+		.news-section {
+			margin: 18px 0;
+			padding: 10px 0;
+		}
+
+		ul {
+			list-style: none;
+			padding-left: 0;
+		}
+
+		ul li {
+			margin-bottom: 25px;
+			padding-left: 20px;
+			position: relative;
+		}
+
+		ul li::before {
+			content: "•";
+			position: absolute;
+			left: 0;
+			color: #666;
+			font-size: 20px;
+		}
+
+		body.dark-mode ul li::before {
+			color: #999;
+		}
+
+		.publication-item {
+			margin-bottom: 20px;
+			padding: 18px;
+			background: #fafafa;
+			border-left: 3px solid var(--green-border);
+			border-radius: 4px;
+			box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+			transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+		}
+
+		.publication-item:hover {
+			background: #f5f5f5;
+			border-left-color: var(--green-light);
+			box-shadow: 0 4px 12px rgba(45, 134, 80, 0.15);
+		}
+
+		body.dark-mode .publication-item {
+			box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+		}
+
+		body.dark-mode .publication-item:hover {
+			box-shadow: 0 4px 12px rgba(61, 163, 102, 0.2);
+		}
+
+		.publication-title {
+			font-size: 17px;
+			font-weight: 600;
+			color: #333;
+			margin-bottom: 8px;
+		}
+
+		.publication-authors {
+			font-size: 15px;
+			color: #444;
+			margin-bottom: 5px;
+		}
+
+		.publication-venue {
+			font-size: 14px;
+			color: #666;
+			font-style: italic;
+		}
+
+		.publication-links {
+			margin-top: 8px;
+		}
+
+		.publication-links a {
+			margin-right: 10px;
+			font-size: 14px;
+		}
+
+		.highlight {
+			color: #333;
+			font-weight: 600;
+		}
+
+		body.dark-mode .highlight {
+			color: #ffffff;
+		}
+
+		.service-item {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 10px 0;
+			border-bottom: 1px solid #e0e0e0;
+		}
+
+		.service-item:last-child {
+			border-bottom: none;
+		}
+
+		.service-name {
+			flex: 1;
+		}
+
+		.service-year {
+			color: #666;
+			font-size: 14px;
+		}
+
+		@media (max-width: 767px) {
+			.navbar-content {
+				flex-wrap: wrap;
+				gap: 15px;
+			}
+
+			.navbar-links {
+				flex-wrap: wrap;
+				gap: 15px;
+			}
+
+			.intro-content {
+				flex-direction: column;
+			}
+
+			.intro-image {
+				align-self: center;
+			}
+
+			.news-item {
+				flex: 0 0 280px;
+			}
+
+			h1 {
+				font-size: 28px;
+			}
+
+			h2 {
+				font-size: 22px;
+			}
+
+			.theme-toggle {
+				font-size: 12px;
+				padding: 5px 10px;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="navbar">
+		<div class="navbar-content">
+			<div class="navbar-links">
+				<a href="./index.html">Mengyuan Li</a>
 				<a href="#myname">About</a>
-				<a href="#interests">Research Interests</a>
-				<a href="#lab">SEPT Lab</a>
-				<a href="#mypublication">Publication</a>
-				<a href="#myservices">Service</a>
+				<a href="#interests">Research</a>
+				<a href="sept_lab.html">SEPT Lab</a>
+				<a href="#mypublication">Publications</a>
+				<a href="#myservices">Services</a>
 				<a href="25fall_699.html">Teaching</a>
+			</div>
+			<button class="theme-toggle" id="themeToggle" onclick="toggleTheme()">
+				<span id="themeIcon">🌙</span>
+				<span id="themeText">Dark</span>
+			</button>
+		</div>
+	</div>
+
+	<div class="empty"></div>
+
+	<div class="container">
+		<div id="intro">
+			<div class="intro-content">
+				<div class="intro-text">
+					<h1 id="myname">Mengyuan Li</h1>
+					<p style="font-size: 18px; margin-bottom: 10px;">
+						<b>Assistant Professor</b>
+						<a href="https://scholar.google.com/citations?user=cgjqyuoAAAAJ&hl=en&oi=ao" target="_blank">[Google Scholar]</a>
+					</p>
+					<p style="font-size: 16px; color: #666; margin-bottom: 20px;">
+						Thomas Lord Department of Computer Science<br>
+						University of Southern California
+					</p>
+					<p style="font-size: 15px;">
+						E-mail: <b>mengyuanli@usc.edu</b>
+					</p>
+				</div>
+				<div class="intro-image">
+					<a href="./files/mengyuan_2024.jpg">
+						<img src="./files/mengyuan_2024.jpg" alt="Mengyuan Li">
+					</a>
+				</div>
+			</div>
+
+			<div id="aboutme">
+				<h2>About me</h2>
+				<p style="font-size: 16px; line-height: 1.8;">
+					Mengyuan Li is an Assistant Professor of Computer Science Department at University of Southern California. Prior to that, he was a postdoc researcher in CSAIL at MIT (2022 - 2024), working with Prof. <a href="https://people.csail.mit.edu/mengjia/" target="_blank">Mengjia Yan</a>. Mengyuan graduated from <a href="http://www.osu.edu/" target="_blank">The Ohio State University (OSU)</a> with a Ph.D. in Computer Science and Engineering in 2022, advised by Prof. <a href="http://web.cse.ohio-state.edu/~yinqian/" target="_blank">Yinqian Zhang</a>. Before coming to OSU, he graduated from <a href="http://en.sjtu.edu.cn/" target="_blank">Shanghai Jiao Tong University (SJTU)</a> with the Bachelor's degree of Electronic Engineering.
+				</p>
 			</div>
 		</div>
 
-		<div class="container">
-			<div id="intro">
-				<a href="./files/mengyuan_2024.jpg">
-					<img src="./files/mengyuan_2024.jpg" class="img-rounded" alt="Photo" width="212" align="right">
-				</a>
+		<div id="interests" class="section">
+			<h2>Research Summary</h2>
+			<p style="font-size: 16px; line-height: 1.8; margin-bottom: 15px;">
+				The increasing importance of a trustworthy computing environment signals the dawn of a new era in computer security. My research has focused on the integration of advanced hardware technologies with software systems. This fusion is essential for securing computation and safeguarding data privacy while achieving optimal performance, spanning a range of platforms from personal devices to cloud computing servers. My primary areas of interest include:
+			</p>
+			<ul style="list-style: none; padding-left: 0;">
+				<li style="margin-bottom: 12px; padding-left: 0;">
+					<p style="font-size: 16px; padding-left: 20px; position: relative;">
+						<span style="position: absolute; left: 0; color: #666;">•</span>
+						Uncovering, Understanding, and Defending Against System and Hardware Vulnerabilities, including cloud system security, CPU security, GPU security, and AI system security.
+					</p>
+				</li>
+				<li style="margin-bottom: 12px; padding-left: 0;">
+					<p style="font-size: 16px; padding-left: 20px; position: relative;">
+						<span style="position: absolute; left: 0; color: #666;">•</span>
+						Software-Hardware Co-Design for Secure and Efficient Devices and Systems.
+					</p>
+				</li>
+			</ul>
+			<p style="font-size: 16px; margin-top: 15px;">
+				<b>Related Research Keywords:</b> Side-channel attacks, Confidential computing, Trusted Execution Environment (TEE), micro-architectural attacks, CPU and GPU security and architecture, program analysis, reverse engineering, software-hardware co-design, etc.
+			</p>
+		</div>
 
-				<h1 id="myname">
-					Mengyuan Li 
-				</h1>
-				<div id="content">
+		<div id="lab" class="section">
+			<h2>SEPT Lab</h2>
+			<p style="font-size: 16px; line-height: 1.8;">
+				I lead the <b>SEPT Lab</b> (<b>SE</b>curity, <b>P</b>rivacy, and <b>T</b>rust), where we focus on cutting-edge research in systems and security. We are actively looking for motivated PhD, MS, and undergraduate students passionate about these fields. Applicants from diverse backgrounds are strongly encouraged to apply. If you're interested in joining us, feel free to reach out via email.
+			</p>
+		</div>
 
-					<div id="introduction">
-						<p>
-							<font size="+1">
-							<b>Assistant Professor </b> 
-							<a href="https://scholar.google.com/citations?user=cgjqyuoAAAAJ&amp;hl=en&amp;oi=ao" target="_blank" onclick="javascript: pageTracker._trackPageview(&#39;/downloads/cv&#39;); ">[Google Scholar]</a> 
-							<br>
-							<br>Thomas Lord Department of Computer Science <br>
-							<font style="color:#8b0000">University of Southern California</font>
-							</font>
-						</p>
-
-						<div id="contact">
-							<p>
-								E-mail: <b> mengyuanli@usc.edu . </b>
-							</p>
-						</div>
-
-						<div id="aboutme">
-							<p><font size="+1">
-								</font></p><h2><font size="+1">About me</font></h2><font size="+1">
-
-									<p><font size="+1.5">Mengyuan Li is an Assistant Professor of Computer Science Department at University of Southern California. Prior to that, he was a postdoc researcher in CSAIL at MIT (2022 - 2024), working with Prof.&nbsp;<a rel="noreferrer noopener" href="https://people.csail.mit.edu/mengjia/" target="_blank">Mengjia Yan</a>. Mengyuan graduated from &nbsp;<a rel="noreferrer noopener" href="http://www.osu.edu/" target="_blank">The Ohio State University (OSU)</a> with a Ph.D. in Computer Science and Engineering in 2022, advised by Prof.&nbsp;<a rel="noreferrer noopener" href="http://web.cse.ohio-state.edu/~yinqian/" target="_blank">Yinqian Zhang</a>. Before coming to OSU, he graduated from&nbsp;<a rel="noreferrer noopener" href="http://en.sjtu.edu.cn/" target="_blank">Shanghai Jiao Tong University (SJTU)</a>&nbsp;with the Bachelor's degree of Electronic Engineering.</font></p>
-
-									<!-- <font style="color:#8b0000">I am very honored to join USC starting from Fall 2024. </font>  -->
-							</font><p></p>
-						</div>
+		<!-- News Section -->
+		<div class="news-section">
+			<h2>News</h2>
+			<div class="news-container">
+				<div class="news-scroll">
+					<div class="news-item">
+						<div class="news-date">2024</div>
+						<div class="news-content">Joined USC as Assistant Professor in the Thomas Lord Department of Computer Science.</div>
+					</div>
+					<div class="news-item">
+						<div class="news-date">2024</div>
+						<div class="news-content">Paper "SoK: Understanding Design Choices and Pitfalls of Trusted Execution Environments" accepted to ACM ASIACCS'24.</div>
+					</div>
+					<div class="news-item">
+						<div class="news-date">2023</div>
+						<div class="news-content">Paper "CipherH: Automated Detection of Ciphertext Side-channel Vulnerabilities" accepted to USENIX Security'23.</div>
+					</div>
+					<div class="news-item">
+						<div class="news-date">2022</div>
+						<div class="news-content">Two papers accepted to IEEE S&P'22: "A Systematic Look at Ciphertext Side Channels" and "vSGX: Virtualizing SGX Enclaves on AMD SEV".</div>
+					</div>
+					<div class="news-item">
+						<div class="news-date">2021</div>
+						<div class="news-content">Paper "CROSSLINE" accepted to ACM CCS'21 and received Best Paper Award (Runner-Up).</div>
+					</div>
+					<div class="news-item">
+						<div class="news-date">2021</div>
+						<div class="news-content">Paper "CIPHERLEAKS" accepted to USENIX Security'21. AMD issued security bulletin and CVE.</div>
 					</div>
 				</div>
 			</div>
-			<br>
+		</div>
 
-			<div id="interests">
-				<div class="section-title">
-					<h2 style="background-color:#ECF3F3; color:#002094">Research Summary</h2>
-					<!-- <hr/>  -->
+		<div id="mypublication" class="section">
+			<h2>Publications</h2>
+			<div class="publication-item">
+				<div class="publication-title">Ditto: Elastic Confidential VMs with Secure and Dynamic CPU Scaling</div>
+				<div class="publication-authors">Shixuan Zhao*, <span class="highlight">Mengyuan Li*</span>, Mengjia Yan, Zhiqiang Lin (*equal contribution)</div>
+				<div class="publication-venue">Under Submission</div>
+				<div class="publication-links">
+					<a href="https://arxiv.org/pdf/2409.15542" target="_blank">[arxiv]</a>
 				</div>
-					<p><font size="+1.5">The increasing importance of a trustworthy computing environment signals the dawn of a new era in computer security. My research has focused on the integration of advanced hardware technologies with software systems. This fusion is essential for securing computation and safeguarding data privacy while achieving optimal performance, spanning a range of platforms from personal devices to cloud computing servers. My primary areas of interest include:</font> </p>
-                </p><ul>
-                    <li> <font size="+1.5"> Uncovering, Understanding, and Defending Against System and Hardware Vulnerabilities, including cloud system security, CPU security, GPU security, and AI system security.</li>
-                    <li> <font size="+1.5"> Software-Hardware Co-Design for Secure and Efficient Devices and Systems. </li>
-                </ul>
-
-					<p><font size="+1.5"><b>Related Research Keywords:</b> Side-channel attacks, Confidential computing, Trusted Execution Environment (TEE), micro-architectural attacks, CPU and GPU security and architecture, program analysis, reverse engineering, software-hardware co-design, etc. </font> </p>
-					<!-- <p>My projects cover a wide variety of interesting topics and I have dived deep into different platforms as well as different technologies including AMD Secure Encrypted Virtualization (SEV), Intel Software Guard Extensions (SGX), Serverless Platforms, channel states information, etc. </p> -->
 			</div>
-			<br>
 
-			<div id="lab">
-				<div class="section-title">
-					<h2 style="background-color:#ECF3F3; color:#002094">SEPT Lab</h2>
-					<!-- <hr/>  -->
+			<div class="publication-item">
+				<div class="publication-title">Bridge the Future: High-Performance Networks in Confidential VMs without Trusted I/O devices</div>
+				<div class="publication-authors"><span class="highlight">Mengyuan Li</span>, Shashvat Srivastava, Mengjia Yan</div>
+				<div class="publication-venue">Under Submission</div>
+				<div class="publication-links">
+					<a href="https://arxiv.org/pdf/2403.03360.pdf" target="_blank">[arxiv]</a>
 				</div>
-					<p><font size="+1.5">I lead the <b>SEPT Lab</b> (<b>SE</b>curity, <b>P</b>rivacy, and <b>T</b>rust), where we focus on cutting-edge research in systems and security. We are actively looking for motivated PhD, MS, and undergraduate students passionate about these fields. Applicants from diverse backgrounds are strongly encouraged to apply. If you're interested in joining us, feel free to reach out via email.</font> </p>
-                </p><ul>
-			</div>
-			<br>
-
-			<div id="mypublication">
-				<h2 style="background-color:#ECF3F3; color:#002094">Publication</h2>
-				<ul>
-					<font size="+1">
-					<li>
-                        <font size="4"><b> Ditto: Elastic Confidential VMs with Secure and Dynamic CPU Scaling </b>  <a href="https://arxiv.org/pdf/2409.15542" target="_blank">[arxiv]</a>
-                        </font>
-                        <br>Shixuan Zhao*, <b>Mengyuan Li*</b>, Mengjia Yan, Zhiqiang Lin (*equal contribution)
-                        <br><i>Under Submission</i>.
-					</li>
-					<br>
-					<li>
-                        <font size="4"><b> Bridge the Future: High-Performance Networks in Confidential VMs without Trusted I/O devices</b>  <a href="https://arxiv.org/pdf/2403.03360.pdf" target="_blank">[arxiv]</a>
-                        </font>
-                        <br><b>Mengyuan Li</b>, Shashvat Srivastava, Mengjia Yan
-                        <br><i>Under Submission</i>.
-					</li>
-					<br>
-					<li>
-                        <font size="4"><b> SoK: Understanding Design Choices and Pitfalls of Trusted Execution Environments</b> <a href="./files/asiaccs_sok.pdf" target="_blank">[pdf]</a>
-                        </font>
-                        <br><b>Mengyuan Li</b>, Yuheng Yang, Guoxing Chen, Mengjia Yan, Yinqian Zhang
-                        <br><i> ACM ASIACCS'24</i>. 
-					</li>
-					<br>
-					<li>
-                        <font size="4"><b> CipherH: Automated Detection of Ciphertext Side-channel Vulnerabilities in Cryptographic Implementations</b> <a href="https://www.usenix.org/system/files/sec23summer_289-deng-prepub.pdf" target="_blank">[pdf]</a>
-                        </font>
-                        <br>Sen Deng, <b>Mengyuan Li</b>, Yining Tang, Shuai Wang, Shoumeng Yan, Yinqian Zhang
-                        <br><i> USENIX Security Symposium'23</i>. 
-					</li>
-					<br>
-					<li>
-                        <font size="4"><b> PWRLEAK: Exploiting Power Reporting Interface for Side-channel Attacks on AMD SEV</b> <a href="https://link.springer.com/chapter/10.1007/978-3-031-35504-2_3" target="_blank">[pdf]</a>
-                        </font>
-                        <br>Wubing Wang, <b>Mengyuan Li</b>, Yinqian Zhang, Zhiqiang Lin
-                        <br><i> 20th Conference on Detection of Intrusions and Malware & Vulnerability Assessment (DIMVA 2023)</i>.
-                        <br><font style="color:#8b0000">Security bulletin from AMD <a href="https://www.amd.com/en/resources/product-security/bulletin/amd-sb-3004.html" target="_blank">[AMD-SB-3004]</a>, CVE <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-20575" target="_blank">[CVE-2023-20575]</a></font>
-					</li>
-					<br>
-					<li>
-                        <font size="4"><b> A Systematic Look at Ciphertext Side Channels</b> <a href="https://ieeexplore.ieee.org/document/9833768" target="_blank">[pdf]</a>
-                        </font>
-                        <br><b>Mengyuan Li</b>*, Luca Wilke*, Jan Wichelmann, Thomas Eisenbarth, Radu Teodorescu, Yinqian Zhang 
-                        <br>(*equal contribution)
-                        <br><i> IEEE Symposium on Security and Privacy'22</i>. <font size="-0.5">(Acceptance rate: 57/407=14.0%)</font>
-                        <br><font style="color:#8b0000">Security bulletin from AMD <a href="https://www.amd.com/en/resources/product-security/bulletin/amd-sb-1033.html" target="_blank">[AMD-SB-1033]</a>, CVE <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-46744" target="_blank">[CVE-2021-46744]</a></font>
-                        <br><font style="color:#8b0000">&#x1F4A5;An official <a href="https://www.amd.com/system/files/documents/221404394-a_security_wp_final.pdf" target="_blank">[White Paper]</a> from AMD for TEE developers and users to write code in a Ciphertext Side-channel-resistant way. </font>
-					</li>
-					<br>
-					<li>
-                        <font size="4"><b>vSGX: Virtualizing SGX Enclaves on AMD SEV</b> <a href="https://ieeexplore.ieee.org/document/9833694" target="_blank">[pdf]</a>
-                        </font>
-                        <br>Shixuan Zhao, <b>Mengyuan Li</b>, Yinqian Zhang, Zhiqiang Lin
-                        <br><i> IEEE Symposium on Security and Privacy'22</i>. <font size="-0.5">(Acceptance rate: 54/327=15.2%)</font>
-					</li>
-					<br>
-					<li>
-                        <font size="4"><b>TLB Poisoning Attacks on AMD Secure Encrypted Virtualization</b> 
-                        	<a href="http://web.cse.ohio-state.edu/~li.7533/paper/acsac21-11.pdf" target="_blank">[pdf]</a>
-                        	<!-- <a href="" target="_blank">[bib]</a> -->
-                        </font>
-                        <br><b>Mengyuan Li</b>, Yinqian Zhang, Huibo Wang, Kang Li, Yueqiang Chen
-                        <br><i>The 2021 Annual Computer Security Applications Conference (ACSAC 2021)</i>. <font size="-0.5">(Acceptance rate: 56/326=15.2%)</font>
-                        <br><font style="color:#8b0000">Security bulletin from AMD <a href="https://www.amd.com/en/corporate/product-security/bulletin/amd-sb-1023" target="_blank">[AMD-SB-1023]</a>, CVE <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-26340" target="_blank">[CVE-2021-26340]</a>, Announcement from <a href="https://support.lenovo.com/us/en/product_security/LEN-75179" target="_blank">Lenovo</a>, Related Patents from Baidu X-lab[<a href="https://patents.google.com/patent/US20230098117A1/en" target="_blank">1</a>,<a href="https://patents.google.com/patent/US20230097604A1/en" target="_blank">2</a>,<a href="https://patents.google.com/patent/US20230097216A1/en" target="_blank">3</a>] </font>
-                        <!-- <br><font style="color:#8b0000">Upcoming  (Dec. 6th) </font> -->
-					</li>
-					<br>
-					<li>
-                        <font size="4"><b>CROSSLINE: Breaking "Security-by-Crash" based Memory Isolation in AMD SEV</b> <a href="https://arxiv.org/pdf/2008.00146.pdf" target="_blank">[pdf]</a>
-                        <!--a href="http://web.cse.ohio-state.edu/~zhaxiaok/assets/NDSS2018/ndss18-xiaokuan.pptx" target="_blank">[slides]</a-->
-                        <a href="http://web.cse.ohio-state.edu/~li.7533/bib/crossline.bib" target="_blank">[bib]</a>
-                        </font>
-                        <br><b>Mengyuan Li</b>, Yinqian Zhang, Zhiqiang Lin
-                        <br><i>ACM Conference on Computer and Communications Security'21</i>,  Nov. 2021. <font size="-0.5">(Acceptance rate: 196/879=22.3%)</font>
-                        <br><font style="color:#8b0000">Best Paper Awards (Runner-Ups) (14/879=1.6%) <a href="https://raw.githubusercontent.com/acmccs2021/acm-ccs-2021/main/best-paper-awards-runner-up/ACM%20CCS%202021_BestPaperAward_RunnerUp%20(6).jpg" target="_blank">[plaque]</a><a href="https://sigsac.org/ccs/CCS2021/ccs-awards.html" target="_blank">[link]</a></font>
-					</li>
-					<br>
-					<li>
-                        <font size="4"><b>CIPHERLEAKS: Breaking Constant-time Cryptography on AMD SEV via the Ciphertext Side Channel</b> <a href="https://www.usenix.org/system/files/sec21-li-mengyuan.pdf" target="_blank">[pdf]</a>
-                        <!--a href="http://web.cse.ohio-state.edu/~zhaxiaok/assets/NDSS2018/ndss18-xiaokuan.pptx" target="_blank">[slides]</a-->
-                        <a href="http://web.cse.ohio-state.edu/~li.7533/bib/cipherleaks.bib" target="_blank">[bib]</a>
-                        [patent]
-                        </font>
-                        <br><b>Mengyuan Li</b>, Yinqian Zhang, Huibo Wang, Kang Li, Yueqiang Chen
-                        <br><i>USENIX Security Symposium'21</i>, Virtual, Aug. 2021. (<a href="https://cipherleaks.com/">Website</a>) <font size="-0.5">(Acceptance rate: 248/1319=18.8%)</font>
-                        <br><font style="color:#8b0000">AMD filed an embargo for the ciphertext side channel identified in the paper and announced a security <a href="https://www.amd.com/en/corporate/product-security/bulletin/amd-sb-1013" target="_blank">bulletin</a> together with a hardware patch for SEV-SNP in August 2021 <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-12966" target="_blank">[CVE-2020-12966]</a>. Related Patents from Baidu Security X-lab[<a href="https://patents.google.com/patent/US20230058863A1/en" target="_blank">1</a>,<a href="https://patents.google.com/patent/US20230057242A1/en" target="_blank">2</a>,<a href="https://patents.google.com/patent/US20230059273A1/en" target="_blank">3</a>] </font>
-                        
-					</li>
-					<br>
-					<li>
-                        <font size="4"><b>Defeating speculative-execution attacks on SGX with HyperRace</b> <a href="http://web.cse.ohio-state.edu/~li.7533/paper/hyperrace-idsc19.pdf" target="_blank">[pdf]</a>
-                        <a href="http://web.cse.ohio-state.edu/~li.7533/bib/cipherleaks.bib" target="_blank">[bib]</a>
-                        </font>
-                        <br>Guoxing Chen, <b>Mengyuan Li</b>, Fengwei Zhang, Yinqian Zhang
-                        <br><i>IEEE Conference on Dependable and Secure Computing'19</i>, Hangzhou, China, Nov. 2021. 
-					</li>
-					<br>
-					<li>
-                        <font size="4"><b>Exploiting Unprotected I/O Operations in AMD’s Secure Encrypted Virtualization</b> <a href="https://yinqian.org/papers/sec19b.pdf" target="_blank">[pdf]</a>
-                        <!--a href="http://web.cse.ohio-state.edu/~zhaxiaok/assets/NDSS2018/ndss18-xiaokuan.pptx" target="_blank">[slides]</a-->
-                        <a href="http://web.cse.ohio-state.edu/~li.7533/bib/sevio.bib" target="_blank">[bib]</a>
-                        </font>
-                        <br><b>Mengyuan Li</b>, Yinqian Zhang, Zhiqiang Lin, Yan Solihin
-                        <br><i>USENIX Security Symposium'19</i>, Santa Clara, CA, Aug. 2019. <font size="-0.5">(Acceptance rate: 113/697=16.2%)</font>
-					</li>
-					<br>
-					<li>
-                        <font size="4"><b>Peeking Behind the Curtains of Serverless Platforms</b> <a href="https://www.usenix.org/system/files/conference/atc18/atc18-wang-liang.pdf" target="_blank">[pdf]</a>
-                        	<a href="https://github.com/liangw89/faas_measure">[Github]</a>
-                        <!--a href="http://web.cse.ohio-state.edu/~zhaxiaok/assets/NDSS2018/ndss18-xiaokuan.pptx" target="_blank">[slides]</a-->
-                        <a href="http://web.cse.ohio-state.edu/~li.7533/bib/atc18.bib" target="_blank">[bib]</a>
-                        </font>
-                        <br>Liang Wang, <b>Mengyuan Li</b>, Yinqian Zhang, Thomas Ristenpart, Michael Swift
-                        <br><i>USENIX ATC'18</i>, Boston, MA, USA, July. 2018. <font size="-0.5">(Acceptance rate: 76/378=20.1%)</font>
-					</li>
-					<br>
-					<li>
-						<font size="4"><b>Stacco: Differentially Analyzing Side-Channel Traces for Detecting SSL/TLS Vulnerabilities in Secure Enclaves</b> <a href="https://acmccs.github.io/papers/p859-xiaoA.pdf">[pdf]</a>  
-						<a href="https://arxiv.org/abs/1707.03473">[arxiv]</a>
-						<a href="https://github.com/OSUSecLab/Stacco">[Github]</a>
-						<a href="http://web.cse.ohio-state.edu/~li.7533/bib/ccs17.bib" target="_blank">[bib]</a>
-						</font>
-						<br>Yuan Xiao, <b>Mengyuan Li</b>, Sanchuan Chen, Yinqian Zhang
-						<br><i>ACM Conference on Computer and Communications Security'17</i>, Dallas, TX, USA, Oct. 2017. <font size="-0.5">(Acceptance rate: 151/843=17.9%)</font>
-						
-					</li>
-					<br>
-
-					<li>
-						<font size="4"><b>When CSI Meets Public WiFi: Inferring Your Mobile Phone Password via WiFi Signals</b> <a href="https://nsec.sjtu.edu.cn/publications/2016/When.pdf" target="_blank">[pdf]</a> 
-						<a href="https://nsec.sjtu.edu.cn/publications/2016/CCS%202016.pdf" target="_blank">[slides]</a>
-						<a href="http://web.cse.ohio-state.edu/~li.7533/bib/ccs16.bib" target="_blank">[bib]</a>
-						</font>
-						<br><b>Mengyuan Li</b>, Yan Meng, Junyi Liu, Haojin Zhu, Xiaohui Liang, Yao Liu, Na Ruan 							
-						<br><i>ACM Conference on Computer and Communications Security'16</i>, Vienna, Austria, Oct. 2016. <font size="-0.5">(Acceptance rate: 137/831=16.5%)</font>
-						<br>
-						(<a href="https://nsec.sjtu.edu.cn/publications/2016/ccs2016.mp4">
-						    Demo</a> and <a href="https://www.youtube.com/watch?v=ZJrTVU_eajE"> 
-						    Youtube video</a>). 
-						Media Coverage: <a href="http://www.theregister.co.uk/2016/11/13/researchers_point_finger_at_handy_smartphone_exploit/">The
-						    Register</a>, <a href="http://thetechnews.com/2016/11/15/this-is-how-you-reveal-you-passwords-to-wi-fi-signal-with-just-your-finger-movements/">The
-						    TechNews</a>, <a href="http://www.techworm.net/2016/11/smartphone-wi-fi-signals-can-leak-passwords-pins-keystrokes.html">Techworm</a>,
-						<a href="http://www.spiegel.de/netzwelt/gadgets/windtalker-forscher-knacken-passwoerter-per-wlan-a-1121180.html">SPIEGEL
-						    ONLINE</a>, <a href="http://www.silicon.fr/162595-162595.html">Silicon</a>,
-						<a href="https://fossbytes.com/windtalker-leak-passwords-interfering-wi-fi-csi/">Fossbytes</a>,
-						<a href="http://bitport.hu/kezmozdulataink-elaruljak-jelszavainkat">Bitport</a>
-					</li>
-					<br>
-				</font>
-				</ul>					
 			</div>
 
-<!-- 			<div id="project">
-				<h2 style="background-color:#ECF3F3; color:#002094">Work in Submission</h2>
-				<ul>
-					<font size="+1">
-					<li>
-                        <font size="4"><b> A Systematic Look at Ciphertext Side Channels (under review)</b>
-                        </font>
-                        <br><b>Mengyuan Li</b>*, Luca Wilke*, Jan Wichelmann, Thomas Eisenbarth, Radu Teodorescu, Yinqian Zhang 
-                        <br>(*equal contribution)
-					</li>
-					<br>
-				</font>
-				</ul>					
-			</div> -->
-
-
-
-<!-- 			<div id="myexp">	
-				<h2 style="background-color:#ECF3F3; color:#002094">Work Experience</h2>
-				<ul>
-					<font size="+1">
-
-					<p>Graduate Research Associate <span style="float:right">2017.9 - 2022.8 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
-            		<p>Graduate Teaching Associate (<a href="https://syllabi.engineering.osu.edu/syllabi/cse_5331">CSE 5331: Foundations II: Data Structures and Algorithms</a>) <span style="float:right">2022.5 - 2022.8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
-            		<p>Graduate Teaching Associate (<a href="https://syllabi.engineering.osu.edu/syllabi/cse_4471">CSE 4471: Information Security</a>) <span style="float:right">2022.1 - 2022.5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
-            		<p>Graduate Teaching Associate (<a href="https://syllabi.engineering.osu.edu/syllabi/cse_5245">CSE 5245: Introduction to Network Science</a>) <span style="float:right">2022.1 - 2022.5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
-            		<p>Graduate Teaching Associate (<a href="https://syllabi.engineering.osu.edu/syllabi/cse_6331">CSE 6331: Algorithms</a>) <span style="float:right">2021.8 - 2021.12&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
-					<p>Intern: Baidu Security (USA) (<a href="https://teaclave.apache.org/">Teaclave</a> Contributor)<span style="float:right">2021.1 - 2021.5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>	            		
-            		</font>		
-				</ul>					
-			</div>
-			<br> -->
-
-			<div id="myservices">	
-				<h2 style="background-color:#ECF3F3; color:#002094">Professional Services</h2>
-				<ul>
-					<font size="+1">
-					<p></p><h3> Program Committee </h3><p></p>
-					<ul>
-						<li>ACM Conference on Computer and Communications Security (CCS) <span style="float:right">2024&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></li>
-						<li>IEEE European Symposium on Security and Privacy (EuroS&P) <span style="float:right">2024&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></li>	
-						<li>International Conference on Applied Cryptography and Network Security (ACNS) <span style="float:right">2023&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></li>					
-					</ul>						
-					<p></p><h3> Reviewer </h3><p></p>
-					<ul>
-						<li>IEEE Transactions on Dependable and Secure Computing (TDSC) <span style="float:right">2021, 2022, 2023&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></li>		
-						<li>IEEE Transactions on Parallel and Distributed Systems (TPDS) <span style="float:right">2023&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></li>	
-						<li>IEEE Transactions on Mobile Computing (TMC) <span style="float:right">2021, 2022&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></li>	
-						<li>IEEE/ACM Transactions on Networking (TNET) <span style="float:right">2021, 2022&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></li>	
-						<li>IEEE Transactions on Emerging Topics in Computing (TETCSI) <span style="float:right">2022&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></li>			
-					</ul>		
-					<p></p><h3> External Reviewer </h3><p></p>
-					<ul>
-						 <li>IEEE Symposium on Security and Privacy (Oakland) <span style="float:right">2020, 2022, 2023&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></li>
-						 <li>ACM Conference on Computer and Communications Security (CCS) <span style="float:right">2019, 2020, 2022, 2023&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></li>
-						 <li>USENIX Security Symposium  <span style="float:right">2021&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></li>
-						 <li>ISOC Network and Distributed System Security Symposium (NDSS)  <span style="float:right">2019&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></li>
-						 <li>ACM Asia Conference on Computer and Communications Security (AsiaCCS) <span style="float:right">2020&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></li>
-						 <li>ACM Cloud Computing Security Workshop (CCSW)<span style="float:right">2021&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> </li>
-					</ul>
-					</font>		
-				</ul>	
+			<div class="publication-item">
+				<div class="publication-title">SoK: Understanding Design Choices and Pitfalls of Trusted Execution Environments</div>
+				<div class="publication-authors"><span class="highlight">Mengyuan Li</span>, Yuheng Yang, Guoxing Chen, Mengjia Yan, Yinqian Zhang</div>
+				<div class="publication-venue">ACM ASIACCS'24</div>
+				<div class="publication-links">
+					<a href="./files/asiaccs_sok.pdf" target="_blank">[pdf]</a>
+				</div>
 			</div>
 
+			<div class="publication-item">
+				<div class="publication-title">CipherH: Automated Detection of Ciphertext Side-channel Vulnerabilities in Cryptographic Implementations</div>
+				<div class="publication-authors">Sen Deng, <span class="highlight">Mengyuan Li</span>, Yining Tang, Shuai Wang, Shoumeng Yan, Yinqian Zhang</div>
+				<div class="publication-venue">USENIX Security Symposium'23</div>
+				<div class="publication-links">
+					<a href="https://www.usenix.org/system/files/sec23summer_289-deng-prepub.pdf" target="_blank">[pdf]</a>
+				</div>
+			</div>
 
-		</div>		
-		
+			<div class="publication-item">
+				<div class="publication-title">PWRLEAK: Exploiting Power Reporting Interface for Side-channel Attacks on AMD SEV</div>
+				<div class="publication-authors">Wubing Wang, <span class="highlight">Mengyuan Li</span>, Yinqian Zhang, Zhiqiang Lin</div>
+				<div class="publication-venue">20th Conference on Detection of Intrusions and Malware & Vulnerability Assessment (DIMVA 2023)</div>
+				<div class="publication-links">
+					<a href="https://link.springer.com/chapter/10.1007/978-3-031-35504-2_3" target="_blank">[pdf]</a>
+				</div>
+				<div style="font-size: 13px; color: #666; margin-top: 8px;">
+					Security bulletin from AMD <a href="https://www.amd.com/en/resources/product-security/bulletin/amd-sb-3004.html" target="_blank">[AMD-SB-3004]</a>, CVE <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-20575" target="_blank">[CVE-2023-20575]</a>
+				</div>
+			</div>
 
-</body></html>
+			<div class="publication-item">
+				<div class="publication-title">A Systematic Look at Ciphertext Side Channels</div>
+				<div class="publication-authors"><span class="highlight">Mengyuan Li</span>*, Luca Wilke*, Jan Wichelmann, Thomas Eisenbarth, Radu Teodorescu, Yinqian Zhang (*equal contribution)</div>
+				<div class="publication-venue">IEEE Symposium on Security and Privacy'22 (Acceptance rate: 57/407=14.0%)</div>
+				<div class="publication-links">
+					<a href="https://ieeexplore.ieee.org/document/9833768" target="_blank">[pdf]</a>
+				</div>
+				<div style="font-size: 13px; color: #666; margin-top: 8px;">
+					Security bulletin from AMD <a href="https://www.amd.com/en/resources/product-security/bulletin/amd-sb-1033.html" target="_blank">[AMD-SB-1033]</a>, CVE <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-46744" target="_blank">[CVE-2021-46744]</a><br>
+					An official <a href="https://www.amd.com/system/files/documents/221404394-a_security_wp_final.pdf" target="_blank">[White Paper]</a> from AMD for TEE developers and users to write code in a Ciphertext Side-channel-resistant way.
+				</div>
+			</div>
+
+			<div class="publication-item">
+				<div class="publication-title">vSGX: Virtualizing SGX Enclaves on AMD SEV</div>
+				<div class="publication-authors">Shixuan Zhao, <span class="highlight">Mengyuan Li</span>, Yinqian Zhang, Zhiqiang Lin</div>
+				<div class="publication-venue">IEEE Symposium on Security and Privacy'22 (Acceptance rate: 54/327=15.2%)</div>
+				<div class="publication-links">
+					<a href="https://ieeexplore.ieee.org/document/9833694" target="_blank">[pdf]</a>
+				</div>
+			</div>
+
+			<div class="publication-item">
+				<div class="publication-title">TLB Poisoning Attacks on AMD Secure Encrypted Virtualization</div>
+				<div class="publication-authors"><span class="highlight">Mengyuan Li</span>, Yinqian Zhang, Huibo Wang, Kang Li, Yueqiang Chen</div>
+				<div class="publication-venue">The 2021 Annual Computer Security Applications Conference (ACSAC 2021) (Acceptance rate: 56/326=15.2%)</div>
+				<div class="publication-links">
+					<a href="http://web.cse.ohio-state.edu/~li.7533/paper/acsac21-11.pdf" target="_blank">[pdf]</a>
+				</div>
+				<div style="font-size: 13px; color: #666; margin-top: 8px;">
+					Security bulletin from AMD <a href="https://www.amd.com/en/corporate/product-security/bulletin/amd-sb-1023" target="_blank">[AMD-SB-1023]</a>, CVE <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-26340" target="_blank">[CVE-2021-26340]</a>, Announcement from <a href="https://support.lenovo.com/us/en/product_security/LEN-75179" target="_blank">Lenovo</a>
+				</div>
+			</div>
+
+			<div class="publication-item">
+				<div class="publication-title">CROSSLINE: Breaking "Security-by-Crash" based Memory Isolation in AMD SEV</div>
+				<div class="publication-authors"><span class="highlight">Mengyuan Li</span>, Yinqian Zhang, Zhiqiang Lin</div>
+				<div class="publication-venue">ACM Conference on Computer and Communications Security'21, Nov. 2021 (Acceptance rate: 196/879=22.3%)</div>
+				<div class="publication-links">
+					<a href="https://arxiv.org/pdf/2008.00146.pdf" target="_blank">[pdf]</a>
+					<a href="http://web.cse.ohio-state.edu/~li.7533/bib/crossline.bib" target="_blank">[bib]</a>
+				</div>
+				<div style="font-size: 13px; color: #666; margin-top: 8px;">
+					Best Paper Awards (Runner-Ups) (14/879=1.6%) <a href="https://raw.githubusercontent.com/acmccs2021/acm-ccs-2021/main/best-paper-awards-runner-up/ACM%20CCS%202021_BestPaperAward_RunnerUp%20(6).jpg" target="_blank">[plaque]</a> <a href="https://sigsac.org/ccs/CCS2021/ccs-awards.html" target="_blank">[link]</a>
+				</div>
+			</div>
+
+			<div class="publication-item">
+				<div class="publication-title">CIPHERLEAKS: Breaking Constant-time Cryptography on AMD SEV via the Ciphertext Side Channel</div>
+				<div class="publication-authors"><span class="highlight">Mengyuan Li</span>, Yinqian Zhang, Huibo Wang, Kang Li, Yueqiang Chen</div>
+				<div class="publication-venue">USENIX Security Symposium'21, Virtual, Aug. 2021 (Acceptance rate: 248/1319=18.8%)</div>
+				<div class="publication-links">
+					<a href="https://www.usenix.org/system/files/sec21-li-mengyuan.pdf" target="_blank">[pdf]</a>
+					<a href="http://web.cse.ohio-state.edu/~li.7533/bib/cipherleaks.bib" target="_blank">[bib]</a>
+					<a href="https://cipherleaks.com/">[Website]</a>
+				</div>
+				<div style="font-size: 13px; color: #666; margin-top: 8px;">
+					AMD filed an embargo for the ciphertext side channel identified in the paper and announced a security <a href="https://www.amd.com/en/corporate/product-security/bulletin/amd-sb-1013" target="_blank">bulletin</a> together with a hardware patch for SEV-SNP in August 2021 <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-12966" target="_blank">[CVE-2020-12966]</a>
+				</div>
+			</div>
+
+			<div class="publication-item">
+				<div class="publication-title">Defeating speculative-execution attacks on SGX with HyperRace</div>
+				<div class="publication-authors">Guoxing Chen, <span class="highlight">Mengyuan Li</span>, Fengwei Zhang, Yinqian Zhang</div>
+				<div class="publication-venue">IEEE Conference on Dependable and Secure Computing'19, Hangzhou, China, Nov. 2021</div>
+				<div class="publication-links">
+					<a href="http://web.cse.ohio-state.edu/~li.7533/paper/hyperrace-idsc19.pdf" target="_blank">[pdf]</a>
+					<a href="http://web.cse.ohio-state.edu/~li.7533/bib/cipherleaks.bib" target="_blank">[bib]</a>
+				</div>
+			</div>
+
+			<div class="publication-item">
+				<div class="publication-title">Exploiting Unprotected I/O Operations in AMD's Secure Encrypted Virtualization</div>
+				<div class="publication-authors"><span class="highlight">Mengyuan Li</span>, Yinqian Zhang, Zhiqiang Lin, Yan Solihin</div>
+				<div class="publication-venue">USENIX Security Symposium'19, Santa Clara, CA, Aug. 2019 (Acceptance rate: 113/697=16.2%)</div>
+				<div class="publication-links">
+					<a href="https://yinqian.org/papers/sec19b.pdf" target="_blank">[pdf]</a>
+					<a href="http://web.cse.ohio-state.edu/~li.7533/bib/sevio.bib" target="_blank">[bib]</a>
+				</div>
+			</div>
+
+			<div class="publication-item">
+				<div class="publication-title">Peeking Behind the Curtains of Serverless Platforms</div>
+				<div class="publication-authors">Liang Wang, <span class="highlight">Mengyuan Li</span>, Yinqian Zhang, Thomas Ristenpart, Michael Swift</div>
+				<div class="publication-venue">USENIX ATC'18, Boston, MA, USA, July. 2018 (Acceptance rate: 76/378=20.1%)</div>
+				<div class="publication-links">
+					<a href="https://www.usenix.org/system/files/conference/atc18/atc18-wang-liang.pdf" target="_blank">[pdf]</a>
+					<a href="https://github.com/liangw89/faas_measure">[Github]</a>
+					<a href="http://web.cse.ohio-state.edu/~li.7533/bib/atc18.bib" target="_blank">[bib]</a>
+				</div>
+			</div>
+
+			<div class="publication-item">
+				<div class="publication-title">Stacco: Differentially Analyzing Side-Channel Traces for Detecting SSL/TLS Vulnerabilities in Secure Enclaves</div>
+				<div class="publication-authors">Yuan Xiao, <span class="highlight">Mengyuan Li</span>, Sanchuan Chen, Yinqian Zhang</div>
+				<div class="publication-venue">ACM Conference on Computer and Communications Security'17, Dallas, TX, USA, Oct. 2017 (Acceptance rate: 151/843=17.9%)</div>
+				<div class="publication-links">
+					<a href="https://acmccs.github.io/papers/p859-xiaoA.pdf">[pdf]</a>
+					<a href="https://arxiv.org/abs/1707.03473">[arxiv]</a>
+					<a href="https://github.com/OSUSecLab/Stacco">[Github]</a>
+					<a href="http://web.cse.ohio-state.edu/~li.7533/bib/ccs17.bib" target="_blank">[bib]</a>
+				</div>
+			</div>
+
+			<div class="publication-item">
+				<div class="publication-title">When CSI Meets Public WiFi: Inferring Your Mobile Phone Password via WiFi Signals</div>
+				<div class="publication-authors"><span class="highlight">Mengyuan Li</span>, Yan Meng, Junyi Liu, Haojin Zhu, Xiaohui Liang, Yao Liu, Na Ruan</div>
+				<div class="publication-venue">ACM Conference on Computer and Communications Security'16, Vienna, Austria, Oct. 2016 (Acceptance rate: 137/831=16.5%)</div>
+				<div class="publication-links">
+					<a href="https://nsec.sjtu.edu.cn/publications/2016/When.pdf" target="_blank">[pdf]</a>
+					<a href="https://nsec.sjtu.edu.cn/publications/2016/CCS%202016.pdf" target="_blank">[slides]</a>
+					<a href="http://web.cse.ohio-state.edu/~li.7533/bib/ccs16.bib" target="_blank">[bib]</a>
+					<a href="https://nsec.sjtu.edu.cn/publications/2016/ccs2016.mp4">[Demo]</a>
+					<a href="https://www.youtube.com/watch?v=ZJrTVU_eajE">[Youtube]</a>
+				</div>
+			</div>
+		</div>
+
+		<div id="myservices" class="section">
+			<h2>Professional Services</h2>
+			
+			<h3>Program Committee</h3>
+			<div class="service-item">
+				<div class="service-name">ACM Conference on Computer and Communications Security (CCS)</div>
+				<div class="service-year">2024</div>
+			</div>
+			<div class="service-item">
+				<div class="service-name">IEEE European Symposium on Security and Privacy (EuroS&P)</div>
+				<div class="service-year">2024</div>
+			</div>
+			<div class="service-item">
+				<div class="service-name">International Conference on Applied Cryptography and Network Security (ACNS)</div>
+				<div class="service-year">2023</div>
+			</div>
+
+			<h3>Reviewer</h3>
+			<div class="service-item">
+				<div class="service-name">IEEE Transactions on Dependable and Secure Computing (TDSC)</div>
+				<div class="service-year">2021, 2022, 2023</div>
+			</div>
+			<div class="service-item">
+				<div class="service-name">IEEE Transactions on Parallel and Distributed Systems (TPDS)</div>
+				<div class="service-year">2023</div>
+			</div>
+			<div class="service-item">
+				<div class="service-name">IEEE Transactions on Mobile Computing (TMC)</div>
+				<div class="service-year">2021, 2022</div>
+			</div>
+			<div class="service-item">
+				<div class="service-name">IEEE/ACM Transactions on Networking (TNET)</div>
+				<div class="service-year">2021, 2022</div>
+			</div>
+			<div class="service-item">
+				<div class="service-name">IEEE Transactions on Emerging Topics in Computing (TETCSI)</div>
+				<div class="service-year">2022</div>
+			</div>
+
+			<h3>External Reviewer</h3>
+			<div class="service-item">
+				<div class="service-name">IEEE Symposium on Security and Privacy (Oakland)</div>
+				<div class="service-year">2020, 2022, 2023</div>
+			</div>
+			<div class="service-item">
+				<div class="service-name">ACM Conference on Computer and Communications Security (CCS)</div>
+				<div class="service-year">2019, 2020, 2022, 2023</div>
+			</div>
+			<div class="service-item">
+				<div class="service-name">USENIX Security Symposium</div>
+				<div class="service-year">2021</div>
+			</div>
+			<div class="service-item">
+				<div class="service-name">ISOC Network and Distributed System Security Symposium (NDSS)</div>
+				<div class="service-year">2019</div>
+			</div>
+			<div class="service-item">
+				<div class="service-name">ACM Asia Conference on Computer and Communications Security (AsiaCCS)</div>
+				<div class="service-year">2020</div>
+			</div>
+			<div class="service-item">
+				<div class="service-name">ACM Cloud Computing Security Workshop (CCSW)</div>
+				<div class="service-year">2021</div>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		// Dark mode toggle functionality
+		function toggleTheme() {
+			const body = document.body;
+			const themeIcon = document.getElementById('themeIcon');
+			const themeText = document.getElementById('themeText');
+			
+			body.classList.toggle('dark-mode');
+			
+			if (body.classList.contains('dark-mode')) {
+				themeIcon.textContent = '☀️';
+				themeText.textContent = 'Light';
+				localStorage.setItem('theme', 'dark');
+			} else {
+				themeIcon.textContent = '🌙';
+				themeText.textContent = 'Dark';
+				localStorage.setItem('theme', 'light');
+			}
+		}
+
+		// Load saved theme preference
+		document.addEventListener('DOMContentLoaded', function() {
+			const savedTheme = localStorage.getItem('theme');
+			const themeIcon = document.getElementById('themeIcon');
+			const themeText = document.getElementById('themeText');
+			
+			if (savedTheme === 'dark') {
+				document.body.classList.add('dark-mode');
+				themeIcon.textContent = '☀️';
+				themeText.textContent = 'Light';
+			}
+		});
+	</script>
+</body>
+</html>
