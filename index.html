@@ -1036,6 +1036,19 @@
 			}
 		});
 	</script>
+	<script>
+		window.addEventListener('load', function() {
+			var container = document.querySelector('.footer-globe');
+			var canvas = document.querySelector('canvas');
+			if (canvas && container) {
+				container.appendChild(canvas);
+				canvas.style.position = 'absolute';
+				canvas.style.top = '50%';
+				canvas.style.left = '50%';
+				canvas.style.transform = 'translate(-50%, -50%) scale(0.2)';
+			}
+		});
+	</script>
 	<footer>
 		Mengyuan Li &nbsp;·&nbsp; © 2026 &nbsp;·&nbsp; University of Southern California
 		&nbsp;·&nbsp; <a href="https://scholar.google.com/citations?user=cgjqyuoAAAAJ&hl=en&oi=ao" target="_blank">Google Scholar</a>
