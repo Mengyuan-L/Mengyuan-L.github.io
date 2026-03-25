@@ -568,9 +568,19 @@
 
 		.footer-globe {
 			display: inline-block;
-			width: 150px;
-			height: 150px;
-			margin-top: 16px;
+			width: 28px;
+			height: 28px;
+			vertical-align: middle;
+			overflow: hidden;
+			position: relative;
+		}
+
+		.footer-globe canvas {
+			position: absolute;
+			top: 0;
+			left: 0;
+			transform: scale(0.14);
+			transform-origin: top left;
 		}
 
 	</style>
@@ -1028,15 +1038,11 @@
 		});
 	</script>
 	<footer>
-		<div>
-			Mengyuan Li &nbsp;·&nbsp; © 2026 &nbsp;·&nbsp; University of Southern California
-			&nbsp;·&nbsp; <a href="https://scholar.google.com/citations?user=cgjqyuoAAAAJ&hl=en&oi=ao" target="_blank">Google Scholar</a>
-			&nbsp;·&nbsp; <a href="./sept_lab.html">SEPT Lab</a>
-			&nbsp;·&nbsp; <a href="mailto:mengyuanli@usc.edu">mengyuanli@usc.edu</a>
-		</div>
-		<div class="footer-globe">
-			<script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=lpQpRn_gF_wIYJVTXZe80F9dO6RiyQ2-LU4oggGObKo"></script>
-		</div>
+		Mengyuan Li &nbsp;·&nbsp; © 2026 &nbsp;·&nbsp; University of Southern California
+		&nbsp;·&nbsp; <a href="https://scholar.google.com/citations?user=cgjqyuoAAAAJ&hl=en&oi=ao" target="_blank">Google Scholar</a>
+		&nbsp;·&nbsp; <a href="./sept_lab.html">SEPT Lab</a>
+		&nbsp;·&nbsp; <a href="mailto:mengyuanli@usc.edu">mengyuanli@usc.edu</a>
+		&nbsp;·&nbsp; <span class="footer-globe"><script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=lpQpRn_gF_wIYJVTXZe80F9dO6RiyQ2-LU4oggGObKo"></script></span>
 	</footer>
 </body>
 </html>
