@@ -569,11 +569,17 @@
 		.footer-globe {
 			display: inline-block;
 			vertical-align: middle;
+			width: 40px;
+			height: 40px;
+			overflow: hidden;
+			position: relative;
 		}
 
 		.footer-globe canvas {
-			width: 40px !important;
-			height: 40px !important;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
 		}
 
 	</style>
@@ -1035,7 +1041,7 @@
 		&nbsp;·&nbsp; <a href="https://scholar.google.com/citations?user=cgjqyuoAAAAJ&hl=en&oi=ao" target="_blank">Google Scholar</a>
 		&nbsp;·&nbsp; <a href="./sept_lab.html">SEPT Lab</a>
 		&nbsp;·&nbsp; <a href="mailto:mengyuanli@usc.edu">mengyuanli@usc.edu</a>
-		&nbsp;·&nbsp; <span class="footer-globe"><script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=lpQpRn_gF_wIYJVTXZe80F9dO6RiyQ2-LU4oggGObKo"></script></span>
+		&nbsp;·&nbsp; <div class="footer-globe"><script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=lpQpRn_gF_wIYJVTXZe80F9dO6RiyQ2-LU4oggGObKo"></script></div>
 	</footer>
 </body>
 </html>
