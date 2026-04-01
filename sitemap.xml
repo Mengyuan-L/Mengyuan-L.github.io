@@ -1,7 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>https://people.csail.mit.edu/mengyuanli/</loc>
-<lastmod>2023-07-01</lastmod>
+<loc>https://mengyuan-l.github.io/</loc>
+<lastmod>2026-04-01</lastmod>
+</url>
+<url>
+<loc>https://mengyuan-l.github.io/sept_lab.html</loc>
+<lastmod>2026-04-01</lastmod>
+</url>
+<url>
+<loc>https://mengyuan-l.github.io/course.html</loc>
+<lastmod>2026-04-01</lastmod>
+</url>
+<url>
+<loc>https://mengyuan-l.github.io/25fall_699.html</loc>
+<lastmod>2026-04-01</lastmod>
+</url>
+<url>
+<loc>https://mengyuan-l.github.io/tee-confidential-computing.html</loc>
+<lastmod>2026-04-01</lastmod>
+</url>
+<url>
+<loc>https://mengyuan-l.github.io/verifiable-ai.html</loc>
+<lastmod>2026-04-01</lastmod>
+</url>
+<url>
+<loc>https://mengyuan-l.github.io/ai-agent-security.html</loc>
+<lastmod>2026-04-01</lastmod>
 </url>
 </urlset>

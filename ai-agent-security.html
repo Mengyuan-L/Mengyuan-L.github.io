@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Agent Security | Mengyuan Li</title>
+  <meta name="description" content="AI agent security research by Mengyuan Li on using TEE and runtime monitoring to monitor agent execution and build trusted infrastructure for LLM systems and AI agents.">
+  <link rel="canonical" href="https://mengyuan-l.github.io/ai-agent-security.html">
+  <meta property="og:title" content="AI Agent Security | Mengyuan Li">
+  <meta property="og:description" content="Using TEE and runtime monitoring to monitor agent execution and build trusted infrastructure for LLM systems and AI agents.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://mengyuan-l.github.io/ai-agent-security.html">
+  <style>
+    :root {
+      --green-color: #2d8650;
+      --green-light: #3da366;
+      --green-bg: #f0f7f2;
+      --green-border: #7fb896;
+      --text-color: #333;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.7;
+      color: var(--text-color);
+      background: #ffffff;
+    }
+
+    .container {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 32px 20px 48px;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #f3faf5 0%, #ffffff 100%);
+      border: 1px solid var(--green-border);
+      border-radius: 14px;
+      padding: 28px;
+      margin-bottom: 28px;
+    }
+
+    h1, h2 {
+      color: #2b5d3f;
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font-size: 34px;
+    }
+
+    h2 {
+      margin-top: 28px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--green-border);
+    }
+
+    a {
+      color: #0b63c8;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .back-link {
+      margin-bottom: 18px;
+      display: inline-block;
+    }
+
+    .card {
+      background: var(--green-bg);
+      border: 1px solid var(--green-border);
+      border-radius: 12px;
+      padding: 18px 20px;
+      margin-bottom: 16px;
+    }
+
+    .muted {
+      color: #666;
+      font-size: 15px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a class="back-link" href="./index.html">Back to homepage</a>
+    <div class="hero">
+      <h1>AI Agent Security</h1>
+      <p>This research direction studies how to use Trusted Execution Environments (TEE) and runtime monitoring to monitor agent execution and build trusted infrastructure for LLM systems and AI agents. The goal is to make agent backends more observable, trustworthy, and resilient, especially when they operate over shared cloud infrastructure and sensitive data.</p>
+      <p class="muted">Related searches this page is designed to serve: AI agent security, secure AI agents, agent runtime monitoring, TEE for AI agents, trusted infrastructure for LLM systems, trustworthy agent execution.</p>
+    </div>
+
+    <h2>Current Perspective</h2>
+    <div class="card">
+      <p>This direction focuses on monitoring and protecting agent execution rather than only verifying final outputs. It brings together TEE, confidential computing, and runtime observation to support trustworthy LLM systems and agentic infrastructure.</p>
+    </div>
+
+    <h2>Representative Papers</h2>
+    <div class="card">
+      <p><a href="https://dl.acm.org/doi/epdf/10.1145/3779212.3790247" target="_blank">WAVE: Leveraging Architecture Observation for Privacy-Preserving Model Oversight</a> explores how system-level observation can support privacy-preserving monitoring of model execution, which is closely aligned with runtime monitoring for trustworthy LLM systems and agents.</p>
+    </div>
+    <div class="card">
+      <p><a href="https://2026.hpca-conf.org/details/hpca-2026-main-conference/97/SCALE-Tackling-Communication-Bottlenecks-in-Confidential-Multi-GPU-ML" target="_blank">SCALE: Tackling Communication Bottlenecks in Confidential Multi-GPU ML</a> contributes infrastructure for secure and efficient confidential multi-GPU execution, which is important for building trusted backends for large-scale LLM systems and agents.</p>
+    </div>
+    <div class="card">
+      <p><a href="./25fall_699.html">CSCI 699: Side-Channel Threats in Cloud and LLM Systems</a> covers threat models that are increasingly relevant when agents and LLM systems run on shared infrastructure.</p>
+    </div>
+
+    <h2>Relevant Foundations</h2>
+    <div class="card">
+      <p><a href="./tee-confidential-computing.html">TEE and Confidential Computing</a> provide mechanisms for isolated execution, protection of agent state, and secure multi-tenant infrastructure.</p>
+    </div>
+    <div class="card">
+      <p><a href="./verifiable-ai.html">Verifiable AI</a> remains closely related because agent systems also need execution integrity, auditability, and trustworthy model-serving pipelines.</p>
+    </div>
+
+    <h2>Research Directions</h2>
+    <p>Key open problems include how to use TEE or runtime monitoring to observe agent execution, how to isolate tool execution, how to protect long-lived memory and secrets, how to build trusted infrastructure for LLM systems and agents, and how to defend against cloud- and hardware-level leakages in agent backends.</p>
+
+    <h2>Lab Context</h2>
+    <p>The <a href="./sept_lab.html">SEPT Lab</a> studies systems and security problems that naturally connect to the foundations of AI agent security, especially where secure execution and trustworthy infrastructure meet modern AI workloads.</p>
+  </div>
+</body>
+</html>

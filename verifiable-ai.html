@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verifiable AI Research | Mengyuan Li</title>
+  <meta name="description" content="Research by Mengyuan Li on verifiable AI, zero-knowledge verification of LLM inference, and privacy-preserving model oversight.">
+  <link rel="canonical" href="https://mengyuan-l.github.io/verifiable-ai.html">
+  <meta property="og:title" content="Verifiable AI Research | Mengyuan Li">
+  <meta property="og:description" content="Verifiable AI, zero-knowledge verification of LLM inference, and privacy-preserving model oversight.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://mengyuan-l.github.io/verifiable-ai.html">
+  <style>
+    :root {
+      --green-color: #2d8650;
+      --green-light: #3da366;
+      --green-bg: #f0f7f2;
+      --green-border: #7fb896;
+      --text-color: #333;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.7;
+      color: var(--text-color);
+      background: #ffffff;
+    }
+
+    .container {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 32px 20px 48px;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #f3faf5 0%, #ffffff 100%);
+      border: 1px solid var(--green-border);
+      border-radius: 14px;
+      padding: 28px;
+      margin-bottom: 28px;
+    }
+
+    h1, h2 {
+      color: #2b5d3f;
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font-size: 34px;
+    }
+
+    h2 {
+      margin-top: 28px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--green-border);
+    }
+
+    a {
+      color: #0b63c8;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .back-link {
+      margin-bottom: 18px;
+      display: inline-block;
+    }
+
+    .card {
+      background: var(--green-bg);
+      border: 1px solid var(--green-border);
+      border-radius: 12px;
+      padding: 18px 20px;
+      margin-bottom: 16px;
+    }
+
+    .paper-title {
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .muted {
+      color: #666;
+      font-size: 15px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a class="back-link" href="./index.html">Back to homepage</a>
+    <div class="hero">
+      <h1>Verifiable AI</h1>
+      <p>This page highlights Mengyuan Li's research at the intersection of verifiable AI, trustworthy machine learning systems, and privacy-preserving oversight. The focus is on verifying LLM inference, understanding failure modes in proof-based AI systems, and building mechanisms that improve the integrity and auditability of deployed models.</p>
+      <p class="muted">Related searches this page is designed to serve: verifiable AI, AI verification, zero-knowledge verification of LLM inference, trustworthy AI systems, model oversight.</p>
+    </div>
+
+    <h2>Representative Papers</h2>
+    <div class="card">
+      <div class="paper-title">Hollow-LLM Attack: Computationally Trivial Weights in Zero-Knowledge Verification of LLM Inference</div>
+      <div class="muted">IEEE S&amp;P 2026</div>
+      <p>Studies a concrete security problem in proof-based verification of LLM inference, showing why verifiable AI systems must be designed with stronger threat models.</p>
+    </div>
+    <div class="card">
+      <div class="paper-title"><a href="https://dl.acm.org/doi/epdf/10.1145/3779212.3790247" target="_blank">WAVE: Leveraging Architecture Observation for Privacy-Preserving Model Oversight</a></div>
+      <div class="muted">ASPLOS 2026</div>
+      <p>Explores privacy-preserving oversight of model execution and also fits naturally into verifiable AI because it studies how to monitor and reason about model behavior in a trustworthy way.</p>
+    </div>
+
+    <h2>Why This Matters</h2>
+    <p>As AI systems become part of high-stakes workflows, users increasingly need evidence about what model ran, how it ran, and whether results can be trusted without revealing sensitive data. Verifiable AI sits at that boundary between systems, security, and machine learning.</p>
+
+    <h2>Related Pages</h2>
+    <p>See <a href="./ai-agent-security.html">AI Agent Security</a> for work on runtime monitoring and trusted infrastructure for LLM systems and agents. WAVE is a cross-cutting paper that also connects naturally to that direction. See <a href="./tee-confidential-computing.html">TEE and Confidential Computing</a> for the secure execution mechanisms that often support deployable verification pipelines.</p>
+  </div>
+</body>
+</html>

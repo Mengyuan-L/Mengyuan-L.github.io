@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mengyuan-l.github.io/sitemap.xml

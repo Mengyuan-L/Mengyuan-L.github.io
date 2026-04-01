@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TEE and Confidential Computing Research | Mengyuan Li</title>
+  <meta name="description" content="Research by Mengyuan Li on Trusted Execution Environments (TEE), confidential computing, confidential VMs, cloud GPU security, and side-channel attacks.">
+  <link rel="canonical" href="https://mengyuan-l.github.io/tee-confidential-computing.html">
+  <meta property="og:title" content="TEE and Confidential Computing Research | Mengyuan Li">
+  <meta property="og:description" content="Trusted Execution Environments, confidential computing, confidential VMs, cloud GPU security, and side-channel attacks.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://mengyuan-l.github.io/tee-confidential-computing.html">
+  <style>
+    :root {
+      --green-color: #2d8650;
+      --green-light: #3da366;
+      --green-bg: #f0f7f2;
+      --green-border: #7fb896;
+      --text-color: #333;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.7;
+      color: var(--text-color);
+      background: #ffffff;
+    }
+
+    .container {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 32px 20px 48px;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #f3faf5 0%, #ffffff 100%);
+      border: 1px solid var(--green-border);
+      border-radius: 14px;
+      padding: 28px;
+      margin-bottom: 28px;
+    }
+
+    h1, h2 {
+      color: #2b5d3f;
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font-size: 34px;
+    }
+
+    h2 {
+      margin-top: 28px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--green-border);
+    }
+
+    a {
+      color: #0b63c8;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .back-link {
+      margin-bottom: 18px;
+      display: inline-block;
+    }
+
+    .card {
+      background: var(--green-bg);
+      border: 1px solid var(--green-border);
+      border-radius: 12px;
+      padding: 18px 20px;
+      margin-bottom: 16px;
+    }
+
+    .paper-title {
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .muted {
+      color: #666;
+      font-size: 15px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a class="back-link" href="./index.html">Back to homepage</a>
+    <div class="hero">
+      <h1>TEE and Confidential Computing</h1>
+      <p>Mengyuan Li's research on Trusted Execution Environments (TEE) and confidential computing spans four closely related areas: TEE-based systems and performance optimization, attacks on confidential computing platforms, defenses for secure cloud and AI infrastructure, and more general cloud security. This includes work on AMD SEV and SEV-SNP, SGX, confidential VMs, confidential GPU systems, ciphertext side channels, virtualization, secure networking, serverless platforms, and high-performance confidential workloads.</p>
+      <p class="muted">Related searches this page is designed to serve: TEE, Trusted Execution Environment, confidential computing, TEE-based systems, TEE performance optimization, TEE attacks, TEE defenses, confidential VM, AMD SEV, SEV-SNP, SGX, cloud GPU security, cloud security, serverless security.</p>
+    </div>
+
+    <h2>TEE-Based Systems and Performance Optimization</h2>
+    <div class="card">
+      <div class="paper-title">MC-ORAM: A Mask-Assisted and Counter-Based Non-Deterministic ORAM Inside VM-Based TEEs</div>
+      <div class="muted">ISCA 2026</div>
+      <p>Explores secure memory techniques for VM-based TEEs and efficient protected execution.</p>
+    </div>
+    <div class="card">
+      <div class="paper-title"><a href="https://2026.hpca-conf.org/details/hpca-2026-main-conference/97/SCALE-Tackling-Communication-Bottlenecks-in-Confidential-Multi-GPU-ML" target="_blank">SCALE: Tackling Communication Bottlenecks in Confidential Multi-GPU ML</a></div>
+      <div class="muted">HPCA 2026</div>
+      <p>Connects confidential computing with efficient multi-GPU machine learning and shows how to reduce system bottlenecks in trusted infrastructure.</p>
+    </div>
+    <div class="card">
+      <div class="paper-title"><a href="https://ieeexplore.ieee.org/document/9833694" target="_blank">vSGX: Virtualizing SGX Enclaves on AMD SEV</a></div>
+      <div class="muted">IEEE S&amp;P 2022</div>
+      <p>Bridges virtualization and enclave protection across TEE platforms, highlighting system support for deployable trusted execution.</p>
+    </div>
+    <div class="card">
+      <div class="paper-title"><a href="https://arxiv.org/pdf/2409.15542" target="_blank">Ditto: Elastic Confidential VMs with Secure and Dynamic CPU Scaling</a></div>
+      <div class="muted">Under Submission</div>
+      <p>Explores how to support elastic confidential VMs with secure and dynamic CPU scaling, improving the flexibility and efficiency of TEE-based systems.</p>
+    </div>
+    <div class="card">
+      <div class="paper-title"><a href="https://arxiv.org/pdf/2403.03360.pdf" target="_blank">Bridge the Future: High-Performance Networks in Confidential VMs without Trusted I/O devices</a></div>
+      <div class="muted">Under Submission</div>
+      <p>Studies how to improve networking performance for confidential VMs without relying on trusted I/O devices, targeting practical system optimization in confidential cloud settings.</p>
+    </div>
+
+    <h2>Attacks on TEE and Confidential Computing Platforms</h2>
+    <div class="card">
+      <div class="paper-title"><a href="https://ieeexplore.ieee.org/document/9833768" target="_blank">A Systematic Look at Ciphertext Side Channels</a></div>
+      <div class="muted">IEEE S&amp;P 2022</div>
+      <p>Studies side-channel vulnerabilities that break confidentiality guarantees in encrypted and confidential execution settings.</p>
+    </div>
+    <div class="card">
+      <div class="paper-title"><a href="https://dl.acm.org/doi/abs/10.1145/3768725.3768727" target="_blank">A Close Look at RMP Entry Caching and Its Security Implications in SEV-SNP</a></div>
+      <div class="muted">HASP 2025</div>
+      <p>Examines subtle security implications of RMP entry caching in SEV-SNP and expands the attack surface analysis of modern confidential computing platforms.</p>
+    </div>
+    <div class="card">
+      <div class="paper-title"><a href="https://www.usenix.org/system/files/sec21-li-mengyuan.pdf" target="_blank">CIPHERLEAKS: Breaking Constant-time Cryptography on AMD SEV via the Ciphertext Side Channel</a></div>
+      <div class="muted">USENIX Security 2021</div>
+      <p>Shows how ciphertext side channels can break constant-time cryptographic implementations running inside AMD SEV.</p>
+    </div>
+    <div class="card">
+      <div class="paper-title"><a href="https://link.springer.com/chapter/10.1007/978-3-031-35504-2_3" target="_blank">PWRLEAK: Exploiting Power Reporting Interface for Side-channel Attacks on AMD SEV</a></div>
+      <div class="muted">DIMVA 2023</div>
+      <p>Demonstrates a side-channel attack surface exposed by the power reporting interface in AMD SEV platforms.</p>
+    </div>
+    <div class="card">
+      <div class="paper-title"><a href="http://web.cse.ohio-state.edu/~li.7533/paper/acsac21-11.pdf" target="_blank">TLB Poisoning Attacks on AMD Secure Encrypted Virtualization</a></div>
+      <div class="muted">ACSAC 2021</div>
+      <p>Uncovers a microarchitectural attack that breaks isolation assumptions in AMD SEV through TLB manipulation.</p>
+    </div>
+    <div class="card">
+      <div class="paper-title"><a href="https://arxiv.org/pdf/2008.00146.pdf" target="_blank">CROSSLINE: Breaking "Security-by-Crash" based Memory Isolation in AMD SEV</a></div>
+      <div class="muted">CCS 2021</div>
+      <p>Shows how crash-based isolation assumptions can fail in AMD SEV and lead to cross-boundary memory exposure.</p>
+    </div>
+    <div class="card">
+      <div class="paper-title"><a href="https://yinqian.org/papers/sec19b.pdf" target="_blank">Exploiting Unprotected I/O Operations in AMD's Secure Encrypted Virtualization</a></div>
+      <div class="muted">USENIX Security 2019</div>
+      <p>Studies attacks that exploit unprotected I/O operations in AMD SEV, highlighting early weaknesses in confidential VM designs.</p>
+    </div>
+    <div class="card">
+      <div class="paper-title"><a href="http://web.cse.ohio-state.edu/~li.7533/paper/hyperrace-idsc19.pdf" target="_blank">Defeating Speculative-Execution Attacks on SGX with HyperRace</a></div>
+      <div class="muted">IEEE DSC 2019</div>
+      <p>Addresses speculative-execution threats in SGX and reflects broader work on attack surfaces and mitigation around TEE platforms.</p>
+    </div>
+
+    <h2>Defense and Design Guidance</h2>
+    <div class="card">
+      <div class="paper-title"><a href="./files/asiaccs_sok.pdf" target="_blank">SoK: Understanding Design Choices and Pitfalls of Trusted Execution Environments</a></div>
+      <div class="muted">ASIACCS 2024</div>
+      <p>A systems-oriented overview of TEE design tradeoffs and common pitfalls, useful for understanding how to build more secure confidential computing systems.</p>
+    </div>
+    <div class="card">
+      <div class="paper-title"><a href="./index.html#mypublication">CipherH and Related Defense-Oriented Work</a></div>
+      <div class="muted">USENIX Security 2023 and related publications</div>
+      <p>Focuses on detecting vulnerabilities and deriving stronger design and implementation guidance for secure cryptographic and confidential systems.</p>
+    </div>
+
+    <h2>General Cloud Security</h2>
+    <div class="card">
+      <div class="paper-title"><a href="https://www.usenix.org/system/files/conference/atc18/atc18-wang-liang.pdf" target="_blank">Peeking Behind the Curtains of Serverless Platforms</a></div>
+      <div class="muted">USENIX ATC 2018</div>
+      <p>Studies security and isolation properties of serverless platforms, representing broader cloud security work beyond TEE-specific mechanisms.</p>
+    </div>
+    <div class="card">
+      <div class="paper-title"><a href="./25fall_699.html">Cloud and LLM Side-Channel Threats</a></div>
+      <div class="muted">Related teaching and systems-security context</div>
+      <p>This broader line of work also connects to cloud multi-tenancy, isolation failures, and shared-infrastructure threats that matter beyond confidential computing alone.</p>
+    </div>
+
+    <h2>Teaching and Lab Context</h2>
+    <p><a href="./course.html">CSCI 699: Confidential Computing</a> covers trusted execution environments, confidential virtual machines, confidential GPUs, and privacy-preserving computation. The <a href="./sept_lab.html">SEPT Lab</a> page provides the broader lab context for this research area.</p>
+
+    <h2>Related Pages</h2>
+    <p>For adjacent research directions, see <a href="./verifiable-ai.html">Verifiable AI</a> and <a href="./ai-agent-security.html">AI Agent Security</a>. The full publication list is available on the <a href="./index.html#mypublication">homepage publications section</a>.</p>
+  </div>
+</body>
+</html>
