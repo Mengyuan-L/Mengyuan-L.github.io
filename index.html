@@ -661,9 +661,26 @@
 		}
 
 		.footer-stat {
-			display: inline-block;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
 			vertical-align: middle;
-			line-height: 1;
+			width: 10px;
+			height: 10px;
+			overflow: hidden;
+			line-height: 0;
+		}
+
+		.footer-stat span,
+		.footer-stat a,
+		.footer-stat img,
+		.footer-stat iframe {
+			display: inline-block !important;
+			width: 10px !important;
+			height: 10px !important;
+			max-width: 10px !important;
+			max-height: 10px !important;
+			object-fit: contain;
 		}
 
 	</style>
