@@ -1,0 +1,177 @@
+# Mengyuan (Marvin) Li
+
+> Full-text Markdown version of https://mengyuan-l.github.io/ for LLMs and AI agents. Mengyuan (Marvin) Li is an Assistant Professor at the University of Southern California working on Trusted Execution Environments (TEE), confidential computing, verifiable AI, AI agent security, side-channel attacks, cloud GPU security, and AI systems security. A shorter index is at https://mengyuan-l.github.io/llms.txt
+
+- Title: Assistant Professor
+- Affiliation: Thomas Lord Department of Computer Science and Ming Hsieh Department of Electrical and Computer Engineering, University of Southern California
+- E-mail: mengyuanli@usc.edu
+- Google Scholar: https://scholar.google.com/citations?user=cgjqyuoAAAAJ&hl=en&oi=ao
+- Homepage: https://mengyuan-l.github.io/
+
+## About
+
+Mengyuan (Marvin) Li is an Assistant Professor in the Computer Science Department at the University of Southern California. He leads the SEPT Lab (SEcurity, Privacy, and Trust), where the group focuses on cutting-edge research in systems and security and is actively looking for motivated PhD, MS, and undergraduate students. Prior to USC, he was a postdoc researcher in CSAIL at MIT (2022-2024), working with Prof. Mengjia Yan. He graduated from The Ohio State University (OSU) with a Ph.D. in Computer Science and Engineering in 2022, advised by Prof. Yinqian Zhang. Before OSU, he graduated from Shanghai Jiao Tong University (SJTU) with a Bachelor's degree in Electronic Engineering.
+
+## Research
+
+His research focuses on the design of trustworthy computing environments through the tight integration of advanced hardware mechanisms and software systems. This co-design is essential for ensuring secure computation and data privacy, across platforms spanning personal devices to cloud AI systems. The group works on Trusted Execution Environments (TEE), confidential computing, verifiable AI, side-channel attacks, and broader AI systems security.
+
+- Uncovering, understanding, and defending against system and hardware vulnerabilities, including cloud system security, CPU security, GPU security, and AI system security.
+- Software-hardware co-design for secure and efficient AI systems.
+
+### TEE and Confidential Computing
+
+Page: https://mengyuan-l.github.io/tee-confidential-computing.html
+
+Research on TEE and confidential computing spans four closely related areas: TEE-based systems and performance optimization, attacks on confidential computing platforms, defenses for secure cloud and AI infrastructure, and more general cloud security. This includes work on AMD SEV and SEV-SNP, SGX, confidential VMs, confidential GPU systems, ciphertext side channels, virtualization, secure networking, serverless platforms, and high-performance confidential workloads.
+
+TEE-based systems and performance optimization:
+
+- MC-ORAM (ISCA 2026): secure memory techniques for VM-based TEEs and efficient protected execution.
+- SCALE (HPCA 2026): connects confidential computing with efficient multi-GPU machine learning and reduces communication bottlenecks in trusted infrastructure.
+- vSGX (IEEE S&P 2022): bridges virtualization and enclave protection across TEE platforms by virtualizing SGX enclaves on AMD SEV.
+- Ditto (under submission): elastic confidential VMs with secure and dynamic CPU scaling.
+- Bridge the Future (under submission): high-performance networking for confidential VMs without relying on trusted I/O devices.
+
+Attacks on TEE and confidential computing platforms:
+
+- A Systematic Look at Ciphertext Side Channels (IEEE S&P 2022): side-channel vulnerabilities that break confidentiality guarantees in encrypted and confidential execution settings.
+- A Close Look at RMP Entry Caching and Its Security Implications in SEV-SNP (HASP 2025): security implications of RMP entry caching in SEV-SNP (AMD-SB-3036).
+- CIPHERLEAKS (USENIX Security 2021): ciphertext side channels break constant-time cryptographic implementations inside AMD SEV.
+- PWRLEAK (DIMVA 2023): side-channel attack surface exposed by the power reporting interface on AMD SEV platforms.
+- TLB Poisoning Attacks on AMD SEV (ACSAC 2021): a microarchitectural attack that breaks isolation assumptions through TLB manipulation.
+- CROSSLINE (CCS 2021): crash-based ("security-by-crash") isolation assumptions fail in AMD SEV and lead to cross-boundary memory exposure.
+- Exploiting Unprotected I/O Operations in AMD SEV (USENIX Security 2019): early weaknesses in confidential VM designs.
+- HyperRace (IEEE DSC 2019): defeating speculative-execution attacks on SGX.
+
+Defense and design guidance:
+
+- SoK: Understanding Design Choices and Pitfalls of Trusted Execution Environments (ASIACCS 2024): systems-oriented overview of TEE design tradeoffs and common pitfalls.
+- CipherH (USENIX Security 2023): automated detection of ciphertext side-channel vulnerabilities in cryptographic implementations.
+
+General cloud security:
+
+- Peeking Behind the Curtains of Serverless Platforms (USENIX ATC 2018): security and isolation properties of serverless platforms.
+
+### Verifiable AI
+
+Page: https://mengyuan-l.github.io/verifiable-ai.html
+
+Research at the intersection of verifiable AI, trustworthy machine learning systems, and privacy-preserving oversight. The focus is on verifying LLM inference, understanding failure modes in proof-based AI systems, and building mechanisms that improve the integrity and auditability of deployed models.
+
+- Hollow-LLM Attack (IEEE S&P 2026): a concrete security problem in proof-based (zero-knowledge) verification of LLM inference, showing why verifiable AI systems must be designed with stronger threat models.
+- WAVE (ASPLOS 2026): privacy-preserving oversight of model execution by leveraging architecture-level observation.
+
+Why this matters: as AI systems become part of high-stakes workflows, users increasingly need evidence about what model ran, how it ran, and whether results can be trusted without revealing sensitive data. Verifiable AI sits at that boundary between systems, security, and machine learning.
+
+### AI Agent Security
+
+Page: https://mengyuan-l.github.io/ai-agent-security.html
+
+This direction studies how to use TEE and runtime monitoring to monitor agent execution and build trusted infrastructure for LLM systems and AI agents. The goal is to make agent backends more observable, trustworthy, and resilient, especially when they operate over shared cloud infrastructure and sensitive data. It focuses on monitoring and protecting agent execution rather than only verifying final outputs.
+
+- WAVE (ASPLOS 2026): system-level observation supporting privacy-preserving monitoring of model execution.
+- SCALE (HPCA 2026): infrastructure for secure and efficient confidential multi-GPU execution, important for trusted backends of large-scale LLM systems and agents.
+
+Open problems: how to use TEE or runtime monitoring to observe agent execution, how to isolate tool execution, how to protect long-lived memory and secrets, how to build trusted infrastructure for LLM systems and agents, and how to defend against cloud- and hardware-level leakages in agent backends.
+
+## News
+
+- 2026: "MC-ORAM: A Mask-Assisted and Counter-Based Non-Deterministic ORAM Inside VM-Based TEEs" accepted to ISCA'26.
+- 2026: "Hollow-LLM Attack: Computationally Trivial Weights in Zero-Knowledge Verification of LLM Inference" accepted to IEEE S&P'26.
+- 2026: "SCALE: Tackling Communication Bottlenecks in Confidential Multi-GPU ML" accepted to IEEE HPCA'26.
+- 2026: "WAVE: Leveraging Architecture Observation for Privacy-Preserving Model Oversight" accepted to ACM ASPLOS'26.
+- 2025: "Chekhov's Gun: Uncovering Hidden Risks in macOS Application-Sandboxed PID-Domain Services" accepted to ACM CCS'25.
+- 2025: "A Close Look at RMP Entry Caching and Its Security Implications in SEV-SNP" accepted to HASP'25.
+- 2025: "Few-Shot Graph Out-of-Distribution Detection with LLMs" published in Lecture Notes in Computer Science.
+- 2024: Joined USC as Assistant Professor in the Thomas Lord Department of Computer Science.
+- 2024: "SoK: Understanding Design Choices and Pitfalls of Trusted Execution Environments" accepted to ACM ASIACCS'24.
+- 2023: "CipherH: Automated Detection of Ciphertext Side-channel Vulnerabilities" accepted to USENIX Security'23.
+- 2022: Two papers accepted to IEEE S&P'22: "A Systematic Look at Ciphertext Side Channels" and "vSGX: Virtualizing SGX Enclaves on AMD SEV".
+- 2021: "CROSSLINE" accepted to ACM CCS'21 and received the Best Paper Award (Runner-Up).
+- 2021: "CIPHERLEAKS" accepted to USENIX Security'21. AMD issued a security bulletin and CVE.
+
+## Publications
+
+Newest first. Asterisk (*) marks equal contribution.
+
+1. **MC-ORAM: A Mask-Assisted and Counter-Based Non-Deterministic ORAM Inside VM-Based TEEs.** Yongqin Wang, Rachit Rajat, Jonghyun Lee, Mengyuan Li, Murali Annavaram. IEEE/ACM International Symposium on Computer Architecture (ISCA) 2026.
+2. **Hollow-LLM Attack: Computationally Trivial Weights in Zero-Knowledge Verification of LLM Inference.** Chen Gong, Beijie Liu, Mengyuan Li. IEEE Symposium on Security and Privacy (S&P) 2026. [pdf](https://mengyuan-l.github.io/files/hollow-llm.pdf) · [bibtex](https://mengyuan-l.github.io/files/hollow-llm.bib)
+3. **SCALE: Tackling Communication Bottlenecks in Confidential Multi-GPU ML.** Joongun Park, Yongqin Wang, Huan Xu, Hanjiang Wu, Mengyuan Li, Tushar Krishna. IEEE International Symposium on High-Performance Computer Architecture (HPCA) 2026. [link](https://2026.hpca-conf.org/details/hpca-2026-main-conference/97/SCALE-Tackling-Communication-Bottlenecks-in-Confidential-Multi-GPU-ML)
+4. **WAVE: Leveraging Architecture Observation for Privacy-Preserving Model Oversight.** Haoxuan Xu*, Chen Gong*, Beijie Liu*, Haizhong Zheng, Beidi Chen, Mengyuan Li. ACM International Conference on Architectural Support for Programming Languages and Operating Systems (ASPLOS) 2026. [link](https://dl.acm.org/doi/epdf/10.1145/3779212.3790247)
+5. **Few-Shot Graph Out-of-Distribution Detection with LLMs.** Haoyan Xu, Zhengtao Yao, Yushun Dong, Ziyi Wang, Ryan Rossi, Mengyuan Li, Yue Zhao. ECML-PKDD 2025. [link](https://link.springer.com/chapter/10.1007/978-3-032-06078-5_18)
+6. **Chekhov's Gun: Uncovering Hidden Risks in macOS Application-Sandboxed PID-Domain Services.** Minghao Lin, Jiaxun Zhu, Tingting Yin, Zechao Cai, Guanxing Wen, Yanan Guo, Mengyuan Li. ACM Conference on Computer and Communications Security (CCS) 2025. [link](https://dl.acm.org/doi/abs/10.1145/3719027.3765205)
+7. **A Close Look at RMP Entry Caching and Its Security Implications in SEV-SNP.** Alexis Bagia, Vincent Quentin Ulitzsch, Daniël Trujillo, Mengyuan Li, Mengjia Yan, Jean-Pierre Seifert. International Workshop on Hardware and Architectural Support for Security and Privacy (HASP) 2025. [link](https://dl.acm.org/doi/abs/10.1145/3768725.3768727) · AMD security bulletin [AMD-SB-3036](https://www.amd.com/en/resources/product-security/bulletin/amd-sb-3036.html)
+8. **Ditto: Elastic Confidential VMs with Secure and Dynamic CPU Scaling.** Shixuan Zhao*, Mengyuan Li*, Mengjia Yan, Zhiqiang Lin. Under submission. [arxiv](https://arxiv.org/pdf/2409.15542)
+9. **Bridge the Future: High-Performance Networks in Confidential VMs without Trusted I/O devices.** Mengyuan Li, Shashvat Srivastava, Mengjia Yan. Under submission. [arxiv](https://arxiv.org/pdf/2403.03360.pdf)
+10. **SoK: Understanding Design Choices and Pitfalls of Trusted Execution Environments.** Mengyuan Li, Yuheng Yang, Guoxing Chen, Mengjia Yan, Yinqian Zhang. ACM ASIACCS 2024. [pdf](https://mengyuan-l.github.io/files/asiaccs_sok.pdf)
+11. **CipherH: Automated Detection of Ciphertext Side-channel Vulnerabilities in Cryptographic Implementations.** Sen Deng, Mengyuan Li, Yining Tang, Shuai Wang, Shoumeng Yan, Yinqian Zhang. USENIX Security Symposium 2023. [pdf](https://www.usenix.org/system/files/sec23summer_289-deng-prepub.pdf)
+12. **PWRLEAK: Exploiting Power Reporting Interface for Side-channel Attacks on AMD SEV.** Wubing Wang, Mengyuan Li, Yinqian Zhang, Zhiqiang Lin. DIMVA 2023. [link](https://link.springer.com/chapter/10.1007/978-3-031-35504-2_3) · [AMD-SB-3004](https://www.amd.com/en/resources/product-security/bulletin/amd-sb-3004.html), [CVE-2023-20575](https://nvd.nist.gov/vuln/detail/CVE-2023-20575)
+13. **A Systematic Look at Ciphertext Side Channels.** Mengyuan Li*, Luca Wilke*, Jan Wichelmann, Thomas Eisenbarth, Radu Teodorescu, Yinqian Zhang. IEEE Symposium on Security and Privacy 2022 (acceptance rate 14.0%). [link](https://ieeexplore.ieee.org/document/9833768) · [AMD-SB-1033](https://www.amd.com/en/resources/product-security/bulletin/amd-sb-1033.html), [CVE-2021-46744](https://nvd.nist.gov/vuln/detail/CVE-2021-46744); AMD also published an official [white paper](https://www.amd.com/system/files/documents/221404394-a_security_wp_final.pdf) for TEE developers on writing ciphertext side-channel-resistant code.
+14. **vSGX: Virtualizing SGX Enclaves on AMD SEV.** Shixuan Zhao, Mengyuan Li, Yinqian Zhang, Zhiqiang Lin. IEEE Symposium on Security and Privacy 2022 (acceptance rate 15.2%). [link](https://ieeexplore.ieee.org/document/9833694)
+15. **TLB Poisoning Attacks on AMD Secure Encrypted Virtualization.** Mengyuan Li, Yinqian Zhang, Huibo Wang, Kang Li, Yueqiang Chen. ACSAC 2021 (acceptance rate 15.2%). [pdf](http://web.cse.ohio-state.edu/~li.7533/paper/acsac21-11.pdf) · [AMD-SB-1023](https://www.amd.com/en/corporate/product-security/bulletin/amd-sb-1023), [CVE-2021-26340](https://nvd.nist.gov/vuln/detail/CVE-2021-26340)
+16. **CROSSLINE: Breaking "Security-by-Crash" based Memory Isolation in AMD SEV.** Mengyuan Li, Yinqian Zhang, Zhiqiang Lin. ACM CCS 2021 (acceptance rate 22.3%). Best Paper Award Runner-Up (14/879 = 1.6%). [pdf](https://arxiv.org/pdf/2008.00146.pdf)
+17. **CIPHERLEAKS: Breaking Constant-time Cryptography on AMD SEV via the Ciphertext Side Channel.** Mengyuan Li, Yinqian Zhang, Huibo Wang, Kang Li, Yueqiang Chen. USENIX Security Symposium 2021 (acceptance rate 18.8%). [pdf](https://www.usenix.org/system/files/sec21-li-mengyuan.pdf) · [website](https://cipherleaks.com/) · AMD filed an embargo for the ciphertext side channel and announced a [security bulletin](https://www.amd.com/en/corporate/product-security/bulletin/amd-sb-1013) together with a hardware patch for SEV-SNP in August 2021 ([CVE-2020-12966](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-12966)).
+18. **Defeating speculative-execution attacks on SGX with HyperRace.** Guoxing Chen, Mengyuan Li, Fengwei Zhang, Yinqian Zhang. IEEE Conference on Dependable and Secure Computing (DSC) 2019. [pdf](http://web.cse.ohio-state.edu/~li.7533/paper/hyperrace-idsc19.pdf)
+19. **Exploiting Unprotected I/O Operations in AMD's Secure Encrypted Virtualization.** Mengyuan Li, Yinqian Zhang, Zhiqiang Lin, Yan Solihin. USENIX Security Symposium 2019 (acceptance rate 16.2%). [pdf](https://yinqian.org/papers/sec19b.pdf)
+20. **Peeking Behind the Curtains of Serverless Platforms.** Liang Wang, Mengyuan Li, Yinqian Zhang, Thomas Ristenpart, Michael Swift. USENIX ATC 2018 (acceptance rate 20.1%). [pdf](https://www.usenix.org/system/files/conference/atc18/atc18-wang-liang.pdf) · [code](https://github.com/liangw89/faas_measure)
+21. **Stacco: Differentially Analyzing Side-Channel Traces for Detecting SSL/TLS Vulnerabilities in Secure Enclaves.** Yuan Xiao, Mengyuan Li, Sanchuan Chen, Yinqian Zhang. ACM CCS 2017 (acceptance rate 17.9%). [pdf](https://acmccs.github.io/papers/p859-xiaoA.pdf) · [arxiv](https://arxiv.org/abs/1707.03473) · [code](https://github.com/OSUSecLab/Stacco)
+22. **When CSI Meets Public WiFi: Inferring Your Mobile Phone Password via WiFi Signals.** Mengyuan Li, Yan Meng, Junyi Liu, Haojin Zhu, Xiaohui Liang, Yao Liu, Na Ruan. ACM CCS 2016 (acceptance rate 16.5%). [pdf](https://nsec.sjtu.edu.cn/publications/2016/When.pdf) · [slides](https://nsec.sjtu.edu.cn/publications/2016/CCS%202016.pdf) · [video](https://www.youtube.com/watch?v=ZJrTVU_eajE)
+
+## SEPT Lab
+
+Page: https://mengyuan-l.github.io/sept_lab.html
+
+The SEPT Lab (SEcurity, Privacy, and Trust) at USC focuses on cutting-edge research in systems and security. Current research themes: TEE and confidential computing, verifiable AI, and AI agent security. The lab is actively looking for motivated PhD, MS, and undergraduate students passionate about these fields. Applicants from diverse backgrounds are strongly encouraged to apply. To join, reach out by email: mengyuanli@usc.edu.
+
+- PhD students: Haoxuan Xu, Beijie Liu, Chen Gong, Minghao Lin, Haoyan Xu (co-advised with Prof. Yue Zhao)
+- MS students: Potung Yu, Tianqi Shen
+- Undergraduate students: Anna Li
+- High school students: Vivan Doshi
+
+## Teaching
+
+### CSCI 699: Understanding and Identifying Side-Channel Threats in Cloud and LLM Systems (Fall 2025)
+
+Page: https://mengyuan-l.github.io/25fall_699.html
+
+Graduate seminar at USC, 4 units, Thursday 3:30-6:50pm. An in-depth exploration of side-channel attacks with a focus on cloud computing environments and large language model (LLM) systems: how subtle indirect leakages (execution timing, cache usage, resource contention) can breach isolation barriers in multi-tenant clouds and reveal sensitive data from cryptographic operations, cloud VMs/containers, and modern AI models. Covers foundational techniques (cache timing attacks such as Flush+Reload and Prime+Probe, speculative execution vulnerabilities such as Meltdown and Spectre) and recent research on side channels targeting cloud infrastructure and LLM deployments.
+
+Weekly topics: introduction to side channels; microarchitectural side channels; side channels in TEEs; website fingerprinting programming lab; transient execution attacks; frequency, port contention, and other channels; side-channel attacks on GPUs; side-channel inference of ML models (DNNs); side channels in LLM services; ML side-channel programming lab; secure software development practices; balancing security and performance in confidential computing; mitigating cache side channels at the architecture and detection-tool level; final project presentations.
+
+Grading: two assignments (15% each), course presentation (20%), final project (40%), participation and discussion (10%).
+
+### CSCI 699: Confidential Computing: Protecting Your Data on Cloud GPUs and CPUs (Spring 2025)
+
+Page: https://mengyuan-l.github.io/course.html
+
+Graduate course at USC, 4 units, Thursday 4:00-7:20pm. An in-depth study of confidential computing and privacy-preserving computational techniques, focusing on protecting data in cloud environments using both CPUs and GPUs. Students explore the design and implementation of Trusted Execution Environments (TEEs) and cloud services that support confidential computing, including secure enclaves, Confidential Virtual Machines (CVMs), and confidential GPUs, and gain exposure to other privacy-preserving techniques such as FL, MPC, and FHE.
+
+Weekly topics: introduction to confidential computing; TEEs (SGX, AMD SEV, Nvidia CC); confidential VMs; programming with virtualization (VMs, QEMU/KVM); practical TEE systems; side-channel attacks; Meltdown and Spectre; confidential GPUs; privacy-preserving techniques; secure software development practices; balancing security and performance in confidential computing on CPUs and on GPUs; final project presentations.
+
+Grading: two assignments (15% each), course presentation (20%), final project (40%), participation and discussion (10%).
+
+## Professional Services
+
+Program committee:
+
+- ACM Conference on Computer and Communications Security (CCS), 2024
+- IEEE European Symposium on Security and Privacy (EuroS&P), 2024
+- International Conference on Applied Cryptography and Network Security (ACNS), 2023
+
+Journal reviewer:
+
+- IEEE Transactions on Dependable and Secure Computing (TDSC), 2021-2023
+- IEEE Transactions on Parallel and Distributed Systems (TPDS), 2023
+- IEEE Transactions on Mobile Computing (TMC), 2021-2022
+- IEEE/ACM Transactions on Networking (TNET), 2021-2022
+- IEEE Transactions on Emerging Topics in Computing, 2022
+
+External reviewer:
+
+- IEEE Symposium on Security and Privacy (Oakland), 2020, 2022, 2023
+- ACM CCS, 2019, 2020, 2022, 2023
+- USENIX Security Symposium, 2021
+- ISOC Network and Distributed System Security Symposium (NDSS), 2019
+- ACM AsiaCCS, 2020
+- ACM Cloud Computing Security Workshop (CCSW), 2021

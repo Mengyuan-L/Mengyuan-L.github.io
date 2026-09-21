@@ -1,0 +1,37 @@
+# Mengyuan (Marvin) Li
+
+> Homepage of Mengyuan (Marvin) Li, Assistant Professor at the University of Southern California (Thomas Lord Department of Computer Science; Ming Hsieh Department of Electrical and Computer Engineering). He leads the SEPT Lab (SEcurity, Privacy, and Trust). Research areas: Trusted Execution Environments (TEE), confidential computing, verifiable AI, AI agent security, side-channel attacks, cloud GPU security, and AI systems security.
+
+Key facts:
+
+- Position: Assistant Professor, University of Southern California (since 2024)
+- Previously: Postdoc at MIT CSAIL (2022-2024, with Prof. Mengjia Yan); Ph.D. in Computer Science and Engineering, The Ohio State University (2022, advised by Prof. Yinqian Zhang); B.E. in Electronic Engineering, Shanghai Jiao Tong University
+- Contact: mengyuanli@usc.edu
+- Recruiting: the SEPT Lab is actively looking for motivated PhD, MS, and undergraduate students; interested students should reach out by email
+- Notable results: CROSSLINE received the ACM CCS 2021 Best Paper Award (Runner-Up); several papers on AMD SEV / SEV-SNP led to AMD security bulletins and CVEs (CVE-2020-12966, CVE-2021-26340, CVE-2021-46744, CVE-2023-20575)
+- A single-file Markdown version of the whole site, including the complete publication list, is at [llms-full.txt](https://mengyuan-l.github.io/llms-full.txt)
+
+## Main pages
+
+- [Homepage](https://mengyuan-l.github.io/): bio, research overview, news, full publication list, and professional services
+- [SEPT Lab](https://mengyuan-l.github.io/sept_lab.html): lab mission, current members, and how to join
+
+## Research topics
+
+- [TEE and Confidential Computing](https://mengyuan-l.github.io/tee-confidential-computing.html): TEE-based systems and performance optimization, attacks on AMD SEV/SEV-SNP and SGX, ciphertext side channels, confidential VMs and GPUs, and defenses, with representative papers
+- [Verifiable AI](https://mengyuan-l.github.io/verifiable-ai.html): zero-knowledge verification of LLM inference (Hollow-LLM Attack, IEEE S&P 2026) and privacy-preserving model oversight (WAVE, ASPLOS 2026)
+- [AI Agent Security](https://mengyuan-l.github.io/ai-agent-security.html): using TEE and runtime monitoring to monitor agent execution and build trusted infrastructure for LLM systems and AI agents
+
+## Teaching
+
+- [CSCI 699 (Fall 2025): Understanding and Identifying Side-Channel Threats in Cloud and LLM Systems](https://mengyuan-l.github.io/25fall_699.html): graduate seminar syllabus and weekly schedule
+- [CSCI 699 (Spring 2025): Confidential Computing: Protecting Your Data on Cloud GPUs and CPUs](https://mengyuan-l.github.io/course.html): graduate course syllabus and weekly schedule
+
+## Optional
+
+- [Google Scholar profile](https://scholar.google.com/citations?user=cgjqyuoAAAAJ&hl=en&oi=ao): citation counts and the most up-to-date paper list
+- [Hollow-LLM Attack paper (PDF)](https://mengyuan-l.github.io/files/hollow-llm.pdf): IEEE S&P 2026
+- [Hollow-LLM Attack BibTeX](https://mengyuan-l.github.io/files/hollow-llm.bib)
+- [SoK: Understanding Design Choices and Pitfalls of Trusted Execution Environments (PDF)](https://mengyuan-l.github.io/files/asiaccs_sok.pdf): ACM ASIACCS 2024
+- [CIPHERLEAKS project website](https://cipherleaks.com/)
+- [Sitemap](https://mengyuan-l.github.io/sitemap.xml)

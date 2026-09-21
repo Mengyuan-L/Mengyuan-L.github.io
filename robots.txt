@@ -1,4 +1,21 @@
 User-agent: *
 Allow: /
 
+# AI crawlers and agents are welcome.
+# LLM-friendly versions of this site:
+#   https://mengyuan-l.github.io/llms.txt       (index)
+#   https://mengyuan-l.github.io/llms-full.txt  (full text in Markdown)
+User-agent: GPTBot
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: ClaudeBot
+User-agent: Claude-User
+User-agent: Claude-SearchBot
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+User-agent: CCBot
+Allow: /
+
 Sitemap: https://mengyuan-l.github.io/sitemap.xml
