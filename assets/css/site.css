@@ -1,0 +1,525 @@
+/* site.css: the one stylesheet for every page of https://mengyuan-l.github.io/
+
+   Look: a white page set like a printed CV. Labels, dates and venues hang in a left margin column;
+   serif text (Literata) fills a text column of about 70 characters, and the two columns together
+   are centred in the window; small apparatus (nav, labels, link rows, footer) is set in Libre
+   Franklin. Structure comes from type, space and neutral hairlines only. One brick accent appears
+   at text level (links, a small label, thin rules).
+   No fills, tinted blocks, gradients, shadows or rounded boxes, in either theme.
+
+   Contents
+     1  Tokens: colours, fonts, grid (light, then dark)
+     2  Base: reset, links, focus, utilities
+     3  Page grid: .wrap, margin rows (.m + .side), text column (.col)
+     4  Header: brand, main nav, external links, theme toggle
+     5  Sections and running text
+     6  Homepage: masthead, research, join, news, publications, teaching, service, contact
+     7  Subpages: breadcrumb, page title, paper entries, project lists, course facts, tables, 404
+     8  Footer (includes the Web-Stat counter rules, kept verbatim)
+     9  Tablet and phone layouts
+    10  Print
+
+   Building blocks for new pages (copy the header, breadcrumb and footer markup from a subpage such as
+   verifiable-ai.html; its footer has no Web-Stat counter, which stays on index.html only):
+     .wrap                       centred page box; use on the header bar, <main> and the footer
+     nav.nav.is-short            subpage nav: a few page links, then ul.nav-ext with the external link(s)
+     h2.sec                      section head hanging in the margin, hairline across the text column
+     h2.sec.is-long              long section head: sits in the text column under a hairline
+     .col / .prose               text column / spaced paragraphs and bulleted lists inside it
+     .m > .side + content        a row with a small label in the margin (dates, terms, categories)
+     dl.facts > div.m > dt.side + dd     labelled facts (masthead rows, course logistics)
+     ol.pubs > li > .tag, cite, .au, .ve, .aw, .nt, .ds, .desc, .ln     paper entries
+     ul.items > li > h3, p, .topics, .ln  titled items (research directions, projects)
+     .ln                         sans link row: <a>DOI</a>&nbsp;· <a>PDF</a>
+     nav.crumbs > ol > li        breadcrumb line under the header
+     header.page-head            subpage title block (h1, .lede, .meta; optional img.mark in the margin,
+                                 black line art such as files/Shield.png, inverted in dark mode)
+     .table-wrap > table.tbl     hairline table; add .tbl-wide to a long table: from tablet width it spans
+                                 the margin and text columns, and on phones it scrolls sideways
+                                 (put p.col.note.scroll-hint before it to say so on phones)
+     .link-list                  vertical list of links (404 page)
+   Lists styled without bullets need role="list" in the markup (Safari drops list semantics otherwise). */
+
+
+/* 1  Tokens ================================================================================= */
+
+/* Web fonts: the latin subsets of Libre Franklin and Literata, self-hosted in assets/fonts/ (SIL OFL 1.1,
+   see assets/fonts/OFL.txt), so pages load no third-party CSS or fonts. Same weight ranges and
+   unicode-range as the Google Fonts CSS they came from; other characters (→, ↗) use the fallbacks. */
+@font-face {
+  font-family: "Libre Franklin"; font-style: normal; font-weight: 400 700; font-display: swap;
+  src: url("../fonts/libre-franklin-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Literata"; font-style: normal; font-weight: 400 600; font-display: swap;
+  src: url("../fonts/literata-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Literata"; font-style: italic; font-weight: 400; font-display: swap;
+  src: url("../fonts/literata-italic-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+:root {
+  --bg: #ffffff;           /* page */
+  --ink: #222222;          /* body text            15.9:1 on --bg */
+  --ink-strong: #111111;   /* name, heads, titles  18.9:1 */
+  --muted: #5e5e5e;        /* authors, venues, dates, labels  6.5:1 */
+  --line: #8f8f8f;         /* underline of ink links, separator dots  3.2:1 */
+  --rule: #e3e3e3;         /* hairlines: header, footer, years, tables (decorative) */
+  --rule-strong: #c7c7c7;  /* section rules (decorative) */
+  --accent: #8c2f1b;       /* brick, text level only  8.3:1 */
+  --accent-line: #b87e72;  /* underline of brick links  3.4:1 */
+
+  --serif: "Literata", Charter, "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+  --sans: "Libre Franklin", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+
+  --side: 11rem;           /* margin column: section heads, dates, venues, labels */
+  --gutter: 2.5rem;
+  --measure: 40rem;        /* text column, about 70 characters */
+  --indent: calc(var(--side) + var(--gutter));
+  --pad: 2rem;             /* page side padding */
+  --bar: 3.25rem;          /* height of the sticky header bar */
+  color-scheme: light;
+}
+
+/* Dark: neutral near-black (R = G = B); the same brick hue, lightened for contrast */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #141414; --ink: #e2e2e2; --ink-strong: #f2f2f2; --muted: #a1a1a1; --line: #6e6e6e;
+    --rule: #2b2b2b; --rule-strong: #444444; --accent: #d8705a; --accent-line: #9b594b;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #141414; --ink: #e2e2e2; --ink-strong: #f2f2f2; --muted: #a1a1a1; --line: #6e6e6e;
+  --rule: #2b2b2b; --rule-strong: #444444; --accent: #d8705a; --accent-line: #9b594b;
+  color-scheme: dark;
+}
+
+
+/* 2  Base =================================================================================== */
+
+*, *::before, *::after { box-sizing: border-box; }
+html {
+  -webkit-text-size-adjust: 100%; text-size-adjust: 100%;
+  scroll-padding-top: calc(var(--bar) + 1.5rem);   /* anchor targets and focused elements clear the sticky bar */
+}
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+body {
+  margin: 0; background: var(--bg); color: var(--ink);
+  font-family: var(--serif); font-size: 1.125rem; line-height: 1.62;
+  font-variant-numeric: oldstyle-nums;
+}
+:where(h1, h2, h3, h4, p, ol, ul, dl, dd, figure, blockquote, address) { margin: 0; }   /* zero specificity: any spacing rule wins */
+h1, h2 { text-wrap: balance; }
+h3, p, li, dd, cite { text-wrap: pretty; }
+img { max-width: 100%; height: auto; }
+address { font-style: normal; }
+b, strong { font-weight: 600; }   /* the serif is loaded up to 600 */
+
+a {
+  color: var(--accent); text-decoration: underline; text-decoration-color: var(--accent-line);
+  text-decoration-thickness: 1px; text-underline-offset: .2em;
+}
+a:hover { text-decoration-color: currentColor; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.nw { white-space: nowrap; }   /* identifiers such as AMD-SB-3036 never split */
+.skip {
+  position: absolute; left: 1rem; top: -4rem; z-index: 20; padding: .45rem .7rem;
+  background: var(--bg); color: var(--accent); font: 600 .875rem/1.2 var(--sans);
+}
+.skip:focus { top: .6rem; outline-offset: 0; }
+
+
+/* 3  Page grid ============================================================================== */
+
+/* The page box holds [margin column | gutter | text column] and is centred in the window (920 px wide
+   on desktop, padding included). The header bar uses the same box: the brand starts at the margin
+   column and the theme toggle ends at the right edge of the text column. */
+.wrap {
+  max-width: calc(var(--indent) + var(--measure) + 2 * var(--pad));
+  margin: 0 auto; padding: 0 var(--pad);
+}
+.m {
+  display: grid; grid-template-columns: var(--side) minmax(0, var(--measure));
+  column-gap: var(--gutter); align-items: baseline;
+}
+.m > * { grid-column: 2; min-width: 0; }
+.m > .side { grid-column: 1; grid-row: 1 / span 4; text-align: right; }
+.side {
+  color: var(--muted); font: 500 .8125rem/1.45 var(--sans);
+  font-variant-numeric: lining-nums tabular-nums;
+}
+h3.side { color: var(--ink-strong); font-size: .875rem; font-weight: 600; line-height: 1.4; text-wrap: balance; }
+.col { margin-left: var(--indent); max-width: var(--measure); }
+
+
+/* 4  Header ================================================================================= */
+
+.site-header {
+  position: sticky; top: 0; z-index: 10;
+  background: var(--bg); border-bottom: 1px solid var(--rule);
+}
+.site-header .wrap { display: flex; align-items: center; min-height: var(--bar); }
+.brand {
+  flex: 0 0 var(--side); margin-right: var(--gutter); color: var(--ink-strong);
+  font: 600 .9375rem/1.2 var(--serif); text-decoration: none;
+}
+.brand:hover { color: var(--accent); }
+.nav { display: flex; align-items: center; min-width: 0; margin-right: .5rem; }
+.nav ul { display: flex; flex-wrap: wrap; gap: 0 1.125rem; padding: 0; list-style: none; }
+.nav a {
+  display: block; padding: .6rem 0; color: var(--ink);
+  font: 500 .875rem/1.2 var(--sans); text-decoration: none;
+}
+.nav a:hover, .nav a.hl { color: var(--accent); }
+.nav a:hover { text-decoration: underline; text-decoration-color: var(--accent-line); }
+.nav a[aria-current="page"] { color: var(--ink-strong); text-decoration: underline; text-decoration-color: var(--line); }
+/* External sites after a thin divider, in the short nav of subpages (<nav class="nav is-short">),
+   which has room for them at every width. The homepage bar has none: its masthead, sections and
+   footer link SEPT Lab and verifiable.pro. */
+.nav .nav-ext { display: none; align-items: center; margin-left: 1.125rem; }
+.nav .nav-ext::before { content: ""; height: .875rem; border-left: 1px solid var(--rule-strong); }   /* the list gap spaces it */
+.nav.is-short .nav-ext { display: flex; }
+
+/* Theme toggle: plain text and a 14 px icon. Hidden without JavaScript (the .js class comes from the
+   inline script in <head>). Its visible label and accessible name follow the active theme. */
+.theme-toggle {
+  display: none; flex: none; margin-left: auto; align-items: center; gap: .4rem;
+  padding: .55rem 0 .55rem .5rem; border: 0; background: none; color: var(--ink);
+  font: 500 .875rem/1.2 var(--sans); cursor: pointer;
+}
+.js .theme-toggle { display: inline-flex; }
+.theme-toggle:hover { color: var(--accent); }
+.theme-toggle svg { flex: none; }
+.theme-toggle .to-light { display: none; }
+:root[data-theme="dark"] .theme-toggle .to-dark { display: none; }
+:root[data-theme="dark"] .theme-toggle .to-light { display: inline; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .theme-toggle .to-dark { display: none; }
+  :root:not([data-theme="light"]) .theme-toggle .to-light { display: inline; }
+}
+
+
+/* 5  Sections and running text ============================================================== */
+
+main > section, main > .section { margin-top: 4.5rem; }
+/* Section head: serif text right-aligned in the margin, neutral hairline across the text column */
+.sec {
+  display: grid; grid-template-columns: var(--side) minmax(0, var(--measure)); column-gap: var(--gutter);
+  align-items: center; justify-items: end; margin-bottom: 1.6rem;
+  color: var(--ink-strong); font-size: 1.5rem; font-weight: 500; line-height: 1.2; letter-spacing: -.005em;
+}
+.sec::after { content: ""; justify-self: stretch; border-top: 1px solid var(--rule-strong); }
+/* Long head (subpages): in the text column, under the hairline */
+.sec.is-long {
+  display: block; margin-left: var(--indent); max-width: var(--measure);
+  padding-top: .9rem; border-top: 1px solid var(--rule-strong);
+}
+.sec.is-long::after { content: none; }
+/* A small brick note under a margin head, e.g. "Recruiting for Fall 2027" */
+.sec-note {
+  width: var(--side); margin: -.95rem 0 1.5rem; text-align: right;
+  color: var(--accent); font: 600 .8125rem/1.4 var(--sans);
+}
+.prose p + p, .prose p + ul, .prose p + ol, .prose ul + p, .prose ol + p { margin-top: .85em; }
+.prose ul, .prose ol { padding-left: 1.3em; }
+.prose li + li { margin-top: .35em; }
+.prose li::marker { color: var(--muted); }
+.note { color: var(--muted); font-size: .9375rem; line-height: 1.5; }
+
+
+/* 6  Homepage =============================================================================== */
+
+/* Masthead. Source order = reading order: portrait, name, role, departments, recruiting, lede, facts */
+.mast {
+  display: grid; grid-template-columns: var(--side) minmax(0, var(--measure));
+  column-gap: var(--gutter); padding-top: 3.5rem;
+}
+.mast > * { grid-column: 2; min-width: 0; }
+.mast > .portrait { grid-column: 1; grid-row: 1 / span 3; align-self: start; }
+.mast > .facts { grid-column: 1 / -1; }
+.portrait { display: block; margin-top: .55rem; }
+.portrait img { display: block; width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: cover; }
+h1 {
+  color: var(--ink-strong); font-size: clamp(2.25rem, 1.5rem + 2.4vw, 3.25rem); font-weight: 500;
+  line-height: 1.04; letter-spacing: -.015em;
+}
+.role { margin-top: .8rem; color: var(--ink-strong); font-size: 1.125rem; line-height: 1.45; }
+.depts { margin-top: .15rem; color: var(--muted); font-size: 1rem; line-height: 1.5; }
+.depts a { color: inherit; text-decoration: none; }   /* underline on hover and focus only */
+.depts a:hover, .depts a:focus-visible { color: var(--accent); text-decoration: underline; text-decoration-color: var(--accent-line); }
+/* Recruiting: a brick run-in label and a bold first phrase, nothing more */
+.recruit { margin-top: 1.35rem; font-size: 1.0625rem; line-height: 1.55; }
+.recruit-label { margin-right: .2em; color: var(--accent); font: 700 .875rem/1 var(--sans); }
+.recruit strong { color: var(--ink-strong); font-weight: 600; }
+.lede { margin-top: 1.1rem; font-size: 1.25rem; line-height: 1.55; }
+.mast > .facts { margin-top: 2.25rem; }
+.facts .m + .m { margin-top: .45rem; }
+.facts dd { font-size: 1rem; line-height: 1.55; }
+/* Destination links in labelled rows are ink with a neutral underline, so brick points at recruiting */
+.facts a, .related a, .contact a { color: var(--ink); text-decoration-color: var(--line); }
+.facts a:hover, .related a:hover, .contact a:hover { color: var(--accent); text-decoration-color: currentColor; }
+/* Brand icons beside the SEPT Lab and verifiable.pro links */
+.site-icon { display: inline-block; width: 1.05em; height: 1.05em; margin-right: .35em; vertical-align: -.16em; }
+
+/* Research */
+.thrusts { margin-top: .85em; padding-left: 0; }   /* numbers hang in the gutter */
+.thrusts li + li { margin-top: .4em; }
+.thrusts li::marker { color: var(--muted); font-family: var(--sans); font-size: .85em; }
+.dirs-row { margin-top: 2.25rem; }
+.items { padding: 0; list-style: none; }
+.items > li + li { margin-top: 1.6rem; }
+.items h3 { color: var(--ink-strong); font-size: 1.1875rem; font-weight: 600; line-height: 1.35; }
+.items h3 a { color: inherit; text-decoration-color: var(--line); }
+.items h3 a:hover { color: var(--accent); text-decoration-color: currentColor; }
+.items p { margin-top: .3rem; }
+.items .topics { color: var(--muted); font-size: .9375rem; line-height: 1.5; }
+.related { margin-top: 2rem; }
+.sec + .related { margin-top: 0; }   /* subpages: a labelled row directly under a section head */
+.related p { font-size: 1rem; }
+
+/* Join */
+.join .m + .m { margin-top: 1.75rem; }
+.join .m p + p { margin-top: .85em; }
+.join .after { margin-top: 1.75rem; }
+
+/* News */
+.news { padding: 0; list-style: none; }
+.news li { font-size: 1.0625rem; line-height: 1.55; }
+.news li + li { margin-top: .6rem; }
+.news .side { font-weight: 400; }
+.more { margin-top: .9rem; }
+.more summary {
+  display: inline-block; margin-left: var(--indent); padding: .3rem 0; cursor: pointer; list-style: none;
+  color: var(--accent); font: 600 .8125rem/1.4 var(--sans);
+}
+.more summary:hover { text-decoration: underline; text-underline-offset: .2em; }
+.more summary::-webkit-details-marker { display: none; }
+.more summary::before {
+  content: ""; display: inline-block; width: .42em; height: .42em; margin: 0 .6em .12em 0;
+  border-right: 1.5px solid; border-bottom: 1.5px solid; transform: rotate(-45deg);
+}
+.more[open] summary::before { transform: rotate(45deg); }
+.more > .news { margin-top: .9rem; }
+
+/* Publications (also used for paper entries on subpages) */
+.pubhead p { color: var(--muted); font-size: .9375rem; }
+.pubhead .years { font: 500 .875rem/1.6 var(--sans); font-variant-numeric: lining-nums tabular-nums; }
+.years a { text-decoration: none; }
+.years a:hover { text-decoration: underline; }
+h3.yr {
+  display: grid; grid-template-columns: var(--side) minmax(0, var(--measure)); column-gap: var(--gutter);
+  align-items: center; justify-items: end; margin: 3rem 0 1rem; color: var(--ink-strong);
+  font-size: 1.25rem; font-weight: 500; line-height: 1.3; font-variant-numeric: lining-nums tabular-nums;
+}
+h3.yr::after { content: ""; justify-self: stretch; border-top: 1px solid var(--rule); }
+.pubs {
+  display: block; padding: 0; list-style: none;
+}
+.pubs > li {
+  display: grid; grid-template-columns: var(--side) minmax(0, var(--measure));
+  column-gap: var(--gutter); align-items: baseline;
+}
+.pubs > li > * { display: block; grid-column: 2; min-width: 0; }
+.pubs > li > .tag { grid-column: 1; grid-row: 1 / span 6; text-align: right; }
+.pubs > li + li { margin-top: 1.35rem; }
+.pubs .tag { color: var(--ink); font: 600 .8125rem/1.4 var(--sans); }
+.pubs .tag small { display: block; color: var(--muted); font-size: inherit; font-weight: 400; }
+.pubs cite { color: var(--ink-strong); font-size: 1.0625rem; font-style: normal; font-weight: 600; line-height: 1.38; }
+/* Preprints: listed last, with a quieter title and only the year in the margin */
+.pubs > li.pre .tag { color: var(--muted); font-weight: 400; }
+.pubs > li.pre cite { color: var(--ink); font-weight: 400; }
+.pubs cite a { color: inherit; text-decoration-color: var(--line); }   /* subpages: the title links to the paper */
+.pubs cite a:hover { color: var(--accent); text-decoration-color: currentColor; }
+.au, .ve, .aw, .nt, .ds { font-size: .9375rem; line-height: 1.5; }
+.au { margin-top: .15rem; color: var(--muted); }
+.au b { color: var(--ink); font-weight: 600; }
+.ve, .nt, .ds { color: var(--muted); }
+.ar { white-space: nowrap; }
+.aw { color: var(--accent); }
+.aw strong { font-weight: 600; }
+.aw a { color: inherit; }
+.pubs .desc { margin-top: .3rem; font-size: 1rem; line-height: 1.55; }   /* subpages: one-sentence summary */
+.ds a, .ln a { white-space: nowrap; }
+/* Link row: one sans line of links to the paper; dots are bound to the item before them */
+.ln { margin-top: .25rem; color: var(--line); font: 500 .8125rem/1.6 var(--sans); word-spacing: .12em; }
+.ln a { text-decoration: none; word-spacing: normal; }
+.ln a:hover { text-decoration: underline; text-decoration-color: currentColor; }
+.pubs > li:target { position: relative; }
+.pubs > li:target::before {
+  content: ""; position: absolute; top: .2rem; bottom: .2rem; left: calc(var(--indent) - 1.1rem);
+  border-left: 2px solid var(--accent);
+}
+
+/* Teaching, service, contact */
+.teach { padding: 0; list-style: none; }
+.teach > li + li { margin-top: 1.5rem; }
+.teach .side { font-weight: 400; }
+.teach h3 { color: var(--ink-strong); font-size: 1.0625rem; font-weight: 600; line-height: 1.4; }
+.teach h3 a { color: inherit; text-decoration-color: var(--line); }
+.teach h3 a:hover { color: var(--accent); text-decoration-color: currentColor; }
+.teach p { margin-top: .25rem; font-size: 1rem; line-height: 1.6; }
+.svc .m + .m { margin-top: 1.1rem; }
+.svc p { font-size: 1rem; line-height: 1.6; }
+.contact .m + .m { margin-top: .5rem; }
+
+
+/* 7  Subpages =============================================================================== */
+
+/* Breadcrumb line under the header: <nav class="crumbs wrap" aria-label="Breadcrumb"><ol role="list"> */
+.crumbs ol {
+  display: flex; flex-wrap: wrap; margin: 0 0 0 var(--indent); padding: 1.25rem 0 0; list-style: none;
+  color: var(--muted); font: 500 .8125rem/1.5 var(--sans);
+}
+/* The separator ends the item before it, so a wrapped line never starts with "›" */
+.crumbs li:not(:last-child)::after { content: "\203A"; content: "\203A" / ""; margin: 0 .5em; color: var(--line); }
+.crumbs a { color: inherit; text-decoration: none; }
+.crumbs a:hover { color: var(--accent); text-decoration: underline; text-decoration-color: var(--accent-line); }
+.crumbs [aria-current="page"] { color: var(--ink); }
+
+/* Page title block: <header class="page-head m"> h1, p.lede, p.meta; optional img.mark in the margin */
+.page-head { padding-top: 2.25rem; }
+.page-head h1 { font-size: clamp(2rem, 1.45rem + 1.6vw, 2.75rem); line-height: 1.1; }
+.page-head .lede { margin-top: 1rem; }
+.page-head .meta { margin-top: .75rem; color: var(--muted); font: 500 .875rem/1.5 var(--sans); }
+.page-head > .mark { grid-column: 1; grid-row: 1 / span 3; justify-self: end; align-self: start; width: 5.5rem; }
+/* .mark is black line art on transparent (files/Shield.png); dark mode inverts it to stay visible */
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .mark { filter: invert(1); } }
+:root[data-theme="dark"] .mark { filter: invert(1); }
+.page-head + section, .page-head + .section { margin-top: 3.5rem; }
+
+/* Paper entries on subpages reuse ol.pubs (above); put the venue in .ve, add .desc for the summary.
+   Project lists reuse ul.items (above) with an optional .ln link row. */
+.items .ln { margin-top: .35rem; }
+
+/* Course logistics reuse dl.facts with .m rows */
+.facts { margin: 0; }
+
+/* Default space between stacked blocks in a section; zero specificity, so any rule above wins */
+:where(.col, .m, .pubs, .items, .facts, .table-wrap) + :where(.col, .m, .pubs, .items, .facts, .table-wrap) { margin-top: 1.75rem; }
+
+/* Tables: hairlines only, no fills. Wrap each table:
+   <div class="table-wrap" role="region" aria-label="Course schedule" tabindex="0"><table class="tbl tbl-wide"> */
+.table-wrap { margin-left: var(--indent); max-width: var(--measure); overflow-x: auto; scroll-padding-inline: .5rem; }
+/* From tablet width a wide table spans the margin and text columns, so it needs no scrolling */
+@media (min-width: 48rem) { .table-wrap:has(> .tbl-wide) { margin-left: 0; max-width: calc(var(--indent) + var(--measure)); } }
+.tbl {
+  width: 100%; border-collapse: collapse; font-size: 1rem; line-height: 1.5;
+  font-variant-numeric: lining-nums tabular-nums;
+}
+.tbl caption {
+  caption-side: top; padding-bottom: .5rem; text-align: left;
+  color: var(--muted); font: 500 .8125rem/1.4 var(--sans);
+}
+.tbl th, .tbl td { padding: .55rem 1rem .55rem 0; border-bottom: 1px solid var(--rule); text-align: left; vertical-align: top; }
+.tbl th:last-child, .tbl td:last-child { padding-right: 0; }
+.tbl thead th { border-bottom-color: var(--rule-strong); color: var(--muted); font: 600 .8125rem/1.4 var(--sans); }
+.tbl tbody th { color: var(--ink-strong); font-weight: 600; }
+.tbl .num { text-align: right; white-space: nowrap; }
+.tbl-wide { min-width: 44rem; }   /* a wide table keeps its columns and scrolls inside .table-wrap on phones */
+/* A one-line note before a wide table, shown on phones only, where the table scrolls sideways.
+   While hidden it must not add the stacked-block space above the table. */
+.scroll-hint { display: none; }
+.scroll-hint + .table-wrap { margin-top: 0; }
+
+/* 404 and other short messages: <section class="msg col"> h1, p, ul.link-list */
+.msg { padding-top: 4rem; }
+.msg h1 { font-size: clamp(2rem, 1.45rem + 1.6vw, 2.75rem); line-height: 1.1; }
+.msg p { margin-top: 1rem; }
+.link-list { margin-top: 1.25rem; padding: 0; list-style: none; }
+.link-list li + li { margin-top: .4rem; }
+
+
+/* 8  Footer ================================================================================= */
+
+.site-footer { margin-top: 5rem; border-top: 1px solid var(--rule); }
+.site-footer .col { padding: 1.75rem 0 3rem; color: var(--muted); font: 400 .8125rem/1.75 var(--sans); }
+.site-footer a { color: var(--muted); text-decoration-color: var(--line); }
+.site-footer a:hover { color: var(--accent); text-decoration-color: currentColor; }
+/* Web-Stat counter: the owner's tuned 8 px placement, verbatim */
+.footer-copyright { display: inline-block; position: relative; padding-right: 6px; white-space: nowrap; }
+.footer-stat { display: inline-flex; align-items: center; justify-content: center; position: absolute; right: -2px; bottom: -1px; vertical-align: middle; width: 8px; height: 8px; overflow: hidden; line-height: 0; }
+.footer-stat span, .footer-stat a, .footer-stat img, .footer-stat iframe { display: inline-block !important; width: 8px !important; height: 8px !important; max-width: 8px !important; max-height: 8px !important; object-fit: contain; }
+
+
+/* 9  Tablet and phone ======================================================================= */
+
+@media (min-width: 48rem) and (max-width: 63.99rem) {
+  :root { --side: 9.5rem; --gutter: 1.75rem; }
+  .brand { display: none; }
+  .sec { font-size: 1.375rem; }
+}
+
+/* Phone: the margin folds into small labels above each item; the header scrolls away */
+@media (max-width: 47.99rem) {
+  :root { --side: 0px; --gutter: 0px; --pad: 1rem; }
+  html { scroll-padding-top: 1rem; }
+  body { font-size: 1.0625rem; line-height: 1.6; }
+  .site-header { position: static; }
+  .site-header .wrap { align-items: flex-end; padding-top: .3rem; padding-bottom: .3rem; }   /* toggle ends the last nav row, as in source order */
+  .brand { display: none; }
+  .nav { flex-wrap: wrap; column-gap: .75rem; }   /* a subpage's external link takes the next row when it must */
+  .nav ul { gap: 0 .75rem; }
+  .nav .nav-ext { margin-left: 0; }
+  .nav .nav-ext::before { content: none; }
+  .nav a { padding: .45rem 0; }
+  /* icon-only toggle (its accessible name stays "Switch to Dark theme") so the nav needs two rows */
+  .theme-toggle { gap: 0; min-width: 1.75rem; min-height: 2rem; justify-content: flex-end; padding: .3rem 0; }
+  .theme-toggle .lbl { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+
+  .mast { grid-template-columns: auto minmax(0, 1fr); column-gap: 1rem; padding-top: 1.75rem; }
+  .mast > *, .mast .role, .mast .depts { grid-column: 1 / -1; }
+  .mast > .portrait { grid-column: 1; grid-row: 1; align-self: center; width: 4.75rem; margin: 0; }
+  .mast .id { display: contents; }
+  .mast h1 { grid-column: 2; grid-row: 1; align-self: center; font-size: clamp(1.875rem, 8.2vw, 2.25rem); }
+  .role { margin-top: .9rem; font-size: 1.0625rem; }
+  .depts { font-size: .9375rem; }
+  .recruit { margin-top: 1rem; }
+  .lede { margin-top: 1rem; font-size: 1.0625rem; line-height: 1.6; }
+  .mast > .facts { margin-top: 1.5rem; }
+  .facts .m + .m { margin-top: .7rem; }
+
+  .m, .pubs > li { display: block; }
+  .m > .side, .pubs > li > .tag { display: block; text-align: left; margin-bottom: .1rem; }
+  main > section, main > .section { margin-top: 3.25rem; }
+  .sec {
+    grid-template-columns: auto minmax(0, 1fr); column-gap: .85rem; justify-items: start;
+    margin-bottom: 1.1rem; font-size: 1.375rem;
+  }
+  .sec-note { width: auto; margin: -.6rem 0 1.1rem; text-align: left; }
+  .thrusts { padding-left: 1.4em; }
+  .news li + li { margin-top: .95rem; }
+  h3.yr {
+    grid-template-columns: auto minmax(0, 1fr); column-gap: .75rem; justify-items: start; margin: 2.25rem 0 .9rem;
+  }
+  .pubs .tag small { display: inline; }
+  .pubs .tag small::before { content: "\00B7\00A0"; }
+  .pubs > li:target::before { left: -.6rem; }
+  /* touch: link rows and index lines get taller lines so each small target has room */
+  .ln { line-height: 1.85; }
+  .pubhead .years, .site-footer .col { line-height: 1.95; }
+  .page-head { padding-top: 1.5rem; }
+  .page-head > .mark { width: 4rem; margin: -1.1rem 0 -.25rem -1.1rem; }   /* offsets the PNG's transparent margin */
+  .crumbs ol { padding-top: 1rem; }
+  .scroll-hint { display: block; }
+  .scroll-hint + .table-wrap { margin-top: .5rem; }
+}
+
+
+/* 10  Print ================================================================================= */
+
+@media print {
+  :root, :root[data-theme] {
+    --bg: #ffffff; --ink: #000000; --ink-strong: #000000; --muted: #444444; --line: #888888;
+    --rule: #cccccc; --rule-strong: #999999; --accent: #000000; --accent-line: #888888;
+  }
+  .site-header, .skip, .theme-toggle, .more summary, .crumbs { display: none; }
+  body { font-size: 10.5pt; }
+  a { color: inherit; text-decoration: none; }
+}

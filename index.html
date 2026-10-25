@@ -1,1208 +1,484 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="google-site-verification" content="zdhqFpA0oKjkjctPEFDgbejj96u3NkxTf8JfEv7Bwqs">
-	<title>Mengyuan (Marvin) Li | TEE, Confidential Computing, Verifiable AI, and AI Systems Security</title>
-	<meta name="description" content="Homepage of Mengyuan (Marvin) Li, Assistant Professor at USC. Research areas include Trusted Execution Environments (TEE), confidential computing, verifiable AI, side-channel attacks, cloud GPU security, and AI systems security.">
-	<link rel="canonical" href="https://mengyuan-l.github.io/">
-	<link rel="alternate" type="text/markdown" title="LLM-friendly site index (llms.txt)" href="https://mengyuan-l.github.io/llms.txt">
-	<link rel="alternate" type="text/markdown" title="Full site text for LLMs (llms-full.txt)" href="https://mengyuan-l.github.io/llms-full.txt">
-	<meta property="og:title" content="Mengyuan (Marvin) Li | TEE, Confidential Computing, Verifiable AI, and AI Systems Security">
-	<meta property="og:description" content="Research on Trusted Execution Environments (TEE), confidential computing, verifiable AI, side-channel attacks, cloud GPU security, and AI systems security.">
-	<meta property="og:type" content="website">
-	<meta property="og:url" content="https://mengyuan-l.github.io/">
-	<meta property="twitter:card" content="summary">
-	<script type="application/ld+json">
-	{
-		"@context": "https://schema.org",
-		"@type": "Person",
-		"name": "Mengyuan (Marvin) Li",
-		"url": "https://mengyuan-l.github.io/",
-		"jobTitle": "Assistant Professor",
-		"worksFor": {
-			"@type": "CollegeOrUniversity",
-			"name": "University of Southern California"
-		},
-		"affiliation": {
-			"@type": "CollegeOrUniversity",
-			"name": "University of Southern California"
-		},
-		"email": "mailto:mengyuanli@usc.edu",
-		"sameAs": [
-			"https://scholar.google.com/citations?user=cgjqyuoAAAAJ&hl=en&oi=ao"
-		],
-		"knowsAbout": [
-			"Trusted Execution Environments",
-			"TEE",
-			"Confidential Computing",
-			"Verifiable AI",
-			"AI Agent Security",
-			"AI Systems Security",
-			"Cloud GPU Security",
-			"Side-Channel Attacks"
-		]
-	}
-	</script>
-	<style type="text/css">
-		* {
-			margin: 0;
-			padding: 0;
-			box-sizing: border-box;
-		}
-
-		:root {
-			--green-color: #2d8650;
-			--green-light: #3da366;
-			--green-bg: #f0f7f2;
-			--green-border: #7fb896;
-		}
-
-		body {
-			font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
-			line-height: 1.6;
-			color: #333;
-			background-color: #ffffff;
-			margin: 0;
-			padding: 0;
-			transition: background-color 0.3s ease, color 0.3s ease;
-		}
-
-		body.dark-mode {
-			background-color: #1a1a1a;
-			color: #f0f0f0;
-		}
-
-		body.dark-mode h1,
-		body.dark-mode h2,
-		body.dark-mode h3 {
-			color: #ffffff;
-		}
-
-		body.dark-mode p {
-			color: #e8e8e8;
-		}
-
-		body.dark-mode a {
-			color: #5ba3ff;
-		}
-
-		body.dark-mode a:hover {
-			color: #7bb5ff;
-		}
-
-		body.dark-mode .publication-item {
-			background: #252525;
-			border-left-color: var(--green-light);
-		}
-
-		body.dark-mode .publication-title {
-			color: #ffffff;
-		}
-
-		body.dark-mode .publication-authors {
-			color: #e0e0e0;
-		}
-
-		body.dark-mode .publication-venue {
-			color: #b0b0b0;
-		}
-
-		body.dark-mode .news-item {
-			background: #252525;
-			border-color: var(--green-light);
-			color: #f0f0f0;
-		}
-
-		body.dark-mode .news-content {
-			color: #f0f0f0;
-		}
-
-		body.dark-mode .news-date {
-			color: var(--green-light);
-		}
-
-
-		body.dark-mode .service-item {
-			border-bottom-color: #404040;
-		}
-
-		body.dark-mode .service-name {
-			color: #f0f0f0;
-		}
-
-		body.dark-mode .service-year {
-			color: #c0c0c0;
-		}
-
-		body.dark-mode h3 {
-			color: #f0f0f0;
-		}
-
-		@media (min-width:1000px) { 
-			.container { 
-				width: 900px;
-			} 
-		}
-
-		.container {
-			margin-right: auto;
-			margin-left: auto;
-			padding: 0 20px;
-		}
-
-		/* Navigation */
-		.navbar {
-			background-color: #f8f9fa;
-			backdrop-filter: blur(10px);
-			position: fixed;
-			top: 0;
-			width: 100%;
-			padding: 15px 0;
-			z-index: 1000;
-			border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-			box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-		}
-
-		body.dark-mode .navbar {
-			background-color: #2a2a2a;
-			border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-			box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-		}
-
-		.navbar-content {
-			max-width: 1200px;
-			margin: 0 auto;
-			padding: 0 20px;
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
-			gap: 30px;
-		}
-
-		.navbar-links {
-			display: flex;
-			align-items: center;
-			gap: 30px;
-		}
-
-		.navbar a {
-			color: #333;
-			text-decoration: none;
-			font-size: 15px;
-			transition: color 0.3s ease;
-			font-weight: 400;
-		}
-
-		body.dark-mode .navbar a {
-			color: #f0f0f0;
-		}
-
-		.navbar a:first-child {
-			font-weight: 600;
-			font-size: 18px;
-			color: #333;
-		}
-
-		body.dark-mode .navbar a:first-child {
-			color: #ffffff;
-		}
-
-		.navbar a:hover {
-			color: var(--green-color);
-		}
-
-		body.dark-mode .navbar a:hover {
-			color: var(--green-light);
-		}
-
-		/* Dark Mode Toggle */
-		.theme-toggle {
-			background: none;
-			border: 1px solid #ccc;
-			border-radius: 20px;
-			padding: 6px 12px;
-			cursor: pointer;
-			font-size: 14px;
-			color: #333;
-			transition: all 0.3s ease;
-			display: flex;
-			align-items: center;
-			gap: 6px;
-		}
-
-		body.dark-mode .theme-toggle {
-			border-color: #666;
-			color: #e0e0e0;
-		}
-
-		.theme-toggle:hover {
-			background: rgba(0, 0, 0, 0.05);
-		}
-
-		body.dark-mode .theme-toggle:hover {
-			background: rgba(255, 255, 255, 0.1);
-		}
-
-		.empty {
-			height: 70px;
-		}
-
-		/* Main Content */
-
-		.intro-content {
-			display: flex;
-			gap: 30px;
-			align-items: flex-start;
-			margin-bottom: 12px;
-		}
-
-		.intro-text {
-			flex: 1;
-		}
-
-		.intro-image {
-			flex-shrink: 0;
-		}
-
-		.intro-image img {
-			width: 200px;
-			height: 200px;
-			object-fit: cover;
-			border-radius: 8px;
-			box-shadow: 0 4px 12px rgba(45, 134, 80, 0.2);
-		}
-
-		body.dark-mode .intro-image img {
-			box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-		}
-
-		h1 {
-			font-size: 36px;
-			font-weight: 600;
-			color: #333;
-			margin-bottom: 15px;
-		}
-
-		h2 {
-			font-size: 24px;
-			font-weight: 600;
-			color: #333;
-			margin: 18px 0 10px 0;
-			padding-bottom: 8px;
-			border-bottom: 3px solid var(--green-border);
-		}
-
-		body.dark-mode h2 {
-			border-bottom-color: var(--green-light);
-		}
-
-		#interests h2 {
-			margin-top: 4px !important;
-		}
-
-		.news-section h2 {
-			margin-top: 4px !important;
-		}
-
-		h3 {
-			font-size: 20px;
-			font-weight: 500;
-			color: #555;
-			margin: 20px 0 12px 0;
-		}
-
-		p {
-			font-size: 16px;
-			margin-bottom: 12px;
-			color: #444;
-		}
-
-		a {
-			color: #0066cc;
-			text-decoration: none;
-			transition: color 0.3s ease;
-		}
-
-		a:hover {
-			color: #0052a3;
-			text-decoration: underline;
-		}
-
-		/* News Section */
-
-		.news-container {
-			position: relative;
-			overflow: hidden;
-		}
-
-		.news-scroll {
-			display: flex;
-			gap: 18px;
-			overflow-x: auto;
-			overflow-y: hidden;
-			padding: 15px 0;
-			scroll-behavior: smooth;
-			-webkit-overflow-scrolling: touch;
-			scrollbar-width: thin;
-			scrollbar-color: var(--green-border) #f0f0f0;
-		}
-
-		.news-scroll::-webkit-scrollbar {
-			height: 8px;
-		}
-
-		.news-scroll::-webkit-scrollbar-track {
-			background: #f0f0f0;
-			border-radius: 4px;
-		}
-
-		.news-scroll::-webkit-scrollbar-thumb {
-			background: var(--green-border);
-			border-radius: 4px;
-		}
-
-		.news-scroll::-webkit-scrollbar-thumb:hover {
-			background: var(--green-light);
-		}
-
-		.news-item {
-			flex: 0 0 300px;
-			background: var(--green-bg);
-			padding: 18px;
-			border-radius: 8px;
-			border: 1px solid var(--green-border);
-			box-shadow: 0 2px 8px rgba(45, 134, 80, 0.15);
-			transition: transform 0.3s ease, box-shadow 0.3s ease;
-		}
-
-		.news-item:hover {
-			transform: translateY(-3px);
-			box-shadow: 0 6px 20px rgba(45, 134, 80, 0.25);
-			border-color: var(--green-light);
-		}
-
-		body.dark-mode .news-item {
-			box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-		}
-
-		body.dark-mode .news-item:hover {
-			box-shadow: 0 6px 20px rgba(61, 163, 102, 0.3);
-		}
-
-		.news-date {
-			font-size: 13px;
-			color: var(--green-color);
-			margin-bottom: 8px;
-			font-weight: 600;
-		}
-
-		.news-content {
-			font-size: 15px;
-			color: #333;
-			line-height: 1.5;
-		}
-
-		/* Sections */
-		.section {
-			margin: 18px 0;
-		}
-
-		#intro {
-			padding: 20px 0 8px 0;
-		}
-
-		#aboutme {
-			margin-bottom: 0px !important;
-		}
-
-		#interests.section {
-			margin-top: 0px !important;
-			margin-bottom: 18px;
-		}
-
-		#lab.section {
-			margin-bottom: 0px !important;
-			margin-top: 18px;
-		}
-
-		.topic-grid {
-			display: grid;
-			grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-			gap: 18px;
-			margin-top: 18px;
-		}
-
-		.topic-card {
-			background: var(--green-bg);
-			border: 1px solid var(--green-border);
-			border-radius: 10px;
-			padding: 20px;
-			box-shadow: 0 2px 8px rgba(45, 134, 80, 0.15);
-			transition: transform 0.3s ease, box-shadow 0.3s ease;
-		}
-
-		.topic-card:hover {
-			transform: translateY(-3px);
-			box-shadow: 0 6px 20px rgba(45, 134, 80, 0.25);
-			border-color: var(--green-light);
-		}
-
-		body.dark-mode .topic-card {
-			background: #252525;
-			box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-		}
-
-		body.dark-mode .topic-card:hover {
-			box-shadow: 0 6px 20px rgba(61, 163, 102, 0.3);
-		}
-
-		.topic-card h3 {
-			margin-top: 0;
-			margin-bottom: 10px;
-			font-size: 20px;
-			color: #2b5d3f;
-		}
-
-		body.dark-mode .topic-card h3 {
-			color: #7ed39b;
-		}
-
-		.topic-card p {
-			margin-bottom: 10px;
-			font-size: 15px;
-		}
-
-		.topic-meta {
-			font-size: 14px;
-			color: #555;
-		}
-
-		body.dark-mode .topic-meta {
-			color: #cccccc;
-		}
-
-		.news-section {
-			margin-top: 0px !important;
-			margin-bottom: 18px;
-			padding: 10px 0;
-		}
-
-		ul {
-			list-style: none;
-			padding-left: 0;
-		}
-
-		ul li {
-			margin-bottom: 25px;
-			padding-left: 20px;
-			position: relative;
-		}
-
-		ul li::before {
-			content: "•";
-			position: absolute;
-			left: 0;
-			color: #666;
-			font-size: 20px;
-		}
-
-		body.dark-mode ul li::before {
-			color: #999;
-		}
-
-		.publication-item {
-			margin-bottom: 20px;
-			padding: 18px;
-			background: #fafafa;
-			border-left: 3px solid var(--green-border);
-			border-radius: 4px;
-			box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-			transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-		}
-
-		.publication-item:hover {
-			background: #f5f5f5;
-			border-left-color: var(--green-light);
-			box-shadow: 0 4px 12px rgba(45, 134, 80, 0.15);
-		}
-
-		body.dark-mode .publication-item {
-			box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-		}
-
-		body.dark-mode .publication-item:hover {
-			box-shadow: 0 4px 12px rgba(61, 163, 102, 0.2);
-		}
-
-		.publication-title {
-			font-size: 17px;
-			font-weight: 600;
-			color: #333;
-			margin-bottom: 8px;
-		}
-
-		.publication-authors {
-			font-size: 15px;
-			color: #444;
-			margin-bottom: 5px;
-		}
-
-		.publication-venue {
-			font-size: 14px;
-			color: #666;
-			font-style: italic;
-		}
-
-		.publication-links {
-			margin-top: 8px;
-		}
-
-		.publication-links a {
-			margin-right: 10px;
-			font-size: 14px;
-		}
-
-		.highlight {
-			color: #333;
-			font-weight: 600;
-		}
-
-		body.dark-mode .highlight {
-			color: #ffffff;
-		}
-
-		.service-item {
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-			padding: 10px 0;
-			border-bottom: 1px solid #e0e0e0;
-		}
-
-		.service-item:last-child {
-			border-bottom: none;
-		}
-
-		.service-name {
-			flex: 1;
-		}
-
-		.service-year {
-			color: #666;
-			font-size: 14px;
-		}
-
-		@media (max-width: 767px) {
-			.navbar-content {
-				flex-wrap: wrap;
-				gap: 15px;
-			}
-
-			.navbar-links {
-				flex-wrap: wrap;
-				gap: 15px;
-			}
-
-			.intro-content {
-				flex-direction: column;
-			}
-
-			.intro-image {
-				align-self: center;
-			}
-
-			.news-item {
-				flex: 0 0 280px;
-			}
-
-			h1 {
-				font-size: 28px;
-			}
-
-			h2 {
-				font-size: 22px;
-			}
-
-			.theme-toggle {
-				font-size: 12px;
-				padding: 5px 10px;
-			}
-		}
-
-		footer {
-			text-align: center;
-			padding: 30px 20px 40px;
-			margin-top: 40px;
-			border-top: 1px solid #e0e0e0;
-			color: #888;
-			font-size: 0.9em;
-		}
-
-		body.dark-mode footer {
-			border-top-color: #444;
-			color: #777;
-		}
-
-		footer a {
-			color: #888;
-			text-decoration: none;
-		}
-
-		footer a:hover {
-			color: var(--green-color);
-		}
-
-		body.dark-mode footer a {
-			color: #777;
-		}
-
-		body.dark-mode footer a:hover {
-			color: var(--green-light);
-		}
-
-		.footer-copyright {
-			display: inline-block;
-			position: relative;
-			padding-right: 6px;
-			white-space: nowrap;
-		}
-
-		.footer-stat {
-			display: inline-flex;
-			align-items: center;
-			justify-content: center;
-			position: absolute;
-			right: -2px;
-			bottom: -1px;
-			vertical-align: middle;
-			width: 8px;
-			height: 8px;
-			overflow: hidden;
-			line-height: 0;
-		}
-
-		.footer-stat span,
-		.footer-stat a,
-		.footer-stat img,
-		.footer-stat iframe {
-			display: inline-block !important;
-			width: 8px !important;
-			height: 8px !important;
-			max-width: 8px !important;
-			max-height: 8px !important;
-			object-fit: contain;
-		}
-
-	</style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mengyuan (Marvin) Li | TEE, Confidential Computing, Verifiable AI, and AI Systems Security</title>
+<meta name="description" content="Mengyuan (Marvin) Li is an Assistant Professor of Computer Science at USC and leads SEPT Lab. Recruiting PhD students for Fall 2027. Research on verifiable AI systems, TEEs, confidential computing, system and hardware security, and AI agent security.">
+<meta name="author" content="Mengyuan (Marvin) Li">
+<meta name="google-site-verification" content="zdhqFpA0oKjkjctPEFDgbejj96u3NkxTf8JfEv7Bwqs">
+<link rel="canonical" href="https://mengyuan-l.github.io/">
+<link rel="alternate" type="text/markdown" title="LLM-friendly site index (llms.txt)" href="https://mengyuan-l.github.io/llms.txt">
+<link rel="alternate" type="text/markdown" title="Full site text for LLMs (llms-full.txt)" href="https://mengyuan-l.github.io/llms-full.txt">
+<link rel="me" href="https://scholar.google.com/citations?user=cgjqyuoAAAAJ">
+<link rel="me" href="https://dblp.org/pid/157/4437-4.html">
+<link rel="me" href="https://viterbi.usc.edu/directory/faculty/Li/Mengyuan">
+<link rel="me" href="https://github.com/Mengyuan-L">
+<meta property="og:type" content="profile">
+<meta property="og:site_name" content="Mengyuan (Marvin) Li">
+<meta property="og:title" content="Mengyuan (Marvin) Li | TEE, Confidential Computing, Verifiable AI, and AI Systems Security">
+<meta property="og:description" content="Assistant Professor of Computer Science at USC and lead of SEPT Lab, recruiting PhD students for Fall 2027. Research on verifiable AI systems, TEEs, confidential computing, system and hardware security, and AI agent security.">
+<meta property="og:url" content="https://mengyuan-l.github.io/">
+<meta property="og:image" content="https://mengyuan-l.github.io/files/mengyuan-480.jpg">
+<meta property="og:image:width" content="480">
+<meta property="og:image:height" content="480">
+<meta property="og:image:alt" content="Portrait of Mengyuan (Marvin) Li">
+<meta property="profile:first_name" content="Mengyuan">
+<meta property="profile:last_name" content="Li">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#141414" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/img/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<script>(function(){var d=document.documentElement;d.classList.add('js');try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){d.setAttribute('data-theme',t);var c=t==='dark'?'#141414':'#ffffff',m=document.querySelectorAll('meta[name="theme-color"]');for(var i=0;i<m.length;i++)m[i].setAttribute('content',c);}}catch(e){}})();</script>
+<link rel="stylesheet" href="assets/css/site.css">
+<script src="assets/js/site.js" defer></script>
+<!-- BEGIN json-ld (generated) -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"ProfilePage","@id":"https://mengyuan-l.github.io/#profilepage","url":"https://mengyuan-l.github.io/","name":"Mengyuan (Marvin) Li | TEE, Confidential Computing, Verifiable AI, and AI Systems Security","inLanguage":"en","dateModified":"2026-10-25","mainEntity":{"@id":"https://mengyuan-l.github.io/#person"},"isPartOf":{"@id":"https://mengyuan-l.github.io/#website"},"relatedLink":["https://septlab.com/","https://verifiable.pro/"]},
+{"@type":"WebSite","@id":"https://mengyuan-l.github.io/#website","url":"https://mengyuan-l.github.io/","name":"Mengyuan (Marvin) Li","inLanguage":"en","publisher":{"@id":"https://mengyuan-l.github.io/#person"}},
+{"@type":"Person","@id":"https://mengyuan-l.github.io/#person","name":"Mengyuan Li","alternateName":["Mengyuan (Marvin) Li","Marvin Li"],"givenName":"Mengyuan","familyName":"Li","url":"https://mengyuan-l.github.io/","image":"https://mengyuan-l.github.io/files/mengyuan-480.jpg","email":"mailto:mengyuanli@usc.edu","jobTitle":"Assistant Professor of Computer Science","description":"Assistant Professor of Computer Science at the University of Southern California and leader of SEPT Lab (Security, Privacy, and Trust). Research on verifiable AI systems, trusted execution environments and confidential computing, system and hardware security including side channels, and AI agent security.","worksFor":{"@id":"https://mengyuan-l.github.io/#usc"},"affiliation":[{"@id":"https://mengyuan-l.github.io/#usc-cs"},{"@id":"https://mengyuan-l.github.io/#usc-ece"},{"@id":"https://septlab.com/#lab"}],"memberOf":{"@id":"https://septlab.com/#lab"},"alumniOf":[{"@type":"CollegeOrUniversity","name":"The Ohio State University","url":"https://www.osu.edu/"}],"knowsAbout":["Verifiable AI systems","Trusted execution environments (TEEs)","Confidential computing","AMD SEV-SNP","Intel SGX","Confidential VMs","Confidential GPUs","Zero-knowledge verification of LLM inference","Side-channel attacks","System and hardware security","Cloud security","AI systems security","AI agent security"],"award":["Best Paper Award Runner-Up, ACM CCS 2021 (CROSSLINE)"],"sameAs":["https://scholar.google.com/citations?user=cgjqyuoAAAAJ","https://dblp.org/pid/157/4437-4.html","https://viterbi.usc.edu/directory/faculty/Li/Mengyuan","https://github.com/Mengyuan-L","https://septlab.com/people.html#person-mengyuan-li"],"workLocation":{"@type":"Place","name":"Ginsburg Hall (GCS), University of Southern California","address":{"@type":"PostalAddress","streetAddress":"1031 Downey Way","addressLocality":"Los Angeles","addressRegion":"CA","postalCode":"90089","addressCountry":"US"}}},
+{"@type":"CollegeOrUniversity","@id":"https://mengyuan-l.github.io/#usc","name":"University of Southern California","url":"https://www.usc.edu/"},
+{"@type":"Organization","@id":"https://mengyuan-l.github.io/#usc-cs","name":"Thomas Lord Department of Computer Science","url":"https://www.cs.usc.edu/","parentOrganization":{"@id":"https://mengyuan-l.github.io/#usc"}},
+{"@type":"Organization","@id":"https://mengyuan-l.github.io/#usc-ece","name":"Ming Hsieh Department of Electrical and Computer Engineering","url":"https://minghsiehece.usc.edu/","parentOrganization":{"@id":"https://mengyuan-l.github.io/#usc"}},
+{"@type":"Organization","@id":"https://septlab.com/#lab","name":"SEPT Lab","alternateName":"Security, Privacy, and Trust Lab","url":"https://septlab.com/","founder":{"@id":"https://mengyuan-l.github.io/#person"},"parentOrganization":{"@id":"https://mengyuan-l.github.io/#usc-cs"},"sameAs":["https://github.com/sept-usc"]},
+{"@type":"WebSite","@id":"https://verifiable.pro/#website","name":"verifiable.pro","url":"https://verifiable.pro/","description":"Public resource maintained by SEPT Lab with news, explainers, and guides on verifiable AI.","maintainer":{"@id":"https://septlab.com/#lab"}},
+{"@type":"ScholarlyArticle","@id":"https://mengyuan-l.github.io/#hollow-llm-sp26","name":"Hollow-LLM Attack: Computationally Trivial Weights in Zero-Knowledge Verification of LLM Inference","author":[{"@type":"Person","name":"Chen Gong"},{"@type":"Person","name":"Beijie Liu"},{"@id":"https://mengyuan-l.github.io/#person"}],"datePublished":"2026","url":"https://doi.org/10.1109/SP63933.2026.00258","isPartOf":{"@type":"CreativeWork","name":"2026 IEEE Symposium on Security and Privacy (S&P 2026)"},"identifier":[{"@type":"PropertyValue","propertyID":"DOI","value":"10.1109/SP63933.2026.00258"},{"@type":"PropertyValue","propertyID":"arXiv","value":"2607.28884"}],"sameAs":"https://arxiv.org/abs/2607.28884"},
+{"@type":"ScholarlyArticle","@id":"https://mengyuan-l.github.io/#wave-asplos26","name":"WAVE: Leveraging Architecture Observation for Privacy-Preserving Model Oversight","author":[{"@type":"Person","name":"Haoxuan Xu"},{"@type":"Person","name":"Chen Gong"},{"@type":"Person","name":"Beijie Liu"},{"@type":"Person","name":"Haizhong Zheng"},{"@type":"Person","name":"Beidi Chen"},{"@id":"https://mengyuan-l.github.io/#person"}],"datePublished":"2026","url":"https://doi.org/10.1145/3779212.3790247","isPartOf":{"@type":"CreativeWork","name":"31st ACM International Conference on Architectural Support for Programming Languages and Operating Systems (ASPLOS 2026)"},"identifier":{"@type":"PropertyValue","propertyID":"DOI","value":"10.1145/3779212.3790247"}},
+{"@type":"ScholarlyArticle","@id":"https://mengyuan-l.github.io/#cvm-query-cost-sequredb26","name":"Query Cost Model Calibration in Confidential Virtual Machines","author":[{"@type":"Person","name":"Qihan Zhang"},{"@id":"https://mengyuan-l.github.io/#person"},{"@type":"Person","name":"Ibrahim Sabek"}],"datePublished":"2026","url":"https://arxiv.org/abs/2606.26385","isPartOf":{"@type":"CreativeWork","name":"Workshop on Secure and Private Data Management (SeQureDB 2026)"},"identifier":{"@type":"PropertyValue","propertyID":"arXiv","value":"2606.26385"}},
+{"@type":"ScholarlyArticle","@id":"https://mengyuan-l.github.io/#mc-oram-isca26","name":"MC-ORAM: A Mask-Assisted and Counter-Based Non-Deterministic ORAM Inside VM-Based TEEs","author":[{"@type":"Person","name":"Yongqin Wang"},{"@type":"Person","name":"Rachit Rajat"},{"@type":"Person","name":"Jonghyun Lee"},{"@id":"https://mengyuan-l.github.io/#person"},{"@type":"Person","name":"Murali Annavaram"}],"datePublished":"2026","url":"https://doi.org/10.1109/ISCA66397.2026.00047","isPartOf":{"@type":"CreativeWork","name":"53rd ACM/IEEE Annual International Symposium on Computer Architecture (ISCA 2026)"},"identifier":{"@type":"PropertyValue","propertyID":"DOI","value":"10.1109/ISCA66397.2026.00047"}},
+{"@type":"ScholarlyArticle","@id":"https://mengyuan-l.github.io/#scale-hpca26","name":"SCALE: Tackling Communication Bottlenecks in Confidential Distributed Machine Learning","author":[{"@type":"Person","name":"Joongun Park"},{"@type":"Person","name":"Yongqin Wang"},{"@type":"Person","name":"Huan Xu"},{"@type":"Person","name":"Hanjiang Wu"},{"@id":"https://mengyuan-l.github.io/#person"},{"@type":"Person","name":"Tushar Krishna"}],"datePublished":"2026","url":"https://doi.org/10.1109/HPCA68181.2026.11408582","isPartOf":{"@type":"CreativeWork","name":"2026 IEEE International Symposium on High-Performance Computer Architecture (HPCA 2026)"},"identifier":{"@type":"PropertyValue","propertyID":"DOI","value":"10.1109/HPCA68181.2026.11408582"}},
+{"@type":"ScholarlyArticle","@id":"https://mengyuan-l.github.io/#safety-offset-arxiv26","name":"Safety Offset Learning: When Benign Fine-Tuning Misaligns LLMs","author":[{"@type":"Person","name":"Jesson Wang"},{"@type":"Person","name":"Zhanhao Hu"},{"@type":"Person","name":"Minghao Lin"},{"@type":"Person","name":"Yuchen Wu"},{"@type":"Person","name":"Aylin Caliskan"},{"@id":"https://mengyuan-l.github.io/#person"}],"datePublished":"2026","url":"https://arxiv.org/abs/2610.25611","isPartOf":{"@type":"CreativeWork","name":"arXiv preprint arXiv:2610.25611"},"creativeWorkStatus":"Preprint","identifier":{"@type":"PropertyValue","propertyID":"arXiv","value":"2610.25611"}},
+{"@type":"ScholarlyArticle","@id":"https://mengyuan-l.github.io/#catchbench-arxiv26","name":"CatchBench: When Can an Agent Failure Be Caught?","author":[{"@type":"Person","name":"Yue Zhao"},{"@id":"https://mengyuan-l.github.io/#person"},{"@type":"Person","name":"Ruolin Li"},{"@type":"Person","name":"Prince Zizhuang Wang"},{"@type":"Person","name":"Shuli Jiang"},{"@type":"Person","name":"Linsey Pang"},{"@type":"Person","name":"Xiongye Xiao"},{"@type":"Person","name":"Xiyang Hu"}],"datePublished":"2026","url":"https://arxiv.org/abs/2608.22808","isPartOf":{"@type":"CreativeWork","name":"arXiv preprint arXiv:2608.22808"},"creativeWorkStatus":"Preprint","identifier":{"@type":"PropertyValue","propertyID":"arXiv","value":"2608.22808"}},
+{"@type":"ScholarlyArticle","@id":"https://mengyuan-l.github.io/#arrowcloak-arxiv26","name":"Hiding Directions, Leaking Structure: Breaking ArrowCloak through Low-Rank Structure","author":[{"@type":"Person","name":"Beijie Liu"},{"@type":"Person","name":"Junyi Ouyang"},{"@type":"Person","name":"Haoxuan Xu"},{"@type":"Person","name":"Vincent Quentin Ulitzsch"},{"@type":"Person","name":"Potung Yu"},{"@type":"Person","name":"Yajie Zhao"},{"@id":"https://mengyuan-l.github.io/#person"}],"datePublished":"2026","url":"https://arxiv.org/abs/2608.21615","isPartOf":{"@type":"CreativeWork","name":"arXiv preprint arXiv:2608.21615"},"creativeWorkStatus":"Preprint","identifier":{"@type":"PropertyValue","propertyID":"arXiv","value":"2608.21615"}},
+{"@type":"ScholarlyArticle","@id":"https://mengyuan-l.github.io/#skill-reconstruction-arxiv26","name":"Behavioral Skill Reconstruction: Reconstructing Hidden Functionality from LLM Agent Skills","author":[{"@type":"Person","name":"Peichun Hua"},{"@type":"Person","name":"Haoxuan Xu"},{"@id":"https://mengyuan-l.github.io/#person"}],"datePublished":"2026","url":"https://arxiv.org/abs/2608.04192","isPartOf":{"@type":"CreativeWork","name":"arXiv preprint arXiv:2608.04192"},"creativeWorkStatus":"Preprint","identifier":{"@type":"PropertyValue","propertyID":"arXiv","value":"2608.04192"}},
+{"@type":"ScholarlyArticle","@id":"https://mengyuan-l.github.io/#otro-arxiv26","name":"OTRO: Oblivious Tokenization Path with Square-Root ORAM","author":[{"@type":"Person","name":"Jonghyun Lee"},{"@type":"Person","name":"Yongqin Wang"},{"@type":"Person","name":"Rachit Rajat"},{"@type":"Person","name":"Daniel Wong"},{"@id":"https://mengyuan-l.github.io/#person"},{"@type":"Person","name":"Murali Annavaram"}],"datePublished":"2026","url":"https://arxiv.org/abs/2606.17358","isPartOf":{"@type":"CreativeWork","name":"arXiv preprint arXiv:2606.17358"},"creativeWorkStatus":"Preprint","identifier":{"@type":"PropertyValue","propertyID":"arXiv","value":"2606.17358"}},
+{"@type":"ScholarlyArticle","@id":"https://mengyuan-l.github.io/#agent-memory-arxiv26","name":"Infrastructure for Valuable, Tradable, and Verifiable Agent Memory","author":[{"@id":"https://mengyuan-l.github.io/#person"},{"@type":"Person","name":"Lei Gao"},{"@type":"Person","name":"Haoxuan Xu"},{"@type":"Person","name":"Jiate Li"},{"@type":"Person","name":"Potung Yu"},{"@type":"Person","name":"Lingke Cheng"},{"@type":"Person","name":"Yue Zhao"},{"@type":"Person","name":"Murali Annavaram"}],"datePublished":"2026","url":"https://arxiv.org/abs/2603.24564","isPartOf":{"@type":"CreativeWork","name":"arXiv preprint arXiv:2603.24564"},"creativeWorkStatus":"Preprint","identifier":{"@type":"PropertyValue","propertyID":"arXiv","value":"2603.24564"}},
+{"@type":"ScholarlyArticle","@id":"https://mengyuan-l.github.io/#chekhovs-gun-ccs25","name":"Chekhov's Gun: Uncovering Hidden Risks in macOS Application-Sandboxed PID-Domain Services","author":[{"@type":"Person","name":"Minghao Lin"},{"@type":"Person","name":"Jiaxun Zhu"},{"@type":"Person","name":"Tingting Yin"},{"@type":"Person","name":"Zechao Cai"},{"@type":"Person","name":"Guanxing Wen"},{"@type":"Person","name":"Yanan Guo"},{"@id":"https://mengyuan-l.github.io/#person"}],"datePublished":"2025","url":"https://doi.org/10.1145/3719027.3765205","isPartOf":{"@type":"CreativeWork","name":"2025 ACM SIGSAC Conference on Computer and Communications Security (CCS 2025)"},"identifier":{"@type":"PropertyValue","propertyID":"DOI","value":"10.1145/3719027.3765205"}},
+{"@type":"ScholarlyArticle","@id":"https://mengyuan-l.github.io/#writing-symbiosis-neurips25","name":"Writing in Symbiosis: Mapping Human Creative Agency in the AI Era","author":[{"@type":"Person","name":"Vivan Doshi"},{"@id":"https://mengyuan-l.github.io/#person"}],"datePublished":"2025","url":"https://proceedings.neurips.cc/paper_files/paper/2025/hash/615229550c97d1c4d006a4bf6b54590e-Abstract-Creative_AI_Track.html","isPartOf":{"@type":"CreativeWork","name":"Advances in Neural Information Processing Systems 38 (NeurIPS 2025), Creative AI Track"},"identifier":{"@type":"PropertyValue","propertyID":"arXiv","value":"2512.13697"},"sameAs":"https://arxiv.org/abs/2512.13697"},
+{"@type":"ScholarlyArticle","@id":"https://mengyuan-l.github.io/#rmp-caching-hasp25","name":"A Close Look at RMP Entry Caching and Its Security Implications in SEV-SNP","author":[{"@type":"Person","name":"Alexis Bagia"},{"@type":"Person","name":"Vincent Quentin Ulitzsch"},{"@type":"Person","name":"Daniël Trujillo"},{"@id":"https://mengyuan-l.github.io/#person"},{"@type":"Person","name":"Mengjia Yan"},{"@type":"Person","name":"Jean-Pierre Seifert"}],"datePublished":"2025","url":"https://doi.org/10.1145/3768725.3768727","isPartOf":{"@type":"CreativeWork","name":"14th International Workshop on Hardware and Architectural Support for Security and Privacy (HASP 2025)"},"identifier":{"@type":"PropertyValue","propertyID":"DOI","value":"10.1145/3768725.3768727"}},
+{"@type":"ScholarlyArticle","@id":"https://mengyuan-l.github.io/#fewshot-graph-ood-ecmlpkdd25","name":"Few-Shot Graph Out-of-Distribution Detection with LLMs","author":[{"@type":"Person","name":"Haoyan Xu"},{"@type":"Person","name":"Zhengtao Yao"},{"@type":"Person","name":"Yushun Dong"},{"@type":"Person","name":"Ziyi Wang"},{"@type":"Person","name":"Ryan A. Rossi"},{"@id":"https://mengyuan-l.github.io/#person"},{"@type":"Person","name":"Yue Zhao"}],"datePublished":"2025","url":"https://doi.org/10.1007/978-3-032-06078-5_18","isPartOf":{"@type":"CreativeWork","name":"European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases (ECML PKDD 2025)"},"identifier":[{"@type":"PropertyValue","propertyID":"DOI","value":"10.1007/978-3-032-06078-5_18"},{"@type":"PropertyValue","propertyID":"arXiv","value":"2503.22097"}],"sameAs":"https://arxiv.org/abs/2503.22097"},
+{"@type":"ScholarlyArticle","@id":"https://mengyuan-l.github.io/#lego-learn-tmlr25","name":"LEGO-Learn: Label-Efficient Graph Open-Set Learning","author":[{"@type":"Person","name":"Haoyan Xu"},{"@type":"Person","name":"Kay Liu"},{"@type":"Person","name":"Zhengtao Yao"},{"@type":"Person","name":"Philip S. Yu"},{"@id":"https://mengyuan-l.github.io/#person"},{"@type":"Person","name":"Kaize Ding"},{"@type":"Person","name":"Yue Zhao"}],"datePublished":"2025","url":"https://openreview.net/forum?id=J6oxTJPOyN","isPartOf":{"@type":"Periodical","name":"Transactions on Machine Learning Research (TMLR)"},"identifier":{"@type":"PropertyValue","propertyID":"arXiv","value":"2410.16386"},"sameAs":"https://arxiv.org/abs/2410.16386"},
+{"@type":"ScholarlyArticle","@id":"https://mengyuan-l.github.io/#gfm-extraction-arxiv25","name":"A Systematic Study of Model Extraction Attacks on Graph Foundation Models","author":[{"@type":"Person","name":"Haoyan Xu"},{"@type":"Person","name":"Ruizhi Qian"},{"@type":"Person","name":"Jiate Li"},{"@type":"Person","name":"Yushun Dong"},{"@type":"Person","name":"Minghao Lin"},{"@type":"Person","name":"Hanson Yan"},{"@type":"Person","name":"Zhengtao Yao"},{"@type":"Person","name":"Qinghua Liu"},{"@type":"Person","name":"Junhao Dong"},{"@type":"Person","name":"Ruopeng Huang"},{"@type":"Person","name":"Yue Zhao"},{"@id":"https://mengyuan-l.github.io/#person"}],"datePublished":"2025","url":"https://arxiv.org/abs/2511.11912","isPartOf":{"@type":"CreativeWork","name":"arXiv preprint arXiv:2511.11912"},"creativeWorkStatus":"Preprint","identifier":{"@type":"PropertyValue","propertyID":"arXiv","value":"2511.11912"}},
+{"@type":"ScholarlyArticle","@id":"https://mengyuan-l.github.io/#vreaves-arxiv25","name":"VReaves: Eavesdropping on Virtual Reality App Identity and Activity via Electromagnetic Side Channels","author":[{"@type":"Person","name":"Wei Sun"},{"@type":"Person","name":"Minghong Fang"},{"@id":"https://mengyuan-l.github.io/#person"}],"datePublished":"2025","url":"https://arxiv.org/abs/2506.17570","isPartOf":{"@type":"CreativeWork","name":"arXiv preprint arXiv:2506.17570"},"creativeWorkStatus":"Preprint","identifier":{"@type":"PropertyValue","propertyID":"arXiv","value":"2506.17570"}},
+{"@type":"ScholarlyArticle","@id":"https://mengyuan-l.github.io/#glip-ood-arxiv25","name":"GLIP-OOD: Zero-Shot Graph OOD Detection with Graph Foundation Model","author":[{"@type":"Person","name":"Haoyan Xu"},{"@type":"Person","name":"Zhengtao Yao"},{"@type":"Person","name":"Xuzhi Zhang"},{"@type":"Person","name":"Ziyi Wang"},{"@type":"Person","name":"Langzhou He"},{"@type":"Person","name":"Yushun Dong"},{"@type":"Person","name":"Philip S. Yu"},{"@id":"https://mengyuan-l.github.io/#person"},{"@type":"Person","name":"Yue Zhao"}],"datePublished":"2025","url":"https://arxiv.org/abs/2504.21186","isPartOf":{"@type":"CreativeWork","name":"arXiv preprint arXiv:2504.21186"},"creativeWorkStatus":"Preprint","identifier":{"@type":"PropertyValue","propertyID":"arXiv","value":"2504.21186"}},
+{"@type":"ScholarlyArticle","@id":"https://mengyuan-l.github.io/#graph-ood-exposure-arxiv25","name":"Graph Synthetic Out-of-Distribution Exposure with Large Language Models","author":[{"@type":"Person","name":"Haoyan Xu"},{"@type":"Person","name":"Zhengtao Yao"},{"@type":"Person","name":"Ziyi Wang"},{"@type":"Person","name":"Zhan Cheng"},{"@type":"Person","name":"Xiyang Hu"},{"@id":"https://mengyuan-l.github.io/#person"},{"@type":"Person","name":"Yue Zhao"}],"datePublished":"2025","url":"https://arxiv.org/abs/2504.21198","isPartOf":{"@type":"CreativeWork","name":"arXiv preprint arXiv:2504.21198"},"creativeWorkStatus":"Preprint","identifier":{"@type":"PropertyValue","propertyID":"arXiv","value":"2504.21198"}},
+{"@type":"ScholarlyArticle","@id":"https://mengyuan-l.github.io/#sok-tee-asiaccs24","name":"SoK: Understanding Design Choices and Pitfalls of Trusted Execution Environments","author":[{"@id":"https://mengyuan-l.github.io/#person"},{"@type":"Person","name":"Yuheng Yang"},{"@type":"Person","name":"Guoxing Chen"},{"@type":"Person","name":"Mengjia Yan"},{"@type":"Person","name":"Yinqian Zhang"}],"datePublished":"2024","url":"https://doi.org/10.1145/3634737.3644993","isPartOf":{"@type":"CreativeWork","name":"19th ACM Asia Conference on Computer and Communications Security (ASIA CCS 2024)"},"identifier":{"@type":"PropertyValue","propertyID":"DOI","value":"10.1145/3634737.3644993"}},
+{"@type":"ScholarlyArticle","@id":"https://mengyuan-l.github.io/#ditto-arxiv24","name":"Ditto: Elastic Confidential VMs with Secure and Dynamic CPU Scaling","author":[{"@type":"Person","name":"Shixuan Zhao"},{"@id":"https://mengyuan-l.github.io/#person"},{"@type":"Person","name":"Mengjia Yan"},{"@type":"Person","name":"Zhiqiang Lin"}],"datePublished":"2024","url":"https://arxiv.org/abs/2409.15542","isPartOf":{"@type":"CreativeWork","name":"arXiv preprint arXiv:2409.15542"},"creativeWorkStatus":"Preprint","identifier":{"@type":"PropertyValue","propertyID":"arXiv","value":"2409.15542"}},
+{"@type":"ScholarlyArticle","@id":"https://mengyuan-l.github.io/#bridge-the-future-arxiv24","name":"Bridge the Future: High-Performance Networks in Confidential VMs without Trusted I/O devices","author":[{"@id":"https://mengyuan-l.github.io/#person"},{"@type":"Person","name":"Shashvat Srivastava"},{"@type":"Person","name":"Mengjia Yan"}],"datePublished":"2024","url":"https://arxiv.org/abs/2403.03360","isPartOf":{"@type":"CreativeWork","name":"arXiv preprint arXiv:2403.03360"},"creativeWorkStatus":"Preprint","identifier":{"@type":"PropertyValue","propertyID":"arXiv","value":"2403.03360"}},
+{"@type":"ScholarlyArticle","@id":"https://mengyuan-l.github.io/#cipherh-usenixsec23","name":"CipherH: Automated Detection of Ciphertext Side-channel Vulnerabilities in Cryptographic Implementations","author":[{"@type":"Person","name":"Sen Deng"},{"@id":"https://mengyuan-l.github.io/#person"},{"@type":"Person","name":"Yining Tang"},{"@type":"Person","name":"Shuai Wang"},{"@type":"Person","name":"Shoumeng Yan"},{"@type":"Person","name":"Yinqian Zhang"}],"datePublished":"2023","url":"https://www.usenix.org/conference/usenixsecurity23/presentation/deng-sen","isPartOf":{"@type":"CreativeWork","name":"32nd USENIX Security Symposium (USENIX Security 2023)"}},
+{"@type":"ScholarlyArticle","@id":"https://mengyuan-l.github.io/#pwrleak-dimva23","name":"PWRLEAK: Exploiting Power Reporting Interface for Side-Channel Attacks on AMD SEV","author":[{"@type":"Person","name":"Wubing Wang"},{"@id":"https://mengyuan-l.github.io/#person"},{"@type":"Person","name":"Yinqian Zhang"},{"@type":"Person","name":"Zhiqiang Lin"}],"datePublished":"2023","url":"https://doi.org/10.1007/978-3-031-35504-2_3","isPartOf":{"@type":"CreativeWork","name":"20th Conference on Detection of Intrusions and Malware & Vulnerability Assessment (DIMVA 2023)"},"identifier":{"@type":"PropertyValue","propertyID":"DOI","value":"10.1007/978-3-031-35504-2_3"}},
+{"@type":"ScholarlyArticle","@id":"https://mengyuan-l.github.io/#ciphertext-sev-snp-sp22","name":"A Systematic Look at Ciphertext Side Channels on AMD SEV-SNP","author":[{"@id":"https://mengyuan-l.github.io/#person"},{"@type":"Person","name":"Luca Wilke"},{"@type":"Person","name":"Jan Wichelmann"},{"@type":"Person","name":"Thomas Eisenbarth"},{"@type":"Person","name":"Radu Teodorescu"},{"@type":"Person","name":"Yinqian Zhang"}],"datePublished":"2022","url":"https://doi.org/10.1109/SP46214.2022.9833768","isPartOf":{"@type":"CreativeWork","name":"2022 IEEE Symposium on Security and Privacy (S&P 2022)"},"identifier":{"@type":"PropertyValue","propertyID":"DOI","value":"10.1109/SP46214.2022.9833768"}},
+{"@type":"ScholarlyArticle","@id":"https://mengyuan-l.github.io/#vsgx-sp22","name":"vSGX: Virtualizing SGX Enclaves on AMD SEV","author":[{"@type":"Person","name":"Shixuan Zhao"},{"@id":"https://mengyuan-l.github.io/#person"},{"@type":"Person","name":"Yinqian Zhang"},{"@type":"Person","name":"Zhiqiang Lin"}],"datePublished":"2022","url":"https://doi.org/10.1109/SP46214.2022.9833694","isPartOf":{"@type":"CreativeWork","name":"2022 IEEE Symposium on Security and Privacy (S&P 2022)"},"identifier":{"@type":"PropertyValue","propertyID":"DOI","value":"10.1109/SP46214.2022.9833694"}},
+{"@type":"Thesis","@id":"https://mengyuan-l.github.io/#phd-thesis-osu22","name":"Understanding and Exploiting Design Flaws of AMD Secure Encrypted Virtualization","author":[{"@id":"https://mengyuan-l.github.io/#person"}],"datePublished":"2022","url":"https://www.proquest.com/openview/e4211fc9bbca1b28c1167c6fcca66c49/1","inSupportOf":"Ph.D.","sourceOrganization":{"@type":"CollegeOrUniversity","name":"The Ohio State University"}},
+{"@type":"ScholarlyArticle","@id":"https://mengyuan-l.github.io/#tlb-poisoning-acsac21","name":"TLB Poisoning Attacks on AMD Secure Encrypted Virtualization","author":[{"@id":"https://mengyuan-l.github.io/#person"},{"@type":"Person","name":"Yinqian Zhang"},{"@type":"Person","name":"Huibo Wang"},{"@type":"Person","name":"Kang Li"},{"@type":"Person","name":"Yueqiang Cheng"}],"datePublished":"2021","url":"https://doi.org/10.1145/3485832.3485876","isPartOf":{"@type":"CreativeWork","name":"37th Annual Computer Security Applications Conference (ACSAC 2021)"},"identifier":{"@type":"PropertyValue","propertyID":"DOI","value":"10.1145/3485832.3485876"}},
+{"@type":"ScholarlyArticle","@id":"https://mengyuan-l.github.io/#crossline-ccs21","name":"CROSSLINE: Breaking \"Security-by-Crash\" based Memory Isolation in AMD SEV","author":[{"@id":"https://mengyuan-l.github.io/#person"},{"@type":"Person","name":"Yinqian Zhang"},{"@type":"Person","name":"Zhiqiang Lin"}],"datePublished":"2021","url":"https://doi.org/10.1145/3460120.3485253","isPartOf":{"@type":"CreativeWork","name":"2021 ACM SIGSAC Conference on Computer and Communications Security (CCS 2021)"},"identifier":[{"@type":"PropertyValue","propertyID":"DOI","value":"10.1145/3460120.3485253"},{"@type":"PropertyValue","propertyID":"arXiv","value":"2008.00146"}],"sameAs":"https://arxiv.org/abs/2008.00146","award":"Best Paper Award Runner-Up"},
+{"@type":"ScholarlyArticle","@id":"https://mengyuan-l.github.io/#cipherleaks-usenixsec21","name":"CIPHERLEAKS: Breaking Constant-time Cryptography on AMD SEV via the Ciphertext Side Channel","author":[{"@id":"https://mengyuan-l.github.io/#person"},{"@type":"Person","name":"Yinqian Zhang"},{"@type":"Person","name":"Huibo Wang"},{"@type":"Person","name":"Kang Li"},{"@type":"Person","name":"Yueqiang Cheng"}],"datePublished":"2021","url":"https://www.usenix.org/conference/usenixsecurity21/presentation/li-mengyuan","isPartOf":{"@type":"CreativeWork","name":"30th USENIX Security Symposium (USENIX Security 2021)"}},
+{"@type":"ScholarlyArticle","@id":"https://mengyuan-l.github.io/#hyperrace-dsc19","name":"Defeating Speculative-Execution Attacks on SGX with HyperRace","author":[{"@type":"Person","name":"Guoxing Chen"},{"@id":"https://mengyuan-l.github.io/#person"},{"@type":"Person","name":"Fengwei Zhang"},{"@type":"Person","name":"Yinqian Zhang"}],"datePublished":"2019","url":"https://doi.org/10.1109/DSC47296.2019.8937682","isPartOf":{"@type":"CreativeWork","name":"2019 IEEE Conference on Dependable and Secure Computing (DSC 2019)"},"identifier":{"@type":"PropertyValue","propertyID":"DOI","value":"10.1109/DSC47296.2019.8937682"}},
+{"@type":"ScholarlyArticle","@id":"https://mengyuan-l.github.io/#sev-io-usenixsec19","name":"Exploiting Unprotected I/O Operations in AMD's Secure Encrypted Virtualization","author":[{"@id":"https://mengyuan-l.github.io/#person"},{"@type":"Person","name":"Yinqian Zhang"},{"@type":"Person","name":"Zhiqiang Lin"},{"@type":"Person","name":"Yan Solihin"}],"datePublished":"2019","url":"https://www.usenix.org/conference/usenixsecurity19/presentation/li-mengyuan","isPartOf":{"@type":"CreativeWork","name":"28th USENIX Security Symposium (USENIX Security 2019)"}},
+{"@type":"ScholarlyArticle","@id":"https://mengyuan-l.github.io/#serverless-atc18","name":"Peeking Behind the Curtains of Serverless Platforms","author":[{"@type":"Person","name":"Liang Wang"},{"@id":"https://mengyuan-l.github.io/#person"},{"@type":"Person","name":"Yinqian Zhang"},{"@type":"Person","name":"Thomas Ristenpart"},{"@type":"Person","name":"Michael Swift"}],"datePublished":"2018","url":"https://www.usenix.org/conference/atc18/presentation/wang-liang","isPartOf":{"@type":"CreativeWork","name":"2018 USENIX Annual Technical Conference (USENIX ATC 2018)"}},
+{"@type":"ScholarlyArticle","@id":"https://mengyuan-l.github.io/#stacco-ccs17","name":"Stacco: Differentially Analyzing Side-Channel Traces for Detecting SSL/TLS Vulnerabilities in Secure Enclaves","author":[{"@type":"Person","name":"Yuan Xiao"},{"@id":"https://mengyuan-l.github.io/#person"},{"@type":"Person","name":"Sanchuan Chen"},{"@type":"Person","name":"Yinqian Zhang"}],"datePublished":"2017","url":"https://doi.org/10.1145/3133956.3134016","isPartOf":{"@type":"CreativeWork","name":"2017 ACM SIGSAC Conference on Computer and Communications Security (CCS 2017)"},"identifier":[{"@type":"PropertyValue","propertyID":"DOI","value":"10.1145/3133956.3134016"},{"@type":"PropertyValue","propertyID":"arXiv","value":"1707.03473"}],"sameAs":"https://arxiv.org/abs/1707.03473"},
+{"@type":"ScholarlyArticle","@id":"https://mengyuan-l.github.io/#spfm-iotj17","name":"SPFM: Scalable and Privacy-Preserving Friend Matching in Mobile Cloud","author":[{"@id":"https://mengyuan-l.github.io/#person"},{"@type":"Person","name":"Na Ruan"},{"@type":"Person","name":"Qiyang Qian"},{"@type":"Person","name":"Haojin Zhu"},{"@type":"Person","name":"Xiaohui Liang"},{"@type":"Person","name":"Le Yu"}],"datePublished":"2017","url":"https://doi.org/10.1109/JIOT.2016.2582780","isPartOf":{"@type":"Periodical","name":"IEEE Internet of Things Journal, vol. 4, no. 2"},"identifier":{"@type":"PropertyValue","propertyID":"DOI","value":"10.1109/JIOT.2016.2582780"}},
+{"@type":"ScholarlyArticle","@id":"https://mengyuan-l.github.io/#csi-wifi-ccs16","name":"When CSI Meets Public WiFi: Inferring Your Mobile Phone Password via WiFi Signals","author":[{"@id":"https://mengyuan-l.github.io/#person"},{"@type":"Person","name":"Yan Meng"},{"@type":"Person","name":"Junyi Liu"},{"@type":"Person","name":"Haojin Zhu"},{"@type":"Person","name":"Xiaohui Liang"},{"@type":"Person","name":"Yao Liu"},{"@type":"Person","name":"Na Ruan"}],"datePublished":"2016","url":"https://doi.org/10.1145/2976749.2978397","isPartOf":{"@type":"CreativeWork","name":"2016 ACM SIGSAC Conference on Computer and Communications Security (CCS 2016)"},"identifier":{"@type":"PropertyValue","propertyID":"DOI","value":"10.1145/2976749.2978397"}},
+{"@type":"ScholarlyArticle","@id":"https://mengyuan-l.github.io/#jamming-jsac16","name":"You Can Jam But You Cannot Hide: Defending Against Jamming Attacks for Geo-Location Database Driven Spectrum Sharing","author":[{"@type":"Person","name":"Haojin Zhu"},{"@type":"Person","name":"Chenliaohui Fang"},{"@type":"Person","name":"Yao Liu"},{"@type":"Person","name":"Cailian Chen"},{"@id":"https://mengyuan-l.github.io/#person"},{"@type":"Person","name":"Xuemin Sherman Shen"}],"datePublished":"2016","url":"https://doi.org/10.1109/JSAC.2016.2605799","isPartOf":{"@type":"Periodical","name":"IEEE Journal on Selected Areas in Communications, vol. 34, no. 10"},"identifier":{"@type":"PropertyValue","propertyID":"DOI","value":"10.1109/JSAC.2016.2605799"}}
+]}
+</script>
+<!-- END json-ld -->
 </head>
+<body id="top">
+<a class="skip" href="#main">Skip to content</a>
 
-<body>
-	<div class="navbar">
-		<div class="navbar-content">
-			<div class="navbar-links">
-				<a href="./index.html">Mengyuan (Marvin) Li</a>
-				<a href="#myname">About</a>
-				<a href="#interests">Research</a>
-				<a href="https://septlab.com/">SEPT Lab</a>
-				<a href="#mypublication">Publications</a>
-				<a href="#myservices">Services</a>
-				<a href="25fall_699.html">Teaching</a>
-			</div>
-			<button class="theme-toggle" id="themeToggle" onclick="toggleTheme()">
-				<span id="themeIcon">🌙</span>
-				<span id="themeText">Dark</span>
-			</button>
-		</div>
-	</div>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="#top">Mengyuan (Marvin) Li</a>
+    <nav class="nav" aria-label="Main">
+      <ul role="list">
+        <li><a href="#about">About</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a class="hl" href="#join">Join</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#teaching">Teaching</a></li>
+        <li><a href="#service">Service</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="theme-toggle" type="button">
+      <svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.25" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8 1.75a6.25 6.25 0 0 1 0 12.5z" fill="currentColor"/></svg>
+      <span class="to-dark"><span class="sr">Switch to </span><span class="lbl">Dark</span><span class="sr"> theme</span></span>
+      <span class="to-light"><span class="sr">Switch to </span><span class="lbl">Light</span><span class="sr"> theme</span></span>
+    </button>
+  </div>
+</header>
 
-	<div class="empty"></div>
+<main id="main" class="wrap">
 
-	<div class="container">
-		<div id="intro">
-			<div class="intro-content">
-				<div class="intro-text">
-					<h1 id="myname">Mengyuan (Marvin) Li</h1>
-					<p style="font-size: 18px; margin-bottom: 10px;">
-						<b>Assistant Professor</b>
-						<a href="https://scholar.google.com/citations?user=cgjqyuoAAAAJ&hl=en&oi=ao" target="_blank">[Google Scholar]</a>
-					</p>
-					<p style="font-size: 16px; color: #2b5d3f; margin-bottom: 12px; font-weight: 500;">
-						TEE, Confidential Computing, Verifiable AI, Side-Channel Attacks, and AI Systems Security
-					</p>
-					<p style="font-size: 16px; color: #666; margin-bottom: 20px;">
-						Thomas Lord Department of Computer Science<br>
-						Ming Hsieh Department of Electrical and Computer Engineering<br>
-						University of Southern California
-					</p>
-					<p style="font-size: 15px;">
-						E-mail: <b>mengyuanli@usc.edu</b>
-					</p>
-				</div>
-				<div class="intro-image">
-					<a href="./files/mengyuan.png">
-						<img src="./files/mengyuan.png" alt="Mengyuan (Marvin) Li">
-					</a>
-				</div>
-			</div>
+<div class="mast">
+  <a class="portrait" href="files/mengyuan.png"><img src="files/mengyuan-480.jpg" alt="Portrait of Mengyuan (Marvin) Li" width="480" height="480"></a>
+  <div class="id">
+    <h1 id="myname">Mengyuan (Marvin)&nbsp;Li</h1>
+    <p class="role">Assistant Professor, University of Southern California</p>
+    <p class="depts"><a href="https://www.cs.usc.edu/">Thomas Lord Department of Computer Science</a><br>
+      <a href="https://minghsiehece.usc.edu/">Ming Hsieh Department of Electrical and Computer Engineering</a></p>
+  </div>
+  <p class="recruit"><span class="recruit-label">Recruiting</span> <strong>PhD students for Fall 2027.</strong> USC MS and undergraduate students are also welcome. <a href="#join">Join SEPT Lab<span aria-hidden="true">&nbsp;→</span></a></p>
+  <p class="lede">I lead <a href="https://septlab.com/">SEPT Lab</a> (Security, Privacy, and Trust) at USC. My research builds trustworthy computing environments by integrating hardware security mechanisms with software systems, so that data and computation stay protected on platforms from personal devices to cloud AI systems.</p>
+  <dl class="facts">
+    <div class="m"><dt class="side">Research areas</dt>
+      <dd>Verifiable AI systems&nbsp;· Trusted execution environments (TEEs)&nbsp;· Confidential computing&nbsp;· System and hardware security&nbsp;· AI agent security</dd></div>
+    <div class="m"><dt class="side">Lab</dt>
+      <dd><a href="https://septlab.com/"><img class="site-icon" src="assets/img/sept-lab.png" alt="" width="16" height="16">SEPT Lab</a>&nbsp;· <a href="https://verifiable.pro/"><img class="site-icon" src="assets/img/verifiable-pro.svg" alt="" width="16" height="16">verifiable.pro</a>&nbsp;· <a href="https://github.com/sept-usc">SEPT Lab on GitHub</a></dd></div>
+    <div class="m"><dt class="side">Profiles</dt>
+      <dd><a rel="me" href="https://scholar.google.com/citations?user=cgjqyuoAAAAJ&amp;hl=en">Google Scholar</a>&nbsp;· <a rel="me" href="https://dblp.org/pid/157/4437-4.html">DBLP</a>&nbsp;· <a rel="me" href="https://viterbi.usc.edu/directory/faculty/Li/Mengyuan">USC Viterbi profile</a></dd></div>
+    <div class="m"><dt class="side">Email</dt>
+      <dd><a href="mailto:mengyuanli@usc.edu">mengyuanli@usc.edu</a></dd></div>
+  </dl>
+</div>
 
-				<div id="aboutme">
-					<h2>About me</h2>
-					<p style="font-size: 16px; line-height: 1.8;">
-						Mengyuan (Marvin) Li is an Assistant Professor of Computer Science Department at University of Southern California. He leads the <a href="https://septlab.com/"><b>SEPT Lab</b></a> (<b>SE</b>curity, <b>P</b>rivacy, and <b>T</b>rust), where the group focuses on cutting-edge research in systems and security and is actively looking for motivated PhD, MS, and undergraduate students. Prior to USC, he was a postdoc researcher in CSAIL at MIT (2022 - 2024), working with Prof. <a href="https://people.csail.mit.edu/mengjia/" target="_blank">Mengjia Yan</a>. Mengyuan graduated from <a href="http://www.osu.edu/" target="_blank">The Ohio State University (OSU)</a> with a Ph.D. in Computer Science and Engineering in 2022, advised by Prof. <a href="http://web.cse.ohio-state.edu/~yinqian/" target="_blank">Yinqian Zhang</a>. Before coming to OSU, he graduated from <a href="http://en.sjtu.edu.cn/" target="_blank">Shanghai Jiao Tong University (SJTU)</a> with the Bachelor's degree of Electronic Engineering.
-					</p>
-				</div>
-			</div>
+<section id="about">
+  <h2 class="sec">About</h2>
+  <div class="col prose">
+    <p>Mengyuan (Marvin) Li is an Assistant Professor in the Thomas Lord Department of Computer Science at the University of Southern California, where he leads <a href="https://septlab.com/">SEPT Lab</a> (Security, Privacy, and Trust). Before joining USC in 2024, he was a postdoctoral researcher at <a href="https://www.csail.mit.edu/">MIT CSAIL</a> (2022–2024), working with Prof. <a href="https://people.csail.mit.edu/mengjia/">Mengjia Yan</a>. He received his Ph.D. in Computer Science and Engineering from <a href="https://www.osu.edu/">The Ohio State University</a> in 2022, advised by Prof. <a href="https://yinqian.org/">Yinqian Zhang</a>. His research on AMD SEV led to several AMD security bulletins and CVEs, and his paper CROSSLINE received the Best Paper Award Runner-Up at ACM CCS 2021.</p>
+  </div>
+</section>
 
-		<div id="interests" class="section">
-			<h2>Research</h2>
-			<p style="font-size: 16px; line-height: 1.8; margin-bottom: 15px;">
-				My research focuses on the design of trustworthy computing environments through the tight integration of advanced hardware mechanisms and software systems. This co-design is essential for ensuring secure computation and data privacy, across platforms spanning personal devices to cloud AI systems. My group works on Trusted Execution Environments (TEE), confidential computing, verifiable AI, side-channel attacks, and broader AI systems security.
-			</p>
-			<ul style="list-style: none; padding-left: 0;">
-				<li style="margin-bottom: 12px; padding-left: 0;">
-					<p style="font-size: 16px; padding-left: 20px; position: relative;">
-						<span style="position: absolute; left: 0; color: #666;">•</span>
-						Uncovering, Understanding, and Defending Against System and Hardware Vulnerabilities, including cloud system security, CPU security, GPU security, and AI system security.
-					</p>
-				</li>
-				<li style="margin-bottom: 12px; padding-left: 0;">
-					<p style="font-size: 16px; padding-left: 20px; position: relative;">
-						<span style="position: absolute; left: 0; color: #666;">•</span>
-						Software-Hardware Co-Design for Secure and Efficient AI Systems.
-					</p>
-				</li>
-			</ul>
-			<p style="font-size: 16px; line-height: 1.8; margin-top: 18px;">
-				These topic pages summarize the main problems, representative papers, and teaching material behind the research directions that readers often search for directly.
-			</p>
-			<div class="topic-grid">
-				<div class="topic-card">
-					<h3><a href="./tee-confidential-computing.html">TEE and Confidential Computing</a></h3>
-					<p>Research on TEE-based systems and performance optimization, attacks on confidential computing platforms, and defenses for secure cloud and AI infrastructure.</p>
-					<p class="topic-meta"><b>Keywords:</b> TEE, confidential computing, AMD SEV/SEV-SNP, SGX, confidential VMs/GPUs.</p>
-				</div>
-				<div class="topic-card">
-					<h3><a href="./verifiable-ai.html">Verifiable AI</a></h3>
-					<p>Research on verification of LLM inference, privacy-preserving model oversight, and system support for trustworthy AI deployment.</p>
-					<p class="topic-meta"><b>Keywords:</b> verifiable AI, zero-knowledge verification, LLM inference, model oversight, trustworthy AI.</p>
-				</div>
-				<div class="topic-card">
-					<h3><a href="./ai-agent-security.html">AI Agent Security</a></h3>
-					<p>Research on using TEE and runtime monitoring to monitor agent execution and build trusted infrastructure for LLM systems and AI agents.</p>
-					<p class="topic-meta"><b>Keywords:</b> AI agent security, TEE, runtime monitoring, trusted infrastructure, LLM systems, agent execution.</p>
-				</div>
-			</div>
-		</div>
+<section id="research">
+  <h2 class="sec" id="interests">Research</h2>
+  <div class="col">
+    <p>My group pursues two research thrusts:</p>
+    <ol class="thrusts">
+      <li>Uncovering, understanding, and defending against system and hardware vulnerabilities in cloud systems, CPUs, GPUs, and AI systems.</li>
+      <li>Co-designing software and hardware for secure and efficient AI systems.</li>
+    </ol>
+  </div>
+  <div class="m dirs-row"><span class="side">Research directions</span>
+    <ul class="items" role="list">
+      <li><h3><a href="verifiable-ai.html">Verifiable AI</a></h3>
+        <p>Evidence that an AI result came from the claimed model and computation, produced without revealing sensitive data. SEPT Lab also maintains <a href="https://verifiable.pro/">verifiable.pro</a>, a public resource with news, explainers, and guides on verifiable AI.</p>
+        <p class="topics"><i>Topics:</i> zero-knowledge verification&nbsp;· LLM inference&nbsp;· model oversight</p></li>
+      <li><h3><a href="tee-confidential-computing.html">TEE and Confidential Computing</a></h3>
+        <p>Practical hardware-isolated execution: efficient and secure TEE-based systems for cloud and AI workloads, from oblivious memory inside VM-based TEEs to confidential multi-GPU machine learning.</p>
+        <p class="topics"><i>Topics:</i> <span class="nw">AMD SEV-SNP</span>&nbsp;· Intel SGX&nbsp;· confidential VMs and GPUs&nbsp;· ORAM</p></li>
+      <li><h3><a href="tee-confidential-computing.html#attacks">System and Hardware Vulnerabilities</a></h3>
+        <p>Design flaws and side channels that break the security guarantees of systems and hardware, found and disclosed to vendors such as AMD.</p>
+        <p class="topics"><i>Topics:</i> side channels&nbsp;· <span class="nw">SEV-SNP</span>&nbsp;· macOS sandboxing&nbsp;· GPUs</p></li>
+      <li><h3><a href="ai-agent-security.html">AI Agent Security</a></h3>
+        <p>Observing and protecting agent execution with TEEs and runtime monitoring, so that agents can be trusted with sensitive data on shared infrastructure.</p>
+        <p class="topics"><i>Topics:</i> runtime monitoring&nbsp;· tool isolation&nbsp;· agent memory</p></li>
+    </ul></div>
+  <div class="m related"><span class="side">Related</span>
+    <p><a href="https://septlab.com/research.html"><img class="site-icon" src="assets/img/sept-lab.png" alt="" width="16" height="16">SEPT Lab research overview</a>&nbsp;· <a href="https://verifiable.pro/"><img class="site-icon" src="assets/img/verifiable-pro.svg" alt="" width="16" height="16">verifiable.pro</a></p></div>
+</section>
 
-		<!-- News Section -->
-		<div class="news-section">
-			<h2>News</h2>
-			<div class="news-container">
-				<div class="news-scroll">
-					<div class="news-item">
-						<div class="news-date">2026</div>
-						<div class="news-content">Paper "MC-ORAM: A Mask-Assisted and Counter-Based Non-Deterministic ORAM Inside VM-Based TEEs" accepted to ISCA'26.</div>
-					</div>
-					<div class="news-item">
-						<div class="news-date">2026</div>
-						<div class="news-content">Paper "Hollow-LLM Attack: Computationally Trivial Weights in Zero-Knowledge Verification of LLM Inference" accepted to IEEE S&amp;P'26.</div>
-					</div>
-					<div class="news-item">
-						<div class="news-date">2026</div>
-						<div class="news-content">Paper "SCALE: Tackling Communication Bottlenecks in Confidential Multi-GPU ML" accepted to IEEE HPCA'26.</div>
-					</div>
-					<div class="news-item">
-						<div class="news-date">2026</div>
-						<div class="news-content">Paper "WAVE: Leveraging Architecture Observation for Privacy-Preserving Model Oversight" accepted to ACM ASPLOS'26.</div>
-					</div>
-					<div class="news-item">
-						<div class="news-date">2025</div>
-						<div class="news-content">Paper "Chekhov's Gun: Uncovering Hidden Risks in macOS Application-Sandboxed PID-Domain Services" accepted to ACM CCS'25.</div>
-					</div>
-					<div class="news-item">
-						<div class="news-date">2025</div>
-						<div class="news-content">Paper "A Close Look at RMP Entry Caching and Its Security Implications in SEV-SNP" accepted to HASP'25.</div>
-					</div>
-					<div class="news-item">
-						<div class="news-date">2025</div>
-						<div class="news-content">Paper "Few-Shot Graph Out-of-Distribution Detection with LLMs" published in Lecture Notes in Computer Science.</div>
-					</div>
-					<div class="news-item">
-						<div class="news-date">2024</div>
-						<div class="news-content">Joined USC as Assistant Professor in the Thomas Lord Department of Computer Science.</div>
-					</div>
-					<div class="news-item">
-						<div class="news-date">2024</div>
-						<div class="news-content">Paper "SoK: Understanding Design Choices and Pitfalls of Trusted Execution Environments" accepted to ACM ASIACCS'24.</div>
-					</div>
-					<div class="news-item">
-						<div class="news-date">2023</div>
-						<div class="news-content">Paper "CipherH: Automated Detection of Ciphertext Side-channel Vulnerabilities" accepted to USENIX Security'23.</div>
-					</div>
-					<div class="news-item">
-						<div class="news-date">2022</div>
-						<div class="news-content">Two papers accepted to IEEE S&P'22: "A Systematic Look at Ciphertext Side Channels" and "vSGX: Virtualizing SGX Enclaves on AMD SEV".</div>
-					</div>
-					<div class="news-item">
-						<div class="news-date">2021</div>
-						<div class="news-content">Paper "CROSSLINE" accepted to ACM CCS'21 and received Best Paper Award (Runner-Up).</div>
-					</div>
-					<div class="news-item">
-						<div class="news-date">2021</div>
-						<div class="news-content">Paper "CIPHERLEAKS" accepted to USENIX Security'21. AMD issued security bulletin and CVE.</div>
-					</div>
-				</div>
-			</div>
-		</div>
+<section id="join" class="join">
+  <h2 class="sec">Join SEPT Lab</h2>
+  <p class="sec-note">Recruiting for Fall 2027</p>
+  <div class="m"><h3 class="side">PhD students</h3>
+    <p>For Fall 2027, <a href="https://viterbi-web.usc.edu/~yzhao010/">Yue Zhao</a>, <a href="https://ruolinli.me/">Ruolin Li</a>, and I are recruiting up to six PhD students together through a research cluster that spans our departments. Ruolin Li works on autonomous systems and Yue Zhao on trustworthy AI, while my group focuses on systems and security. Our shared goal is intelligent systems that remain reliable and secure when they are deployed in the real world. Students in the cluster can work with more than one of us and pursue questions that cross our research areas. Co-advising is possible but not required.</p>
+    <p>To apply, submit your application through USC Viterbi Graduate Admission (<a href="https://viterbigradadmission.usc.edu/doctoral/">PhD application information</a>). If you are interested in working with me, email <a href="mailto:mengyuanli@usc.edu?subject=%5BSEPT%20PhD%5D">mengyuanli@usc.edu</a> with “[SEPT PhD]” in the subject line.</p></div>
+  <div class="m"><h3 class="side">Research collaboration</h3>
+    <p>Current USC MS and undergraduate students are welcome to work on research projects in SEPT Lab, and students at other universities can apply to collaborate with us. If you are interested, email <a href="mailto:mengyuanli@usc.edu?subject=%5BSEPT%20Research%5D">mengyuanli@usc.edu</a> with “[SEPT Research]” in the subject line.</p></div>
+</section>
 
-		<div id="mypublication" class="section">
-			<h2>Publications</h2>
-			<div class="publication-item">
-				<div class="publication-title">MC-ORAM: A Mask-Assisted and Counter-Based Non-Deterministic ORAM Inside VM-Based TEEs</div>
-				<div class="publication-authors">Yongqin Wang, Rachit Rajat, Jonghyun Lee, <span class="highlight">Mengyuan Li</span>, Murali Annavaram</div>
-				<div class="publication-venue">IEEE/ACM International Symposium on Computer Architecture (ISCA) 2026</div>
-				<div class="publication-links">
-					<a href="index.html" target="_blank">[link]</a>
-				</div>
-			</div>
+<section id="news">
+  <h2 class="sec">News</h2>
+  <ol class="news" role="list">
+    <li class="m"><time class="side" datetime="2026-10">Oct 2026</time><p>Recruiting up to six PhD students for Fall 2027 in a cross-department cluster with Yue Zhao and Ruolin Li. <a href="#join">Join SEPT Lab</a></p></li>
+    <li class="m"><time class="side" datetime="2026-06">Jun 2026</time><p><a href="#mc-oram-isca26">MC-ORAM</a> appears at ISCA 2026.</p></li>
+    <li class="m"><time class="side" datetime="2026-05">May 2026</time><p><a href="#hollow-llm-sp26">Hollow-LLM Attack</a> appears at IEEE&nbsp;S&amp;P 2026.</p></li>
+    <li class="m"><time class="side" datetime="2026-04">Apr 2026</time><p>Talk at the University of Chicago: <i>Confidential Computing and Trusted Execution Environments: Challenges and Opportunities for Trustworthy AI</i>. (<a href="https://computerscience.uchicago.edu/events/event/mengyuan-li-usc-confidential-computing-and-trusted-execution-environments-challenges-and-opportunities-for-trustworthy-ai/">event page</a>)</p></li>
+    <li class="m"><time class="side" datetime="2026-03">Mar 2026</time><p><a href="#wave-asplos26">WAVE</a> appears at ASPLOS 2026; the artifact is on <a href="https://github.com/sept-usc/Wave">GitHub</a>.</p></li>
+    <li class="m"><time class="side" datetime="2026-02">Feb 2026</time><p><a href="#scale-hpca26">SCALE</a> presented at HPCA 2026.</p></li>
+    <li class="m"><time class="side" datetime="2025-12">Dec 2025</time><p><a href="#writing-symbiosis-neurips25">Writing in Symbiosis</a> appears in the NeurIPS 2025 Creative AI Track.</p></li>
+    <li class="m"><time class="side" datetime="2025-10">Oct 2025</time><p><a href="#rmp-caching-hasp25">RMP entry caching study</a> at HASP 2025; AMD published security bulletin <a class="nw" href="https://www.amd.com/en/resources/product-security/bulletin/amd-sb-3036.html">AMD-SB-3036</a>.</p></li>
+    <li class="m"><time class="side" datetime="2025-10">Oct 2025</time><p><a href="#chekhovs-gun-ccs25">Chekhov’s Gun</a> appears at ACM CCS 2025.</p></li>
+    <li class="m"><time class="side" datetime="2025-09">Sep 2025</time><p><a href="#fewshot-graph-ood-ecmlpkdd25">Few-shot graph OOD detection with LLMs</a> appears at ECML PKDD 2025.</p></li>
+  </ol>
+  <details class="more">
+    <summary>Earlier news, 2021–2024</summary>
+    <ol class="news" role="list">
+      <li class="m"><time class="side" datetime="2024-07">Jul 2024</time><p><a href="#sok-tee-asiaccs24">SoK on TEE design choices and pitfalls</a> appears at ACM ASIACCS 2024.</p></li>
+      <li class="m"><time class="side" datetime="2024">2024</time><p>Joined USC as an Assistant Professor in the Thomas Lord Department of Computer Science and started SEPT Lab.</p></li>
+      <li class="m"><time class="side" datetime="2023">2023</time><p><a href="#cipherh-usenixsec23">CipherH</a> accepted to USENIX Security 2023.</p></li>
+      <li class="m"><time class="side" datetime="2022">2022</time><p>Two papers at IEEE&nbsp;S&amp;P 2022: <a href="#ciphertext-sev-snp-sp22">A Systematic Look at Ciphertext Side Channels on AMD SEV-SNP</a> and <a href="#vsgx-sp22">vSGX</a>.</p></li>
+      <li class="m"><time class="side" datetime="2021">2021</time><p><a href="#crossline-ccs21">CROSSLINE</a> accepted to ACM CCS 2021 and received the Best Paper Award Runner-Up.</p></li>
+      <li class="m"><time class="side" datetime="2021">2021</time><p><a href="#cipherleaks-usenixsec21">CIPHERLEAKS</a> accepted to USENIX Security 2021; AMD issued a security bulletin and CVE.</p></li>
+    </ol>
+  </details>
+</section>
 
-			<div class="publication-item">
-				<div class="publication-title">Hollow-LLM Attack: Computationally Trivial Weights in Zero-Knowledge Verification of LLM Inference</div>
-				<div class="publication-authors"><span class="highlight">Chen Gong</span>, <span class="highlight">Beijie Liu</span>, <span class="highlight">Mengyuan Li</span></div>
-				<div class="publication-venue">IEEE Symposium on Security and Privacy (S&amp;P) 2026</div>
-				<div class="publication-links">
-					<a href="./files/hollow-llm.pdf" target="_blank">[pdf]</a>
-					<a href="./files/hollow-llm.bib" target="_blank">[reference]</a>
-				</div>
-			</div>
+<section id="publications">
+  <h2 class="sec" id="mypublication">Publications</h2>
+<!-- BEGIN publications (generated by _tools/build.py from _data/publications.json; edit the JSON, not this block) -->
+<div class="m pubhead"><span class="side">By year</span>
+  <p class="years"><a href="#pubs-2026">2026</a>&nbsp;· <a href="#pubs-2025">2025</a>&nbsp;· <a href="#pubs-2024">2024</a>&nbsp;· <a href="#pubs-before-2024">Before 2024</a>&nbsp;· <a href="#pubs-preprints">Preprints</a></p>
+  <p>Names in bold are my PhD students or students who work closely with me. * Equal contribution. Also listed on <a href="https://scholar.google.com/citations?user=cgjqyuoAAAAJ">Google Scholar</a>.</p></div>
+<h3 class="yr" id="pubs-2026">2026</h3>
+<ol class="pubs" role="list">
+<li id="hollow-llm-sp26"><span class="tag" data-export="skip">IEEE S&amp;P</span>
+  <cite>Hollow-LLM Attack: Computationally Trivial Weights in Zero-Knowledge Verification of LLM Inference</cite>
+  <span class="au"><b>Chen&nbsp;Gong</b>, <b>Beijie&nbsp;Liu</b>, <b>Mengyuan&nbsp;Li</b></span>
+  <span class="ve"><i>2026 IEEE Symposium on Security and Privacy&nbsp;(S&amp;P&nbsp;2026)</i></span>
+  <span class="ln"><a href="https://doi.org/10.1109/SP63933.2026.00258">DOI</a>&nbsp;· <a href="files/hollow-llm.pdf">PDF</a>&nbsp;· <a href="https://arxiv.org/abs/2607.28884">arXiv</a>&nbsp;· <a href="files/hollow-llm.bib">BibTeX</a></span></li>
+<li id="wave-asplos26"><span class="tag" data-export="skip">ASPLOS</span>
+  <cite>WAVE: Leveraging Architecture Observation for Privacy-Preserving Model Oversight</cite>
+  <span class="au"><b>Haoxuan&nbsp;Xu</b>*, <b>Chen&nbsp;Gong</b>*, <b>Beijie&nbsp;Liu</b>*, Haizhong&nbsp;Zheng, Beidi&nbsp;Chen, <b>Mengyuan&nbsp;Li</b></span>
+  <span class="ve"><i>31st ACM International Conference on Architectural Support for Programming Languages and Operating Systems&nbsp;(ASPLOS&nbsp;2026)</i></span>
+  <span class="ln"><a href="https://doi.org/10.1145/3779212.3790247">DOI</a>&nbsp;· <a href="https://github.com/sept-usc/Wave">Code</a>&nbsp;· <a href="files/bib/wave-asplos26.bib">BibTeX</a></span></li>
+<li id="cvm-query-cost-sequredb26"><span class="tag" data-export="skip">SeQureDB <small>Workshop</small></span>
+  <cite>Query Cost Model Calibration in Confidential Virtual Machines</cite>
+  <span class="au">Qihan&nbsp;Zhang, <b>Mengyuan&nbsp;Li</b>, Ibrahim&nbsp;Sabek</span>
+  <span class="ve"><i>Workshop on Secure and Private Data Management&nbsp;(SeQureDB&nbsp;2026)</i></span>
+  <span class="ln"><a href="https://arxiv.org/pdf/2606.26385">PDF</a>&nbsp;· <a href="https://arxiv.org/abs/2606.26385">arXiv</a>&nbsp;· <a href="files/bib/cvm-query-cost-sequredb26.bib">BibTeX</a></span></li>
+<li id="mc-oram-isca26"><span class="tag" data-export="skip">ISCA</span>
+  <cite>MC-ORAM: A Mask-Assisted and Counter-Based Non-Deterministic ORAM Inside VM-Based TEEs</cite>
+  <span class="au"><b>Yongqin&nbsp;Wang</b>, Rachit&nbsp;Rajat, Jonghyun&nbsp;Lee, <b>Mengyuan&nbsp;Li</b>, Murali&nbsp;Annavaram</span>
+  <span class="ve"><i>53rd ACM/IEEE Annual International Symposium on Computer Architecture&nbsp;(ISCA&nbsp;2026)</i></span>
+  <span class="ln"><a href="https://doi.org/10.1109/ISCA66397.2026.00047">DOI</a>&nbsp;· <a href="files/bib/mc-oram-isca26.bib">BibTeX</a></span></li>
+<li id="scale-hpca26"><span class="tag" data-export="skip">HPCA</span>
+  <cite>SCALE: Tackling Communication Bottlenecks in Confidential Distributed Machine Learning</cite>
+  <span class="au"><b>Joongun&nbsp;Park</b>, <b>Yongqin&nbsp;Wang</b>, Huan&nbsp;Xu, Hanjiang&nbsp;Wu, <b>Mengyuan&nbsp;Li</b>, Tushar&nbsp;Krishna</span>
+  <span class="ve"><i>2026 IEEE International Symposium on High-Performance Computer Architecture&nbsp;(HPCA&nbsp;2026)</i></span>
+  <span class="ln"><a href="https://doi.org/10.1109/HPCA68181.2026.11408582">DOI</a>&nbsp;· <a href="files/bib/scale-hpca26.bib">BibTeX</a></span></li>
+</ol>
+<h3 class="yr" id="pubs-2025">2025</h3>
+<ol class="pubs" role="list">
+<li id="chekhovs-gun-ccs25"><span class="tag" data-export="skip">ACM CCS</span>
+  <cite>Chekhov’s Gun: Uncovering Hidden Risks in macOS Application-Sandboxed PID-Domain Services</cite>
+  <span class="au"><b>Minghao&nbsp;Lin</b>, Jiaxun&nbsp;Zhu, Tingting&nbsp;Yin, Zechao&nbsp;Cai, Guanxing&nbsp;Wen, Yanan&nbsp;Guo, <b>Mengyuan&nbsp;Li</b></span>
+  <span class="ve"><i>2025 ACM SIGSAC Conference on Computer and Communications Security&nbsp;(CCS&nbsp;2025)</i></span>
+  <span class="ln"><a href="https://doi.org/10.1145/3719027.3765205">DOI</a>&nbsp;· <a href="files/bib/chekhovs-gun-ccs25.bib">BibTeX</a></span></li>
+<li id="writing-symbiosis-neurips25"><span class="tag" data-export="skip">NeurIPS</span>
+  <cite>Writing in Symbiosis: Mapping Human Creative Agency in the AI Era</cite>
+  <span class="au"><b>Vivan&nbsp;Doshi</b>, <b>Mengyuan&nbsp;Li</b></span>
+  <span class="ve"><i>Advances in Neural Information Processing Systems 38&nbsp;(NeurIPS&nbsp;2025), Creative AI Track</i></span>
+  <span class="ln"><a href="https://proceedings.neurips.cc/paper_files/paper/2025/hash/615229550c97d1c4d006a4bf6b54590e-Abstract-Creative_AI_Track.html">Paper</a>&nbsp;· <a href="https://papers.neurips.cc/paper_files/paper/2025/file/615229550c97d1c4d006a4bf6b54590e-Paper-Creative_AI_Track.pdf">PDF</a>&nbsp;· <a href="https://arxiv.org/abs/2512.13697">arXiv</a>&nbsp;· <a href="files/bib/writing-symbiosis-neurips25.bib">BibTeX</a></span></li>
+<li id="rmp-caching-hasp25"><span class="tag" data-export="skip">HASP <small>Workshop</small></span>
+  <cite>A Close Look at RMP Entry Caching and Its Security Implications in SEV-SNP</cite>
+  <span class="au">Alexis&nbsp;Bagia, Vincent&nbsp;Quentin&nbsp;Ulitzsch, Daniël&nbsp;Trujillo, <b>Mengyuan&nbsp;Li</b>, Mengjia&nbsp;Yan, Jean-Pierre&nbsp;Seifert</span>
+  <span class="ve"><i>14th International Workshop on Hardware and Architectural Support for Security and Privacy&nbsp;(HASP&nbsp;2025)</i></span>
+  <span class="ds">Disclosures: <a href="https://www.amd.com/en/resources/product-security/bulletin/amd-sb-3036.html">AMD-SB-3036</a></span>
+  <span class="ln"><a href="https://doi.org/10.1145/3768725.3768727">DOI</a>&nbsp;· <a href="files/bib/rmp-caching-hasp25.bib">BibTeX</a></span></li>
+<li id="fewshot-graph-ood-ecmlpkdd25"><span class="tag" data-export="skip">ECML PKDD</span>
+  <cite>Few-Shot Graph Out-of-Distribution Detection with LLMs</cite>
+  <span class="au"><b>Haoyan&nbsp;Xu</b>*, Zhengtao&nbsp;Yao*, Yushun&nbsp;Dong, Ziyi&nbsp;Wang, Ryan&nbsp;A.&nbsp;Rossi, <b>Mengyuan&nbsp;Li</b>, Yue&nbsp;Zhao</span>
+  <span class="ve"><i>European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases&nbsp;(ECML&nbsp;PKDD&nbsp;2025)</i></span>
+  <span class="ln"><a href="https://doi.org/10.1007/978-3-032-06078-5_18">DOI</a>&nbsp;· <a href="https://arxiv.org/pdf/2503.22097">PDF</a>&nbsp;· <a href="https://arxiv.org/abs/2503.22097">arXiv</a>&nbsp;· <a href="files/bib/fewshot-graph-ood-ecmlpkdd25.bib">BibTeX</a></span></li>
+<li id="lego-learn-tmlr25"><span class="tag" data-export="skip">TMLR <small>Journal</small></span>
+  <cite>LEGO-Learn: Label-Efficient Graph Open-Set Learning</cite>
+  <span class="au"><b>Haoyan&nbsp;Xu</b>, Kay&nbsp;Liu, Zhengtao&nbsp;Yao, Philip&nbsp;S.&nbsp;Yu, <b>Mengyuan&nbsp;Li</b>, Kaize&nbsp;Ding, Yue&nbsp;Zhao</span>
+  <span class="ve"><i>Transactions on Machine Learning Research&nbsp;(TMLR)</i></span>
+  <span class="ln"><a href="https://openreview.net/forum?id=J6oxTJPOyN">Paper</a>&nbsp;· <a href="https://arxiv.org/pdf/2410.16386">PDF</a>&nbsp;· <a href="https://arxiv.org/abs/2410.16386">arXiv</a>&nbsp;· <a href="https://github.com/zhengtaoyao/lego">Code</a>&nbsp;· <a href="files/bib/lego-learn-tmlr25.bib">BibTeX</a></span></li>
+</ol>
+<h3 class="yr" id="pubs-2024">2024</h3>
+<ol class="pubs" role="list">
+<li id="sok-tee-asiaccs24"><span class="tag" data-export="skip">ACM ASIACCS</span>
+  <cite>SoK: Understanding Design Choices and Pitfalls of Trusted Execution Environments</cite>
+  <span class="au"><b>Mengyuan&nbsp;Li</b>, Yuheng&nbsp;Yang, Guoxing&nbsp;Chen, Mengjia&nbsp;Yan, Yinqian&nbsp;Zhang</span>
+  <span class="ve"><i>19th ACM Asia Conference on Computer and Communications Security&nbsp;(ASIA&nbsp;CCS&nbsp;2024)</i></span>
+  <span class="ln"><a href="https://doi.org/10.1145/3634737.3644993">DOI</a>&nbsp;· <a href="files/asiaccs_sok.pdf">PDF</a>&nbsp;· <a href="files/bib/sok-tee-asiaccs24.bib">BibTeX</a></span></li>
+</ol>
+<h3 class="yr" id="pubs-before-2024">Before 2024</h3>
+<ol class="pubs" role="list">
+<li id="cipherh-usenixsec23"><span class="tag" data-export="skip">USENIX Security&nbsp;2023</span>
+  <cite>CipherH: Automated Detection of Ciphertext Side-channel Vulnerabilities in Cryptographic Implementations</cite>
+  <span class="au">Sen&nbsp;Deng, <b>Mengyuan&nbsp;Li</b>, Yining&nbsp;Tang, Shuai&nbsp;Wang, Shoumeng&nbsp;Yan, Yinqian&nbsp;Zhang</span>
+  <span class="ve"><i>32nd USENIX Security Symposium&nbsp;(USENIX&nbsp;Security&nbsp;2023)</i></span>
+  <span class="ln"><a href="https://www.usenix.org/conference/usenixsecurity23/presentation/deng-sen">Paper</a>&nbsp;· <a href="https://www.usenix.org/system/files/usenixsecurity23-deng-sen.pdf">PDF</a>&nbsp;· <a href="https://github.com/Sen-Deng/CipherH">Code</a>&nbsp;· <a href="files/bib/cipherh-usenixsec23.bib">BibTeX</a></span></li>
+<li id="pwrleak-dimva23"><span class="tag" data-export="skip">DIMVA&nbsp;2023</span>
+  <cite>PWRLEAK: Exploiting Power Reporting Interface for Side-Channel Attacks on AMD SEV</cite>
+  <span class="au">Wubing&nbsp;Wang, <b>Mengyuan&nbsp;Li</b>, Yinqian&nbsp;Zhang, Zhiqiang&nbsp;Lin</span>
+  <span class="ve"><i>20th Conference on Detection of Intrusions and Malware &amp; Vulnerability Assessment&nbsp;(DIMVA&nbsp;2023)</i></span>
+  <span class="ds">Disclosures: <a href="https://www.amd.com/en/resources/product-security/bulletin/amd-sb-3004.html">AMD-SB-3004</a>&nbsp;· <a href="https://www.cve.org/CVERecord?id=CVE-2023-20575">CVE-2023-20575</a></span>
+  <span class="ln"><a href="https://doi.org/10.1007/978-3-031-35504-2_3">DOI</a>&nbsp;· <a href="https://yinqian.org/papers/dimva23.pdf">PDF</a>&nbsp;· <a href="files/bib/pwrleak-dimva23.bib">BibTeX</a></span></li>
+<li id="ciphertext-sev-snp-sp22"><span class="tag" data-export="skip">IEEE S&amp;P&nbsp;2022</span>
+  <cite>A Systematic Look at Ciphertext Side Channels on AMD SEV-SNP</cite>
+  <span class="au"><b>Mengyuan&nbsp;Li</b>*, Luca&nbsp;Wilke*, Jan&nbsp;Wichelmann, Thomas&nbsp;Eisenbarth, Radu&nbsp;Teodorescu, Yinqian&nbsp;Zhang</span>
+  <span class="ve"><i>2022 IEEE Symposium on Security and Privacy&nbsp;(S&amp;P&nbsp;2022)</i>&nbsp;· <span class="ar">Acceptance rate 14.0% (57/407)</span></span>
+  <span class="ds">Disclosures: <a href="https://www.amd.com/en/resources/product-security/bulletin/amd-sb-1033.html">AMD-SB-1033</a>&nbsp;· <a href="https://www.cve.org/CVERecord?id=CVE-2021-46744">CVE-2021-46744</a></span>
+  <span class="nt">AMD published an official white paper for TEE developers and users on writing code that resists ciphertext side channels. <a href="https://www.amd.com/content/dam/amd/en/documents/resources/bulletin/technical-guidance-for-mitigating-effects-of-ciphertext-visibility-under-amd-sev.pdf">AMD white paper</a></span>
+  <span class="ln"><a href="https://doi.org/10.1109/SP46214.2022.9833768">DOI</a>&nbsp;· <a href="https://yinqian.org/papers/sp22b.pdf">PDF</a>&nbsp;· <a href="files/bib/ciphertext-sev-snp-sp22.bib">BibTeX</a></span></li>
+<li id="vsgx-sp22"><span class="tag" data-export="skip">IEEE S&amp;P&nbsp;2022</span>
+  <cite>vSGX: Virtualizing SGX Enclaves on AMD SEV</cite>
+  <span class="au">Shixuan&nbsp;Zhao, <b>Mengyuan&nbsp;Li</b>, Yinqian&nbsp;Zhang, Zhiqiang&nbsp;Lin</span>
+  <span class="ve"><i>2022 IEEE Symposium on Security and Privacy&nbsp;(S&amp;P&nbsp;2022)</i>&nbsp;· <span class="ar">Acceptance rate 16.5% (54/327)</span></span>
+  <span class="ln"><a href="https://doi.org/10.1109/SP46214.2022.9833694">DOI</a>&nbsp;· <a href="https://yinqian.org/papers/sp22a.pdf">PDF</a>&nbsp;· <a href="https://github.com/OSUSecLab/vSGX">Code</a>&nbsp;· <a href="files/bib/vsgx-sp22.bib">BibTeX</a></span></li>
+<li id="phd-thesis-osu22"><span class="tag" data-export="skip">PhD Thesis&nbsp;2022</span>
+  <cite>Understanding and Exploiting Design Flaws of AMD Secure Encrypted Virtualization</cite>
+  <span class="au"><b>Mengyuan&nbsp;Li</b></span>
+  <span class="ve"><i>Ph.D. Dissertation, The Ohio State University</i>, 2022</span>
+  <span class="ln"><a href="https://www.proquest.com/openview/e4211fc9bbca1b28c1167c6fcca66c49/1">Paper</a>&nbsp;· <a href="files/bib/phd-thesis-osu22.bib">BibTeX</a></span></li>
+<li id="tlb-poisoning-acsac21"><span class="tag" data-export="skip">ACSAC&nbsp;2021</span>
+  <cite>TLB Poisoning Attacks on AMD Secure Encrypted Virtualization</cite>
+  <span class="au"><b>Mengyuan&nbsp;Li</b>, Yinqian&nbsp;Zhang, Huibo&nbsp;Wang, Kang&nbsp;Li, Yueqiang&nbsp;Cheng</span>
+  <span class="ve"><i>37th Annual Computer Security Applications Conference&nbsp;(ACSAC&nbsp;2021)</i>&nbsp;· <span class="ar">Acceptance rate 17.2% (56/326)</span></span>
+  <span class="ds">Disclosures: <a href="https://www.amd.com/en/resources/product-security/bulletin/amd-sb-1023.html">AMD-SB-1023</a>&nbsp;· <a href="https://www.cve.org/CVERecord?id=CVE-2021-26340">CVE-2021-26340</a>&nbsp;· <a href="https://support.lenovo.com/us/en/product_security/LEN-75179">Lenovo LEN-75179</a></span>
+  <span class="ln"><a href="https://doi.org/10.1145/3485832.3485876">DOI</a>&nbsp;· <a href="https://yinqian.org/papers/acsac21.pdf">PDF</a>&nbsp;· <a href="files/bib/tlb-poisoning-acsac21.bib">BibTeX</a></span></li>
+<li id="crossline-ccs21"><span class="tag" data-export="skip">ACM CCS&nbsp;2021</span>
+  <cite>CROSSLINE: Breaking “Security-by-Crash” based Memory Isolation in AMD SEV</cite>
+  <span class="au"><b>Mengyuan&nbsp;Li</b>, Yinqian&nbsp;Zhang, Zhiqiang&nbsp;Lin</span>
+  <span class="ve"><i>2021 ACM SIGSAC Conference on Computer and Communications Security&nbsp;(CCS&nbsp;2021)</i>&nbsp;· <span class="ar">Acceptance rate 22.3% (196/879)</span></span>
+  <span class="aw"><strong>Best Paper Award Runner-Up</strong>, one of 14 papers among 879 submissions that received a Best Paper Award or Runner-Up (<a href="https://raw.githubusercontent.com/acmccs2021/acm-ccs-2021/main/best-paper-awards-runner-up/ACM%20CCS%202021_BestPaperAward_RunnerUp%20(6).jpg">plaque</a>, <a href="https://sigsac.org/ccs/CCS2021/ccs-awards.html">CCS 2021 awards</a>)</span>
+  <span class="ln"><a href="https://doi.org/10.1145/3460120.3485253">DOI</a>&nbsp;· <a href="https://arxiv.org/pdf/2008.00146">PDF</a>&nbsp;· <a href="https://arxiv.org/abs/2008.00146">arXiv</a>&nbsp;· <a href="files/bib/crossline-ccs21.bib">BibTeX</a></span></li>
+<li id="cipherleaks-usenixsec21"><span class="tag" data-export="skip">USENIX Security&nbsp;2021</span>
+  <cite>CIPHERLEAKS: Breaking Constant-time Cryptography on AMD SEV via the Ciphertext Side Channel</cite>
+  <span class="au"><b>Mengyuan&nbsp;Li</b>, Yinqian&nbsp;Zhang, Huibo&nbsp;Wang, Kang&nbsp;Li, Yueqiang&nbsp;Cheng</span>
+  <span class="ve"><i>30th USENIX Security Symposium&nbsp;(USENIX&nbsp;Security&nbsp;2021)</i>&nbsp;· <span class="ar">Acceptance rate 18.8% (248/1319)</span></span>
+  <span class="ds">Disclosures: <a href="https://www.amd.com/en/resources/product-security/bulletin/amd-sb-1013.html">AMD-SB-1013</a>&nbsp;· <a href="https://www.cve.org/CVERecord?id=CVE-2020-12966">CVE-2020-12966</a></span>
+  <span class="nt">AMD filed an embargo for the ciphertext side channel identified in the paper and announced a security bulletin together with a hardware patch for SEV-SNP in August 2021.</span>
+  <span class="ln"><a href="https://www.usenix.org/conference/usenixsecurity21/presentation/li-mengyuan">Paper</a>&nbsp;· <a href="https://www.usenix.org/system/files/sec21-li-mengyuan.pdf">PDF</a>&nbsp;· <a href="https://cipherleaks.com/">Website</a>&nbsp;· <a href="files/bib/cipherleaks-usenixsec21.bib">BibTeX</a></span></li>
+<li id="hyperrace-dsc19"><span class="tag" data-export="skip">IEEE DSC&nbsp;2019</span>
+  <cite>Defeating Speculative-Execution Attacks on SGX with HyperRace</cite>
+  <span class="au">Guoxing&nbsp;Chen, <b>Mengyuan&nbsp;Li</b>, Fengwei&nbsp;Zhang, Yinqian&nbsp;Zhang</span>
+  <span class="ve"><i>2019 IEEE Conference on Dependable and Secure Computing&nbsp;(DSC&nbsp;2019)</i></span>
+  <span class="ln"><a href="https://doi.org/10.1109/DSC47296.2019.8937682">DOI</a>&nbsp;· <a href="https://yinqian.org/papers/idsc19.pdf">PDF</a>&nbsp;· <a href="files/bib/hyperrace-dsc19.bib">BibTeX</a></span></li>
+<li id="sev-io-usenixsec19"><span class="tag" data-export="skip">USENIX Security&nbsp;2019</span>
+  <cite>Exploiting Unprotected I/O Operations in AMD’s Secure Encrypted Virtualization</cite>
+  <span class="au"><b>Mengyuan&nbsp;Li</b>, Yinqian&nbsp;Zhang, Zhiqiang&nbsp;Lin, Yan&nbsp;Solihin</span>
+  <span class="ve"><i>28th USENIX Security Symposium&nbsp;(USENIX&nbsp;Security&nbsp;2019)</i>&nbsp;· <span class="ar">Acceptance rate 16.2% (113/697)</span></span>
+  <span class="ln"><a href="https://www.usenix.org/conference/usenixsecurity19/presentation/li-mengyuan">Paper</a>&nbsp;· <a href="https://www.usenix.org/system/files/sec19-li-mengyuan_0.pdf">PDF</a>&nbsp;· <a href="files/bib/sev-io-usenixsec19.bib">BibTeX</a></span></li>
+<li id="serverless-atc18"><span class="tag" data-export="skip">USENIX ATC&nbsp;2018</span>
+  <cite>Peeking Behind the Curtains of Serverless Platforms</cite>
+  <span class="au">Liang&nbsp;Wang, <b>Mengyuan&nbsp;Li</b>, Yinqian&nbsp;Zhang, Thomas&nbsp;Ristenpart, Michael&nbsp;Swift</span>
+  <span class="ve"><i>2018 USENIX Annual Technical Conference&nbsp;(USENIX&nbsp;ATC&nbsp;2018)</i>&nbsp;· <span class="ar">Acceptance rate 20.1% (76/378)</span></span>
+  <span class="ln"><a href="https://www.usenix.org/conference/atc18/presentation/wang-liang">Paper</a>&nbsp;· <a href="https://www.usenix.org/system/files/conference/atc18/atc18-wang-liang.pdf">PDF</a>&nbsp;· <a href="https://github.com/liangw-sec/faas_measure">Code</a>&nbsp;· <a href="files/bib/serverless-atc18.bib">BibTeX</a></span></li>
+<li id="stacco-ccs17"><span class="tag" data-export="skip">ACM CCS&nbsp;2017</span>
+  <cite>Stacco: Differentially Analyzing Side-Channel Traces for Detecting SSL/TLS Vulnerabilities in Secure Enclaves</cite>
+  <span class="au">Yuan&nbsp;Xiao, <b>Mengyuan&nbsp;Li</b>, Sanchuan&nbsp;Chen, Yinqian&nbsp;Zhang</span>
+  <span class="ve"><i>2017 ACM SIGSAC Conference on Computer and Communications Security&nbsp;(CCS&nbsp;2017)</i>&nbsp;· <span class="ar">Acceptance rate 17.9% (151/843)</span></span>
+  <span class="ln"><a href="https://doi.org/10.1145/3133956.3134016">DOI</a>&nbsp;· <a href="https://acmccs.github.io/papers/p859-xiaoA.pdf">PDF</a>&nbsp;· <a href="https://arxiv.org/abs/1707.03473">arXiv</a>&nbsp;· <a href="https://github.com/OSUSecLab/Stacco">Code</a>&nbsp;· <a href="files/bib/stacco-ccs17.bib">BibTeX</a></span></li>
+<li id="spfm-iotj17"><span class="tag" data-export="skip">IEEE IoT-J&nbsp;2017 <small>Journal</small></span>
+  <cite>SPFM: Scalable and Privacy-Preserving Friend Matching in Mobile Cloud</cite>
+  <span class="au"><b>Mengyuan&nbsp;Li</b>, Na&nbsp;Ruan, Qiyang&nbsp;Qian, Haojin&nbsp;Zhu, Xiaohui&nbsp;Liang, Le&nbsp;Yu</span>
+  <span class="ve"><i>IEEE Internet of Things Journal, vol. 4, no. 2</i>, 2017</span>
+  <span class="ln"><a href="https://doi.org/10.1109/JIOT.2016.2582780">DOI</a>&nbsp;· <a href="files/bib/spfm-iotj17.bib">BibTeX</a></span></li>
+<li id="csi-wifi-ccs16"><span class="tag" data-export="skip">ACM CCS&nbsp;2016</span>
+  <cite>When CSI Meets Public WiFi: Inferring Your Mobile Phone Password via WiFi Signals</cite>
+  <span class="au"><b>Mengyuan&nbsp;Li</b>, Yan&nbsp;Meng, Junyi&nbsp;Liu, Haojin&nbsp;Zhu, Xiaohui&nbsp;Liang, Yao&nbsp;Liu, Na&nbsp;Ruan</span>
+  <span class="ve"><i>2016 ACM SIGSAC Conference on Computer and Communications Security&nbsp;(CCS&nbsp;2016)</i>&nbsp;· <span class="ar">Acceptance rate 16.5% (137/831)</span></span>
+  <span class="ln"><a href="https://doi.org/10.1145/2976749.2978397">DOI</a>&nbsp;· <a href="https://nsec.sjtu.edu.cn/publications/2016/When.pdf">PDF</a>&nbsp;· <a href="https://nsec.sjtu.edu.cn/publications/2016/CCS%202016.pdf">Slides</a>&nbsp;· <a href="https://nsec.sjtu.edu.cn/publications/2016/ccs2016.mp4">Demo video</a>&nbsp;· <a href="https://www.youtube.com/watch?v=ZJrTVU_eajE">Video</a>&nbsp;· <a href="files/bib/csi-wifi-ccs16.bib">BibTeX</a></span></li>
+<li id="jamming-jsac16"><span class="tag" data-export="skip">IEEE JSAC&nbsp;2016 <small>Journal</small></span>
+  <cite>You Can Jam But You Cannot Hide: Defending Against Jamming Attacks for Geo-Location Database Driven Spectrum Sharing</cite>
+  <span class="au">Haojin&nbsp;Zhu, Chenliaohui&nbsp;Fang, Yao&nbsp;Liu, Cailian&nbsp;Chen, <b>Mengyuan&nbsp;Li</b>, Xuemin&nbsp;Sherman&nbsp;Shen</span>
+  <span class="ve"><i>IEEE Journal on Selected Areas in Communications, vol. 34, no. 10</i>, 2016</span>
+  <span class="ln"><a href="https://doi.org/10.1109/JSAC.2016.2605799">DOI</a>&nbsp;· <a href="files/bib/jamming-jsac16.bib">BibTeX</a></span></li>
+</ol>
+<h3 class="yr" id="pubs-preprints">Preprints</h3>
+<ol class="pubs" role="list">
+<li id="safety-offset-arxiv26" class="pre"><span class="tag" data-export="skip">2026</span>
+  <cite>Safety Offset Learning: When Benign Fine-Tuning Misaligns LLMs</cite>
+  <span class="au">Jesson&nbsp;Wang*, Zhanhao&nbsp;Hu*, <b>Minghao&nbsp;Lin</b>, Yuchen&nbsp;Wu, Aylin&nbsp;Caliskan, <b>Mengyuan&nbsp;Li</b></span>
+  <span class="ve"><i>arXiv:2610.25611</i>, 2026</span>
+  <span class="ln"><a href="https://arxiv.org/pdf/2610.25611">PDF</a>&nbsp;· <a href="https://arxiv.org/abs/2610.25611">arXiv</a>&nbsp;· <a href="https://github.com/JessonWong/safety-offset-learning">Code</a>&nbsp;· <a href="files/bib/safety-offset-arxiv26.bib">BibTeX</a></span></li>
+<li id="catchbench-arxiv26" class="pre"><span class="tag" data-export="skip">2026</span>
+  <cite>CatchBench: When Can an Agent Failure Be Caught?</cite>
+  <span class="au">Yue&nbsp;Zhao, <b>Mengyuan&nbsp;Li</b>, Ruolin&nbsp;Li, Prince&nbsp;Zizhuang&nbsp;Wang, Shuli&nbsp;Jiang, Linsey&nbsp;Pang, Xiongye&nbsp;Xiao, Xiyang&nbsp;Hu</span>
+  <span class="ve"><i>arXiv:2608.22808</i>, 2026</span>
+  <span class="ln"><a href="https://arxiv.org/pdf/2608.22808">PDF</a>&nbsp;· <a href="https://arxiv.org/abs/2608.22808">arXiv</a>&nbsp;· <a href="https://github.com/yzhao062/catchbench">Code</a>&nbsp;· <a href="files/bib/catchbench-arxiv26.bib">BibTeX</a></span></li>
+<li id="arrowcloak-arxiv26" class="pre"><span class="tag" data-export="skip">2026</span>
+  <cite>Hiding Directions, Leaking Structure: Breaking ArrowCloak through Low-Rank Structure</cite>
+  <span class="au"><b>Beijie&nbsp;Liu</b>*, Junyi&nbsp;Ouyang*, <b>Haoxuan&nbsp;Xu</b>*, Vincent&nbsp;Quentin&nbsp;Ulitzsch, <b>Potung&nbsp;Yu</b>, Yajie&nbsp;Zhao, <b>Mengyuan&nbsp;Li</b></span>
+  <span class="ve"><i>arXiv:2608.21615</i>, 2026</span>
+  <span class="ln"><a href="https://arxiv.org/pdf/2608.21615">PDF</a>&nbsp;· <a href="https://arxiv.org/abs/2608.21615">arXiv</a>&nbsp;· <a href="files/bib/arrowcloak-arxiv26.bib">BibTeX</a></span></li>
+<li id="skill-reconstruction-arxiv26" class="pre"><span class="tag" data-export="skip">2026</span>
+  <cite>Behavioral Skill Reconstruction: Reconstructing Hidden Functionality from LLM Agent Skills</cite>
+  <span class="au">Peichun&nbsp;Hua, <b>Haoxuan&nbsp;Xu</b>, <b>Mengyuan&nbsp;Li</b></span>
+  <span class="ve"><i>arXiv:2608.04192</i>, 2026</span>
+  <span class="ln"><a href="https://arxiv.org/pdf/2608.04192">PDF</a>&nbsp;· <a href="https://arxiv.org/abs/2608.04192">arXiv</a>&nbsp;· <a href="files/bib/skill-reconstruction-arxiv26.bib">BibTeX</a></span></li>
+<li id="otro-arxiv26" class="pre"><span class="tag" data-export="skip">2026</span>
+  <cite>OTRO: Oblivious Tokenization Path with Square-Root ORAM</cite>
+  <span class="au">Jonghyun&nbsp;Lee, <b>Yongqin&nbsp;Wang</b>, Rachit&nbsp;Rajat, Daniel&nbsp;Wong, <b>Mengyuan&nbsp;Li</b>, Murali&nbsp;Annavaram</span>
+  <span class="ve"><i>arXiv:2606.17358</i>, 2026</span>
+  <span class="ln"><a href="https://arxiv.org/pdf/2606.17358">PDF</a>&nbsp;· <a href="https://arxiv.org/abs/2606.17358">arXiv</a>&nbsp;· <a href="files/bib/otro-arxiv26.bib">BibTeX</a></span></li>
+<li id="agent-memory-arxiv26" class="pre"><span class="tag" data-export="skip">2026</span>
+  <cite>Infrastructure for Valuable, Tradable, and Verifiable Agent Memory</cite>
+  <span class="au"><b>Mengyuan&nbsp;Li</b>, Lei&nbsp;Gao, <b>Haoxuan&nbsp;Xu</b>, Jiate&nbsp;Li, <b>Potung&nbsp;Yu</b>, Lingke&nbsp;Cheng, Yue&nbsp;Zhao, Murali&nbsp;Annavaram</span>
+  <span class="ve"><i>arXiv:2603.24564</i>, 2026</span>
+  <span class="ln"><a href="https://arxiv.org/pdf/2603.24564">PDF</a>&nbsp;· <a href="https://arxiv.org/abs/2603.24564">arXiv</a>&nbsp;· <a href="https://github.com/sept-usc/ClawGang">Code</a>&nbsp;· <a href="files/bib/agent-memory-arxiv26.bib">BibTeX</a></span></li>
+<li id="gfm-extraction-arxiv25" class="pre"><span class="tag" data-export="skip">2025</span>
+  <cite>A Systematic Study of Model Extraction Attacks on Graph Foundation Models</cite>
+  <span class="au"><b>Haoyan&nbsp;Xu</b>*, Ruizhi&nbsp;Qian*, Jiate&nbsp;Li, Yushun&nbsp;Dong, <b>Minghao&nbsp;Lin</b>, Hanson&nbsp;Yan, Zhengtao&nbsp;Yao, Qinghua&nbsp;Liu, Junhao&nbsp;Dong, Ruopeng&nbsp;Huang, Yue&nbsp;Zhao, <b>Mengyuan&nbsp;Li</b></span>
+  <span class="ve"><i>arXiv:2511.11912</i>, 2025</span>
+  <span class="ln"><a href="https://arxiv.org/pdf/2511.11912">PDF</a>&nbsp;· <a href="https://arxiv.org/abs/2511.11912">arXiv</a>&nbsp;· <a href="files/bib/gfm-extraction-arxiv25.bib">BibTeX</a></span></li>
+<li id="vreaves-arxiv25" class="pre"><span class="tag" data-export="skip">2025</span>
+  <cite>VReaves: Eavesdropping on Virtual Reality App Identity and Activity via Electromagnetic Side Channels</cite>
+  <span class="au">Wei&nbsp;Sun, Minghong&nbsp;Fang, <b>Mengyuan&nbsp;Li</b></span>
+  <span class="ve"><i>arXiv:2506.17570</i>, 2025</span>
+  <span class="ln"><a href="https://arxiv.org/pdf/2506.17570">PDF</a>&nbsp;· <a href="https://arxiv.org/abs/2506.17570">arXiv</a>&nbsp;· <a href="files/bib/vreaves-arxiv25.bib">BibTeX</a></span></li>
+<li id="glip-ood-arxiv25" class="pre"><span class="tag" data-export="skip">2025</span>
+  <cite>GLIP-OOD: Zero-Shot Graph OOD Detection with Graph Foundation Model</cite>
+  <span class="au"><b>Haoyan&nbsp;Xu</b>*, Zhengtao&nbsp;Yao*, Xuzhi&nbsp;Zhang, Ziyi&nbsp;Wang, Langzhou&nbsp;He, Yushun&nbsp;Dong, Philip&nbsp;S.&nbsp;Yu, <b>Mengyuan&nbsp;Li</b>, Yue&nbsp;Zhao</span>
+  <span class="ve"><i>arXiv:2504.21186</i>, 2025</span>
+  <span class="ln"><a href="https://arxiv.org/pdf/2504.21186">PDF</a>&nbsp;· <a href="https://arxiv.org/abs/2504.21186">arXiv</a>&nbsp;· <a href="files/bib/glip-ood-arxiv25.bib">BibTeX</a></span></li>
+<li id="graph-ood-exposure-arxiv25" class="pre"><span class="tag" data-export="skip">2025</span>
+  <cite>Graph Synthetic Out-of-Distribution Exposure with Large Language Models</cite>
+  <span class="au"><b>Haoyan&nbsp;Xu</b>*, Zhengtao&nbsp;Yao*, Ziyi&nbsp;Wang, Zhan&nbsp;Cheng, Xiyang&nbsp;Hu, <b>Mengyuan&nbsp;Li</b>, Yue&nbsp;Zhao</span>
+  <span class="ve"><i>arXiv:2504.21198</i>, 2025</span>
+  <span class="ln"><a href="https://arxiv.org/pdf/2504.21198">PDF</a>&nbsp;· <a href="https://arxiv.org/abs/2504.21198">arXiv</a>&nbsp;· <a href="files/bib/graph-ood-exposure-arxiv25.bib">BibTeX</a></span></li>
+<li id="ditto-arxiv24" class="pre"><span class="tag" data-export="skip">2024</span>
+  <cite>Ditto: Elastic Confidential VMs with Secure and Dynamic CPU Scaling</cite>
+  <span class="au">Shixuan&nbsp;Zhao*, <b>Mengyuan&nbsp;Li</b>*, Mengjia&nbsp;Yan, Zhiqiang&nbsp;Lin</span>
+  <span class="ve"><i>arXiv:2409.15542</i>, 2024</span>
+  <span class="ln"><a href="https://arxiv.org/pdf/2409.15542">PDF</a>&nbsp;· <a href="https://arxiv.org/abs/2409.15542">arXiv</a>&nbsp;· <a href="files/bib/ditto-arxiv24.bib">BibTeX</a></span></li>
+<li id="bridge-the-future-arxiv24" class="pre"><span class="tag" data-export="skip">2024</span>
+  <cite>Bridge the Future: High-Performance Networks in Confidential VMs without Trusted I/O devices</cite>
+  <span class="au"><b>Mengyuan&nbsp;Li</b>, Shashvat&nbsp;Srivastava, Mengjia&nbsp;Yan</span>
+  <span class="ve"><i>arXiv:2403.03360</i>, 2024</span>
+  <span class="ln"><a href="https://arxiv.org/pdf/2403.03360">PDF</a>&nbsp;· <a href="https://arxiv.org/abs/2403.03360">arXiv</a>&nbsp;· <a href="files/bib/bridge-the-future-arxiv24.bib">BibTeX</a></span></li>
+</ol>
+<!-- END publications -->
+</section>
 
-			<div class="publication-item">
-				<div class="publication-title">SCALE: Tackling Communication Bottlenecks in Confidential Multi-GPU ML</div>
-				<div class="publication-authors">Joongun Park, <span class="highlight">Yongqin Wang</span>, Huan Xu, Hanjiang Wu, <span class="highlight">Mengyuan Li</span>, Tushar Krishna</div>
-				<div class="publication-venue">IEEE International Symposium on High-Performance Computer Architecture (HPCA) 2026</div>
-				<div class="publication-links">
-					<a href="https://2026.hpca-conf.org/details/hpca-2026-main-conference/97/SCALE-Tackling-Communication-Bottlenecks-in-Confidential-Multi-GPU-ML" target="_blank">[link]</a>
-				</div>
-			</div>
+<section id="teaching">
+  <h2 class="sec">Teaching</h2>
+  <ul class="teach" role="list">
+    <li class="m"><span class="side">Spring 2027 (upcoming)</span>
+      <h3>CSCI 530: Security Systems</h3>
+      <p>Graduate course on protecting computer networks and systems with cryptography, authentication and authorization, and intrusion detection and response. A lab component gives students hands-on experience with these mechanisms.</p></li>
+    <li class="m"><span class="side">Fall 2025, Fall 2026</span>
+      <h3><a href="25fall_699.html">CSCI 699: Understanding and Identifying <span class="nw">Side-Channel</span> Threats in Cloud and LLM Systems</a></h3>
+      <p>Graduate seminar on side-channel attacks across multi-tenant cloud platforms, TEEs, GPUs, and LLM services.</p></li>
+    <li class="m"><span class="side">Spring 2025, Spring 2026</span>
+      <h3><a href="course.html">CSCI 699: Confidential Computing: Protecting Your Data on Cloud GPUs and CPUs</a></h3>
+      <p>Graduate course on trusted execution environments, confidential VMs, and confidential GPUs, together with related privacy techniques such as federated learning, secure multi-party computation, and fully homomorphic encryption.</p></li>
+  </ul>
+</section>
 
-			<div class="publication-item">
-				<div class="publication-title">WAVE: Leveraging Architecture Observation for Privacy-Preserving Model Oversight</div>
-				<div class="publication-authors"><span class="highlight">Haoxuan Xu</span>*, <span class="highlight">Chen Gong</span>*, <span class="highlight">Beijie Liu</span>*, Haizhong Zheng, Beidi Chen, <span class="highlight">Mengyuan Li</span> (*equal contribution)</div>
-				<div class="publication-venue">ACM International Conference on Architectural Support for Programming Languages and Operating Systems (ASPLOS) 2026</div>
-				<div class="publication-links">
-					<a href="https://dl.acm.org/doi/epdf/10.1145/3779212.3790247" target="_blank">[link]</a>
-				</div>
-			</div>
+<section id="service" class="svc">
+  <h2 class="sec" id="myservices">Service</h2>
+  <div class="m"><h3 class="side">Program committee</h3>
+    <p>ACM Conference on Computer and Communications Security (CCS) 2024; IEEE European Symposium on Security and Privacy (EuroS&amp;P) 2024; International Conference on Applied Cryptography and Network Security (ACNS) 2023.</p></div>
+  <div class="m"><h3 class="side">Journal reviewer</h3>
+    <p>IEEE Transactions on Dependable and Secure Computing (TDSC) 2021, 2022, 2023; IEEE Transactions on Parallel and Distributed Systems (TPDS) 2023; IEEE Transactions on Mobile Computing (TMC) 2021, 2022; IEEE/ACM Transactions on Networking (TNET) 2021, 2022; IEEE Transactions on Emerging Topics in Computing 2022.</p></div>
+  <div class="m"><h3 class="side">External reviewer</h3>
+    <p>IEEE Symposium on Security and Privacy (Oakland) 2020, 2022, 2023; ACM CCS 2019, 2020, 2022, 2023; USENIX Security Symposium 2021; ISOC Network and Distributed System Security Symposium (NDSS) 2019; ACM AsiaCCS 2020; ACM Cloud Computing Security Workshop (CCSW) 2021.</p></div>
+</section>
 
-			<div class="publication-item">
-				<div class="publication-title">Few-Shot Graph Out-of-Distribution Detection with LLMs</div>
-				<div class="publication-authors"><span class="highlight">Haoyan Xu</span>, Zhengtao Yao, Yushun Dong, Ziyi Wang, Ryan Rossi, <span class="highlight">Mengyuan Li</span>, Yue Zhao</div>
-				<div class="publication-venue">Joint European Conference on Machine Learning and Knowledge Discovery in Databases (ECML-PKDD) 2025</div>
-				<div class="publication-links">
-					<a href="https://link.springer.com/chapter/10.1007/978-3-032-06078-5_18" target="_blank">[link]</a>
-				</div>
-			</div>
+<section id="contact" class="contact">
+  <h2 class="sec">Contact</h2>
+  <div class="m"><span class="side">Email</span>
+    <p><a href="mailto:mengyuanli@usc.edu">mengyuanli@usc.edu</a></p></div>
+  <div class="m"><span class="side">Address</span>
+    <address>Thomas Lord Department of Computer Science<br>Ginsburg Hall (GCS), 1031 Downey Way<br>Los Angeles, CA 90089</address></div>
+</section>
 
-			<div class="publication-item">
-				<div class="publication-title">Chekhov's Gun: Uncovering Hidden Risks in macOS Application-Sandboxed PID-Domain Services</div>
-				<div class="publication-authors"><span class="highlight">Minghao Lin</span>, Jiaxun Zhu, Tingting Yin, Zechao Cai, Guanxing Wen, Yanan Guo, <span class="highlight">Mengyuan Li</span></div>
-				<div class="publication-venue">ACM Conference on Computer and Communications Security (CCS) 2025</div>
-				<div class="publication-links">
-					<a href="https://dl.acm.org/doi/abs/10.1145/3719027.3765205" target="_blank">[link]</a>
-				</div>
-			</div>
+</main>
 
-			<div class="publication-item">
-				<div class="publication-title">A Close Look at RMP Entry Caching and Its Security Implications in SEV-SNP</div>
-				<div class="publication-authors">Alexis Bagia, Vincent Quentin Ulitzsch, Daniël Trujillo, <span class="highlight">Mengyuan Li</span>, Mengjia Yan, Jean-Pierre Seifert</div>
-				<div class="publication-venue">14th International Workshop on Hardware and Architectural Support for Security and Privacy (HASP) 2025</div>
-				<div class="publication-links">
-					<a href="https://dl.acm.org/doi/abs/10.1145/3768725.3768727" target="_blank">[link]</a>
-				</div>
-				<div style="font-size: 13px; color: #666; margin-top: 8px;">
-					Security bulletin from AMD <a href="https://www.amd.com/en/resources/product-security/bulletin/amd-sb-3036.html" target="_blank">[AMD-SB-3036]</a>
-				</div>
-			</div>
-
-			<div class="publication-item">
-				<div class="publication-title">Ditto: Elastic Confidential VMs with Secure and Dynamic CPU Scaling</div>
-				<div class="publication-authors">Shixuan Zhao*, <span class="highlight">Mengyuan Li*</span>, Mengjia Yan, Zhiqiang Lin (*equal contribution)</div>
-				<div class="publication-venue">Under Submission</div>
-				<div class="publication-links">
-					<a href="https://arxiv.org/pdf/2409.15542" target="_blank">[arxiv]</a>
-				</div>
-			</div>
-
-			<div class="publication-item">
-				<div class="publication-title">Bridge the Future: High-Performance Networks in Confidential VMs without Trusted I/O devices</div>
-				<div class="publication-authors"><span class="highlight">Mengyuan Li</span>, Shashvat Srivastava, Mengjia Yan</div>
-				<div class="publication-venue">Under Submission</div>
-				<div class="publication-links">
-					<a href="https://arxiv.org/pdf/2403.03360.pdf" target="_blank">[arxiv]</a>
-				</div>
-			</div>
-
-			<div class="publication-item">
-				<div class="publication-title">SoK: Understanding Design Choices and Pitfalls of Trusted Execution Environments</div>
-				<div class="publication-authors"><span class="highlight">Mengyuan Li</span>, Yuheng Yang, Guoxing Chen, Mengjia Yan, Yinqian Zhang</div>
-				<div class="publication-venue">ACM ASIACCS'24</div>
-				<div class="publication-links">
-					<a href="./files/asiaccs_sok.pdf" target="_blank">[pdf]</a>
-				</div>
-			</div>
-
-			<div class="publication-item">
-				<div class="publication-title">CipherH: Automated Detection of Ciphertext Side-channel Vulnerabilities in Cryptographic Implementations</div>
-				<div class="publication-authors">Sen Deng, <span class="highlight">Mengyuan Li</span>, Yining Tang, Shuai Wang, Shoumeng Yan, Yinqian Zhang</div>
-				<div class="publication-venue">USENIX Security Symposium'23</div>
-				<div class="publication-links">
-					<a href="https://www.usenix.org/system/files/sec23summer_289-deng-prepub.pdf" target="_blank">[pdf]</a>
-				</div>
-			</div>
-
-			<div class="publication-item">
-				<div class="publication-title">PWRLEAK: Exploiting Power Reporting Interface for Side-channel Attacks on AMD SEV</div>
-				<div class="publication-authors">Wubing Wang, <span class="highlight">Mengyuan Li</span>, Yinqian Zhang, Zhiqiang Lin</div>
-				<div class="publication-venue">20th Conference on Detection of Intrusions and Malware & Vulnerability Assessment (DIMVA 2023)</div>
-				<div class="publication-links">
-					<a href="https://link.springer.com/chapter/10.1007/978-3-031-35504-2_3" target="_blank">[pdf]</a>
-				</div>
-				<div style="font-size: 13px; color: #666; margin-top: 8px;">
-					Security bulletin from AMD <a href="https://www.amd.com/en/resources/product-security/bulletin/amd-sb-3004.html" target="_blank">[AMD-SB-3004]</a>, CVE <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-20575" target="_blank">[CVE-2023-20575]</a>
-				</div>
-			</div>
-
-			<div class="publication-item">
-				<div class="publication-title">A Systematic Look at Ciphertext Side Channels</div>
-				<div class="publication-authors"><span class="highlight">Mengyuan Li</span>*, Luca Wilke*, Jan Wichelmann, Thomas Eisenbarth, Radu Teodorescu, Yinqian Zhang (*equal contribution)</div>
-				<div class="publication-venue">IEEE Symposium on Security and Privacy'22 (Acceptance rate: 57/407=14.0%)</div>
-				<div class="publication-links">
-					<a href="https://ieeexplore.ieee.org/document/9833768" target="_blank">[pdf]</a>
-				</div>
-				<div style="font-size: 13px; color: #666; margin-top: 8px;">
-					Security bulletin from AMD <a href="https://www.amd.com/en/resources/product-security/bulletin/amd-sb-1033.html" target="_blank">[AMD-SB-1033]</a>, CVE <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-46744" target="_blank">[CVE-2021-46744]</a><br>
-					An official <a href="https://www.amd.com/system/files/documents/221404394-a_security_wp_final.pdf" target="_blank">[White Paper]</a> from AMD for TEE developers and users to write code in a Ciphertext Side-channel-resistant way.
-				</div>
-			</div>
-
-			<div class="publication-item">
-				<div class="publication-title">vSGX: Virtualizing SGX Enclaves on AMD SEV</div>
-				<div class="publication-authors">Shixuan Zhao, <span class="highlight">Mengyuan Li</span>, Yinqian Zhang, Zhiqiang Lin</div>
-				<div class="publication-venue">IEEE Symposium on Security and Privacy'22 (Acceptance rate: 54/327=15.2%)</div>
-				<div class="publication-links">
-					<a href="https://ieeexplore.ieee.org/document/9833694" target="_blank">[pdf]</a>
-				</div>
-			</div>
-
-			<div class="publication-item">
-				<div class="publication-title">TLB Poisoning Attacks on AMD Secure Encrypted Virtualization</div>
-				<div class="publication-authors"><span class="highlight">Mengyuan Li</span>, Yinqian Zhang, Huibo Wang, Kang Li, Yueqiang Chen</div>
-				<div class="publication-venue">The 2021 Annual Computer Security Applications Conference (ACSAC 2021) (Acceptance rate: 56/326=15.2%)</div>
-				<div class="publication-links">
-					<a href="http://web.cse.ohio-state.edu/~li.7533/paper/acsac21-11.pdf" target="_blank">[pdf]</a>
-				</div>
-				<div style="font-size: 13px; color: #666; margin-top: 8px;">
-					Security bulletin from AMD <a href="https://www.amd.com/en/corporate/product-security/bulletin/amd-sb-1023" target="_blank">[AMD-SB-1023]</a>, CVE <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-26340" target="_blank">[CVE-2021-26340]</a>, Announcement from <a href="https://support.lenovo.com/us/en/product_security/LEN-75179" target="_blank">Lenovo</a>
-				</div>
-			</div>
-
-			<div class="publication-item">
-				<div class="publication-title">CROSSLINE: Breaking "Security-by-Crash" based Memory Isolation in AMD SEV</div>
-				<div class="publication-authors"><span class="highlight">Mengyuan Li</span>, Yinqian Zhang, Zhiqiang Lin</div>
-				<div class="publication-venue">ACM Conference on Computer and Communications Security'21, Nov. 2021 (Acceptance rate: 196/879=22.3%)</div>
-				<div class="publication-links">
-					<a href="https://arxiv.org/pdf/2008.00146.pdf" target="_blank">[pdf]</a>
-					<a href="http://web.cse.ohio-state.edu/~li.7533/bib/crossline.bib" target="_blank">[bib]</a>
-				</div>
-				<div style="font-size: 13px; color: #666; margin-top: 8px;">
-					Best Paper Awards (Runner-Ups) (14/879=1.6%) <a href="https://raw.githubusercontent.com/acmccs2021/acm-ccs-2021/main/best-paper-awards-runner-up/ACM%20CCS%202021_BestPaperAward_RunnerUp%20(6).jpg" target="_blank">[plaque]</a> <a href="https://sigsac.org/ccs/CCS2021/ccs-awards.html" target="_blank">[link]</a>
-				</div>
-			</div>
-
-			<div class="publication-item">
-				<div class="publication-title">CIPHERLEAKS: Breaking Constant-time Cryptography on AMD SEV via the Ciphertext Side Channel</div>
-				<div class="publication-authors"><span class="highlight">Mengyuan Li</span>, Yinqian Zhang, Huibo Wang, Kang Li, Yueqiang Chen</div>
-				<div class="publication-venue">USENIX Security Symposium'21, Virtual, Aug. 2021 (Acceptance rate: 248/1319=18.8%)</div>
-				<div class="publication-links">
-					<a href="https://www.usenix.org/system/files/sec21-li-mengyuan.pdf" target="_blank">[pdf]</a>
-					<a href="http://web.cse.ohio-state.edu/~li.7533/bib/cipherleaks.bib" target="_blank">[bib]</a>
-					<a href="https://cipherleaks.com/">[Website]</a>
-				</div>
-				<div style="font-size: 13px; color: #666; margin-top: 8px;">
-					AMD filed an embargo for the ciphertext side channel identified in the paper and announced a security <a href="https://www.amd.com/en/corporate/product-security/bulletin/amd-sb-1013" target="_blank">bulletin</a> together with a hardware patch for SEV-SNP in August 2021 <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-12966" target="_blank">[CVE-2020-12966]</a>
-				</div>
-			</div>
-
-			<div class="publication-item">
-				<div class="publication-title">Defeating speculative-execution attacks on SGX with HyperRace</div>
-				<div class="publication-authors">Guoxing Chen, <span class="highlight">Mengyuan Li</span>, Fengwei Zhang, Yinqian Zhang</div>
-				<div class="publication-venue">IEEE Conference on Dependable and Secure Computing'19, Hangzhou, China, Nov. 2021</div>
-				<div class="publication-links">
-					<a href="http://web.cse.ohio-state.edu/~li.7533/paper/hyperrace-idsc19.pdf" target="_blank">[pdf]</a>
-					<a href="http://web.cse.ohio-state.edu/~li.7533/bib/cipherleaks.bib" target="_blank">[bib]</a>
-				</div>
-			</div>
-
-			<div class="publication-item">
-				<div class="publication-title">Exploiting Unprotected I/O Operations in AMD's Secure Encrypted Virtualization</div>
-				<div class="publication-authors"><span class="highlight">Mengyuan Li</span>, Yinqian Zhang, Zhiqiang Lin, Yan Solihin</div>
-				<div class="publication-venue">USENIX Security Symposium'19, Santa Clara, CA, Aug. 2019 (Acceptance rate: 113/697=16.2%)</div>
-				<div class="publication-links">
-					<a href="https://yinqian.org/papers/sec19b.pdf" target="_blank">[pdf]</a>
-					<a href="http://web.cse.ohio-state.edu/~li.7533/bib/sevio.bib" target="_blank">[bib]</a>
-				</div>
-			</div>
-
-			<div class="publication-item">
-				<div class="publication-title">Peeking Behind the Curtains of Serverless Platforms</div>
-				<div class="publication-authors">Liang Wang, <span class="highlight">Mengyuan Li</span>, Yinqian Zhang, Thomas Ristenpart, Michael Swift</div>
-				<div class="publication-venue">USENIX ATC'18, Boston, MA, USA, July. 2018 (Acceptance rate: 76/378=20.1%)</div>
-				<div class="publication-links">
-					<a href="https://www.usenix.org/system/files/conference/atc18/atc18-wang-liang.pdf" target="_blank">[pdf]</a>
-					<a href="https://github.com/liangw89/faas_measure">[Github]</a>
-					<a href="http://web.cse.ohio-state.edu/~li.7533/bib/atc18.bib" target="_blank">[bib]</a>
-				</div>
-			</div>
-
-			<div class="publication-item">
-				<div class="publication-title">Stacco: Differentially Analyzing Side-Channel Traces for Detecting SSL/TLS Vulnerabilities in Secure Enclaves</div>
-				<div class="publication-authors">Yuan Xiao, <span class="highlight">Mengyuan Li</span>, Sanchuan Chen, Yinqian Zhang</div>
-				<div class="publication-venue">ACM Conference on Computer and Communications Security'17, Dallas, TX, USA, Oct. 2017 (Acceptance rate: 151/843=17.9%)</div>
-				<div class="publication-links">
-					<a href="https://acmccs.github.io/papers/p859-xiaoA.pdf">[pdf]</a>
-					<a href="https://arxiv.org/abs/1707.03473">[arxiv]</a>
-					<a href="https://github.com/OSUSecLab/Stacco">[Github]</a>
-					<a href="http://web.cse.ohio-state.edu/~li.7533/bib/ccs17.bib" target="_blank">[bib]</a>
-				</div>
-			</div>
-
-			<div class="publication-item">
-				<div class="publication-title">When CSI Meets Public WiFi: Inferring Your Mobile Phone Password via WiFi Signals</div>
-				<div class="publication-authors"><span class="highlight">Mengyuan Li</span>, Yan Meng, Junyi Liu, Haojin Zhu, Xiaohui Liang, Yao Liu, Na Ruan</div>
-				<div class="publication-venue">ACM Conference on Computer and Communications Security'16, Vienna, Austria, Oct. 2016 (Acceptance rate: 137/831=16.5%)</div>
-				<div class="publication-links">
-					<a href="https://nsec.sjtu.edu.cn/publications/2016/When.pdf" target="_blank">[pdf]</a>
-					<a href="https://nsec.sjtu.edu.cn/publications/2016/CCS%202016.pdf" target="_blank">[slides]</a>
-					<a href="http://web.cse.ohio-state.edu/~li.7533/bib/ccs16.bib" target="_blank">[bib]</a>
-					<a href="https://nsec.sjtu.edu.cn/publications/2016/ccs2016.mp4">[Demo]</a>
-					<a href="https://www.youtube.com/watch?v=ZJrTVU_eajE">[Youtube]</a>
-				</div>
-			</div>
-		</div>
-
-		<div id="myservices" class="section">
-			<h2>Professional Services</h2>
-			
-			<h3>Program Committee</h3>
-			<div class="service-item">
-				<div class="service-name">ACM Conference on Computer and Communications Security (CCS)</div>
-				<div class="service-year">2024</div>
-			</div>
-			<div class="service-item">
-				<div class="service-name">IEEE European Symposium on Security and Privacy (EuroS&P)</div>
-				<div class="service-year">2024</div>
-			</div>
-			<div class="service-item">
-				<div class="service-name">International Conference on Applied Cryptography and Network Security (ACNS)</div>
-				<div class="service-year">2023</div>
-			</div>
-
-			<h3>Reviewer</h3>
-			<div class="service-item">
-				<div class="service-name">IEEE Transactions on Dependable and Secure Computing (TDSC)</div>
-				<div class="service-year">2021, 2022, 2023</div>
-			</div>
-			<div class="service-item">
-				<div class="service-name">IEEE Transactions on Parallel and Distributed Systems (TPDS)</div>
-				<div class="service-year">2023</div>
-			</div>
-			<div class="service-item">
-				<div class="service-name">IEEE Transactions on Mobile Computing (TMC)</div>
-				<div class="service-year">2021, 2022</div>
-			</div>
-			<div class="service-item">
-				<div class="service-name">IEEE/ACM Transactions on Networking (TNET)</div>
-				<div class="service-year">2021, 2022</div>
-			</div>
-			<div class="service-item">
-				<div class="service-name">IEEE Transactions on Emerging Topics in Computing (TETCSI)</div>
-				<div class="service-year">2022</div>
-			</div>
-
-			<h3>External Reviewer</h3>
-			<div class="service-item">
-				<div class="service-name">IEEE Symposium on Security and Privacy (Oakland)</div>
-				<div class="service-year">2020, 2022, 2023</div>
-			</div>
-			<div class="service-item">
-				<div class="service-name">ACM Conference on Computer and Communications Security (CCS)</div>
-				<div class="service-year">2019, 2020, 2022, 2023</div>
-			</div>
-			<div class="service-item">
-				<div class="service-name">USENIX Security Symposium</div>
-				<div class="service-year">2021</div>
-			</div>
-			<div class="service-item">
-				<div class="service-name">ISOC Network and Distributed System Security Symposium (NDSS)</div>
-				<div class="service-year">2019</div>
-			</div>
-			<div class="service-item">
-				<div class="service-name">ACM Asia Conference on Computer and Communications Security (AsiaCCS)</div>
-				<div class="service-year">2020</div>
-			</div>
-			<div class="service-item">
-				<div class="service-name">ACM Cloud Computing Security Workshop (CCSW)</div>
-				<div class="service-year">2021</div>
-			</div>
-		</div>
-	</div>
-
-	<script>
-		// Dark mode toggle functionality
-		function toggleTheme() {
-			const body = document.body;
-			const themeIcon = document.getElementById('themeIcon');
-			const themeText = document.getElementById('themeText');
-			
-			body.classList.toggle('dark-mode');
-			
-			if (body.classList.contains('dark-mode')) {
-				themeIcon.textContent = '☀️';
-				themeText.textContent = 'Light';
-				localStorage.setItem('theme', 'dark');
-			} else {
-				themeIcon.textContent = '🌙';
-				themeText.textContent = 'Dark';
-				localStorage.setItem('theme', 'light');
-			}
-		}
-
-		// Load saved theme preference
-		document.addEventListener('DOMContentLoaded', function() {
-			const savedTheme = localStorage.getItem('theme');
-			const themeIcon = document.getElementById('themeIcon');
-			const themeText = document.getElementById('themeText');
-			
-			if (savedTheme === 'dark') {
-				document.body.classList.add('dark-mode');
-				themeIcon.textContent = '☀️';
-				themeText.textContent = 'Light';
-			}
-		});
-	</script>
-	<footer>
-		Mengyuan (Marvin) Li &nbsp;·&nbsp; <span class="footer-copyright">© 2026<span class="footer-stat"><!-- begin Web-Stat code v 7.0 -->
+<footer class="site-footer">
+  <div class="wrap"><div class="col">
+    <p>Mengyuan (Marvin) Li&nbsp;· University of Southern California&nbsp;· <span class="footer-copyright">© 2026<span class="footer-stat"><!-- begin Web-Stat code v 7.0 -->
 <span id="wts2213221"></span>
 <script>var wts=document.createElement('script');wts.async=true;
 wts.src='https://app.ardalio.com/wts7.js';document.head.appendChild(wts);
 wts.onload = function(){ wtsl7(2213221,2); };
 </script><noscript><img src="https://app.ardalio.com/7/2/2213221.png"></noscript>
-<!-- end Web-Stat code v 7.0 --></span></span> &nbsp;·&nbsp; University of Southern California
-		&nbsp;·&nbsp; <a href="https://scholar.google.com/citations?user=cgjqyuoAAAAJ&hl=en&oi=ao" target="_blank">Google Scholar</a>
-		&nbsp;·&nbsp; <a href="https://septlab.com/">SEPT Lab</a>
-		&nbsp;·&nbsp; <a href="mailto:mengyuanli@usc.edu">mengyuanli@usc.edu</a>
-	</footer>
+<!-- end Web-Stat code v 7.0 --></span></span></p>
+    <nav aria-label="Footer"><p><a href="https://scholar.google.com/citations?user=cgjqyuoAAAAJ&amp;hl=en">Google Scholar</a>&nbsp;· <a href="https://septlab.com/"><img class="site-icon" src="assets/img/sept-lab.png" alt="" width="16" height="16">SEPT Lab</a>&nbsp;· <a href="https://verifiable.pro/"><img class="site-icon" src="assets/img/verifiable-pro.svg" alt="" width="16" height="16">verifiable.pro</a>&nbsp;· <a href="mailto:mengyuanli@usc.edu">mengyuanli@usc.edu</a></p></nav>
+    <p>Text versions for AI agents: <a href="llms.txt">llms.txt</a>&nbsp;· <a href="llms-full.txt">llms-full.txt</a></p>
+    <p><a href="#top">Back to top</a></p>
+  </div></div>
+</footer>
 </body>
 </html>

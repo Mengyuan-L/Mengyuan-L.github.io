@@ -1,133 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI Agent Security | Mengyuan Li</title>
-  <meta name="description" content="AI agent security research by Mengyuan Li on using TEE and runtime monitoring to monitor agent execution and build trusted infrastructure for LLM systems and AI agents.">
-  <link rel="canonical" href="https://mengyuan-l.github.io/ai-agent-security.html">
-  <link rel="alternate" type="text/markdown" title="LLM-friendly site index (llms.txt)" href="https://mengyuan-l.github.io/llms.txt">
-  <link rel="alternate" type="text/markdown" title="Full site text for LLMs (llms-full.txt)" href="https://mengyuan-l.github.io/llms-full.txt">
-  <meta property="og:title" content="AI Agent Security | Mengyuan Li">
-  <meta property="og:description" content="Using TEE and runtime monitoring to monitor agent execution and build trusted infrastructure for LLM systems and AI agents.">
-  <meta property="og:type" content="article">
-  <meta property="og:url" content="https://mengyuan-l.github.io/ai-agent-security.html">
-  <style>
-    :root {
-      --green-color: #2d8650;
-      --green-light: #3da366;
-      --green-bg: #f0f7f2;
-      --green-border: #7fb896;
-      --text-color: #333;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
-      line-height: 1.7;
-      color: var(--text-color);
-      background: #ffffff;
-    }
-
-    .container {
-      max-width: 920px;
-      margin: 0 auto;
-      padding: 32px 20px 48px;
-    }
-
-    .hero {
-      background: linear-gradient(135deg, #f3faf5 0%, #ffffff 100%);
-      border: 1px solid var(--green-border);
-      border-radius: 14px;
-      padding: 28px;
-      margin-bottom: 28px;
-    }
-
-    h1, h2 {
-      color: #2b5d3f;
-    }
-
-    h1 {
-      margin: 0 0 10px;
-      font-size: 34px;
-    }
-
-    h2 {
-      margin-top: 28px;
-      padding-bottom: 8px;
-      border-bottom: 2px solid var(--green-border);
-    }
-
-    a {
-      color: #0b63c8;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    .back-link {
-      margin-bottom: 18px;
-      display: inline-block;
-    }
-
-    .card {
-      background: var(--green-bg);
-      border: 1px solid var(--green-border);
-      border-radius: 12px;
-      padding: 18px 20px;
-      margin-bottom: 16px;
-    }
-
-    .muted {
-      color: #666;
-      font-size: 15px;
-    }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Agent Security | Mengyuan Li</title>
+<meta name="description" content="AI agent security research by Mengyuan Li on using TEE and runtime monitoring to monitor agent execution and build trusted infrastructure for LLM systems and AI agents.">
+<link rel="canonical" href="https://mengyuan-l.github.io/ai-agent-security.html">
+<link rel="alternate" type="text/markdown" title="LLM-friendly site index (llms.txt)" href="https://mengyuan-l.github.io/llms.txt">
+<link rel="alternate" type="text/markdown" title="Full site text for LLMs (llms-full.txt)" href="https://mengyuan-l.github.io/llms-full.txt">
+<meta property="og:title" content="AI Agent Security | Mengyuan Li">
+<meta property="og:description" content="Using TEE and runtime monitoring to monitor agent execution and build trusted infrastructure for LLM systems and AI agents.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Mengyuan (Marvin) Li">
+<meta property="og:url" content="https://mengyuan-l.github.io/ai-agent-security.html">
+<meta property="og:image" content="https://mengyuan-l.github.io/files/mengyuan-480.jpg">
+<meta property="og:image:width" content="480">
+<meta property="og:image:height" content="480">
+<meta property="og:image:alt" content="Portrait of Mengyuan (Marvin) Li">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#141414" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/img/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<script>(function(){var d=document.documentElement;d.classList.add('js');try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){d.setAttribute('data-theme',t);var c=t==='dark'?'#141414':'#ffffff',m=document.querySelectorAll('meta[name="theme-color"]');for(var i=0;i<m.length;i++)m[i].setAttribute('content',c);}}catch(e){}})();</script>
+<link rel="stylesheet" href="assets/css/site.css">
+<script src="assets/js/site.js" defer></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"WebPage","@id":"https://mengyuan-l.github.io/ai-agent-security.html#webpage","url":"https://mengyuan-l.github.io/ai-agent-security.html","name":"AI Agent Security | Mengyuan Li","description":"AI agent security research by Mengyuan Li on using TEE and runtime monitoring to monitor agent execution and build trusted infrastructure for LLM systems and AI agents.","inLanguage":"en","dateModified":"2026-10-25","isPartOf":{"@id":"https://mengyuan-l.github.io/#website"},"breadcrumb":{"@id":"https://mengyuan-l.github.io/ai-agent-security.html#breadcrumb"},"author":{"@id":"https://mengyuan-l.github.io/#person"},"about":[{"@id":"https://mengyuan-l.github.io/#person"},{"@type":"Thing","name":"AI agent security"},{"@type":"Thing","name":"Agent runtime monitoring"},{"@type":"Thing","name":"Trusted execution environments for AI agents"}],"keywords":"AI agent security, secure AI agents, agent runtime monitoring, TEE for AI agents, trusted infrastructure for LLM systems, trustworthy agent execution","mentions":[{"@type":"ScholarlyArticle","@id":"https://mengyuan-l.github.io/#wave-asplos26","name":"WAVE: Leveraging Architecture Observation for Privacy-Preserving Model Oversight"},{"@type":"ScholarlyArticle","@id":"https://mengyuan-l.github.io/#scale-hpca26","name":"SCALE: Tackling Communication Bottlenecks in Confidential Distributed Machine Learning"},{"@type":"ScholarlyArticle","@id":"https://mengyuan-l.github.io/#catchbench-arxiv26","name":"CatchBench: When Can an Agent Failure Be Caught?"},{"@type":"ScholarlyArticle","@id":"https://mengyuan-l.github.io/#skill-reconstruction-arxiv26","name":"Behavioral Skill Reconstruction: Reconstructing Hidden Functionality from LLM Agent Skills"},{"@type":"ScholarlyArticle","@id":"https://mengyuan-l.github.io/#agent-memory-arxiv26","name":"Infrastructure for Valuable, Tradable, and Verifiable Agent Memory"},{"@type":"SoftwareSourceCode","name":"ClawGang","url":"https://clawgang.ai/","codeRepository":"https://github.com/sept-usc/ClawGang","maintainer":{"@id":"https://septlab.com/#lab"}},{"@type":"SoftwareSourceCode","name":"Muse MCP Adapter","codeRepository":"https://github.com/sept-usc/muse-mcp-adapter","maintainer":{"@id":"https://septlab.com/#lab"}},{"@type":"SoftwareSourceCode","name":"WAVE artifact","codeRepository":"https://github.com/sept-usc/Wave","maintainer":{"@id":"https://septlab.com/#lab"}}],"relatedLink":["https://septlab.com/"]},
+{"@type":"BreadcrumbList","@id":"https://mengyuan-l.github.io/ai-agent-security.html#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Mengyuan Li","item":"https://mengyuan-l.github.io/"},{"@type":"ListItem","position":2,"name":"Research","item":"https://mengyuan-l.github.io/#research"},{"@type":"ListItem","position":3,"name":"AI Agent Security","item":"https://mengyuan-l.github.io/ai-agent-security.html"}]}
+]}
+</script>
 </head>
-<body>
-  <div class="container">
-    <a class="back-link" href="./index.html">Back to homepage</a>
-    <div class="hero">
-      <h1>AI Agent Security</h1>
-      <p>This research direction studies how to use Trusted Execution Environments (TEE) and runtime monitoring to monitor agent execution and build trusted infrastructure for LLM systems and AI agents. The goal is to make agent backends more observable, trustworthy, and resilient, especially when they operate over shared cloud infrastructure and sensitive data.</p>
-      <p class="muted">Related searches this page is designed to serve: AI agent security, secure AI agents, agent runtime monitoring, TEE for AI agents, trusted infrastructure for LLM systems, trustworthy agent execution.</p>
-    </div>
+<body id="top">
+<a class="skip" href="#main">Skip to content</a>
 
-    <h2>Current Perspective</h2>
-    <div class="card">
-      <p>This direction focuses on monitoring and protecting agent execution rather than only verifying final outputs. It brings together TEE, confidential computing, and runtime observation to support trustworthy LLM systems and agentic infrastructure.</p>
-    </div>
-
-    <h2>Representative Papers</h2>
-    <div class="card">
-      <p><a href="https://dl.acm.org/doi/epdf/10.1145/3779212.3790247" target="_blank">WAVE: Leveraging Architecture Observation for Privacy-Preserving Model Oversight</a> explores how system-level observation can support privacy-preserving monitoring of model execution, which is closely aligned with runtime monitoring for trustworthy LLM systems and agents.</p>
-    </div>
-    <div class="card">
-      <p><a href="https://2026.hpca-conf.org/details/hpca-2026-main-conference/97/SCALE-Tackling-Communication-Bottlenecks-in-Confidential-Multi-GPU-ML" target="_blank">SCALE: Tackling Communication Bottlenecks in Confidential Multi-GPU ML</a> contributes infrastructure for secure and efficient confidential multi-GPU execution, which is important for building trusted backends for large-scale LLM systems and agents.</p>
-    </div>
-    <div class="card">
-      <p><a href="./25fall_699.html">CSCI 699: Side-Channel Threats in Cloud and LLM Systems</a> covers threat models that are increasingly relevant when agents and LLM systems run on shared infrastructure.</p>
-    </div>
-
-    <h2>Relevant Foundations</h2>
-    <div class="card">
-      <p><a href="./tee-confidential-computing.html">TEE and Confidential Computing</a> provide mechanisms for isolated execution, protection of agent state, and secure multi-tenant infrastructure.</p>
-    </div>
-    <div class="card">
-      <p><a href="./verifiable-ai.html">Verifiable AI</a> remains closely related because agent systems also need execution integrity, auditability, and trustworthy model-serving pipelines.</p>
-    </div>
-
-    <h2>Research Directions</h2>
-    <p>Key open problems include how to use TEE or runtime monitoring to observe agent execution, how to isolate tool execution, how to protect long-lived memory and secrets, how to build trusted infrastructure for LLM systems and agents, and how to defend against cloud- and hardware-level leakages in agent backends.</p>
-
-    <h2>Lab Context</h2>
-    <p>The <a href="./sept_lab.html">SEPT Lab</a> studies systems and security problems that naturally connect to the foundations of AI agent security, especially where secure execution and trustworthy infrastructure meet modern AI workloads.</p>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="./">Mengyuan (Marvin) Li</a>
+    <nav class="nav is-short" aria-label="Main">
+      <ul role="list">
+        <li><a href="./">Home</a></li>
+        <li><a href="./#research">Research</a></li>
+        <li><a class="hl" href="./#join">Join</a></li>
+        <li><a href="./#publications">Publications</a></li>
+      </ul>
+      <ul class="nav-ext" role="list">
+        <li><a href="https://septlab.com/">SEPT Lab<span aria-hidden="true">&nbsp;↗</span></a></li>
+      </ul>
+    </nav>
+    <button class="theme-toggle" type="button">
+      <svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.25" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8 1.75a6.25 6.25 0 0 1 0 12.5z" fill="currentColor"/></svg>
+      <span class="to-dark"><span class="sr">Switch to </span><span class="lbl">Dark</span><span class="sr"> theme</span></span>
+      <span class="to-light"><span class="sr">Switch to </span><span class="lbl">Light</span><span class="sr"> theme</span></span>
+    </button>
   </div>
+</header>
+
+<nav class="crumbs wrap" aria-label="Breadcrumb"><ol role="list"><li><a href="./">Mengyuan Li</a></li><li><a href="./#research">Research</a></li><li aria-current="page">AI Agent Security</li></ol></nav>
+
+<main id="main" class="wrap">
+
+<header class="page-head m"><p class="side" data-export="skip">Research direction</p>
+  <h1>AI Agent Security</h1>
+  <p class="lede">Mengyuan Li’s research on AI agent security uses trusted execution environments (TEEs) and runtime monitoring to observe agent execution and to build trusted infrastructure for LLM systems and AI agents. The goal is agent backends that remain observable, trustworthy, and resilient when they run on shared cloud infrastructure and handle sensitive data.</p>
+  <p class="meta">Topics: secure AI agents&nbsp;· agent runtime monitoring&nbsp;· TEEs for AI agents&nbsp;· trusted infrastructure for LLM systems&nbsp;· trustworthy agent execution</p>
+</header>
+
+<section id="perspective">
+  <h2 class="sec">Perspective</h2>
+<div class="col prose">
+  <p>This direction focuses on monitoring and protecting agent execution rather than only verifying final outputs. It brings together TEEs, confidential computing, and runtime observation to support trustworthy LLM systems and agentic infrastructure.</p></div>
+</section>
+
+<section id="papers">
+  <h2 class="sec">Papers</h2>
+<ol class="pubs" role="list">
+<li id="wave-asplos26"><span class="tag" data-export="skip">ASPLOS 2026</span>
+  <cite><a href="https://doi.org/10.1145/3779212.3790247">WAVE: Leveraging Architecture Observation for Privacy-Preserving Model Oversight</a></cite>
+  <span class="au">Haoxuan&nbsp;Xu*, Chen&nbsp;Gong*, Beijie&nbsp;Liu*, Haizhong&nbsp;Zheng, Beidi&nbsp;Chen, <b>Mengyuan&nbsp;Li</b></span>
+  <span class="ve"><i>31st ACM International Conference on Architectural Support for Programming Languages and Operating Systems&nbsp;(ASPLOS&nbsp;2026)</i></span>
+  <p class="desc">Explores how system-level observation can support privacy-preserving monitoring of model execution, which aligns with runtime monitoring for trustworthy LLM systems and agents.</p>
+  <span class="ln"><a href="https://doi.org/10.1145/3779212.3790247">DOI</a>&nbsp;· <a href="https://github.com/sept-usc/Wave">Code</a>&nbsp;· <a href="files/bib/wave-asplos26.bib">BibTeX</a></span></li>
+<li id="scale-hpca26"><span class="tag" data-export="skip">HPCA 2026</span>
+  <cite><a href="https://doi.org/10.1109/HPCA68181.2026.11408582">SCALE: Tackling Communication Bottlenecks in Confidential Distributed Machine Learning</a></cite>
+  <span class="au">Joongun&nbsp;Park, Yongqin&nbsp;Wang, Huan&nbsp;Xu, Hanjiang&nbsp;Wu, <b>Mengyuan&nbsp;Li</b>, Tushar&nbsp;Krishna</span>
+  <span class="ve"><i>2026 IEEE International Symposium on High-Performance Computer Architecture&nbsp;(HPCA&nbsp;2026)</i></span>
+  <p class="desc">Contributes infrastructure for secure and efficient confidential multi-GPU execution, which is important for building trusted backends for large-scale LLM systems and agents.</p>
+  <span class="ln"><a href="https://doi.org/10.1109/HPCA68181.2026.11408582">DOI</a>&nbsp;· <a href="files/bib/scale-hpca26.bib">BibTeX</a></span></li>
+<li id="catchbench-arxiv26"><span class="tag" data-export="skip">arXiv 2026 <small>Preprint</small></span>
+  <cite><a href="https://arxiv.org/abs/2608.22808">CatchBench: When Can an Agent Failure Be Caught?</a></cite>
+  <span class="au">Yue&nbsp;Zhao, <b>Mengyuan&nbsp;Li</b>, Ruolin&nbsp;Li, Prince&nbsp;Zizhuang&nbsp;Wang, Shuli&nbsp;Jiang, Linsey&nbsp;Pang, Xiongye&nbsp;Xiao, Xiyang&nbsp;Hu</span>
+  <span class="ve"><i>arXiv preprint arXiv:2608.22808</i></span>
+  <p class="desc">Benchmarks when an agent failure can be caught by putting one auditor’s question to three information states: a run’s declared configuration, a growing prefix of its trace, and the finished trace.</p>
+  <span class="ln"><a href="https://arxiv.org/pdf/2608.22808">PDF</a>&nbsp;· <a href="https://arxiv.org/abs/2608.22808">arXiv</a>&nbsp;· <a href="https://github.com/yzhao062/catchbench">Code</a>&nbsp;· <a href="files/bib/catchbench-arxiv26.bib">BibTeX</a></span></li>
+<li id="skill-reconstruction-arxiv26"><span class="tag" data-export="skip">arXiv 2026 <small>Preprint</small></span>
+  <cite><a href="https://arxiv.org/abs/2608.04192">Behavioral Skill Reconstruction: Reconstructing Hidden Functionality from LLM Agent Skills</a></cite>
+  <span class="au">Peichun&nbsp;Hua, Haoxuan&nbsp;Xu, <b>Mengyuan&nbsp;Li</b></span>
+  <span class="ve"><i>arXiv preprint arXiv:2608.04192</i></span>
+  <p class="desc">Shows that keeping an LLM agent skill’s files secret does not keep its functionality secret: through ordinary use alone, the black-box attack SkillClone recovers several of 30 tested skills exactly or partially.</p>
+  <span class="ln"><a href="https://arxiv.org/pdf/2608.04192">PDF</a>&nbsp;· <a href="https://arxiv.org/abs/2608.04192">arXiv</a>&nbsp;· <a href="files/bib/skill-reconstruction-arxiv26.bib">BibTeX</a></span></li>
+<li id="agent-memory-arxiv26"><span class="tag" data-export="skip">arXiv 2026 <small>Preprint</small></span>
+  <cite><a href="https://arxiv.org/abs/2603.24564">Infrastructure for Valuable, Tradable, and Verifiable Agent Memory</a></cite>
+  <span class="au"><b>Mengyuan&nbsp;Li</b>, Lei&nbsp;Gao, Haoxuan&nbsp;Xu, Jiate&nbsp;Li, Potung&nbsp;Yu, Lingke&nbsp;Cheng, Yue&nbsp;Zhao, Murali&nbsp;Annavaram</span>
+  <span class="ve"><i>arXiv preprint arXiv:2603.24564</i></span>
+  <p class="desc">Proposes infrastructure that makes agent memory verifiable and tradable: ClawGang binds memory to verifiable computational provenance through TEE remote attestation, and MeowTrade is a market layer for listing, transferring, and governing certified memory artifacts.</p>
+  <span class="ln"><a href="https://arxiv.org/pdf/2603.24564">PDF</a>&nbsp;· <a href="https://arxiv.org/abs/2603.24564">arXiv</a>&nbsp;· <a href="https://github.com/sept-usc/ClawGang">Code</a>&nbsp;· <a href="files/bib/agent-memory-arxiv26.bib">BibTeX</a></span></li>
+</ol>
+<p class="col note">* Equal contribution.</p>
+</section>
+
+<section id="projects">
+  <h2 class="sec">Projects</h2>
+<div class="m"><span class="side">Open source</span>
+  <ul class="items" role="list">
+    <li><h3><a href="https://clawgang.ai/">ClawGang</a></h3>
+      <p>Infrastructure for valuable, tradable, and verifiable agent memory. ClawGang binds agent memory to verifiable computational provenance through TEE-based certification on AMD <span class="nw">SEV-SNP</span>.</p>
+      <p class="ln"><a href="https://clawgang.ai/">Website</a>&nbsp;· <a href="https://github.com/sept-usc/ClawGang">Code</a></p></li>
+    <li><h3><a href="https://github.com/sept-usc/muse-mcp-adapter">Muse MCP Adapter</a></h3>
+      <p>A user-controlled bridge between the Muse personal agent and MCP servers. The agent sees only the capabilities the user has reviewed, and every write is confirmed by the user first and runs at most once.</p>
+      <p class="ln"><a href="https://github.com/sept-usc/muse-mcp-adapter">Code</a></p></li>
+    <li><h3><a href="https://github.com/sept-usc/Wave">WAVE artifact</a></h3>
+      <p>Artifact for the ASPLOS 2026 paper <a href="#wave-asplos26">WAVE: Leveraging Architecture Observation for Privacy-Preserving Model Oversight</a>.</p>
+      <p class="ln"><a href="https://github.com/sept-usc/Wave">Code</a></p></li>
+  </ul></div>
+</section>
+
+<section id="foundations">
+  <h2 class="sec">Foundations</h2>
+<div class="col prose">
+  <p><a href="tee-confidential-computing.html">TEE and Confidential Computing</a> provide mechanisms for isolated execution, protection of agent state, and secure multi-tenant infrastructure.</p>
+  <p><a href="verifiable-ai.html">Verifiable AI</a> is related because agent systems also need execution integrity, auditability, and trustworthy model-serving pipelines.</p></div>
+</section>
+
+<section id="open-problems">
+  <h2 class="sec">Challenges</h2>
+<div class="col prose">
+  <p>Key open problems include:</p>
+  <ul>
+    <li>observing agent execution with TEEs or runtime monitoring;</li>
+    <li>isolating tool execution;</li>
+    <li>protecting long-lived memory and secrets;</li>
+    <li>building trusted infrastructure for LLM systems and agents;</li>
+    <li>defending agent backends against cloud- and hardware-level leakage.</li>
+  </ul></div>
+</section>
+
+<section id="related">
+  <h2 class="sec">Related</h2>
+<div class="m related"><span class="side">Teaching</span>
+  <p><a href="25fall_699.html">CSCI 699: Understanding and Identifying <span class="nw">Side-Channel</span> Threats in Cloud and LLM Systems</a> covers threat models that matter when agents and LLM systems run on shared infrastructure.</p></div>
+<div class="m related"><span class="side">Lab</span>
+  <p><a href="https://septlab.com/">SEPT Lab</a> studies systems and security problems that connect to the foundations of AI agent security, especially where secure execution and trustworthy infrastructure meet AI workloads.</p></div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap"><div class="col">
+    <p>Mengyuan (Marvin) Li&nbsp;· University of Southern California&nbsp;· © 2026</p>
+    <nav aria-label="Footer"><p><a href="https://scholar.google.com/citations?user=cgjqyuoAAAAJ&amp;hl=en">Google Scholar</a>&nbsp;· <a href="https://septlab.com/"><img class="site-icon" src="assets/img/sept-lab.png" alt="" width="16" height="16">SEPT Lab</a>&nbsp;· <a href="https://verifiable.pro/"><img class="site-icon" src="assets/img/verifiable-pro.svg" alt="" width="16" height="16">verifiable.pro</a>&nbsp;· <a href="mailto:mengyuanli@usc.edu">mengyuanli@usc.edu</a></p></nav>
+    <p>Text versions for AI agents: <a href="llms.txt">llms.txt</a>&nbsp;· <a href="llms-full.txt">llms-full.txt</a></p>
+    <p><a href="#top">Back to top</a></p>
+  </div></div>
+</footer>
 </body>
 </html>

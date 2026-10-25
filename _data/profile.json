@@ -1,0 +1,90 @@
+{
+ "_about": "Identity data for the homepage JSON-LD (Person, organizations, related sites). Facts only from the homepage, septlab.com and verifiable.pro as of 2026-10-25. Edit, then run: python3 _tools/build.py",
+ "base_url": "https://mengyuan-l.github.io/",
+ "person": {
+  "name": "Mengyuan Li",
+  "display_name": "Mengyuan (Marvin) Li",
+  "alternate_names": [
+   "Mengyuan (Marvin) Li",
+   "Marvin Li"
+  ],
+  "given_name": "Mengyuan",
+  "family_name": "Li",
+  "job_title": "Assistant Professor of Computer Science",
+  "email": "mengyuanli@usc.edu",
+  "image": "files/mengyuan-480.jpg",
+  "description": "Assistant Professor of Computer Science at the University of Southern California and leader of SEPT Lab (Security, Privacy, and Trust). Research on verifiable AI systems, trusted execution environments and confidential computing, system and hardware security including side channels, and AI agent security.",
+  "knows_about": [
+   "Verifiable AI systems",
+   "Trusted execution environments (TEEs)",
+   "Confidential computing",
+   "AMD SEV-SNP",
+   "Intel SGX",
+   "Confidential VMs",
+   "Confidential GPUs",
+   "Zero-knowledge verification of LLM inference",
+   "Side-channel attacks",
+   "System and hardware security",
+   "Cloud security",
+   "AI systems security",
+   "AI agent security"
+  ],
+  "awards": [
+   "Best Paper Award Runner-Up, ACM CCS 2021 (CROSSLINE)"
+  ],
+  "same_as": [
+   "https://scholar.google.com/citations?user=cgjqyuoAAAAJ",
+   "https://dblp.org/pid/157/4437-4.html",
+   "https://viterbi.usc.edu/directory/faculty/Li/Mengyuan",
+   "https://github.com/Mengyuan-L",
+   "https://septlab.com/people.html#person-mengyuan-li"
+  ],
+  "alumni_of": [
+   {
+    "name": "The Ohio State University",
+    "url": "https://www.osu.edu/"
+   }
+  ],
+  "work_location": {
+   "name": "Ginsburg Hall (GCS), University of Southern California",
+   "street": "1031 Downey Way",
+   "locality": "Los Angeles",
+   "region": "CA",
+   "postal_code": "90089",
+   "country": "US"
+  }
+ },
+ "university": {
+  "name": "University of Southern California",
+  "url": "https://www.usc.edu/"
+ },
+ "departments": [
+  {
+   "id": "usc-cs",
+   "name": "Thomas Lord Department of Computer Science",
+   "url": "https://www.cs.usc.edu/"
+  },
+  {
+   "id": "usc-ece",
+   "name": "Ming Hsieh Department of Electrical and Computer Engineering",
+   "url": "https://minghsiehece.usc.edu/"
+  }
+ ],
+ "lab": {
+  "id": "https://septlab.com/#lab",
+  "name": "SEPT Lab",
+  "alternate_name": "Security, Privacy, and Trust Lab",
+  "url": "https://septlab.com/",
+  "same_as": [
+   "https://github.com/sept-usc"
+  ]
+ },
+ "related_sites": [
+  {
+   "id": "https://verifiable.pro/#website",
+   "name": "verifiable.pro",
+   "url": "https://verifiable.pro/",
+   "description": "Public resource maintained by SEPT Lab with news, explainers, and guides on verifiable AI."
+  }
+ ]
+}
