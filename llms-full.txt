@@ -120,14 +120,9 @@ Newest first. Asterisk (*) marks equal contribution.
 
 ## SEPT Lab
 
-Page: https://mengyuan-l.github.io/sept_lab.html
+Official website: https://septlab.com/
 
-The SEPT Lab (SEcurity, Privacy, and Trust) at USC focuses on cutting-edge research in systems and security. Current research themes: TEE and confidential computing, verifiable AI, and AI agent security. The lab is actively looking for motivated PhD, MS, and undergraduate students passionate about these fields. Applicants from diverse backgrounds are strongly encouraged to apply. To join, reach out by email: mengyuanli@usc.edu.
-
-- PhD students: Haoxuan Xu, Beijie Liu, Chen Gong, Minghao Lin, Haoyan Xu (co-advised with Prof. Yue Zhao)
-- MS students: Potung Yu, Tianqi Shen
-- Undergraduate students: Anna Li
-- High school students: Vivan Doshi
+SEPT Lab's website has moved to https://septlab.com/. Current members are on https://septlab.com/people.html, and prospective students can read how to join at https://septlab.com/join.html.
 
 ## Teaching
 
