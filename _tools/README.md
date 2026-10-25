@@ -75,6 +75,8 @@ sips -s format png -Z 48 path/to/sept-mark-240.png --out /tmp/sept-mark-48.png
 sips -p 48 48 /tmp/sept-mark-48.png --out assets/img/sept-lab.png
 ```
 
+**Favicon.** The site icon is the letter M from Literata at weight 800 (the typeface of the page text), in the brick accent. `assets/img/favicon.svg` switches to the lighter dark-mode brick under `prefers-color-scheme: dark`. The other files are exports of it: `assets/img/favicon-32.png` for older browsers, `assets/img/apple-touch-icon.png` (180 px on white) for iPhone home screens, and `favicon.ico` (16, 32 and 48 px) at the root for PDFs and other files that browsers open without a page. The links in each page's `<head>` end in `?v=2`; raise the number whenever the icon changes, so browsers fetch the new one instead of a cached copy.
+
 ## Shared stylesheet and script
 
 `assets/css/site.css` is the single stylesheet for every page. Its header comment lists the building blocks (margin rows, section heads, paper entries, project lists, course facts, tables, breadcrumb, 404 message). The colors are custom properties at the top. Light mode uses a white page, and dark mode a neutral near-black (#141414). The brick accent appears only at text level: links, a small label and thin rules.
