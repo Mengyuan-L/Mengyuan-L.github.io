@@ -4,21 +4,6 @@ The pages of https://mengyuanli.com/ are hand-written HTML, and the HTML is cano
 
 This folder is not published: GitHub Pages builds the site with Jekyll, which skips folders whose names start with `_` (`_tools/`, `_data/`).
 
-## Publish the two sites
-
-The same source is published at `https://mengyuan-l.github.io/` and `https://mengyuanli.com/`. Each address stays on its own hostname. The HTML uses `https://mengyuanli.com/` as its canonical URL for search engines.
-
-`Mengyuan-L/Mengyuan-L.github.io` publishes `main` from the repository root with the default GitHub Pages branch build. Keep its custom domain empty and do not add a `CNAME` file. `Mengyuan-L/mengyuanli.com` uses `.github/workflows/deploy-domain.yml` and owns the `mengyuanli.com` custom domain. Its workflow builds with Jekyll before uploading `_site`, preserving the same file exclusions as the original site.
-
-After checking changes, push the same `main` commit to both repositories:
-
-```sh
-git push https://github.com/Mengyuan-L/Mengyuan-L.github.io.git main
-git push https://github.com/Mengyuan-L/mengyuanli.com.git main
-```
-
-Changes made through GitHub's web editor or another clone must also be pushed to both repositories. The custom-domain workflow runs only in `Mengyuan-L/mengyuanli.com`; the original repository continues to use its branch build.
-
 ## Commands
 
 Run both from the repository root (or give the full path to the script):
