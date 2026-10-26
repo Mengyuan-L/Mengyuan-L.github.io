@@ -1,6 +1,6 @@
 # Site tools
 
-The pages of https://mengyuan-l.github.io/ are hand-written HTML, and the HTML is canonical. `build.py` regenerates only the parts that are derived from data, and its `--check` mode verifies the whole site before a commit. It needs Python 3.9 or later and no packages.
+The pages of https://mengyuanli.com/ are hand-written HTML, and the HTML is canonical. `build.py` regenerates only the parts that are derived from data, and its `--check` mode verifies the whole site before a commit. It needs Python 3.9 or later and no packages.
 
 This folder is not published: GitHub Pages builds the site with Jekyll, which skips folders whose names start with `_` (`_tools/`, `_data/`).
 
@@ -16,7 +16,7 @@ python3 _tools/build.py --check   # change nothing; exit 1 if anything below fai
 `--check` fails when:
 
 - a generated output is out of date (run the build to fix it);
-- a link to this site, relative or absolute (`https://mengyuan-l.github.io/…`), points to a missing file or `#anchor`. This covers links, images, stylesheets and alternate links on every page, the Markdown links in `llms.txt`, and the `url`, `item`, `image` and `@id` values in JSON-LD (an `@id` may instead name a node in the JSON-LD of the page it points to, such as the homepage's `#person`);
+- a link to this site, relative or absolute (`https://mengyuanli.com/…`), points to a missing file or `#anchor`. This covers links, images, stylesheets and alternate links on every page, the Markdown links in `llms.txt`, and the `url`, `item`, `image` and `@id` values in JSON-LD (an `@id` may instead name a node in the JSON-LD of the page it points to, such as the homepage's `#person`);
 - a JSON-LD block does not parse;
 - the publication ids in `_data/publications.json`, the list on `index.html` and the JSON-LD disagree;
 - a paper entry on a topic page differs from its record in `_data/publications.json`: the title, the title's link (the DOI or one of the record's links), the authors, the venue, the disclosures, a note or the link row;

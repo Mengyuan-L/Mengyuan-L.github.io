@@ -1,4 +1,4 @@
-Web fonts of https://mengyuan-l.github.io/ (latin subsets, as served by Google Fonts):
+Web fonts of https://mengyuanli.com/ (latin subsets, as served by Google Fonts):
 
   libre-franklin-latin.woff2   Libre Franklin, roman, weights 400-700
   literata-latin.woff2         Literata, roman, weights 400-600

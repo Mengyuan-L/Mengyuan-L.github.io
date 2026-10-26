@@ -17,22 +17,22 @@ Key facts:
 
 ## Main pages
 
-- [Homepage](https://mengyuan-l.github.io/): biography, research directions, recruiting, news, the publication list, teaching, and service
-- [Join SEPT Lab](https://mengyuan-l.github.io/#join): Fall 2027 PhD recruiting, research opportunities for USC MS and undergraduate students, and research collaboration for students at other universities
-- [Publications](https://mengyuan-l.github.io/#publications): published papers by year (papers from before 2024 are grouped together), then arXiv preprints, with DOI, PDF, code, and BibTeX links; each entry has a stable anchor such as #hollow-llm-sp26
-- [Publications in BibTeX](https://mengyuan-l.github.io/files/publications.bib): every entry of the publication list in one file
+- [Homepage](https://mengyuanli.com/): biography, research directions, recruiting, news, the publication list, teaching, and service
+- [Join SEPT Lab](https://mengyuanli.com/#join): Fall 2027 PhD recruiting, research opportunities for USC MS and undergraduate students, and research collaboration for students at other universities
+- [Publications](https://mengyuanli.com/#publications): published papers by year (papers from before 2024 are grouped together), then arXiv preprints, with DOI, PDF, code, and BibTeX links; each entry has a stable anchor such as #hollow-llm-sp26
+- [Publications in BibTeX](https://mengyuanli.com/files/publications.bib): every entry of the publication list in one file
 
 ## Research topics
 
-- [Verifiable AI](https://mengyuan-l.github.io/verifiable-ai.html): zero-knowledge verification of LLM inference (Hollow-LLM Attack, IEEE S&P 2026), privacy-preserving model oversight (WAVE, ASPLOS 2026), and SEPT Lab's verifiable.pro resource
-- [TEE and Confidential Computing](https://mengyuan-l.github.io/tee-confidential-computing.html): TEE-based systems and their performance (confidential VMs, ORAM, confidential multi-GPU machine learning), attacks on AMD SEV and SEV-SNP (several led to AMD security bulletins and CVEs), defenses against ciphertext and speculative-execution side channels, and the security of serverless cloud platforms
-- [AI Agent Security](https://mengyuan-l.github.io/ai-agent-security.html): TEEs and runtime monitoring for observing and protecting agent execution; papers include WAVE, SCALE, CatchBench, Behavioral Skill Reconstruction, and infrastructure for verifiable agent memory, plus the open-source projects ClawGang and Muse MCP Adapter
+- [Verifiable AI](https://mengyuanli.com/verifiable-ai.html): zero-knowledge verification of LLM inference (Hollow-LLM Attack, IEEE S&P 2026), privacy-preserving model oversight (WAVE, ASPLOS 2026), and SEPT Lab's verifiable.pro resource
+- [TEE and Confidential Computing](https://mengyuanli.com/tee-confidential-computing.html): TEE-based systems and their performance (confidential VMs, ORAM, confidential multi-GPU machine learning), attacks on AMD SEV and SEV-SNP (several led to AMD security bulletins and CVEs), defenses against ciphertext and speculative-execution side channels, and the security of serverless cloud platforms
+- [AI Agent Security](https://mengyuanli.com/ai-agent-security.html): TEEs and runtime monitoring for observing and protecting agent execution; papers include WAVE, SCALE, CatchBench, Behavioral Skill Reconstruction, and infrastructure for verifiable agent memory, plus the open-source projects ClawGang and Muse MCP Adapter
 
 ## Teaching
 
-- [CSCI 699: Understanding and Identifying Side-Channel Threats in Cloud and LLM Systems](https://mengyuan-l.github.io/25fall_699.html): graduate seminar taught in Fall 2025 and Fall 2026; the page is the Fall 2025 syllabus
-- [CSCI 699: Confidential Computing: Protecting Your Data on Cloud GPUs and CPUs](https://mengyuan-l.github.io/course.html): graduate course taught in Spring 2025 and Spring 2026; the page is the Spring 2025 syllabus
-- [CSCI 530: Security Systems](https://mengyuan-l.github.io/#teaching): graduate course, upcoming in Spring 2027
+- [CSCI 699: Understanding and Identifying Side-Channel Threats in Cloud and LLM Systems](https://mengyuanli.com/25fall_699.html): graduate seminar taught in Fall 2025 and Fall 2026; the page is the Fall 2025 syllabus
+- [CSCI 699: Confidential Computing: Protecting Your Data on Cloud GPUs and CPUs](https://mengyuanli.com/course.html): graduate course taught in Spring 2025 and Spring 2026; the page is the Spring 2025 syllabus
+- [CSCI 530: Security Systems](https://mengyuanli.com/#teaching): graduate course, upcoming in Spring 2027
 
 ## Lab and profiles
 
@@ -45,9 +45,9 @@ Key facts:
 
 ## Optional
 
-- [Full site text (llms-full.txt)](https://mengyuan-l.github.io/llms-full.txt)
-- [Sitemap](https://mengyuan-l.github.io/sitemap.xml)
-- [SoK: Understanding Design Choices and Pitfalls of Trusted Execution Environments (PDF)](https://mengyuan-l.github.io/files/asiaccs_sok.pdf): ACM ASIACCS 2024
-- [Hollow-LLM Attack (PDF)](https://mengyuan-l.github.io/files/hollow-llm.pdf): IEEE S&P 2026
-- [Hollow-LLM Attack BibTeX](https://mengyuan-l.github.io/files/hollow-llm.bib)
+- [Full site text (llms-full.txt)](https://mengyuanli.com/llms-full.txt)
+- [Sitemap](https://mengyuanli.com/sitemap.xml)
+- [SoK: Understanding Design Choices and Pitfalls of Trusted Execution Environments (PDF)](https://mengyuanli.com/files/asiaccs_sok.pdf): ACM ASIACCS 2024
+- [Hollow-LLM Attack (PDF)](https://mengyuanli.com/files/hollow-llm.pdf): IEEE S&P 2026
+- [Hollow-LLM Attack BibTeX](https://mengyuanli.com/files/hollow-llm.bib)
 - [CIPHERLEAKS project website](https://cipherleaks.com/)

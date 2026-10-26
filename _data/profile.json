@@ -1,6 +1,6 @@
 {
  "_about": "Identity data for the homepage JSON-LD (Person, organizations, related sites). Facts only from the homepage, septlab.com and verifiable.pro as of 2026-10-25. Edit, then run: python3 _tools/build.py",
- "base_url": "https://mengyuan-l.github.io/",
+ "base_url": "https://mengyuanli.com/",
  "person": {
   "name": "Mengyuan Li",
   "display_name": "Mengyuan (Marvin) Li",

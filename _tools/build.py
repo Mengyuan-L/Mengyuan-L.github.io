@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Regenerate and check the derived parts of https://mengyuan-l.github.io/ (Python 3.9+, standard library only).
+"""Regenerate and check the derived parts of https://mengyuanli.com/ (Python 3.9+, standard library only).
 
 The HTML pages are written by hand and are canonical. This script rewrites only what is derived from data:
 
@@ -33,7 +33,7 @@ from urllib.parse import unquote, urljoin, urlsplit
 from xml.etree import ElementTree
 
 ROOT = Path(__file__).resolve().parent.parent
-BASE = "https://mengyuan-l.github.io/"
+BASE = "https://mengyuanli.com/"
 PUBS_JSON = ROOT / "_data" / "publications.json"
 PROFILE_JSON = ROOT / "_data" / "profile.json"
 INDEX = ROOT / "index.html"
@@ -784,7 +784,7 @@ class PageRefs(HTMLParser):
 
 
 def local_target(href, page):
-    """Map a link to this site, relative or absolute (https://mengyuan-l.github.io/…), to (path relative to
+    """Map a link to this site, relative or absolute (https://mengyuanli.com/…), to (path relative to
     the site root, fragment); None for other sites and schemes."""
     if href.startswith(BASE):
         parts = urlsplit(href[len(BASE):])

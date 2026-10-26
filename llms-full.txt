@@ -1,12 +1,12 @@
 # Mengyuan (Marvin) Li: full site text
 
-> Full-text Markdown version of https://mengyuan-l.github.io/ for AI agents and other readers, generated from the <main> content of each public page by _tools/build.py. The HTML pages are canonical. A short index is at https://mengyuan-l.github.io/llms.txt
+> Full-text Markdown version of https://mengyuanli.com/ for AI agents and other readers, generated from the <main> content of each public page by _tools/build.py. The HTML pages are canonical. A short index is at https://mengyuanli.com/llms.txt
 
 ---
 
-Canonical page: https://mengyuan-l.github.io/
+Canonical page: https://mengyuanli.com/
 
-[[Image: Portrait of Mengyuan (Marvin) Li]](https://mengyuan-l.github.io/files/mengyuan.png)
+[[Image: Portrait of Mengyuan (Marvin) Li]](https://mengyuanli.com/files/mengyuan.png)
 
 # Mengyuan (Marvin) Li
 
@@ -15,7 +15,7 @@ Assistant Professor, University of Southern California
 [Thomas Lord Department of Computer Science](https://www.cs.usc.edu/)
 [Ming Hsieh Department of Electrical and Computer Engineering](https://minghsiehece.usc.edu/)
 
-Recruiting **PhD students for Fall 2027.** USC MS and undergraduate students are also welcome. [Join SEPT Lab](https://mengyuan-l.github.io/#join)
+Recruiting **PhD students for Fall 2027.** USC MS and undergraduate students are also welcome. [Join SEPT Lab](https://mengyuanli.com/#join)
 
 I lead [SEPT Lab](https://septlab.com/) (Security, Privacy, and Trust) at USC. My research builds trustworthy computing environments by integrating hardware security mechanisms with software systems, so that data and computation stay protected on platforms from personal devices to cloud AI systems.
 
@@ -37,16 +37,16 @@ My group pursues two research thrusts:
 
 **Research directions:**
 
-- **[Verifiable AI](https://mengyuan-l.github.io/verifiable-ai.html)**
+- **[Verifiable AI](https://mengyuanli.com/verifiable-ai.html)**
   Evidence that an AI result came from the claimed model and computation, produced without revealing sensitive data. SEPT Lab also maintains [verifiable.pro](https://verifiable.pro/), a public resource with news, explainers, and guides on verifiable AI.
   *Topics:* zero-knowledge verification · LLM inference · model oversight
-- **[TEE and Confidential Computing](https://mengyuan-l.github.io/tee-confidential-computing.html)**
+- **[TEE and Confidential Computing](https://mengyuanli.com/tee-confidential-computing.html)**
   Practical hardware-isolated execution: efficient and secure TEE-based systems for cloud and AI workloads, from oblivious memory inside VM-based TEEs to confidential multi-GPU machine learning.
   *Topics:* AMD SEV-SNP · Intel SGX · confidential VMs and GPUs · ORAM
-- **[System and Hardware Vulnerabilities](https://mengyuan-l.github.io/tee-confidential-computing.html#attacks)**
+- **[System and Hardware Vulnerabilities](https://mengyuanli.com/tee-confidential-computing.html#attacks)**
   Design flaws and side channels that break the security guarantees of systems and hardware, found and disclosed to vendors such as AMD.
   *Topics:* side channels · SEV-SNP · macOS sandboxing · GPUs
-- **[AI Agent Security](https://mengyuan-l.github.io/ai-agent-security.html)**
+- **[AI Agent Security](https://mengyuanli.com/ai-agent-security.html)**
   Observing and protecting agent execution with TEEs and runtime monitoring, so that agents can be trusted with sensitive data on shared infrastructure.
   *Topics:* runtime monitoring · tool isolation · agent memory
 
@@ -64,29 +64,29 @@ To apply, submit your application through USC Viterbi Graduate Admission ([PhD a
 
 ## News
 
-- **Oct 2026:** Recruiting up to six PhD students for Fall 2027 in a cross-department cluster with Yue Zhao and Ruolin Li. [Join SEPT Lab](https://mengyuan-l.github.io/#join)
-- **Jun 2026:** [MC-ORAM](https://mengyuan-l.github.io/#mc-oram-isca26) appears at ISCA 2026.
-- **May 2026:** [Hollow-LLM Attack](https://mengyuan-l.github.io/#hollow-llm-sp26) appears at IEEE S&P 2026.
+- **Oct 2026:** Recruiting up to six PhD students for Fall 2027 in a cross-department cluster with Yue Zhao and Ruolin Li. [Join SEPT Lab](https://mengyuanli.com/#join)
+- **Jun 2026:** [MC-ORAM](https://mengyuanli.com/#mc-oram-isca26) appears at ISCA 2026.
+- **May 2026:** [Hollow-LLM Attack](https://mengyuanli.com/#hollow-llm-sp26) appears at IEEE S&P 2026.
 - **Apr 2026:** Talk at the University of Chicago: *Confidential Computing and Trusted Execution Environments: Challenges and Opportunities for Trustworthy AI*. ([event page](https://computerscience.uchicago.edu/events/event/mengyuan-li-usc-confidential-computing-and-trusted-execution-environments-challenges-and-opportunities-for-trustworthy-ai/))
-- **Mar 2026:** [WAVE](https://mengyuan-l.github.io/#wave-asplos26) appears at ASPLOS 2026; the artifact is on [GitHub](https://github.com/sept-usc/Wave).
-- **Feb 2026:** [SCALE](https://mengyuan-l.github.io/#scale-hpca26) presented at HPCA 2026.
-- **Dec 2025:** [Writing in Symbiosis](https://mengyuan-l.github.io/#writing-symbiosis-neurips25) appears in the NeurIPS 2025 Creative AI Track.
-- **Oct 2025:** [RMP entry caching study](https://mengyuan-l.github.io/#rmp-caching-hasp25) at HASP 2025; AMD published security bulletin [AMD-SB-3036](https://www.amd.com/en/resources/product-security/bulletin/amd-sb-3036.html).
-- **Oct 2025:** [Chekhov’s Gun](https://mengyuan-l.github.io/#chekhovs-gun-ccs25) appears at ACM CCS 2025.
-- **Sep 2025:** [Few-shot graph OOD detection with LLMs](https://mengyuan-l.github.io/#fewshot-graph-ood-ecmlpkdd25) appears at ECML PKDD 2025.
+- **Mar 2026:** [WAVE](https://mengyuanli.com/#wave-asplos26) appears at ASPLOS 2026; the artifact is on [GitHub](https://github.com/sept-usc/Wave).
+- **Feb 2026:** [SCALE](https://mengyuanli.com/#scale-hpca26) presented at HPCA 2026.
+- **Dec 2025:** [Writing in Symbiosis](https://mengyuanli.com/#writing-symbiosis-neurips25) appears in the NeurIPS 2025 Creative AI Track.
+- **Oct 2025:** [RMP entry caching study](https://mengyuanli.com/#rmp-caching-hasp25) at HASP 2025; AMD published security bulletin [AMD-SB-3036](https://www.amd.com/en/resources/product-security/bulletin/amd-sb-3036.html).
+- **Oct 2025:** [Chekhov’s Gun](https://mengyuanli.com/#chekhovs-gun-ccs25) appears at ACM CCS 2025.
+- **Sep 2025:** [Few-shot graph OOD detection with LLMs](https://mengyuanli.com/#fewshot-graph-ood-ecmlpkdd25) appears at ECML PKDD 2025.
 
 Earlier news, 2021–2024
 
-- **Jul 2024:** [SoK on TEE design choices and pitfalls](https://mengyuan-l.github.io/#sok-tee-asiaccs24) appears at ACM ASIACCS 2024.
+- **Jul 2024:** [SoK on TEE design choices and pitfalls](https://mengyuanli.com/#sok-tee-asiaccs24) appears at ACM ASIACCS 2024.
 - **2024:** Joined USC as an Assistant Professor in the Thomas Lord Department of Computer Science and started SEPT Lab.
-- **2023:** [CipherH](https://mengyuan-l.github.io/#cipherh-usenixsec23) accepted to USENIX Security 2023.
-- **2022:** Two papers at IEEE S&P 2022: [A Systematic Look at Ciphertext Side Channels on AMD SEV-SNP](https://mengyuan-l.github.io/#ciphertext-sev-snp-sp22) and [vSGX](https://mengyuan-l.github.io/#vsgx-sp22).
-- **2021:** [CROSSLINE](https://mengyuan-l.github.io/#crossline-ccs21) accepted to ACM CCS 2021 and received the Best Paper Award Runner-Up.
-- **2021:** [CIPHERLEAKS](https://mengyuan-l.github.io/#cipherleaks-usenixsec21) accepted to USENIX Security 2021; AMD issued a security bulletin and CVE.
+- **2023:** [CipherH](https://mengyuanli.com/#cipherh-usenixsec23) accepted to USENIX Security 2023.
+- **2022:** Two papers at IEEE S&P 2022: [A Systematic Look at Ciphertext Side Channels on AMD SEV-SNP](https://mengyuanli.com/#ciphertext-sev-snp-sp22) and [vSGX](https://mengyuanli.com/#vsgx-sp22).
+- **2021:** [CROSSLINE](https://mengyuanli.com/#crossline-ccs21) accepted to ACM CCS 2021 and received the Best Paper Award Runner-Up.
+- **2021:** [CIPHERLEAKS](https://mengyuanli.com/#cipherleaks-usenixsec21) accepted to USENIX Security 2021; AMD issued a security bulletin and CVE.
 
 ## Publications
 
-**By year:** [2026](https://mengyuan-l.github.io/#pubs-2026) · [2025](https://mengyuan-l.github.io/#pubs-2025) · [2024](https://mengyuan-l.github.io/#pubs-2024) · [Before 2024](https://mengyuan-l.github.io/#pubs-before-2024) · [Preprints](https://mengyuan-l.github.io/#pubs-preprints)
+**By year:** [2026](https://mengyuanli.com/#pubs-2026) · [2025](https://mengyuanli.com/#pubs-2025) · [2024](https://mengyuanli.com/#pubs-2024) · [Before 2024](https://mengyuanli.com/#pubs-before-2024) · [Preprints](https://mengyuanli.com/#pubs-preprints)
 
 Names in bold are my PhD students or students who work closely with me. \* Equal contribution. Also listed on [Google Scholar](https://scholar.google.com/citations?user=cgjqyuoAAAAJ).
 
@@ -95,183 +95,183 @@ Names in bold are my PhD students or students who work closely with me. \* Equal
 - **Hollow-LLM Attack: Computationally Trivial Weights in Zero-Knowledge Verification of LLM Inference**
   **Chen Gong**, **Beijie Liu**, **Mengyuan Li**
   *2026 IEEE Symposium on Security and Privacy (S&P 2026)*
-  [DOI](https://doi.org/10.1109/SP63933.2026.00258) · [PDF](https://mengyuan-l.github.io/files/hollow-llm.pdf) · [arXiv](https://arxiv.org/abs/2607.28884) · [BibTeX](https://mengyuan-l.github.io/files/hollow-llm.bib)
+  [DOI](https://doi.org/10.1109/SP63933.2026.00258) · [PDF](https://mengyuanli.com/files/hollow-llm.pdf) · [arXiv](https://arxiv.org/abs/2607.28884) · [BibTeX](https://mengyuanli.com/files/hollow-llm.bib)
 - **WAVE: Leveraging Architecture Observation for Privacy-Preserving Model Oversight**
   **Haoxuan Xu**\*, **Chen Gong**\*, **Beijie Liu**\*, Haizhong Zheng, Beidi Chen, **Mengyuan Li**
   *31st ACM International Conference on Architectural Support for Programming Languages and Operating Systems (ASPLOS 2026)*
-  [DOI](https://doi.org/10.1145/3779212.3790247) · [Code](https://github.com/sept-usc/Wave) · [BibTeX](https://mengyuan-l.github.io/files/bib/wave-asplos26.bib)
+  [DOI](https://doi.org/10.1145/3779212.3790247) · [Code](https://github.com/sept-usc/Wave) · [BibTeX](https://mengyuanli.com/files/bib/wave-asplos26.bib)
 - **Query Cost Model Calibration in Confidential Virtual Machines**
   Qihan Zhang, **Mengyuan Li**, Ibrahim Sabek
   *Workshop on Secure and Private Data Management (SeQureDB 2026)*
-  [PDF](https://arxiv.org/pdf/2606.26385) · [arXiv](https://arxiv.org/abs/2606.26385) · [BibTeX](https://mengyuan-l.github.io/files/bib/cvm-query-cost-sequredb26.bib)
+  [PDF](https://arxiv.org/pdf/2606.26385) · [arXiv](https://arxiv.org/abs/2606.26385) · [BibTeX](https://mengyuanli.com/files/bib/cvm-query-cost-sequredb26.bib)
 - **MC-ORAM: A Mask-Assisted and Counter-Based Non-Deterministic ORAM Inside VM-Based TEEs**
   **Yongqin Wang**, Rachit Rajat, Jonghyun Lee, **Mengyuan Li**, Murali Annavaram
   *53rd ACM/IEEE Annual International Symposium on Computer Architecture (ISCA 2026)*
-  [DOI](https://doi.org/10.1109/ISCA66397.2026.00047) · [BibTeX](https://mengyuan-l.github.io/files/bib/mc-oram-isca26.bib)
+  [DOI](https://doi.org/10.1109/ISCA66397.2026.00047) · [BibTeX](https://mengyuanli.com/files/bib/mc-oram-isca26.bib)
 - **SCALE: Tackling Communication Bottlenecks in Confidential Distributed Machine Learning**
   **Joongun Park**, **Yongqin Wang**, Huan Xu, Hanjiang Wu, **Mengyuan Li**, Tushar Krishna
   *2026 IEEE International Symposium on High-Performance Computer Architecture (HPCA 2026)*
-  [DOI](https://doi.org/10.1109/HPCA68181.2026.11408582) · [BibTeX](https://mengyuan-l.github.io/files/bib/scale-hpca26.bib)
+  [DOI](https://doi.org/10.1109/HPCA68181.2026.11408582) · [BibTeX](https://mengyuanli.com/files/bib/scale-hpca26.bib)
 
 ### 2025
 
 - **Chekhov’s Gun: Uncovering Hidden Risks in macOS Application-Sandboxed PID-Domain Services**
   **Minghao Lin**, Jiaxun Zhu, Tingting Yin, Zechao Cai, Guanxing Wen, Yanan Guo, **Mengyuan Li**
   *2025 ACM SIGSAC Conference on Computer and Communications Security (CCS 2025)*
-  [DOI](https://doi.org/10.1145/3719027.3765205) · [BibTeX](https://mengyuan-l.github.io/files/bib/chekhovs-gun-ccs25.bib)
+  [DOI](https://doi.org/10.1145/3719027.3765205) · [BibTeX](https://mengyuanli.com/files/bib/chekhovs-gun-ccs25.bib)
 - **Writing in Symbiosis: Mapping Human Creative Agency in the AI Era**
   **Vivan Doshi**, **Mengyuan Li**
   *Advances in Neural Information Processing Systems 38 (NeurIPS 2025), Creative AI Track*
-  [Paper](https://proceedings.neurips.cc/paper_files/paper/2025/hash/615229550c97d1c4d006a4bf6b54590e-Abstract-Creative_AI_Track.html) · [PDF](https://papers.neurips.cc/paper_files/paper/2025/file/615229550c97d1c4d006a4bf6b54590e-Paper-Creative_AI_Track.pdf) · [arXiv](https://arxiv.org/abs/2512.13697) · [BibTeX](https://mengyuan-l.github.io/files/bib/writing-symbiosis-neurips25.bib)
+  [Paper](https://proceedings.neurips.cc/paper_files/paper/2025/hash/615229550c97d1c4d006a4bf6b54590e-Abstract-Creative_AI_Track.html) · [PDF](https://papers.neurips.cc/paper_files/paper/2025/file/615229550c97d1c4d006a4bf6b54590e-Paper-Creative_AI_Track.pdf) · [arXiv](https://arxiv.org/abs/2512.13697) · [BibTeX](https://mengyuanli.com/files/bib/writing-symbiosis-neurips25.bib)
 - **A Close Look at RMP Entry Caching and Its Security Implications in SEV-SNP**
   Alexis Bagia, Vincent Quentin Ulitzsch, Daniël Trujillo, **Mengyuan Li**, Mengjia Yan, Jean-Pierre Seifert
   *14th International Workshop on Hardware and Architectural Support for Security and Privacy (HASP 2025)*
   Disclosures: [AMD-SB-3036](https://www.amd.com/en/resources/product-security/bulletin/amd-sb-3036.html)
-  [DOI](https://doi.org/10.1145/3768725.3768727) · [BibTeX](https://mengyuan-l.github.io/files/bib/rmp-caching-hasp25.bib)
+  [DOI](https://doi.org/10.1145/3768725.3768727) · [BibTeX](https://mengyuanli.com/files/bib/rmp-caching-hasp25.bib)
 - **Few-Shot Graph Out-of-Distribution Detection with LLMs**
   **Haoyan Xu**\*, Zhengtao Yao\*, Yushun Dong, Ziyi Wang, Ryan A. Rossi, **Mengyuan Li**, Yue Zhao
   *European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases (ECML PKDD 2025)*
-  [DOI](https://doi.org/10.1007/978-3-032-06078-5_18) · [PDF](https://arxiv.org/pdf/2503.22097) · [arXiv](https://arxiv.org/abs/2503.22097) · [BibTeX](https://mengyuan-l.github.io/files/bib/fewshot-graph-ood-ecmlpkdd25.bib)
+  [DOI](https://doi.org/10.1007/978-3-032-06078-5_18) · [PDF](https://arxiv.org/pdf/2503.22097) · [arXiv](https://arxiv.org/abs/2503.22097) · [BibTeX](https://mengyuanli.com/files/bib/fewshot-graph-ood-ecmlpkdd25.bib)
 - **LEGO-Learn: Label-Efficient Graph Open-Set Learning**
   **Haoyan Xu**, Kay Liu, Zhengtao Yao, Philip S. Yu, **Mengyuan Li**, Kaize Ding, Yue Zhao
   *Transactions on Machine Learning Research (TMLR)*
-  [Paper](https://openreview.net/forum?id=J6oxTJPOyN) · [PDF](https://arxiv.org/pdf/2410.16386) · [arXiv](https://arxiv.org/abs/2410.16386) · [Code](https://github.com/zhengtaoyao/lego) · [BibTeX](https://mengyuan-l.github.io/files/bib/lego-learn-tmlr25.bib)
+  [Paper](https://openreview.net/forum?id=J6oxTJPOyN) · [PDF](https://arxiv.org/pdf/2410.16386) · [arXiv](https://arxiv.org/abs/2410.16386) · [Code](https://github.com/zhengtaoyao/lego) · [BibTeX](https://mengyuanli.com/files/bib/lego-learn-tmlr25.bib)
 
 ### 2024
 
 - **SoK: Understanding Design Choices and Pitfalls of Trusted Execution Environments**
   **Mengyuan Li**, Yuheng Yang, Guoxing Chen, Mengjia Yan, Yinqian Zhang
   *19th ACM Asia Conference on Computer and Communications Security (ASIA CCS 2024)*
-  [DOI](https://doi.org/10.1145/3634737.3644993) · [PDF](https://mengyuan-l.github.io/files/asiaccs_sok.pdf) · [BibTeX](https://mengyuan-l.github.io/files/bib/sok-tee-asiaccs24.bib)
+  [DOI](https://doi.org/10.1145/3634737.3644993) · [PDF](https://mengyuanli.com/files/asiaccs_sok.pdf) · [BibTeX](https://mengyuanli.com/files/bib/sok-tee-asiaccs24.bib)
 
 ### Before 2024
 
 - **CipherH: Automated Detection of Ciphertext Side-channel Vulnerabilities in Cryptographic Implementations**
   Sen Deng, **Mengyuan Li**, Yining Tang, Shuai Wang, Shoumeng Yan, Yinqian Zhang
   *32nd USENIX Security Symposium (USENIX Security 2023)*
-  [Paper](https://www.usenix.org/conference/usenixsecurity23/presentation/deng-sen) · [PDF](https://www.usenix.org/system/files/usenixsecurity23-deng-sen.pdf) · [Code](https://github.com/Sen-Deng/CipherH) · [BibTeX](https://mengyuan-l.github.io/files/bib/cipherh-usenixsec23.bib)
+  [Paper](https://www.usenix.org/conference/usenixsecurity23/presentation/deng-sen) · [PDF](https://www.usenix.org/system/files/usenixsecurity23-deng-sen.pdf) · [Code](https://github.com/Sen-Deng/CipherH) · [BibTeX](https://mengyuanli.com/files/bib/cipherh-usenixsec23.bib)
 - **PWRLEAK: Exploiting Power Reporting Interface for Side-Channel Attacks on AMD SEV**
   Wubing Wang, **Mengyuan Li**, Yinqian Zhang, Zhiqiang Lin
   *20th Conference on Detection of Intrusions and Malware & Vulnerability Assessment (DIMVA 2023)*
   Disclosures: [AMD-SB-3004](https://www.amd.com/en/resources/product-security/bulletin/amd-sb-3004.html) · [CVE-2023-20575](https://www.cve.org/CVERecord?id=CVE-2023-20575)
-  [DOI](https://doi.org/10.1007/978-3-031-35504-2_3) · [PDF](https://yinqian.org/papers/dimva23.pdf) · [BibTeX](https://mengyuan-l.github.io/files/bib/pwrleak-dimva23.bib)
+  [DOI](https://doi.org/10.1007/978-3-031-35504-2_3) · [PDF](https://yinqian.org/papers/dimva23.pdf) · [BibTeX](https://mengyuanli.com/files/bib/pwrleak-dimva23.bib)
 - **A Systematic Look at Ciphertext Side Channels on AMD SEV-SNP**
   **Mengyuan Li**\*, Luca Wilke\*, Jan Wichelmann, Thomas Eisenbarth, Radu Teodorescu, Yinqian Zhang
   *2022 IEEE Symposium on Security and Privacy (S&P 2022)* · Acceptance rate 14.0% (57/407)
   Disclosures: [AMD-SB-1033](https://www.amd.com/en/resources/product-security/bulletin/amd-sb-1033.html) · [CVE-2021-46744](https://www.cve.org/CVERecord?id=CVE-2021-46744)
   AMD published an official white paper for TEE developers and users on writing code that resists ciphertext side channels. [AMD white paper](https://www.amd.com/content/dam/amd/en/documents/resources/bulletin/technical-guidance-for-mitigating-effects-of-ciphertext-visibility-under-amd-sev.pdf)
-  [DOI](https://doi.org/10.1109/SP46214.2022.9833768) · [PDF](https://yinqian.org/papers/sp22b.pdf) · [BibTeX](https://mengyuan-l.github.io/files/bib/ciphertext-sev-snp-sp22.bib)
+  [DOI](https://doi.org/10.1109/SP46214.2022.9833768) · [PDF](https://yinqian.org/papers/sp22b.pdf) · [BibTeX](https://mengyuanli.com/files/bib/ciphertext-sev-snp-sp22.bib)
 - **vSGX: Virtualizing SGX Enclaves on AMD SEV**
   Shixuan Zhao, **Mengyuan Li**, Yinqian Zhang, Zhiqiang Lin
   *2022 IEEE Symposium on Security and Privacy (S&P 2022)* · Acceptance rate 16.5% (54/327)
-  [DOI](https://doi.org/10.1109/SP46214.2022.9833694) · [PDF](https://yinqian.org/papers/sp22a.pdf) · [Code](https://github.com/OSUSecLab/vSGX) · [BibTeX](https://mengyuan-l.github.io/files/bib/vsgx-sp22.bib)
+  [DOI](https://doi.org/10.1109/SP46214.2022.9833694) · [PDF](https://yinqian.org/papers/sp22a.pdf) · [Code](https://github.com/OSUSecLab/vSGX) · [BibTeX](https://mengyuanli.com/files/bib/vsgx-sp22.bib)
 - **Understanding and Exploiting Design Flaws of AMD Secure Encrypted Virtualization**
   **Mengyuan Li**
   *Ph.D. Dissertation, The Ohio State University*, 2022
-  [Paper](https://www.proquest.com/openview/e4211fc9bbca1b28c1167c6fcca66c49/1) · [BibTeX](https://mengyuan-l.github.io/files/bib/phd-thesis-osu22.bib)
+  [Paper](https://www.proquest.com/openview/e4211fc9bbca1b28c1167c6fcca66c49/1) · [BibTeX](https://mengyuanli.com/files/bib/phd-thesis-osu22.bib)
 - **TLB Poisoning Attacks on AMD Secure Encrypted Virtualization**
   **Mengyuan Li**, Yinqian Zhang, Huibo Wang, Kang Li, Yueqiang Cheng
   *37th Annual Computer Security Applications Conference (ACSAC 2021)* · Acceptance rate 17.2% (56/326)
   Disclosures: [AMD-SB-1023](https://www.amd.com/en/resources/product-security/bulletin/amd-sb-1023.html) · [CVE-2021-26340](https://www.cve.org/CVERecord?id=CVE-2021-26340) · [Lenovo LEN-75179](https://support.lenovo.com/us/en/product_security/LEN-75179)
-  [DOI](https://doi.org/10.1145/3485832.3485876) · [PDF](https://yinqian.org/papers/acsac21.pdf) · [BibTeX](https://mengyuan-l.github.io/files/bib/tlb-poisoning-acsac21.bib)
+  [DOI](https://doi.org/10.1145/3485832.3485876) · [PDF](https://yinqian.org/papers/acsac21.pdf) · [BibTeX](https://mengyuanli.com/files/bib/tlb-poisoning-acsac21.bib)
 - **CROSSLINE: Breaking “Security-by-Crash” based Memory Isolation in AMD SEV**
   **Mengyuan Li**, Yinqian Zhang, Zhiqiang Lin
   *2021 ACM SIGSAC Conference on Computer and Communications Security (CCS 2021)* · Acceptance rate 22.3% (196/879)
   **Best Paper Award Runner-Up**, one of 14 papers among 879 submissions that received a Best Paper Award or Runner-Up ([plaque](https://raw.githubusercontent.com/acmccs2021/acm-ccs-2021/main/best-paper-awards-runner-up/ACM%20CCS%202021_BestPaperAward_RunnerUp%20%286%29.jpg), [CCS 2021 awards](https://sigsac.org/ccs/CCS2021/ccs-awards.html))
-  [DOI](https://doi.org/10.1145/3460120.3485253) · [PDF](https://arxiv.org/pdf/2008.00146) · [arXiv](https://arxiv.org/abs/2008.00146) · [BibTeX](https://mengyuan-l.github.io/files/bib/crossline-ccs21.bib)
+  [DOI](https://doi.org/10.1145/3460120.3485253) · [PDF](https://arxiv.org/pdf/2008.00146) · [arXiv](https://arxiv.org/abs/2008.00146) · [BibTeX](https://mengyuanli.com/files/bib/crossline-ccs21.bib)
 - **CIPHERLEAKS: Breaking Constant-time Cryptography on AMD SEV via the Ciphertext Side Channel**
   **Mengyuan Li**, Yinqian Zhang, Huibo Wang, Kang Li, Yueqiang Cheng
   *30th USENIX Security Symposium (USENIX Security 2021)* · Acceptance rate 18.8% (248/1319)
   Disclosures: [AMD-SB-1013](https://www.amd.com/en/resources/product-security/bulletin/amd-sb-1013.html) · [CVE-2020-12966](https://www.cve.org/CVERecord?id=CVE-2020-12966)
   AMD filed an embargo for the ciphertext side channel identified in the paper and announced a security bulletin together with a hardware patch for SEV-SNP in August 2021.
-  [Paper](https://www.usenix.org/conference/usenixsecurity21/presentation/li-mengyuan) · [PDF](https://www.usenix.org/system/files/sec21-li-mengyuan.pdf) · [Website](https://cipherleaks.com/) · [BibTeX](https://mengyuan-l.github.io/files/bib/cipherleaks-usenixsec21.bib)
+  [Paper](https://www.usenix.org/conference/usenixsecurity21/presentation/li-mengyuan) · [PDF](https://www.usenix.org/system/files/sec21-li-mengyuan.pdf) · [Website](https://cipherleaks.com/) · [BibTeX](https://mengyuanli.com/files/bib/cipherleaks-usenixsec21.bib)
 - **Defeating Speculative-Execution Attacks on SGX with HyperRace**
   Guoxing Chen, **Mengyuan Li**, Fengwei Zhang, Yinqian Zhang
   *2019 IEEE Conference on Dependable and Secure Computing (DSC 2019)*
-  [DOI](https://doi.org/10.1109/DSC47296.2019.8937682) · [PDF](https://yinqian.org/papers/idsc19.pdf) · [BibTeX](https://mengyuan-l.github.io/files/bib/hyperrace-dsc19.bib)
+  [DOI](https://doi.org/10.1109/DSC47296.2019.8937682) · [PDF](https://yinqian.org/papers/idsc19.pdf) · [BibTeX](https://mengyuanli.com/files/bib/hyperrace-dsc19.bib)
 - **Exploiting Unprotected I/O Operations in AMD’s Secure Encrypted Virtualization**
   **Mengyuan Li**, Yinqian Zhang, Zhiqiang Lin, Yan Solihin
   *28th USENIX Security Symposium (USENIX Security 2019)* · Acceptance rate 16.2% (113/697)
-  [Paper](https://www.usenix.org/conference/usenixsecurity19/presentation/li-mengyuan) · [PDF](https://www.usenix.org/system/files/sec19-li-mengyuan_0.pdf) · [BibTeX](https://mengyuan-l.github.io/files/bib/sev-io-usenixsec19.bib)
+  [Paper](https://www.usenix.org/conference/usenixsecurity19/presentation/li-mengyuan) · [PDF](https://www.usenix.org/system/files/sec19-li-mengyuan_0.pdf) · [BibTeX](https://mengyuanli.com/files/bib/sev-io-usenixsec19.bib)
 - **Peeking Behind the Curtains of Serverless Platforms**
   Liang Wang, **Mengyuan Li**, Yinqian Zhang, Thomas Ristenpart, Michael Swift
   *2018 USENIX Annual Technical Conference (USENIX ATC 2018)* · Acceptance rate 20.1% (76/378)
-  [Paper](https://www.usenix.org/conference/atc18/presentation/wang-liang) · [PDF](https://www.usenix.org/system/files/conference/atc18/atc18-wang-liang.pdf) · [Code](https://github.com/liangw-sec/faas_measure) · [BibTeX](https://mengyuan-l.github.io/files/bib/serverless-atc18.bib)
+  [Paper](https://www.usenix.org/conference/atc18/presentation/wang-liang) · [PDF](https://www.usenix.org/system/files/conference/atc18/atc18-wang-liang.pdf) · [Code](https://github.com/liangw-sec/faas_measure) · [BibTeX](https://mengyuanli.com/files/bib/serverless-atc18.bib)
 - **Stacco: Differentially Analyzing Side-Channel Traces for Detecting SSL/TLS Vulnerabilities in Secure Enclaves**
   Yuan Xiao, **Mengyuan Li**, Sanchuan Chen, Yinqian Zhang
   *2017 ACM SIGSAC Conference on Computer and Communications Security (CCS 2017)* · Acceptance rate 17.9% (151/843)
-  [DOI](https://doi.org/10.1145/3133956.3134016) · [PDF](https://acmccs.github.io/papers/p859-xiaoA.pdf) · [arXiv](https://arxiv.org/abs/1707.03473) · [Code](https://github.com/OSUSecLab/Stacco) · [BibTeX](https://mengyuan-l.github.io/files/bib/stacco-ccs17.bib)
+  [DOI](https://doi.org/10.1145/3133956.3134016) · [PDF](https://acmccs.github.io/papers/p859-xiaoA.pdf) · [arXiv](https://arxiv.org/abs/1707.03473) · [Code](https://github.com/OSUSecLab/Stacco) · [BibTeX](https://mengyuanli.com/files/bib/stacco-ccs17.bib)
 - **SPFM: Scalable and Privacy-Preserving Friend Matching in Mobile Cloud**
   **Mengyuan Li**, Na Ruan, Qiyang Qian, Haojin Zhu, Xiaohui Liang, Le Yu
   *IEEE Internet of Things Journal, vol. 4, no. 2*, 2017
-  [DOI](https://doi.org/10.1109/JIOT.2016.2582780) · [BibTeX](https://mengyuan-l.github.io/files/bib/spfm-iotj17.bib)
+  [DOI](https://doi.org/10.1109/JIOT.2016.2582780) · [BibTeX](https://mengyuanli.com/files/bib/spfm-iotj17.bib)
 - **When CSI Meets Public WiFi: Inferring Your Mobile Phone Password via WiFi Signals**
   **Mengyuan Li**, Yan Meng, Junyi Liu, Haojin Zhu, Xiaohui Liang, Yao Liu, Na Ruan
   *2016 ACM SIGSAC Conference on Computer and Communications Security (CCS 2016)* · Acceptance rate 16.5% (137/831)
-  [DOI](https://doi.org/10.1145/2976749.2978397) · [PDF](https://nsec.sjtu.edu.cn/publications/2016/When.pdf) · [Slides](https://nsec.sjtu.edu.cn/publications/2016/CCS%202016.pdf) · [Demo video](https://nsec.sjtu.edu.cn/publications/2016/ccs2016.mp4) · [Video](https://www.youtube.com/watch?v=ZJrTVU_eajE) · [BibTeX](https://mengyuan-l.github.io/files/bib/csi-wifi-ccs16.bib)
+  [DOI](https://doi.org/10.1145/2976749.2978397) · [PDF](https://nsec.sjtu.edu.cn/publications/2016/When.pdf) · [Slides](https://nsec.sjtu.edu.cn/publications/2016/CCS%202016.pdf) · [Demo video](https://nsec.sjtu.edu.cn/publications/2016/ccs2016.mp4) · [Video](https://www.youtube.com/watch?v=ZJrTVU_eajE) · [BibTeX](https://mengyuanli.com/files/bib/csi-wifi-ccs16.bib)
 - **You Can Jam But You Cannot Hide: Defending Against Jamming Attacks for Geo-Location Database Driven Spectrum Sharing**
   Haojin Zhu, Chenliaohui Fang, Yao Liu, Cailian Chen, **Mengyuan Li**, Xuemin Sherman Shen
   *IEEE Journal on Selected Areas in Communications, vol. 34, no. 10*, 2016
-  [DOI](https://doi.org/10.1109/JSAC.2016.2605799) · [BibTeX](https://mengyuan-l.github.io/files/bib/jamming-jsac16.bib)
+  [DOI](https://doi.org/10.1109/JSAC.2016.2605799) · [BibTeX](https://mengyuanli.com/files/bib/jamming-jsac16.bib)
 
 ### Preprints
 
 - **Safety Offset Learning: When Benign Fine-Tuning Misaligns LLMs**
   Jesson Wang\*, Zhanhao Hu\*, **Minghao Lin**, Yuchen Wu, Aylin Caliskan, **Mengyuan Li**
   *arXiv:2610.25611*, 2026
-  [PDF](https://arxiv.org/pdf/2610.25611) · [arXiv](https://arxiv.org/abs/2610.25611) · [Code](https://github.com/JessonWong/safety-offset-learning) · [BibTeX](https://mengyuan-l.github.io/files/bib/safety-offset-arxiv26.bib)
+  [PDF](https://arxiv.org/pdf/2610.25611) · [arXiv](https://arxiv.org/abs/2610.25611) · [Code](https://github.com/JessonWong/safety-offset-learning) · [BibTeX](https://mengyuanli.com/files/bib/safety-offset-arxiv26.bib)
 - **CatchBench: When Can an Agent Failure Be Caught?**
   Yue Zhao, **Mengyuan Li**, Ruolin Li, Prince Zizhuang Wang, Shuli Jiang, Linsey Pang, Xiongye Xiao, Xiyang Hu
   *arXiv:2608.22808*, 2026
-  [PDF](https://arxiv.org/pdf/2608.22808) · [arXiv](https://arxiv.org/abs/2608.22808) · [Code](https://github.com/yzhao062/catchbench) · [BibTeX](https://mengyuan-l.github.io/files/bib/catchbench-arxiv26.bib)
+  [PDF](https://arxiv.org/pdf/2608.22808) · [arXiv](https://arxiv.org/abs/2608.22808) · [Code](https://github.com/yzhao062/catchbench) · [BibTeX](https://mengyuanli.com/files/bib/catchbench-arxiv26.bib)
 - **Hiding Directions, Leaking Structure: Breaking ArrowCloak through Low-Rank Structure**
   **Beijie Liu**\*, Junyi Ouyang\*, **Haoxuan Xu**\*, Vincent Quentin Ulitzsch, **Potung Yu**, Yajie Zhao, **Mengyuan Li**
   *arXiv:2608.21615*, 2026
-  [PDF](https://arxiv.org/pdf/2608.21615) · [arXiv](https://arxiv.org/abs/2608.21615) · [BibTeX](https://mengyuan-l.github.io/files/bib/arrowcloak-arxiv26.bib)
+  [PDF](https://arxiv.org/pdf/2608.21615) · [arXiv](https://arxiv.org/abs/2608.21615) · [BibTeX](https://mengyuanli.com/files/bib/arrowcloak-arxiv26.bib)
 - **Behavioral Skill Reconstruction: Reconstructing Hidden Functionality from LLM Agent Skills**
   Peichun Hua, **Haoxuan Xu**, **Mengyuan Li**
   *arXiv:2608.04192*, 2026
-  [PDF](https://arxiv.org/pdf/2608.04192) · [arXiv](https://arxiv.org/abs/2608.04192) · [BibTeX](https://mengyuan-l.github.io/files/bib/skill-reconstruction-arxiv26.bib)
+  [PDF](https://arxiv.org/pdf/2608.04192) · [arXiv](https://arxiv.org/abs/2608.04192) · [BibTeX](https://mengyuanli.com/files/bib/skill-reconstruction-arxiv26.bib)
 - **OTRO: Oblivious Tokenization Path with Square-Root ORAM**
   Jonghyun Lee, **Yongqin Wang**, Rachit Rajat, Daniel Wong, **Mengyuan Li**, Murali Annavaram
   *arXiv:2606.17358*, 2026
-  [PDF](https://arxiv.org/pdf/2606.17358) · [arXiv](https://arxiv.org/abs/2606.17358) · [BibTeX](https://mengyuan-l.github.io/files/bib/otro-arxiv26.bib)
+  [PDF](https://arxiv.org/pdf/2606.17358) · [arXiv](https://arxiv.org/abs/2606.17358) · [BibTeX](https://mengyuanli.com/files/bib/otro-arxiv26.bib)
 - **Infrastructure for Valuable, Tradable, and Verifiable Agent Memory**
   **Mengyuan Li**, Lei Gao, **Haoxuan Xu**, Jiate Li, **Potung Yu**, Lingke Cheng, Yue Zhao, Murali Annavaram
   *arXiv:2603.24564*, 2026
-  [PDF](https://arxiv.org/pdf/2603.24564) · [arXiv](https://arxiv.org/abs/2603.24564) · [Code](https://github.com/sept-usc/ClawGang) · [BibTeX](https://mengyuan-l.github.io/files/bib/agent-memory-arxiv26.bib)
+  [PDF](https://arxiv.org/pdf/2603.24564) · [arXiv](https://arxiv.org/abs/2603.24564) · [Code](https://github.com/sept-usc/ClawGang) · [BibTeX](https://mengyuanli.com/files/bib/agent-memory-arxiv26.bib)
 - **A Systematic Study of Model Extraction Attacks on Graph Foundation Models**
   **Haoyan Xu**\*, Ruizhi Qian\*, Jiate Li, Yushun Dong, **Minghao Lin**, Hanson Yan, Zhengtao Yao, Qinghua Liu, Junhao Dong, Ruopeng Huang, Yue Zhao, **Mengyuan Li**
   *arXiv:2511.11912*, 2025
-  [PDF](https://arxiv.org/pdf/2511.11912) · [arXiv](https://arxiv.org/abs/2511.11912) · [BibTeX](https://mengyuan-l.github.io/files/bib/gfm-extraction-arxiv25.bib)
+  [PDF](https://arxiv.org/pdf/2511.11912) · [arXiv](https://arxiv.org/abs/2511.11912) · [BibTeX](https://mengyuanli.com/files/bib/gfm-extraction-arxiv25.bib)
 - **VReaves: Eavesdropping on Virtual Reality App Identity and Activity via Electromagnetic Side Channels**
   Wei Sun, Minghong Fang, **Mengyuan Li**
   *arXiv:2506.17570*, 2025
-  [PDF](https://arxiv.org/pdf/2506.17570) · [arXiv](https://arxiv.org/abs/2506.17570) · [BibTeX](https://mengyuan-l.github.io/files/bib/vreaves-arxiv25.bib)
+  [PDF](https://arxiv.org/pdf/2506.17570) · [arXiv](https://arxiv.org/abs/2506.17570) · [BibTeX](https://mengyuanli.com/files/bib/vreaves-arxiv25.bib)
 - **GLIP-OOD: Zero-Shot Graph OOD Detection with Graph Foundation Model**
   **Haoyan Xu**\*, Zhengtao Yao\*, Xuzhi Zhang, Ziyi Wang, Langzhou He, Yushun Dong, Philip S. Yu, **Mengyuan Li**, Yue Zhao
   *arXiv:2504.21186*, 2025
-  [PDF](https://arxiv.org/pdf/2504.21186) · [arXiv](https://arxiv.org/abs/2504.21186) · [BibTeX](https://mengyuan-l.github.io/files/bib/glip-ood-arxiv25.bib)
+  [PDF](https://arxiv.org/pdf/2504.21186) · [arXiv](https://arxiv.org/abs/2504.21186) · [BibTeX](https://mengyuanli.com/files/bib/glip-ood-arxiv25.bib)
 - **Graph Synthetic Out-of-Distribution Exposure with Large Language Models**
   **Haoyan Xu**\*, Zhengtao Yao\*, Ziyi Wang, Zhan Cheng, Xiyang Hu, **Mengyuan Li**, Yue Zhao
   *arXiv:2504.21198*, 2025
-  [PDF](https://arxiv.org/pdf/2504.21198) · [arXiv](https://arxiv.org/abs/2504.21198) · [BibTeX](https://mengyuan-l.github.io/files/bib/graph-ood-exposure-arxiv25.bib)
+  [PDF](https://arxiv.org/pdf/2504.21198) · [arXiv](https://arxiv.org/abs/2504.21198) · [BibTeX](https://mengyuanli.com/files/bib/graph-ood-exposure-arxiv25.bib)
 - **Ditto: Elastic Confidential VMs with Secure and Dynamic CPU Scaling**
   Shixuan Zhao\*, **Mengyuan Li**\*, Mengjia Yan, Zhiqiang Lin
   *arXiv:2409.15542*, 2024
-  [PDF](https://arxiv.org/pdf/2409.15542) · [arXiv](https://arxiv.org/abs/2409.15542) · [BibTeX](https://mengyuan-l.github.io/files/bib/ditto-arxiv24.bib)
+  [PDF](https://arxiv.org/pdf/2409.15542) · [arXiv](https://arxiv.org/abs/2409.15542) · [BibTeX](https://mengyuanli.com/files/bib/ditto-arxiv24.bib)
 - **Bridge the Future: High-Performance Networks in Confidential VMs without Trusted I/O devices**
   **Mengyuan Li**, Shashvat Srivastava, Mengjia Yan
   *arXiv:2403.03360*, 2024
-  [PDF](https://arxiv.org/pdf/2403.03360) · [arXiv](https://arxiv.org/abs/2403.03360) · [BibTeX](https://mengyuan-l.github.io/files/bib/bridge-the-future-arxiv24.bib)
+  [PDF](https://arxiv.org/pdf/2403.03360) · [arXiv](https://arxiv.org/abs/2403.03360) · [BibTeX](https://mengyuanli.com/files/bib/bridge-the-future-arxiv24.bib)
 
 ## Teaching
 
 - **Spring 2027 (upcoming):** **CSCI 530: Security Systems**
   Graduate course on protecting computer networks and systems with cryptography, authentication and authorization, and intrusion detection and response. A lab component gives students hands-on experience with these mechanisms.
-- **Fall 2025, Fall 2026:** **[CSCI 699: Understanding and Identifying Side-Channel Threats in Cloud and LLM Systems](https://mengyuan-l.github.io/25fall_699.html)**
+- **Fall 2025, Fall 2026:** **[CSCI 699: Understanding and Identifying Side-Channel Threats in Cloud and LLM Systems](https://mengyuanli.com/25fall_699.html)**
   Graduate seminar on side-channel attacks across multi-tenant cloud platforms, TEEs, GPUs, and LLM services.
-- **Spring 2025, Spring 2026:** **[CSCI 699: Confidential Computing: Protecting Your Data on Cloud GPUs and CPUs](https://mengyuan-l.github.io/course.html)**
+- **Spring 2025, Spring 2026:** **[CSCI 699: Confidential Computing: Protecting Your Data on Cloud GPUs and CPUs](https://mengyuanli.com/course.html)**
   Graduate course on trusted execution environments, confidential VMs, and confidential GPUs, together with related privacy techniques such as federated learning, secure multi-party computation, and fully homomorphic encryption.
 
 ## Service
@@ -292,11 +292,11 @@ Los Angeles, CA 90089
 
 ---
 
-Canonical page: https://mengyuan-l.github.io/tee-confidential-computing.html
+Canonical page: https://mengyuanli.com/tee-confidential-computing.html
 
 # TEE and Confidential Computing
 
-Mengyuan Li’s research on trusted execution environments (TEEs) and confidential computing spans four related areas: [TEE-based systems and their performance](https://mengyuan-l.github.io/tee-confidential-computing.html#systems), [attacks on confidential computing platforms](https://mengyuan-l.github.io/tee-confidential-computing.html#attacks), [defenses for secure cloud and AI infrastructure](https://mengyuan-l.github.io/tee-confidential-computing.html#defenses), and [general cloud security](https://mengyuan-l.github.io/tee-confidential-computing.html#cloud).
+Mengyuan Li’s research on trusted execution environments (TEEs) and confidential computing spans four related areas: [TEE-based systems and their performance](https://mengyuanli.com/tee-confidential-computing.html#systems), [attacks on confidential computing platforms](https://mengyuanli.com/tee-confidential-computing.html#attacks), [defenses for secure cloud and AI infrastructure](https://mengyuanli.com/tee-confidential-computing.html#defenses), and [general cloud security](https://mengyuanli.com/tee-confidential-computing.html#cloud).
 
 Topics: AMD SEV and SEV-SNP · Intel SGX · confidential VMs · cloud GPU security · ciphertext side channels · virtualization · secure networking · serverless platforms
 
@@ -306,42 +306,42 @@ Topics: AMD SEV and SEV-SNP · Intel SGX · confidential VMs · cloud GPU securi
   Yongqin Wang, Rachit Rajat, Jonghyun Lee, **Mengyuan Li**, Murali Annavaram
   *53rd ACM/IEEE Annual International Symposium on Computer Architecture (ISCA 2026)*
   Explores secure memory techniques for VM-based TEEs and efficient protected execution.
-  [DOI](https://doi.org/10.1109/ISCA66397.2026.00047) · [BibTeX](https://mengyuan-l.github.io/files/bib/mc-oram-isca26.bib)
+  [DOI](https://doi.org/10.1109/ISCA66397.2026.00047) · [BibTeX](https://mengyuanli.com/files/bib/mc-oram-isca26.bib)
 - **[SCALE: Tackling Communication Bottlenecks in Confidential Distributed Machine Learning](https://doi.org/10.1109/HPCA68181.2026.11408582)**
   Joongun Park, Yongqin Wang, Huan Xu, Hanjiang Wu, **Mengyuan Li**, Tushar Krishna
   *2026 IEEE International Symposium on High-Performance Computer Architecture (HPCA 2026)*
   Connects confidential computing with efficient multi-GPU machine learning and shows how to reduce system bottlenecks in trusted infrastructure.
-  [DOI](https://doi.org/10.1109/HPCA68181.2026.11408582) · [BibTeX](https://mengyuan-l.github.io/files/bib/scale-hpca26.bib)
+  [DOI](https://doi.org/10.1109/HPCA68181.2026.11408582) · [BibTeX](https://mengyuanli.com/files/bib/scale-hpca26.bib)
 - **[Query Cost Model Calibration in Confidential Virtual Machines](https://arxiv.org/abs/2606.26385)**
   Qihan Zhang, **Mengyuan Li**, Ibrahim Sabek
   *Workshop on Secure and Private Data Management (SeQureDB 2026)*
   Narrows the slowdown of analytical queries in confidential VMs such as AMD SEV-SNP with a lightweight calibration of the query optimizer’s cost model for data movement and RMP-related translation.
-  [PDF](https://arxiv.org/pdf/2606.26385) · [arXiv](https://arxiv.org/abs/2606.26385) · [BibTeX](https://mengyuan-l.github.io/files/bib/cvm-query-cost-sequredb26.bib)
+  [PDF](https://arxiv.org/pdf/2606.26385) · [arXiv](https://arxiv.org/abs/2606.26385) · [BibTeX](https://mengyuanli.com/files/bib/cvm-query-cost-sequredb26.bib)
 - **[OTRO: Oblivious Tokenization Path with Square-Root ORAM](https://arxiv.org/abs/2606.17358)**
   Jonghyun Lee, Yongqin Wang, Rachit Rajat, Daniel Wong, **Mengyuan Li**, Murali Annavaram
   *arXiv preprint arXiv:2606.17358*
   Reduces access-pattern leakage from the CPU-side tokenizer in confidential LLM serving with replicated square-root ORAM, adding at most 4.5% to time-to-first-token in an Intel TDX confidential VM with an NVIDIA H100 GPU.
-  [PDF](https://arxiv.org/pdf/2606.17358) · [arXiv](https://arxiv.org/abs/2606.17358) · [BibTeX](https://mengyuan-l.github.io/files/bib/otro-arxiv26.bib)
+  [PDF](https://arxiv.org/pdf/2606.17358) · [arXiv](https://arxiv.org/abs/2606.17358) · [BibTeX](https://mengyuanli.com/files/bib/otro-arxiv26.bib)
 - **[Infrastructure for Valuable, Tradable, and Verifiable Agent Memory](https://arxiv.org/abs/2603.24564)**
   **Mengyuan Li**, Lei Gao, Haoxuan Xu, Jiate Li, Potung Yu, Lingke Cheng, Yue Zhao, Murali Annavaram
   *arXiv preprint arXiv:2603.24564*
   Proposes infrastructure that makes agent memory verifiable and tradable: ClawGang binds memory to verifiable computational provenance through TEE remote attestation, and MeowTrade is a market layer for listing, transferring, and governing certified memory artifacts.
-  [PDF](https://arxiv.org/pdf/2603.24564) · [arXiv](https://arxiv.org/abs/2603.24564) · [Code](https://github.com/sept-usc/ClawGang) · [BibTeX](https://mengyuan-l.github.io/files/bib/agent-memory-arxiv26.bib)
+  [PDF](https://arxiv.org/pdf/2603.24564) · [arXiv](https://arxiv.org/abs/2603.24564) · [Code](https://github.com/sept-usc/ClawGang) · [BibTeX](https://mengyuanli.com/files/bib/agent-memory-arxiv26.bib)
 - **[Ditto: Elastic Confidential VMs with Secure and Dynamic CPU Scaling](https://arxiv.org/abs/2409.15542)**
   Shixuan Zhao\*, **Mengyuan Li**\*, Mengjia Yan, Zhiqiang Lin
   *arXiv preprint arXiv:2409.15542*
   Explores how to support elastic confidential VMs with secure and dynamic CPU scaling, improving the flexibility and efficiency of TEE-based systems.
-  [PDF](https://arxiv.org/pdf/2409.15542) · [arXiv](https://arxiv.org/abs/2409.15542) · [BibTeX](https://mengyuan-l.github.io/files/bib/ditto-arxiv24.bib)
+  [PDF](https://arxiv.org/pdf/2409.15542) · [arXiv](https://arxiv.org/abs/2409.15542) · [BibTeX](https://mengyuanli.com/files/bib/ditto-arxiv24.bib)
 - **[Bridge the Future: High-Performance Networks in Confidential VMs without Trusted I/O devices](https://arxiv.org/abs/2403.03360)**
   **Mengyuan Li**, Shashvat Srivastava, Mengjia Yan
   *arXiv preprint arXiv:2403.03360*
   Studies how to improve networking performance for confidential VMs without relying on trusted I/O devices, targeting practical system optimization in confidential cloud settings.
-  [PDF](https://arxiv.org/pdf/2403.03360) · [arXiv](https://arxiv.org/abs/2403.03360) · [BibTeX](https://mengyuan-l.github.io/files/bib/bridge-the-future-arxiv24.bib)
+  [PDF](https://arxiv.org/pdf/2403.03360) · [arXiv](https://arxiv.org/abs/2403.03360) · [BibTeX](https://mengyuanli.com/files/bib/bridge-the-future-arxiv24.bib)
 - **[vSGX: Virtualizing SGX Enclaves on AMD SEV](https://doi.org/10.1109/SP46214.2022.9833694)**
   Shixuan Zhao, **Mengyuan Li**, Yinqian Zhang, Zhiqiang Lin
   *2022 IEEE Symposium on Security and Privacy (S&P 2022)*
   Bridges virtualization and enclave protection across TEE platforms, highlighting system support for deployable trusted execution.
-  [DOI](https://doi.org/10.1109/SP46214.2022.9833694) · [PDF](https://yinqian.org/papers/sp22a.pdf) · [Code](https://github.com/OSUSecLab/vSGX) · [BibTeX](https://mengyuan-l.github.io/files/bib/vsgx-sp22.bib)
+  [DOI](https://doi.org/10.1109/SP46214.2022.9833694) · [PDF](https://yinqian.org/papers/sp22a.pdf) · [Code](https://github.com/OSUSecLab/vSGX) · [BibTeX](https://mengyuanli.com/files/bib/vsgx-sp22.bib)
 
 \* Equal contribution.
 
@@ -352,48 +352,48 @@ Topics: AMD SEV and SEV-SNP · Intel SGX · confidential VMs · cloud GPU securi
   *14th International Workshop on Hardware and Architectural Support for Security and Privacy (HASP 2025)*
   Examines the security implications of RMP entry caching in SEV-SNP and expands the attack surface analysis of confidential computing platforms.
   Disclosures: [AMD-SB-3036](https://www.amd.com/en/resources/product-security/bulletin/amd-sb-3036.html)
-  [DOI](https://doi.org/10.1145/3768725.3768727) · [BibTeX](https://mengyuan-l.github.io/files/bib/rmp-caching-hasp25.bib)
+  [DOI](https://doi.org/10.1145/3768725.3768727) · [BibTeX](https://mengyuanli.com/files/bib/rmp-caching-hasp25.bib)
 - **[PWRLEAK: Exploiting Power Reporting Interface for Side-Channel Attacks on AMD SEV](https://doi.org/10.1007/978-3-031-35504-2_3)**
   Wubing Wang, **Mengyuan Li**, Yinqian Zhang, Zhiqiang Lin
   *20th Conference on Detection of Intrusions and Malware & Vulnerability Assessment (DIMVA 2023)*
   Demonstrates a side-channel attack surface exposed by the power reporting interface in AMD SEV platforms.
   Disclosures: [AMD-SB-3004](https://www.amd.com/en/resources/product-security/bulletin/amd-sb-3004.html) · [CVE-2023-20575](https://www.cve.org/CVERecord?id=CVE-2023-20575)
-  [DOI](https://doi.org/10.1007/978-3-031-35504-2_3) · [PDF](https://yinqian.org/papers/dimva23.pdf) · [BibTeX](https://mengyuan-l.github.io/files/bib/pwrleak-dimva23.bib)
+  [DOI](https://doi.org/10.1007/978-3-031-35504-2_3) · [PDF](https://yinqian.org/papers/dimva23.pdf) · [BibTeX](https://mengyuanli.com/files/bib/pwrleak-dimva23.bib)
 - **[A Systematic Look at Ciphertext Side Channels on AMD SEV-SNP](https://doi.org/10.1109/SP46214.2022.9833768)**
   **Mengyuan Li**\*, Luca Wilke\*, Jan Wichelmann, Thomas Eisenbarth, Radu Teodorescu, Yinqian Zhang
   *2022 IEEE Symposium on Security and Privacy (S&P 2022)*
   Studies side-channel vulnerabilities that break confidentiality guarantees in encrypted and confidential execution settings.
   Disclosures: [AMD-SB-1033](https://www.amd.com/en/resources/product-security/bulletin/amd-sb-1033.html) · [CVE-2021-46744](https://www.cve.org/CVERecord?id=CVE-2021-46744)
   AMD published an official white paper for TEE developers and users on writing code that resists ciphertext side channels. [AMD white paper](https://www.amd.com/content/dam/amd/en/documents/resources/bulletin/technical-guidance-for-mitigating-effects-of-ciphertext-visibility-under-amd-sev.pdf)
-  [DOI](https://doi.org/10.1109/SP46214.2022.9833768) · [PDF](https://yinqian.org/papers/sp22b.pdf) · [BibTeX](https://mengyuan-l.github.io/files/bib/ciphertext-sev-snp-sp22.bib)
+  [DOI](https://doi.org/10.1109/SP46214.2022.9833768) · [PDF](https://yinqian.org/papers/sp22b.pdf) · [BibTeX](https://mengyuanli.com/files/bib/ciphertext-sev-snp-sp22.bib)
 - **[TLB Poisoning Attacks on AMD Secure Encrypted Virtualization](https://doi.org/10.1145/3485832.3485876)**
   **Mengyuan Li**, Yinqian Zhang, Huibo Wang, Kang Li, Yueqiang Cheng
   *37th Annual Computer Security Applications Conference (ACSAC 2021)*
   Uncovers a microarchitectural attack that breaks isolation assumptions in AMD SEV through TLB manipulation.
   Disclosures: [AMD-SB-1023](https://www.amd.com/en/resources/product-security/bulletin/amd-sb-1023.html) · [CVE-2021-26340](https://www.cve.org/CVERecord?id=CVE-2021-26340) · [Lenovo LEN-75179](https://support.lenovo.com/us/en/product_security/LEN-75179)
-  [DOI](https://doi.org/10.1145/3485832.3485876) · [PDF](https://yinqian.org/papers/acsac21.pdf) · [BibTeX](https://mengyuan-l.github.io/files/bib/tlb-poisoning-acsac21.bib)
+  [DOI](https://doi.org/10.1145/3485832.3485876) · [PDF](https://yinqian.org/papers/acsac21.pdf) · [BibTeX](https://mengyuanli.com/files/bib/tlb-poisoning-acsac21.bib)
 - **[CROSSLINE: Breaking “Security-by-Crash” based Memory Isolation in AMD SEV](https://doi.org/10.1145/3460120.3485253)**
   **Mengyuan Li**, Yinqian Zhang, Zhiqiang Lin
   *2021 ACM SIGSAC Conference on Computer and Communications Security (CCS 2021)*
   Shows how crash-based isolation assumptions can fail in AMD SEV and lead to cross-boundary memory exposure.
   **Best Paper Award Runner-Up**
-  [DOI](https://doi.org/10.1145/3460120.3485253) · [PDF](https://arxiv.org/pdf/2008.00146) · [arXiv](https://arxiv.org/abs/2008.00146) · [BibTeX](https://mengyuan-l.github.io/files/bib/crossline-ccs21.bib)
+  [DOI](https://doi.org/10.1145/3460120.3485253) · [PDF](https://arxiv.org/pdf/2008.00146) · [arXiv](https://arxiv.org/abs/2008.00146) · [BibTeX](https://mengyuanli.com/files/bib/crossline-ccs21.bib)
 - **[CIPHERLEAKS: Breaking Constant-time Cryptography on AMD SEV via the Ciphertext Side Channel](https://www.usenix.org/conference/usenixsecurity21/presentation/li-mengyuan)**
   **Mengyuan Li**, Yinqian Zhang, Huibo Wang, Kang Li, Yueqiang Cheng
   *30th USENIX Security Symposium (USENIX Security 2021)*
   Shows how ciphertext side channels can break constant-time cryptographic implementations running inside AMD SEV.
   Disclosures: [AMD-SB-1013](https://www.amd.com/en/resources/product-security/bulletin/amd-sb-1013.html) · [CVE-2020-12966](https://www.cve.org/CVERecord?id=CVE-2020-12966)
   AMD filed an embargo for the ciphertext side channel identified in the paper and announced a security bulletin together with a hardware patch for SEV-SNP in August 2021.
-  [Paper](https://www.usenix.org/conference/usenixsecurity21/presentation/li-mengyuan) · [PDF](https://www.usenix.org/system/files/sec21-li-mengyuan.pdf) · [Website](https://cipherleaks.com/) · [BibTeX](https://mengyuan-l.github.io/files/bib/cipherleaks-usenixsec21.bib)
+  [Paper](https://www.usenix.org/conference/usenixsecurity21/presentation/li-mengyuan) · [PDF](https://www.usenix.org/system/files/sec21-li-mengyuan.pdf) · [Website](https://cipherleaks.com/) · [BibTeX](https://mengyuanli.com/files/bib/cipherleaks-usenixsec21.bib)
 - **[Exploiting Unprotected I/O Operations in AMD’s Secure Encrypted Virtualization](https://www.usenix.org/conference/usenixsecurity19/presentation/li-mengyuan)**
   **Mengyuan Li**, Yinqian Zhang, Zhiqiang Lin, Yan Solihin
   *28th USENIX Security Symposium (USENIX Security 2019)*
   Studies attacks that exploit unprotected I/O operations in AMD SEV, highlighting early weaknesses in confidential VM designs.
-  [Paper](https://www.usenix.org/conference/usenixsecurity19/presentation/li-mengyuan) · [PDF](https://www.usenix.org/system/files/sec19-li-mengyuan_0.pdf) · [BibTeX](https://mengyuan-l.github.io/files/bib/sev-io-usenixsec19.bib)
+  [Paper](https://www.usenix.org/conference/usenixsecurity19/presentation/li-mengyuan) · [PDF](https://www.usenix.org/system/files/sec19-li-mengyuan_0.pdf) · [BibTeX](https://mengyuanli.com/files/bib/sev-io-usenixsec19.bib)
 
 \* Equal contribution.
 
-**Beyond TEEs:** Vulnerability research outside TEEs, such as [Chekhov’s Gun](https://mengyuan-l.github.io/#chekhovs-gun-ccs25) on macOS sandboxing (ACM CCS 2025) and [VReaves](https://mengyuan-l.github.io/#vreaves-arxiv25) on electromagnetic side channels (arXiv 2025), is in the [full publication list](https://mengyuan-l.github.io/#publications).
+**Beyond TEEs:** Vulnerability research outside TEEs, such as [Chekhov’s Gun](https://mengyuanli.com/#chekhovs-gun-ccs25) on macOS sandboxing (ACM CCS 2025) and [VReaves](https://mengyuanli.com/#vreaves-arxiv25) on electromagnetic side channels (arXiv 2025), is in the [full publication list](https://mengyuanli.com/#publications).
 
 ## Defenses
 
@@ -401,17 +401,17 @@ Topics: AMD SEV and SEV-SNP · Intel SGX · confidential VMs · cloud GPU securi
   **Mengyuan Li**, Yuheng Yang, Guoxing Chen, Mengjia Yan, Yinqian Zhang
   *19th ACM Asia Conference on Computer and Communications Security (ASIA CCS 2024)*
   A systems-oriented overview of TEE design tradeoffs and common pitfalls, useful for understanding how to build more secure confidential computing systems.
-  [DOI](https://doi.org/10.1145/3634737.3644993) · [PDF](https://mengyuan-l.github.io/files/asiaccs_sok.pdf) · [BibTeX](https://mengyuan-l.github.io/files/bib/sok-tee-asiaccs24.bib)
+  [DOI](https://doi.org/10.1145/3634737.3644993) · [PDF](https://mengyuanli.com/files/asiaccs_sok.pdf) · [BibTeX](https://mengyuanli.com/files/bib/sok-tee-asiaccs24.bib)
 - **[CipherH: Automated Detection of Ciphertext Side-channel Vulnerabilities in Cryptographic Implementations](https://www.usenix.org/conference/usenixsecurity23/presentation/deng-sen)**
   Sen Deng, **Mengyuan Li**, Yining Tang, Shuai Wang, Shoumeng Yan, Yinqian Zhang
   *32nd USENIX Security Symposium (USENIX Security 2023)*
   Automatically detects program points in cryptographic software that are vulnerable to ciphertext side channels, finding over 200 in the RSA and ECDSA/ECDH implementations of OpenSSL, MbedTLS, and wolfSSL.
-  [Paper](https://www.usenix.org/conference/usenixsecurity23/presentation/deng-sen) · [PDF](https://www.usenix.org/system/files/usenixsecurity23-deng-sen.pdf) · [Code](https://github.com/Sen-Deng/CipherH) · [BibTeX](https://mengyuan-l.github.io/files/bib/cipherh-usenixsec23.bib)
+  [Paper](https://www.usenix.org/conference/usenixsecurity23/presentation/deng-sen) · [PDF](https://www.usenix.org/system/files/usenixsecurity23-deng-sen.pdf) · [Code](https://github.com/Sen-Deng/CipherH) · [BibTeX](https://mengyuanli.com/files/bib/cipherh-usenixsec23.bib)
 - **[Defeating Speculative-Execution Attacks on SGX with HyperRace](https://doi.org/10.1109/DSC47296.2019.8937682)**
   Guoxing Chen, **Mengyuan Li**, Fengwei Zhang, Yinqian Zhang
   *2019 IEEE Conference on Dependable and Secure Computing (DSC 2019)*
   Addresses speculative-execution threats in SGX and reflects broader work on attack surfaces and mitigation around TEE platforms.
-  [DOI](https://doi.org/10.1109/DSC47296.2019.8937682) · [PDF](https://yinqian.org/papers/idsc19.pdf) · [BibTeX](https://mengyuan-l.github.io/files/bib/hyperrace-dsc19.bib)
+  [DOI](https://doi.org/10.1109/DSC47296.2019.8937682) · [PDF](https://yinqian.org/papers/idsc19.pdf) · [BibTeX](https://mengyuanli.com/files/bib/hyperrace-dsc19.bib)
 
 ## Cloud
 
@@ -419,23 +419,23 @@ Topics: AMD SEV and SEV-SNP · Intel SGX · confidential VMs · cloud GPU securi
   Liang Wang, **Mengyuan Li**, Yinqian Zhang, Thomas Ristenpart, Michael Swift
   *2018 USENIX Annual Technical Conference (USENIX ATC 2018)*
   Studies security and isolation properties of serverless platforms, representing broader cloud security work beyond TEE-specific mechanisms.
-  [Paper](https://www.usenix.org/conference/atc18/presentation/wang-liang) · [PDF](https://www.usenix.org/system/files/conference/atc18/atc18-wang-liang.pdf) · [Code](https://github.com/liangw-sec/faas_measure) · [BibTeX](https://mengyuan-l.github.io/files/bib/serverless-atc18.bib)
+  [Paper](https://www.usenix.org/conference/atc18/presentation/wang-liang) · [PDF](https://www.usenix.org/system/files/conference/atc18/atc18-wang-liang.pdf) · [Code](https://github.com/liangw-sec/faas_measure) · [BibTeX](https://mengyuanli.com/files/bib/serverless-atc18.bib)
 
 This line of work also connects to cloud multi-tenancy, isolation failures, and shared-infrastructure threats that matter beyond confidential computing.
 
 ## Related
 
-**Teaching:** [CSCI 699: Confidential Computing: Protecting Your Data on Cloud GPUs and CPUs](https://mengyuan-l.github.io/course.html) covers trusted execution environments, confidential virtual machines, confidential GPUs, and privacy-preserving computation. The graduate seminar [CSCI 699: Understanding and Identifying Side-Channel Threats in Cloud and LLM Systems](https://mengyuan-l.github.io/25fall_699.html) covers side-channel attacks on shared infrastructure, from multi-tenant cloud platforms to LLM services.
+**Teaching:** [CSCI 699: Confidential Computing: Protecting Your Data on Cloud GPUs and CPUs](https://mengyuanli.com/course.html) covers trusted execution environments, confidential virtual machines, confidential GPUs, and privacy-preserving computation. The graduate seminar [CSCI 699: Understanding and Identifying Side-Channel Threats in Cloud and LLM Systems](https://mengyuanli.com/25fall_699.html) covers side-channel attacks on shared infrastructure, from multi-tenant cloud platforms to LLM services.
 
 **Lab:** The [SEPT Lab research overview](https://septlab.com/research.html) gives the broader lab context for this area.
 
 **Resources:** SEPT Lab’s public resource on verifiable AI, verifiable.pro, keeps a [hub on TEEs and remote attestation](https://verifiable.pro/topics/confidential-computing/) for AI workloads.
 
-**Other directions:** For adjacent research directions, see [Verifiable AI](https://mengyuan-l.github.io/verifiable-ai.html) and [AI Agent Security](https://mengyuan-l.github.io/ai-agent-security.html). The full publication list is on the [homepage](https://mengyuan-l.github.io/#publications).
+**Other directions:** For adjacent research directions, see [Verifiable AI](https://mengyuanli.com/verifiable-ai.html) and [AI Agent Security](https://mengyuanli.com/ai-agent-security.html). The full publication list is on the [homepage](https://mengyuanli.com/#publications).
 
 ---
 
-Canonical page: https://mengyuan-l.github.io/verifiable-ai.html
+Canonical page: https://mengyuanli.com/verifiable-ai.html
 
 # Verifiable AI
 
@@ -449,12 +449,12 @@ Topics: AI verification · zero-knowledge verification of LLM inference · trust
   Chen Gong, Beijie Liu, **Mengyuan Li**
   *2026 IEEE Symposium on Security and Privacy (S&P 2026)*
   Shows that a valid zero-knowledge proof of LLM inference is not proof of large-model execution: with “ghost weights”, a provider keeps the declared architecture and passes verification while paying only small-model cost.
-  [DOI](https://doi.org/10.1109/SP63933.2026.00258) · [PDF](https://mengyuan-l.github.io/files/hollow-llm.pdf) · [arXiv](https://arxiv.org/abs/2607.28884) · [BibTeX](https://mengyuan-l.github.io/files/hollow-llm.bib)
+  [DOI](https://doi.org/10.1109/SP63933.2026.00258) · [PDF](https://mengyuanli.com/files/hollow-llm.pdf) · [arXiv](https://arxiv.org/abs/2607.28884) · [BibTeX](https://mengyuanli.com/files/hollow-llm.bib)
 - **[WAVE: Leveraging Architecture Observation for Privacy-Preserving Model Oversight](https://doi.org/10.1145/3779212.3790247)**
   Haoxuan Xu\*, Chen Gong\*, Beijie Liu\*, Haizhong Zheng, Beidi Chen, **Mengyuan Li**
   *31st ACM International Conference on Architectural Support for Programming Languages and Operating Systems (ASPLOS 2026)*
   Explores privacy-preserving oversight of model execution: how to monitor and reason about model behavior in a trustworthy way.
-  [DOI](https://doi.org/10.1145/3779212.3790247) · [Code](https://github.com/sept-usc/Wave) · [BibTeX](https://mengyuan-l.github.io/files/bib/wave-asplos26.bib)
+  [DOI](https://doi.org/10.1145/3779212.3790247) · [Code](https://github.com/sept-usc/Wave) · [BibTeX](https://mengyuanli.com/files/bib/wave-asplos26.bib)
 
 \* Equal contribution.
 
@@ -468,13 +468,13 @@ SEPT Lab maintains [verifiable.pro](https://verifiable.pro/), a public resource 
 
 ## Related
 
-**Other directions:** [AI Agent Security](https://mengyuan-l.github.io/ai-agent-security.html) covers runtime monitoring and trusted infrastructure for LLM systems and agents; WAVE also belongs to that direction. [TEE and Confidential Computing](https://mengyuan-l.github.io/tee-confidential-computing.html) covers the secure execution mechanisms that often support deployable verification pipelines.
+**Other directions:** [AI Agent Security](https://mengyuanli.com/ai-agent-security.html) covers runtime monitoring and trusted infrastructure for LLM systems and agents; WAVE also belongs to that direction. [TEE and Confidential Computing](https://mengyuanli.com/tee-confidential-computing.html) covers the secure execution mechanisms that often support deployable verification pipelines.
 
 **Lab:** The [SEPT Lab research overview](https://septlab.com/research.html) gives the broader lab context for this area.
 
 ---
 
-Canonical page: https://mengyuan-l.github.io/ai-agent-security.html
+Canonical page: https://mengyuanli.com/ai-agent-security.html
 
 # AI Agent Security
 
@@ -492,27 +492,27 @@ This direction focuses on monitoring and protecting agent execution rather than 
   Haoxuan Xu\*, Chen Gong\*, Beijie Liu\*, Haizhong Zheng, Beidi Chen, **Mengyuan Li**
   *31st ACM International Conference on Architectural Support for Programming Languages and Operating Systems (ASPLOS 2026)*
   Explores how system-level observation can support privacy-preserving monitoring of model execution, which aligns with runtime monitoring for trustworthy LLM systems and agents.
-  [DOI](https://doi.org/10.1145/3779212.3790247) · [Code](https://github.com/sept-usc/Wave) · [BibTeX](https://mengyuan-l.github.io/files/bib/wave-asplos26.bib)
+  [DOI](https://doi.org/10.1145/3779212.3790247) · [Code](https://github.com/sept-usc/Wave) · [BibTeX](https://mengyuanli.com/files/bib/wave-asplos26.bib)
 - **[SCALE: Tackling Communication Bottlenecks in Confidential Distributed Machine Learning](https://doi.org/10.1109/HPCA68181.2026.11408582)**
   Joongun Park, Yongqin Wang, Huan Xu, Hanjiang Wu, **Mengyuan Li**, Tushar Krishna
   *2026 IEEE International Symposium on High-Performance Computer Architecture (HPCA 2026)*
   Contributes infrastructure for secure and efficient confidential multi-GPU execution, which is important for building trusted backends for large-scale LLM systems and agents.
-  [DOI](https://doi.org/10.1109/HPCA68181.2026.11408582) · [BibTeX](https://mengyuan-l.github.io/files/bib/scale-hpca26.bib)
+  [DOI](https://doi.org/10.1109/HPCA68181.2026.11408582) · [BibTeX](https://mengyuanli.com/files/bib/scale-hpca26.bib)
 - **[CatchBench: When Can an Agent Failure Be Caught?](https://arxiv.org/abs/2608.22808)**
   Yue Zhao, **Mengyuan Li**, Ruolin Li, Prince Zizhuang Wang, Shuli Jiang, Linsey Pang, Xiongye Xiao, Xiyang Hu
   *arXiv preprint arXiv:2608.22808*
   Benchmarks when an agent failure can be caught by putting one auditor’s question to three information states: a run’s declared configuration, a growing prefix of its trace, and the finished trace.
-  [PDF](https://arxiv.org/pdf/2608.22808) · [arXiv](https://arxiv.org/abs/2608.22808) · [Code](https://github.com/yzhao062/catchbench) · [BibTeX](https://mengyuan-l.github.io/files/bib/catchbench-arxiv26.bib)
+  [PDF](https://arxiv.org/pdf/2608.22808) · [arXiv](https://arxiv.org/abs/2608.22808) · [Code](https://github.com/yzhao062/catchbench) · [BibTeX](https://mengyuanli.com/files/bib/catchbench-arxiv26.bib)
 - **[Behavioral Skill Reconstruction: Reconstructing Hidden Functionality from LLM Agent Skills](https://arxiv.org/abs/2608.04192)**
   Peichun Hua, Haoxuan Xu, **Mengyuan Li**
   *arXiv preprint arXiv:2608.04192*
   Shows that keeping an LLM agent skill’s files secret does not keep its functionality secret: through ordinary use alone, the black-box attack SkillClone recovers several of 30 tested skills exactly or partially.
-  [PDF](https://arxiv.org/pdf/2608.04192) · [arXiv](https://arxiv.org/abs/2608.04192) · [BibTeX](https://mengyuan-l.github.io/files/bib/skill-reconstruction-arxiv26.bib)
+  [PDF](https://arxiv.org/pdf/2608.04192) · [arXiv](https://arxiv.org/abs/2608.04192) · [BibTeX](https://mengyuanli.com/files/bib/skill-reconstruction-arxiv26.bib)
 - **[Infrastructure for Valuable, Tradable, and Verifiable Agent Memory](https://arxiv.org/abs/2603.24564)**
   **Mengyuan Li**, Lei Gao, Haoxuan Xu, Jiate Li, Potung Yu, Lingke Cheng, Yue Zhao, Murali Annavaram
   *arXiv preprint arXiv:2603.24564*
   Proposes infrastructure that makes agent memory verifiable and tradable: ClawGang binds memory to verifiable computational provenance through TEE remote attestation, and MeowTrade is a market layer for listing, transferring, and governing certified memory artifacts.
-  [PDF](https://arxiv.org/pdf/2603.24564) · [arXiv](https://arxiv.org/abs/2603.24564) · [Code](https://github.com/sept-usc/ClawGang) · [BibTeX](https://mengyuan-l.github.io/files/bib/agent-memory-arxiv26.bib)
+  [PDF](https://arxiv.org/pdf/2603.24564) · [arXiv](https://arxiv.org/abs/2603.24564) · [Code](https://github.com/sept-usc/ClawGang) · [BibTeX](https://mengyuanli.com/files/bib/agent-memory-arxiv26.bib)
 
 \* Equal contribution.
 
@@ -527,14 +527,14 @@ This direction focuses on monitoring and protecting agent execution rather than 
   A user-controlled bridge between the Muse personal agent and MCP servers. The agent sees only the capabilities the user has reviewed, and every write is confirmed by the user first and runs at most once.
   [Code](https://github.com/sept-usc/muse-mcp-adapter)
 - **[WAVE artifact](https://github.com/sept-usc/Wave)**
-  Artifact for the ASPLOS 2026 paper [WAVE: Leveraging Architecture Observation for Privacy-Preserving Model Oversight](https://mengyuan-l.github.io/ai-agent-security.html#wave-asplos26).
+  Artifact for the ASPLOS 2026 paper [WAVE: Leveraging Architecture Observation for Privacy-Preserving Model Oversight](https://mengyuanli.com/ai-agent-security.html#wave-asplos26).
   [Code](https://github.com/sept-usc/Wave)
 
 ## Foundations
 
-[TEE and Confidential Computing](https://mengyuan-l.github.io/tee-confidential-computing.html) provide mechanisms for isolated execution, protection of agent state, and secure multi-tenant infrastructure.
+[TEE and Confidential Computing](https://mengyuanli.com/tee-confidential-computing.html) provide mechanisms for isolated execution, protection of agent state, and secure multi-tenant infrastructure.
 
-[Verifiable AI](https://mengyuan-l.github.io/verifiable-ai.html) is related because agent systems also need execution integrity, auditability, and trustworthy model-serving pipelines.
+[Verifiable AI](https://mengyuanli.com/verifiable-ai.html) is related because agent systems also need execution integrity, auditability, and trustworthy model-serving pipelines.
 
 ## Challenges
 
@@ -548,13 +548,13 @@ Key open problems include:
 
 ## Related
 
-**Teaching:** [CSCI 699: Understanding and Identifying Side-Channel Threats in Cloud and LLM Systems](https://mengyuan-l.github.io/25fall_699.html) covers threat models that matter when agents and LLM systems run on shared infrastructure.
+**Teaching:** [CSCI 699: Understanding and Identifying Side-Channel Threats in Cloud and LLM Systems](https://mengyuanli.com/25fall_699.html) covers threat models that matter when agents and LLM systems run on shared infrastructure.
 
 **Lab:** [SEPT Lab](https://septlab.com/) studies systems and security problems that connect to the foundations of AI agent security, especially where secure execution and trustworthy infrastructure meet AI workloads.
 
 ---
 
-Canonical page: https://mengyuan-l.github.io/25fall_699.html
+Canonical page: https://mengyuanli.com/25fall_699.html
 
 [Image: USC shield]
 
@@ -625,7 +625,7 @@ This graduate seminar course provides an in-depth exploration of side-channel at
 
 ---
 
-Canonical page: https://mengyuan-l.github.io/course.html
+Canonical page: https://mengyuanli.com/course.html
 
 [Image: USC shield]
 
