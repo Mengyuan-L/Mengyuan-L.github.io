@@ -75,7 +75,7 @@ sips -s format png -Z 48 path/to/sept-mark-240.png --out /tmp/sept-mark-48.png
 sips -p 48 48 /tmp/sept-mark-48.png --out assets/img/sept-lab.png
 ```
 
-**Favicon.** The site icon is the letter M from Literata at weight 800 (the typeface of the page text), in the brick accent. `assets/img/favicon.svg` switches to the lighter dark-mode brick under `prefers-color-scheme: dark`. The other files are exports of it: `assets/img/favicon-32.png` for older browsers, `assets/img/apple-touch-icon.png` (180 px on white) for iPhone home screens, and `favicon.ico` (16, 32 and 48 px) at the root for PDFs and other files that browsers open without a page. The links in each page's `<head>` end in `?v=2`; raise the number whenever the icon changes, so browsers fetch the new one instead of a cached copy.
+**Favicon.** The site icon is a dark green ginkgo leaf (`#154734`), tilted slightly, with faint veins; its notch splits the leaf into two lobes that hint at an M. `assets/img/favicon.svg` switches to a lighter green (`#6cb48d`) under `prefers-color-scheme: dark`. The other files are exports of it: `assets/img/favicon-32.png` for older browsers, `assets/img/apple-touch-icon.png` (180 px on white) for iPhone home screens, and `favicon.ico` (16, 32 and 48 px) at the root for PDFs and other files that browsers open without a page. The links in each page's `<head>` end in `?v=3`; raise the number whenever the icon changes, so browsers fetch the new one instead of a cached copy.
 
 ## Shared stylesheet and script
 
