@@ -24,7 +24,7 @@ Key facts:
 
 ## Research topics
 
-- [Verifiable AI](https://mengyuanli.com/verifiable-ai.html): zero-knowledge verification of LLM inference (Hollow-LLM Attack, IEEE S&P 2026), privacy-preserving model oversight (WAVE, ASPLOS 2026), and SEPT Lab's verifiable.pro resource
+- [Verifiable AI](https://mengyuanli.com/verifiable-ai.html): zero-knowledge verification of LLM inference (Hollow-LLM Attack, IEEE S&P 2026), privacy-preserving model oversight (WAVE, ASPLOS 2026), plus news and guides at verifiable.pro and open-source projects from Anything, Anywhere, Verifiable (AAV)
 - [TEE and Confidential Computing](https://mengyuanli.com/tee-confidential-computing.html): TEE-based systems and their performance (confidential VMs, ORAM, confidential multi-GPU machine learning), attacks on AMD SEV and SEV-SNP (several led to AMD security bulletins and CVEs), defenses against ciphertext and speculative-execution side channels, and the security of serverless cloud platforms
 - [AI Agent Security](https://mengyuanli.com/ai-agent-security.html): TEEs and runtime monitoring for observing and protecting agent execution; papers include WAVE, SCALE, CatchBench, Behavioral Skill Reconstruction, and infrastructure for verifiable agent memory, plus the open-source projects ClawGang and Muse MCP Adapter
 
@@ -38,6 +38,7 @@ Key facts:
 
 - [SEPT Lab](https://septlab.com/): lab website with current members, research, publications, and how to join
 - [verifiable.pro](https://verifiable.pro/): SEPT Lab's public resource on verifiable AI
+- [Anything, Anywhere, Verifiable (AAV) on GitHub](https://github.com/Anything-Anywhere-Verifiable): open-source projects for verifiable execution, including vContainer and the source for verifiable.pro
 - [Google Scholar](https://scholar.google.com/citations?user=cgjqyuoAAAAJ)
 - [DBLP](https://dblp.org/pid/157/4437-4.html)
 - [USC Viterbi faculty profile](https://viterbi.usc.edu/directory/faculty/Li/Mengyuan)

@@ -441,6 +441,9 @@ Canonical page: https://mengyuanli.com/verifiable-ai.html
 
 Mengyuan Li’s research on verifiable AI builds mechanisms that improve the integrity and auditability of deployed models. It focuses on verifying LLM inference and on how proof-based AI systems fail. The work connects verifiable AI with trustworthy machine learning systems and privacy-preserving oversight.
 
+[Explore verifiable.pro ↗](https://verifiable.pro/)
+[Anything, Anywhere, Verifiable (AAV) on GitHub ↗](https://github.com/Anything-Anywhere-Verifiable)
+
 Topics: AI verification · zero-knowledge verification of LLM inference · trustworthy AI systems · model oversight
 
 ## Papers
@@ -462,11 +465,17 @@ Topics: AI verification · zero-knowledge verification of LLM inference · trust
 
 As AI systems become part of high-stakes workflows, users need evidence about which model produced a result and how it ran before they can trust it. That evidence should not reveal sensitive data. Verifiable AI sits at this boundary between systems, security, and machine learning.
 
-## verifiable.pro
+The broader goal is [Anything, Anywhere, Verifiable](https://github.com/Anything-Anywhere-Verifiable): making claims about AI systems checkable across different deployments, from agents to inference and training. [verifiable.pro](https://verifiable.pro/) follows progress toward that goal and explains what today’s evidence can establish.
+
+## Explore verifiable.pro and AAV
 
 SEPT Lab maintains [verifiable.pro](https://verifiable.pro/), a public resource on verifiable AI. It publishes news, explainers, and guides on what evidence can establish about an AI service’s claims, starting from trusted execution environments. Its [verification stack](https://verifiable.pro/topics/) places each kind of claim in one of seven layers, from the chip up to the laws, standards, and agreements that govern an AI system.
 
+For open-source projects, visit [Anything, Anywhere, Verifiable (AAV) on GitHub](https://github.com/Anything-Anywhere-Verifiable). The organization hosts work on verifiable execution, including [vContainer](https://github.com/Anything-Anywhere-Verifiable/vContainer) and the [source for verifiable.pro](https://github.com/Anything-Anywhere-Verifiable/verifiable-pro). Explore the repositories to use the tools or contribute to their development.
+
 ## Related
+
+**Follow & contribute:** Keep up with verifiable AI at [verifiable.pro](https://verifiable.pro/), and explore or contribute to projects on [Anything, Anywhere, Verifiable’s GitHub](https://github.com/Anything-Anywhere-Verifiable).
 
 **Other directions:** [AI Agent Security](https://mengyuanli.com/ai-agent-security.html) covers runtime monitoring and trusted infrastructure for LLM systems and agents; WAVE also belongs to that direction. [TEE and Confidential Computing](https://mengyuanli.com/tee-confidential-computing.html) covers the secure execution mechanisms that often support deployable verification pipelines.
 
