@@ -32,12 +32,12 @@
 <link rel="icon" href="assets/img/favicon-32.png?v=3" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png?v=3">
 <script>(function(){var d=document.documentElement;d.classList.add('js');try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){d.setAttribute('data-theme',t);var c=t==='dark'?'#141414':'#ffffff',m=document.querySelectorAll('meta[name="theme-color"]');for(var i=0;i<m.length;i++)m[i].setAttribute('content',c);}}catch(e){}})();</script>
-<link rel="stylesheet" href="assets/css/site.css">
+<link rel="stylesheet" href="assets/css/site.css?v=20261028">
 <script src="assets/js/site.js" defer></script>
 <!-- BEGIN json-ld (generated) -->
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
-{"@type":"ProfilePage","@id":"https://mengyuanli.com/#profilepage","url":"https://mengyuanli.com/","name":"Mengyuan (Marvin) Li | TEE, Confidential Computing, Verifiable AI, and AI Systems Security","inLanguage":"en","dateModified":"2026-10-25","mainEntity":{"@id":"https://mengyuanli.com/#person"},"isPartOf":{"@id":"https://mengyuanli.com/#website"},"relatedLink":["https://septlab.com/","https://verifiable.pro/"]},
+{"@type":"ProfilePage","@id":"https://mengyuanli.com/#profilepage","url":"https://mengyuanli.com/","name":"Mengyuan (Marvin) Li | TEE, Confidential Computing, Verifiable AI, and AI Systems Security","inLanguage":"en","dateModified":"2026-10-28","mainEntity":{"@id":"https://mengyuanli.com/#person"},"isPartOf":{"@id":"https://mengyuanli.com/#website"},"relatedLink":["https://septlab.com/","https://verifiable.pro/"]},
 {"@type":"WebSite","@id":"https://mengyuanli.com/#website","url":"https://mengyuanli.com/","name":"Mengyuan (Marvin) Li","inLanguage":"en","publisher":{"@id":"https://mengyuanli.com/#person"}},
 {"@type":"Person","@id":"https://mengyuanli.com/#person","name":"Mengyuan Li","alternateName":["Mengyuan (Marvin) Li","Marvin Li"],"givenName":"Mengyuan","familyName":"Li","url":"https://mengyuanli.com/","image":"https://mengyuanli.com/files/mengyuan-480.jpg","email":"mailto:mengyuanli@usc.edu","jobTitle":"Assistant Professor of Computer Science","description":"Assistant Professor of Computer Science at the University of Southern California and leader of SEPT Lab (Security, Privacy, and Trust). Research on verifiable AI systems, trusted execution environments and confidential computing, system and hardware security including side channels, and AI agent security.","worksFor":{"@id":"https://mengyuanli.com/#usc"},"affiliation":[{"@id":"https://mengyuanli.com/#usc-cs"},{"@id":"https://mengyuanli.com/#usc-ece"},{"@id":"https://septlab.com/#lab"}],"memberOf":{"@id":"https://septlab.com/#lab"},"alumniOf":[{"@type":"CollegeOrUniversity","name":"The Ohio State University","url":"https://www.osu.edu/"}],"knowsAbout":["Verifiable AI systems","Trusted execution environments (TEEs)","Confidential computing","AMD SEV-SNP","Intel SGX","Confidential VMs","Confidential GPUs","Zero-knowledge verification of LLM inference","Side-channel attacks","System and hardware security","Cloud security","AI systems security","AI agent security"],"award":["Best Paper Award Runner-Up, ACM CCS 2021 (CROSSLINE)"],"sameAs":["https://scholar.google.com/citations?user=cgjqyuoAAAAJ","https://dblp.org/pid/157/4437-4.html","https://viterbi.usc.edu/directory/faculty/Li/Mengyuan","https://github.com/Mengyuan-L","https://septlab.com/people.html#person-mengyuan-li"],"workLocation":{"@type":"Place","name":"Ginsburg Hall (GCS), University of Southern California","address":{"@type":"PostalAddress","streetAddress":"1031 Downey Way","addressLocality":"Los Angeles","addressRegion":"CA","postalCode":"90089","addressCountry":"US"}}},
 {"@type":"CollegeOrUniversity","@id":"https://mengyuanli.com/#usc","name":"University of Southern California","url":"https://www.usc.edu/"},
@@ -129,7 +129,9 @@
     <div class="m"><dt class="side">Research areas</dt>
       <dd>Verifiable AI systems&nbsp;· Trusted execution environments (TEEs)&nbsp;· Confidential computing&nbsp;· System and hardware security&nbsp;· AI agent security</dd></div>
     <div class="m"><dt class="side">Lab</dt>
-      <dd><a href="https://septlab.com/"><img class="site-icon" src="assets/img/sept-lab.png" alt="" width="16" height="16">SEPT Lab</a>&nbsp;· <a href="https://verifiable.pro/"><img class="site-icon" src="assets/img/verifiable-pro.svg" alt="" width="16" height="16">verifiable.pro</a>&nbsp;· <a href="https://github.com/sept-usc">SEPT Lab on GitHub</a></dd></div>
+      <dd><a href="https://septlab.com/"><img class="site-icon" src="assets/img/sept-lab.png" alt="" width="16" height="16">SEPT Lab</a>&nbsp;· <a href="https://github.com/sept-usc">SEPT Lab on GitHub</a></dd></div>
+    <div class="m"><dt class="side">Projects</dt>
+      <dd><a href="https://verifiable.pro/"><img class="site-icon" src="assets/img/verifiable-pro.svg" alt="" width="16" height="16">verifiable.pro</a>&nbsp;· <a href="https://github.com/Anything-Anywhere-Verifiable">Anything, Anywhere, Verifiable (AAV) on GitHub</a></dd></div>
     <div class="m"><dt class="side">Profiles</dt>
       <dd><a rel="me" href="https://scholar.google.com/citations?user=cgjqyuoAAAAJ&amp;hl=en">Google Scholar</a>&nbsp;· <a rel="me" href="https://dblp.org/pid/157/4437-4.html">DBLP</a>&nbsp;· <a rel="me" href="https://viterbi.usc.edu/directory/faculty/Li/Mengyuan">USC Viterbi profile</a></dd></div>
     <div class="m"><dt class="side">Email</dt>
@@ -156,8 +158,13 @@
   <div class="m dirs-row"><span class="side">Research directions</span>
     <ul class="items" role="list">
       <li><h3><a href="verifiable-ai.html">Verifiable AI</a></h3>
-        <p>Evidence that an AI result came from the claimed model and computation, produced without revealing sensitive data. SEPT Lab also maintains <a href="https://verifiable.pro/">verifiable.pro</a>, a public resource with news, explainers, and guides on verifiable AI.</p>
-        <p class="topics"><i>Topics:</i> zero-knowledge verification&nbsp;· LLM inference&nbsp;· model oversight</p></li>
+        <p>Evidence that an AI result came from the claimed model and computation, produced without revealing sensitive data. SEPT Lab also maintains <a href="https://verifiable.pro/">verifiable.pro</a>, a public resource with news, explainers, and guides on verifiable AI. Explore open-source projects at <a href="https://github.com/Anything-Anywhere-Verifiable">Anything, Anywhere, Verifiable (AAV) on GitHub</a>.</p>
+        <p class="topics"><i>Topics:</i> attestable systems&nbsp;· zero-knowledge verification&nbsp;· LLM inference&nbsp;· model oversight</p>
+        <details class="term-note">
+          <summary>What does “verifiable” mean?</summary>
+          <p>Here, <em>verifiable</em> means that a specific claim about an AI system can be checked using evidence. This includes <em>attestable</em> systems: <a href="https://www.rfc-editor.org/rfc/rfc9334.html">remote attestation</a> lets a verifier assess claims about the hardware and measured software state.</p>
+          <p>The evidence applies to those claims under stated trust assumptions; it does not by itself prove that an AI answer is correct. Explore the <a href="https://verifiable.pro/topics/">verification stack at verifiable.pro</a> for the different claims each layer supports.</p>
+        </details></li>
       <li><h3><a href="tee-confidential-computing.html">TEE and Confidential Computing</a></h3>
         <p>Practical hardware-isolated execution: efficient and secure TEE-based systems for cloud and AI workloads, from oblivious memory inside VM-based TEEs to confidential multi-GPU machine learning.</p>
         <p class="topics"><i>Topics:</i> <span class="nw">AMD SEV-SNP</span>&nbsp;· Intel SGX&nbsp;· confidential VMs and GPUs&nbsp;· ORAM</p></li>
@@ -169,7 +176,7 @@
         <p class="topics"><i>Topics:</i> runtime monitoring&nbsp;· tool isolation&nbsp;· agent memory</p></li>
     </ul></div>
   <div class="m related"><span class="side">Related</span>
-    <p><a href="https://septlab.com/research.html"><img class="site-icon" src="assets/img/sept-lab.png" alt="" width="16" height="16">SEPT Lab research overview</a>&nbsp;· <a href="https://verifiable.pro/"><img class="site-icon" src="assets/img/verifiable-pro.svg" alt="" width="16" height="16">verifiable.pro</a></p></div>
+    <p><a href="https://septlab.com/research.html"><img class="site-icon" src="assets/img/sept-lab.png" alt="" width="16" height="16">SEPT Lab research overview</a>&nbsp;· <a href="https://verifiable.pro/"><img class="site-icon" src="assets/img/verifiable-pro.svg" alt="" width="16" height="16">verifiable.pro</a>&nbsp;· <a href="https://github.com/Anything-Anywhere-Verifiable" aria-label="Anything, Anywhere, Verifiable (AAV) on GitHub">AAV on GitHub</a></p></div>
 </section>
 
 <section id="join" class="join">
@@ -475,7 +482,7 @@ wts.src='https://app.ardalio.com/wts7.js';document.head.appendChild(wts);
 wts.onload = function(){ wtsl7(2213221,2); };
 </script><noscript><img src="https://app.ardalio.com/7/2/2213221.png"></noscript>
 <!-- end Web-Stat code v 7.0 --></span></span></p>
-    <nav aria-label="Footer"><p><a href="https://scholar.google.com/citations?user=cgjqyuoAAAAJ&amp;hl=en">Google Scholar</a>&nbsp;· <a href="https://septlab.com/"><img class="site-icon" src="assets/img/sept-lab.png" alt="" width="16" height="16">SEPT Lab</a>&nbsp;· <a href="https://verifiable.pro/"><img class="site-icon" src="assets/img/verifiable-pro.svg" alt="" width="16" height="16">verifiable.pro</a>&nbsp;· <a href="mailto:mengyuanli@usc.edu">mengyuanli@usc.edu</a></p></nav>
+    <nav aria-label="Footer"><p><a href="https://scholar.google.com/citations?user=cgjqyuoAAAAJ&amp;hl=en">Google Scholar</a>&nbsp;· <a href="https://septlab.com/"><img class="site-icon" src="assets/img/sept-lab.png" alt="" width="16" height="16">SEPT Lab</a>&nbsp;· <a href="https://verifiable.pro/"><img class="site-icon" src="assets/img/verifiable-pro.svg" alt="" width="16" height="16">verifiable.pro</a>&nbsp;· <a href="https://github.com/Anything-Anywhere-Verifiable" aria-label="Anything, Anywhere, Verifiable (AAV) on GitHub">AAV on GitHub</a>&nbsp;· <a href="mailto:mengyuanli@usc.edu">mengyuanli@usc.edu</a></p></nav>
     <p>Text versions for AI agents: <a href="llms.txt">llms.txt</a>&nbsp;· <a href="llms-full.txt">llms-full.txt</a></p>
     <p><a href="#top">Back to top</a></p>
   </div></div>

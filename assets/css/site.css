@@ -232,6 +232,12 @@ main > section, main > .section { margin-top: 4.5rem; }
 .prose li + li { margin-top: .35em; }
 .prose li::marker { color: var(--muted); }
 .note { color: var(--muted); font-size: .9375rem; line-height: 1.5; }
+/* Expandable terminology notes work with the keyboard and without JavaScript. */
+.term-note { margin-top: .75rem; font-size: .9375rem; line-height: 1.6; }
+.term-note summary { cursor: pointer; color: var(--accent); font: 500 .875rem/1.5 var(--sans); }
+.term-note summary:hover { text-decoration: underline; text-underline-offset: .2em; }
+.term-note[open] summary { margin-bottom: .5rem; }
+.term-note p + p { margin-top: .6rem; }
 
 
 /* 6  Homepage =============================================================================== */

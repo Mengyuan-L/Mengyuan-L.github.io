@@ -20,7 +20,8 @@ Recruiting **PhD students for Fall 2027.** USC MS and undergraduate students are
 I lead [SEPT Lab](https://septlab.com/) (Security, Privacy, and Trust) at USC. My research builds trustworthy computing environments by integrating hardware security mechanisms with software systems, so that data and computation stay protected on platforms from personal devices to cloud AI systems.
 
 - **Research areas:** Verifiable AI systems · Trusted execution environments (TEEs) · Confidential computing · System and hardware security · AI agent security
-- **Lab:** [SEPT Lab](https://septlab.com/) · [verifiable.pro](https://verifiable.pro/) · [SEPT Lab on GitHub](https://github.com/sept-usc)
+- **Lab:** [SEPT Lab](https://septlab.com/) · [SEPT Lab on GitHub](https://github.com/sept-usc)
+- **Projects:** [verifiable.pro](https://verifiable.pro/) · [Anything, Anywhere, Verifiable (AAV) on GitHub](https://github.com/Anything-Anywhere-Verifiable)
 - **Profiles:** [Google Scholar](https://scholar.google.com/citations?user=cgjqyuoAAAAJ&hl=en) · [DBLP](https://dblp.org/pid/157/4437-4.html) · [USC Viterbi profile](https://viterbi.usc.edu/directory/faculty/Li/Mengyuan)
 - **Email:** [mengyuanli@usc.edu](mailto:mengyuanli@usc.edu)
 
@@ -38,8 +39,11 @@ My group pursues two research thrusts:
 **Research directions:**
 
 - **[Verifiable AI](https://mengyuanli.com/verifiable-ai.html)**
-  Evidence that an AI result came from the claimed model and computation, produced without revealing sensitive data. SEPT Lab also maintains [verifiable.pro](https://verifiable.pro/), a public resource with news, explainers, and guides on verifiable AI.
-  *Topics:* zero-knowledge verification · LLM inference · model oversight
+  Evidence that an AI result came from the claimed model and computation, produced without revealing sensitive data. SEPT Lab also maintains [verifiable.pro](https://verifiable.pro/), a public resource with news, explainers, and guides on verifiable AI. Explore open-source projects at [Anything, Anywhere, Verifiable (AAV) on GitHub](https://github.com/Anything-Anywhere-Verifiable).
+  *Topics:* attestable systems · zero-knowledge verification · LLM inference · model oversight
+  What does “verifiable” mean?
+  Here, *verifiable* means that a specific claim about an AI system can be checked using evidence. This includes *attestable* systems: [remote attestation](https://www.rfc-editor.org/rfc/rfc9334.html) lets a verifier assess claims about the hardware and measured software state.
+  The evidence applies to those claims under stated trust assumptions; it does not by itself prove that an AI answer is correct. Explore the [verification stack at verifiable.pro](https://verifiable.pro/topics/) for the different claims each layer supports.
 - **[TEE and Confidential Computing](https://mengyuanli.com/tee-confidential-computing.html)**
   Practical hardware-isolated execution: efficient and secure TEE-based systems for cloud and AI workloads, from oblivious memory inside VM-based TEEs to confidential multi-GPU machine learning.
   *Topics:* AMD SEV-SNP · Intel SGX · confidential VMs and GPUs · ORAM
@@ -50,7 +54,7 @@ My group pursues two research thrusts:
   Observing and protecting agent execution with TEEs and runtime monitoring, so that agents can be trusted with sensitive data on shared infrastructure.
   *Topics:* runtime monitoring · tool isolation · agent memory
 
-**Related:** [SEPT Lab research overview](https://septlab.com/research.html) · [verifiable.pro](https://verifiable.pro/)
+**Related:** [SEPT Lab research overview](https://septlab.com/research.html) · [verifiable.pro](https://verifiable.pro/) · [AAV on GitHub](https://github.com/Anything-Anywhere-Verifiable)
 
 ## Join SEPT Lab
 
@@ -439,12 +443,18 @@ Canonical page: https://mengyuanli.com/verifiable-ai.html
 
 # Verifiable AI
 
-Mengyuan Li’s research on verifiable AI builds mechanisms that improve the integrity and auditability of deployed models. It focuses on verifying LLM inference and on how proof-based AI systems fail. The work connects verifiable AI with trustworthy machine learning systems and privacy-preserving oversight.
+Mengyuan Li’s research on verifiable AI builds mechanisms that help users check the integrity of deployed models. It focuses on verifying LLM inference and on how proof-based AI systems fail. The work connects verifiable AI with trustworthy machine learning systems and privacy-preserving oversight.
 
 [Explore verifiable.pro ↗](https://verifiable.pro/)
 [Anything, Anywhere, Verifiable (AAV) on GitHub ↗](https://github.com/Anything-Anywhere-Verifiable)
 
-Topics: AI verification · zero-knowledge verification of LLM inference · trustworthy AI systems · model oversight
+Topics: attestable systems · zero-knowledge verification of LLM inference · trustworthy AI systems · model oversight
+
+What does “verifiable” mean?
+
+Here, *verifiable* means that a specific claim about an AI system can be checked using evidence. This includes *attestable* systems: [remote attestation](https://www.rfc-editor.org/rfc/rfc9334.html) lets a verifier assess claims about the hardware and measured software state.
+
+The evidence applies to those claims under stated trust assumptions; it does not by itself prove that an AI answer is correct. Explore the [verification stack at verifiable.pro](https://verifiable.pro/topics/) for the different claims each layer supports.
 
 ## Papers
 
@@ -510,7 +520,7 @@ This direction focuses on monitoring and protecting agent execution rather than 
 - **[CatchBench: When Can an Agent Failure Be Caught?](https://arxiv.org/abs/2608.22808)**
   Yue Zhao, **Mengyuan Li**, Ruolin Li, Prince Zizhuang Wang, Shuli Jiang, Linsey Pang, Xiongye Xiao, Xiyang Hu
   *arXiv preprint arXiv:2608.22808*
-  Benchmarks when an agent failure can be caught by putting one auditor’s question to three information states: a run’s declared configuration, a growing prefix of its trace, and the finished trace.
+  Benchmarks when an agent failure can be caught by putting one reviewer’s question to three information states: a run’s declared configuration, a growing prefix of its trace, and the finished trace.
   [PDF](https://arxiv.org/pdf/2608.22808) · [arXiv](https://arxiv.org/abs/2608.22808) · [Code](https://github.com/yzhao062/catchbench) · [BibTeX](https://mengyuanli.com/files/bib/catchbench-arxiv26.bib)
 - **[Behavioral Skill Reconstruction: Reconstructing Hidden Functionality from LLM Agent Skills](https://arxiv.org/abs/2608.04192)**
   Peichun Hua, Haoxuan Xu, **Mengyuan Li**
@@ -543,7 +553,7 @@ This direction focuses on monitoring and protecting agent execution rather than 
 
 [TEE and Confidential Computing](https://mengyuanli.com/tee-confidential-computing.html) provide mechanisms for isolated execution, protection of agent state, and secure multi-tenant infrastructure.
 
-[Verifiable AI](https://mengyuanli.com/verifiable-ai.html) is related because agent systems also need execution integrity, auditability, and trustworthy model-serving pipelines.
+[Verifiable AI](https://mengyuanli.com/verifiable-ai.html) is related because agent systems also need execution integrity, verifiable evidence, and trustworthy model-serving pipelines.
 
 ## Challenges
 

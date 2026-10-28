@@ -24,7 +24,7 @@
 <link rel="icon" href="assets/img/favicon-32.png?v=3" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png?v=3">
 <script>(function(){var d=document.documentElement;d.classList.add('js');try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){d.setAttribute('data-theme',t);var c=t==='dark'?'#141414':'#ffffff',m=document.querySelectorAll('meta[name="theme-color"]');for(var i=0;i<m.length;i++)m[i].setAttribute('content',c);}}catch(e){}})();</script>
-<link rel="stylesheet" href="assets/css/site.css">
+<link rel="stylesheet" href="assets/css/site.css?v=20261028">
 <script src="assets/js/site.js" defer></script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
@@ -64,9 +64,14 @@
 
 <header class="page-head m"><p class="side" data-export="skip">Research direction</p>
   <h1>Verifiable AI</h1>
-  <p class="lede">Mengyuan Li’s research on verifiable AI builds mechanisms that improve the integrity and auditability of deployed models. It focuses on verifying LLM inference and on how proof-based AI systems fail. The work connects verifiable AI with trustworthy machine learning systems and privacy-preserving oversight.</p>
+  <p class="lede">Mengyuan Li’s research on verifiable AI builds mechanisms that help users check the integrity of deployed models. It focuses on verifying LLM inference and on how proof-based AI systems fail. The work connects verifiable AI with trustworthy machine learning systems and privacy-preserving oversight.</p>
   <p class="meta"><a href="https://verifiable.pro/">Explore verifiable.pro&nbsp;↗</a><br><a href="https://github.com/Anything-Anywhere-Verifiable">Anything, Anywhere, Verifiable (AAV) on GitHub&nbsp;↗</a></p>
-  <p class="meta">Topics: AI verification&nbsp;· zero-knowledge verification of LLM inference&nbsp;· trustworthy AI systems&nbsp;· model oversight</p>
+  <p class="meta">Topics: attestable systems&nbsp;· zero-knowledge verification of LLM inference&nbsp;· trustworthy AI systems&nbsp;· model oversight</p>
+  <details class="term-note">
+          <summary>What does “verifiable” mean?</summary>
+          <p>Here, <em>verifiable</em> means that a specific claim about an AI system can be checked using evidence. This includes <em>attestable</em> systems: <a href="https://www.rfc-editor.org/rfc/rfc9334.html">remote attestation</a> lets a verifier assess claims about the hardware and measured software state.</p>
+          <p>The evidence applies to those claims under stated trust assumptions; it does not by itself prove that an AI answer is correct. Explore the <a href="https://verifiable.pro/topics/">verification stack at verifiable.pro</a> for the different claims each layer supports.</p>
+        </details>
 </header>
 
 <section id="papers">
