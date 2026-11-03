@@ -70,10 +70,22 @@
    ],
    "kind": "conference",
    "doi_pending": "10.14722/ndss.2027.233233",
-   "links": [],
+   "links": [
+    {
+     "label": "Overview",
+     "url": "https://septlab.com/papers/argus.html"
+    },
+    {
+     "label": "PDF",
+     "url": "https://septlab.com/papers/argus.pdf"
+    }
+   ],
    "notes": [
     {
      "text": "To appear."
+    },
+    {
+     "text": "ARGUS verifies LLM execution on an untrusted GPU from a CPU confidential VM and issues per-inference receipts, with 18–74% overhead on the evaluated balanced workloads."
     }
    ],
    "bibtex": {
@@ -162,10 +174,22 @@
    ],
    "kind": "conference",
    "doi_pending": "10.1145/3828523.3857076",
-   "links": [],
+   "links": [
+    {
+     "label": "Overview",
+     "url": "https://septlab.com/papers/flash.html"
+    },
+    {
+     "label": "PDF",
+     "url": "https://septlab.com/papers/flash.pdf"
+    }
+   ],
    "notes": [
     {
      "text": "To appear."
+    },
+    {
+     "text": "FLASH combines hybrid-key snapshots with GPU write-fault tracking to reduce checkpoint pauses for confidential LLM inference, by up to 9.4× in the evaluated H100/Intel TDX setup."
     }
    ],
    "bibtex": {

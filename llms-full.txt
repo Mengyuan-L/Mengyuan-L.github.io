@@ -68,9 +68,9 @@ To apply, submit your application through USC Viterbi Graduate Admission ([PhD a
 
 ## News
 
-- **Nov 2026:** Two papers accepted to NDSS 2027: [TPUZZ](https://mengyuanli.com/#tpuzz-ndss27) and [Hardware-Rooted Inference-Time Verification for LLM Execution on Untrusted GPUs (ARGUS)](https://mengyuanli.com/#argus-ndss27).
+- **Nov 2026:** Two papers accepted to NDSS 2027: [TPUZZ](https://mengyuanli.com/#tpuzz-ndss27) and [Hardware-Rooted Inference-Time Verification for LLM Execution on Untrusted GPUs (ARGUS)](https://septlab.com/papers/argus.html).
 - **Nov 2026:** Two papers accepted to ACM CCS 2026: [From Fault to Oracle](https://mengyuanli.com/#fault-oracle-ccs26) and [Trapped Handler](https://mengyuanli.com/#trapped-handler-ccs26).
-- **Nov 2026:** [FLASH](https://mengyuanli.com/#flash-atc26) accepted to SIGOPS ATC 2026.
+- **Nov 2026:** [FLASH](https://septlab.com/papers/flash.html) accepted to SIGOPS ATC 2026.
 - **Oct 2026:** Recruiting up to six PhD students for Fall 2027 in a cross-department cluster with Yue Zhao and Ruolin Li. [Join SEPT Lab](https://mengyuanli.com/#join)
 - **Jun 2026:** [MC-ORAM](https://mengyuanli.com/#mc-oram-isca26) appears at ISCA 2026.
 - **May 2026:** [Hollow-LLM Attack](https://mengyuanli.com/#hollow-llm-sp26) appears at IEEE S&P 2026.
@@ -108,7 +108,8 @@ Names in bold are my PhD students or students who work closely with me. \* Equal
   **Beijie Liu**, **Haoxuan Xu**, Jie Peng, **Minghao Lin**, **Chen Gong**, Tianlong Chen, **Mengyuan Li**
   *Network and Distributed System Security Symposium (NDSS 2027)*
   To appear.
-  [BibTeX](https://mengyuanli.com/files/bib/argus-ndss27.bib)
+  ARGUS verifies LLM execution on an untrusted GPU from a CPU confidential VM and issues per-inference receipts, with 18–74% overhead on the evaluated balanced workloads.
+  [Overview](https://septlab.com/papers/argus.html) · [PDF](https://septlab.com/papers/argus.pdf) · [BibTeX](https://mengyuanli.com/files/bib/argus-ndss27.bib)
 
 ### 2026
 
@@ -126,7 +127,8 @@ Names in bold are my PhD students or students who work closely with me. \* Equal
   Jonghyun Lee, Taewoon Kang, **Yongqin Wang**, Rachit Rajat, **Mengyuan Li**, Gunjae Koo, Daniel Wong, Murali Annavaram
   *2026 ACM SIGOPS Annual Technical Conference (SIGOPS ATC 2026)*
   To appear.
-  [BibTeX](https://mengyuanli.com/files/bib/flash-atc26.bib)
+  FLASH combines hybrid-key snapshots with GPU write-fault tracking to reduce checkpoint pauses for confidential LLM inference, by up to 9.4× in the evaluated H100/Intel TDX setup.
+  [Overview](https://septlab.com/papers/flash.html) · [PDF](https://septlab.com/papers/flash.pdf) · [BibTeX](https://mengyuanli.com/files/bib/flash-atc26.bib)
 - **Hollow-LLM Attack: Computationally Trivial Weights in Zero-Knowledge Verification of LLM Inference**
   **Chen Gong**, **Beijie Liu**, **Mengyuan Li**
   *2026 IEEE Symposium on Security and Privacy (S&P 2026)*
