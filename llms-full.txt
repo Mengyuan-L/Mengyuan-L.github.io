@@ -68,6 +68,9 @@ To apply, submit your application through USC Viterbi Graduate Admission ([PhD a
 
 ## News
 
+- **Nov 2026:** Two papers accepted to NDSS 2027: [TPUZZ](https://mengyuanli.com/#tpuzz-ndss27) and [Hardware-Rooted Inference-Time Verification for LLM Execution on Untrusted GPUs (ARGUS)](https://mengyuanli.com/#argus-ndss27).
+- **Nov 2026:** Two papers accepted to ACM CCS 2026: [From Fault to Oracle](https://mengyuanli.com/#fault-oracle-ccs26) and [Trapped Handler](https://mengyuanli.com/#trapped-handler-ccs26).
+- **Nov 2026:** [FLASH](https://mengyuanli.com/#flash-atc26) accepted to SIGOPS ATC 2026.
 - **Oct 2026:** Recruiting up to six PhD students for Fall 2027 in a cross-department cluster with Yue Zhao and Ruolin Li. [Join SEPT Lab](https://mengyuanli.com/#join)
 - **Jun 2026:** [MC-ORAM](https://mengyuanli.com/#mc-oram-isca26) appears at ISCA 2026.
 - **May 2026:** [Hollow-LLM Attack](https://mengyuanli.com/#hollow-llm-sp26) appears at IEEE S&P 2026.
@@ -75,12 +78,12 @@ To apply, submit your application through USC Viterbi Graduate Admission ([PhD a
 - **Mar 2026:** [WAVE](https://mengyuanli.com/#wave-asplos26) appears at ASPLOS 2026; the artifact is on [GitHub](https://github.com/sept-usc/Wave).
 - **Feb 2026:** [SCALE](https://mengyuanli.com/#scale-hpca26) presented at HPCA 2026.
 - **Dec 2025:** [Writing in Symbiosis](https://mengyuanli.com/#writing-symbiosis-neurips25) appears in the NeurIPS 2025 Creative AI Track.
+
+Earlier news, 2021–2025
+
 - **Oct 2025:** [RMP entry caching study](https://mengyuanli.com/#rmp-caching-hasp25) at HASP 2025; AMD published security bulletin [AMD-SB-3036](https://www.amd.com/en/resources/product-security/bulletin/amd-sb-3036.html).
 - **Oct 2025:** [Chekhov’s Gun](https://mengyuanli.com/#chekhovs-gun-ccs25) appears at ACM CCS 2025.
 - **Sep 2025:** [Few-shot graph OOD detection with LLMs](https://mengyuanli.com/#fewshot-graph-ood-ecmlpkdd25) appears at ECML PKDD 2025.
-
-Earlier news, 2021–2024
-
 - **Jul 2024:** [SoK on TEE design choices and pitfalls](https://mengyuanli.com/#sok-tee-asiaccs24) appears at ACM ASIACCS 2024.
 - **2024:** Joined USC as an Assistant Professor in the Thomas Lord Department of Computer Science and started SEPT Lab.
 - **2023:** [CipherH](https://mengyuanli.com/#cipherh-usenixsec23) accepted to USENIX Security 2023.
