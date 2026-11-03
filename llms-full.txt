@@ -90,12 +90,40 @@ Earlier news, 2021–2024
 
 ## Publications
 
-**By year:** [2026](https://mengyuanli.com/#pubs-2026) · [2025](https://mengyuanli.com/#pubs-2025) · [2024](https://mengyuanli.com/#pubs-2024) · [Before 2024](https://mengyuanli.com/#pubs-before-2024) · [Preprints](https://mengyuanli.com/#pubs-preprints)
+**By year:** [2027](https://mengyuanli.com/#pubs-2027) · [2026](https://mengyuanli.com/#pubs-2026) · [2025](https://mengyuanli.com/#pubs-2025) · [2024](https://mengyuanli.com/#pubs-2024) · [Before 2024](https://mengyuanli.com/#pubs-before-2024) · [Preprints](https://mengyuanli.com/#pubs-preprints)
 
 Names in bold are my PhD students or students who work closely with me. \* Equal contribution. Also listed on [Google Scholar](https://scholar.google.com/citations?user=cgjqyuoAAAAJ).
 
+### 2027
+
+- **TPUZZ: Cross-Domain State-Aware Fuzzing of Google Pixel TPU**
+  **Minghao Lin**, **Haoxuan Xu**, Yuzhou Fang, **Beijie Liu**, Nanzi Yang, Guanxing Wen, **Mengyuan Li**
+  *Network and Distributed System Security Symposium (NDSS 2027)*
+  To appear.
+  [BibTeX](https://mengyuanli.com/files/bib/tpuzz-ndss27.bib)
+- **Hardware-Rooted Inference-Time Verification for LLM Execution on Untrusted GPUs**
+  **Beijie Liu**, **Haoxuan Xu**, Jie Peng, **Minghao Lin**, **Chen Gong**, Tianlong Chen, **Mengyuan Li**
+  *Network and Distributed System Security Symposium (NDSS 2027)*
+  To appear.
+  [BibTeX](https://mengyuanli.com/files/bib/argus-ndss27.bib)
+
 ### 2026
 
+- **From Fault to Oracle: Breaking Google Pixel TPU Hardware Memory Isolation via Trusted Deserialization Faults**
+  **Minghao Lin**, Guanxing Wen, **Haoxuan Xu**, Yuzhou Fang, Nanzi Yang, Xiaokuan Zhang, Yanan Guo, Zhuo Zhang, **Mengyuan Li**
+  *2026 ACM SIGSAC Conference on Computer and Communications Security (CCS 2026)*
+  To appear.
+  [BibTeX](https://mengyuanli.com/files/bib/fault-oracle-ccs26.bib)
+- **Trapped Handler: A Practical Performance Degradation Attack on NVIDIA vGPU via Preemption Manipulation**
+  Cheng Gu, Fatemeh Moradihaghighi, Daniel Genkin, Zhuo Li, **Mengyuan Li**, Zhenkai Zhang, Yanan Guo
+  *2026 ACM SIGSAC Conference on Computer and Communications Security (CCS 2026)*
+  To appear.
+  [BibTeX](https://mengyuanli.com/files/bib/trapped-handler-ccs26.bib)
+- **FLASH: Fault-Led, Attested, Secure Hybrid-Key Checkpoint for Confidential Inference**
+  Jonghyun Lee, Taewoon Kang, **Yongqin Wang**, Rachit Rajat, **Mengyuan Li**, Gunjae Koo, Daniel Wong, Murali Annavaram
+  *2026 ACM SIGOPS Annual Technical Conference (SIGOPS ATC 2026)*
+  To appear.
+  [BibTeX](https://mengyuanli.com/files/bib/flash-atc26.bib)
 - **Hollow-LLM Attack: Computationally Trivial Weights in Zero-Knowledge Verification of LLM Inference**
   **Chen Gong**, **Beijie Liu**, **Mengyuan Li**
   *2026 IEEE Symposium on Security and Privacy (S&P 2026)*

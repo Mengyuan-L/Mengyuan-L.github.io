@@ -20,6 +20,159 @@
  },
  "publications": [
   {
+   "id": "tpuzz-ndss27",
+   "title": "TPUZZ: Cross-Domain State-Aware Fuzzing of Google Pixel TPU",
+   "authors": [
+    "Minghao Lin",
+    "Haoxuan Xu",
+    "Yuzhou Fang",
+    "Beijie Liu",
+    "Nanzi Yang",
+    "Guanxing Wen",
+    "Mengyuan Li"
+   ],
+   "venue": "Network and Distributed System Security Symposium (NDSS 2027)",
+   "venue_short": "NDSS",
+   "year": 2027,
+   "themes": [
+    "attacks"
+   ],
+   "kind": "conference",
+   "doi_pending": "10.14722/ndss.2027.231828",
+   "links": [],
+   "notes": [
+    {
+     "text": "To appear."
+    }
+   ],
+   "bibtex": {
+    "key": "lin2027tpuzz"
+   }
+  },
+  {
+   "id": "argus-ndss27",
+   "title": "Hardware-Rooted Inference-Time Verification for LLM Execution on Untrusted GPUs",
+   "authors": [
+    "Beijie Liu",
+    "Haoxuan Xu",
+    "Jie Peng",
+    "Minghao Lin",
+    "Chen Gong",
+    "Tianlong Chen",
+    "Mengyuan Li"
+   ],
+   "venue": "Network and Distributed System Security Symposium (NDSS 2027)",
+   "venue_short": "NDSS",
+   "year": 2027,
+   "themes": [
+    "verifiable-ai",
+    "tee"
+   ],
+   "kind": "conference",
+   "doi_pending": "10.14722/ndss.2027.233233",
+   "links": [],
+   "notes": [
+    {
+     "text": "To appear."
+    }
+   ],
+   "bibtex": {
+    "key": "liu2027argus"
+   }
+  },
+  {
+   "id": "fault-oracle-ccs26",
+   "title": "From Fault to Oracle: Breaking Google Pixel TPU Hardware Memory Isolation via Trusted Deserialization Faults",
+   "authors": [
+    "Minghao Lin",
+    "Guanxing Wen",
+    "Haoxuan Xu",
+    "Yuzhou Fang",
+    "Nanzi Yang",
+    "Xiaokuan Zhang",
+    "Yanan Guo",
+    "Zhuo Zhang",
+    "Mengyuan Li"
+   ],
+   "venue": "2026 ACM SIGSAC Conference on Computer and Communications Security (CCS 2026)",
+   "venue_short": "ACM CCS",
+   "year": 2026,
+   "themes": [
+    "attacks"
+   ],
+   "kind": "conference",
+   "doi_pending": "10.1145/3830454.3846589",
+   "links": [],
+   "notes": [
+    {
+     "text": "To appear."
+    }
+   ],
+   "bibtex": {
+    "key": "lin2026faultoracle"
+   }
+  },
+  {
+   "id": "trapped-handler-ccs26",
+   "title": "Trapped Handler: A Practical Performance Degradation Attack on NVIDIA vGPU via Preemption Manipulation",
+   "authors": [
+    "Cheng Gu",
+    "Fatemeh Moradihaghighi",
+    "Daniel Genkin",
+    "Zhuo Li",
+    "Mengyuan Li",
+    "Zhenkai Zhang",
+    "Yanan Guo"
+   ],
+   "venue": "2026 ACM SIGSAC Conference on Computer and Communications Security (CCS 2026)",
+   "venue_short": "ACM CCS",
+   "year": 2026,
+   "themes": [
+    "attacks"
+   ],
+   "kind": "conference",
+   "links": [],
+   "notes": [
+    {
+     "text": "To appear."
+    }
+   ],
+   "bibtex": {
+    "key": "gu2026trappedhandler"
+   }
+  },
+  {
+   "id": "flash-atc26",
+   "title": "FLASH: Fault-Led, Attested, Secure Hybrid-Key Checkpoint for Confidential Inference",
+   "authors": [
+    "Jonghyun Lee",
+    "Taewoon Kang",
+    "Yongqin Wang",
+    "Rachit Rajat",
+    "Mengyuan Li",
+    "Gunjae Koo",
+    "Daniel Wong",
+    "Murali Annavaram"
+   ],
+   "venue": "2026 ACM SIGOPS Annual Technical Conference (SIGOPS ATC 2026)",
+   "venue_short": "SIGOPS ATC",
+   "year": 2026,
+   "themes": [
+    "tee"
+   ],
+   "kind": "conference",
+   "doi_pending": "10.1145/3828523.3857076",
+   "links": [],
+   "notes": [
+    {
+     "text": "To appear."
+    }
+   ],
+   "bibtex": {
+    "key": "lee2026flash"
+   }
+  },
+  {
    "id": "hollow-llm-sp26",
    "title": "Hollow-LLM Attack: Computationally Trivial Weights in Zero-Knowledge Verification of LLM Inference",
    "authors": [
