@@ -73,7 +73,7 @@ To apply, submit your application through USC Viterbi Graduate Admission ([PhD a
 - **Nov 2026:** [FLASH](https://septlab.com/papers/flash.html) accepted to SIGOPS ATC 2026.
 - **Oct 2026:** Recruiting up to six PhD students for Fall 2027 in a cross-department cluster with Yue Zhao and Ruolin Li. [Join SEPT Lab](https://mengyuanli.com/#join)
 - **Jun 2026:** [MC-ORAM](https://mengyuanli.com/#mc-oram-isca26) appears at ISCA 2026.
-- **May 2026:** [Hollow-LLM Attack](https://mengyuanli.com/#hollow-llm-sp26) appears at IEEE S&P 2026.
+- **May 2026:** [Hollow-LLM Attack](https://septlab.com/papers/hollow-llm.html) appears at IEEE S&P 2026.
 - **Apr 2026:** Talk at the University of Chicago: *Confidential Computing and Trusted Execution Environments: Challenges and Opportunities for Trustworthy AI*. ([event page](https://computerscience.uchicago.edu/events/event/mengyuan-li-usc-confidential-computing-and-trusted-execution-environments-challenges-and-opportunities-for-trustworthy-ai/))
 - **Mar 2026:** [WAVE](https://mengyuanli.com/#wave-asplos26) appears at ASPLOS 2026; the artifact is on [GitHub](https://github.com/sept-usc/Wave).
 - **Feb 2026:** [SCALE](https://mengyuanli.com/#scale-hpca26) presented at HPCA 2026.
@@ -132,7 +132,8 @@ Names in bold are my PhD students or students who work closely with me. \* Equal
 - **Hollow-LLM Attack: Computationally Trivial Weights in Zero-Knowledge Verification of LLM Inference**
   **Chen Gong**, **Beijie Liu**, **Mengyuan Li**
   *2026 IEEE Symposium on Security and Privacy (S&P 2026)*
-  [DOI](https://doi.org/10.1109/SP63933.2026.00258) · [PDF](https://mengyuanli.com/files/hollow-llm.pdf) · [arXiv](https://arxiv.org/abs/2607.28884) · [BibTeX](https://mengyuanli.com/files/hollow-llm.bib)
+  Structured private weights can preserve valid proofs for a large declared architecture while serving at small-model cost; the proof does not certify actual computational effort.
+  [DOI](https://doi.org/10.1109/SP63933.2026.00258) · [Overview](https://septlab.com/papers/hollow-llm.html) · [PDF](https://mengyuanli.com/files/hollow-llm.pdf) · [arXiv](https://arxiv.org/abs/2607.28884) · [BibTeX](https://mengyuanli.com/files/hollow-llm.bib)
 - **WAVE: Leveraging Architecture Observation for Privacy-Preserving Model Oversight**
   **Haoxuan Xu**\*, **Chen Gong**\*, **Beijie Liu**\*, Haizhong Zheng, Beidi Chen, **Mengyuan Li**
   *31st ACM International Conference on Architectural Support for Programming Languages and Operating Systems (ASPLOS 2026)*
@@ -495,7 +496,7 @@ The evidence applies to those claims under stated trust assumptions; it does not
   Chen Gong, Beijie Liu, **Mengyuan Li**
   *2026 IEEE Symposium on Security and Privacy (S&P 2026)*
   Shows that a valid zero-knowledge proof of LLM inference is not proof of large-model execution: with “ghost weights”, a provider keeps the declared architecture and passes verification while paying only small-model cost.
-  [DOI](https://doi.org/10.1109/SP63933.2026.00258) · [PDF](https://mengyuanli.com/files/hollow-llm.pdf) · [arXiv](https://arxiv.org/abs/2607.28884) · [BibTeX](https://mengyuanli.com/files/hollow-llm.bib)
+  [DOI](https://doi.org/10.1109/SP63933.2026.00258) · [Overview](https://septlab.com/papers/hollow-llm.html) · [PDF](https://mengyuanli.com/files/hollow-llm.pdf) · [arXiv](https://arxiv.org/abs/2607.28884) · [BibTeX](https://mengyuanli.com/files/hollow-llm.bib)
 - **[WAVE: Leveraging Architecture Observation for Privacy-Preserving Model Oversight](https://doi.org/10.1145/3779212.3790247)**
   Haoxuan Xu\*, Chen Gong\*, Beijie Liu\*, Haizhong Zheng, Beidi Chen, **Mengyuan Li**
   *31st ACM International Conference on Architectural Support for Programming Languages and Operating Systems (ASPLOS 2026)*

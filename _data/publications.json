@@ -212,6 +212,10 @@
    "arxiv": "2607.28884",
    "links": [
     {
+     "label": "Overview",
+     "url": "https://septlab.com/papers/hollow-llm.html"
+    },
+    {
      "label": "PDF",
      "url": "files/hollow-llm.pdf"
     },
@@ -229,7 +233,12 @@
     "key": "gong2026hollowllm",
     "pages": "4339--4355",
     "file": "files/hollow-llm.bib"
-   }
+   },
+   "notes": [
+    {
+     "text": "Structured private weights can preserve valid proofs for a large declared architecture while serving at small-model cost; the proof does not certify actual computational effort."
+    }
+   ]
   },
   {
    "id": "wave-asplos26",
