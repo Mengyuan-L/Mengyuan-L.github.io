@@ -109,7 +109,7 @@ Names in bold are my PhD students or students who work closely with me. \* Equal
   *Network and Distributed System Security Symposium (NDSS 2027)*
   To appear.
   ARGUS verifies LLM execution on an untrusted GPU from a CPU confidential VM and issues per-inference receipts, with 18–74% overhead on the evaluated balanced workloads.
-  [Overview](https://septlab.com/papers/argus.html) · [PDF](https://septlab.com/papers/argus.pdf) · [BibTeX](https://mengyuanli.com/files/bib/argus-ndss27.bib)
+  [Overview](https://septlab.com/papers/argus.html) · [BibTeX](https://mengyuanli.com/files/bib/argus-ndss27.bib)
 
 ### 2026
 
