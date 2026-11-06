@@ -1,6 +1,6 @@
-# Mengyuan (Marvin) Li
+# Mengyuan Li
 
-> Mengyuan (Marvin) Li is an Assistant Professor of Computer Science at the University of Southern California (USC), where he leads SEPT Lab (Security, Privacy, and Trust). His research covers verifiable AI systems, trusted execution environments (TEEs) and confidential computing, system and hardware security including side channels, and AI agent security.
+> Mengyuan Li is an Assistant Professor of Computer Science at the University of Southern California (USC), where he leads SEPT Lab (Security, Privacy, and Trust). His research covers verifiable AI systems, trusted execution environments (TEEs) and confidential computing, system and hardware security including side channels, and AI agent security.
 
 This is the official homepage. The HTML pages are canonical; llms-full.txt contains their full text in Markdown.
 

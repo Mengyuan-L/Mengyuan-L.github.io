@@ -1,4 +1,4 @@
-# Mengyuan (Marvin) Li: full site text
+# Mengyuan Li: full site text
 
 > Full-text Markdown version of https://mengyuanli.com/ for AI agents and other readers, generated from the <main> content of each public page by _tools/build.py. The HTML pages are canonical. A short index is at https://mengyuanli.com/llms.txt
 
@@ -6,9 +6,9 @@
 
 Canonical page: https://mengyuanli.com/
 
-[[Image: Portrait of Mengyuan (Marvin) Li]](https://mengyuanli.com/files/mengyuan.png)
+[[Image: Portrait of Mengyuan Li]](https://mengyuanli.com/files/mengyuan.png)
 
-# Mengyuan (Marvin) Li
+# Mengyuan Li
 
 Assistant Professor, University of Southern California
 
@@ -27,7 +27,7 @@ I lead [SEPT Lab](https://septlab.com/) (Security, Privacy, and Trust) at USC. M
 
 ## About
 
-Mengyuan (Marvin) Li is an Assistant Professor in the Thomas Lord Department of Computer Science at the University of Southern California, where he leads [SEPT Lab](https://septlab.com/) (Security, Privacy, and Trust). Before joining USC in 2024, he was a postdoctoral researcher at [MIT CSAIL](https://www.csail.mit.edu/) (2022–2024), working with Prof. [Mengjia Yan](https://people.csail.mit.edu/mengjia/). He received his Ph.D. in Computer Science and Engineering from [The Ohio State University](https://www.osu.edu/) in 2022, advised by Prof. [Yinqian Zhang](https://yinqian.org/). His research on AMD SEV led to several AMD security bulletins and CVEs, and his paper CROSSLINE received the Best Paper Award Runner-Up at ACM CCS 2021.
+Mengyuan Li is an Assistant Professor in the Thomas Lord Department of Computer Science at the University of Southern California, where he leads [SEPT Lab](https://septlab.com/) (Security, Privacy, and Trust). Before joining USC in 2024, he was a postdoctoral researcher at [MIT CSAIL](https://www.csail.mit.edu/) (2022–2024), working with Prof. [Mengjia Yan](https://people.csail.mit.edu/mengjia/). He received his Ph.D. in Computer Science and Engineering from [The Ohio State University](https://www.osu.edu/) in 2022, advised by Prof. [Yinqian Zhang](https://yinqian.org/). His research on AMD SEV led to several AMD security bulletins and CVEs, and his paper CROSSLINE received the Best Paper Award Runner-Up at ACM CCS 2021.
 
 ## Research
 
