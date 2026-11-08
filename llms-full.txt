@@ -17,7 +17,7 @@ Assistant Professor, University of Southern California
 
 Recruiting **PhD students for Fall 2027.** USC MS and undergraduate students are also welcome. [Join SEPT Lab](https://mengyuanli.com/#join)
 
-I lead [SEPT Lab](https://septlab.com/) (Security, Privacy, and Trust) at USC. My research builds trustworthy computing environments by integrating hardware security mechanisms with software systems, so that data and computation stay protected on platforms from personal devices to cloud AI systems.
+I lead [SEPT Lab](https://septlab.com/) (Security, Privacy, and Trust) at USC. My research combines hardware security with software systems to build efficient, high-performance AI systems with stronger security. I focus on confidential inference and AI agents.
 
 - **Research areas:** Verifiable AI systems · Trusted execution environments (TEEs) · Confidential computing · System and hardware security · AI agent security
 - **Lab:** [SEPT Lab](https://septlab.com/) · [SEPT Lab on GitHub](https://github.com/sept-usc)
@@ -34,7 +34,7 @@ Mengyuan Li is an Assistant Professor in the Thomas Lord Department of Computer 
 My group pursues two research thrusts:
 
 - Uncovering, understanding, and defending against system and hardware vulnerabilities in cloud systems, CPUs, GPUs, and AI systems.
-- Co-designing software and hardware for secure and efficient AI systems.
+- Co-designing software and hardware for secure, efficient, and high-performance AI systems, with a focus on confidential inference and AI agents.
 
 **Research directions:**
 
@@ -45,14 +45,14 @@ My group pursues two research thrusts:
   Here, *verifiable* means that a specific claim about an AI system can be checked using evidence. This includes *attestable* systems: [remote attestation](https://www.rfc-editor.org/rfc/rfc9334.html) lets a verifier assess claims about the hardware and measured software state.
   The evidence applies to those claims under stated trust assumptions; it does not by itself prove that an AI answer is correct. Explore the [verification stack at verifiable.pro](https://verifiable.pro/topics/) for the different claims each layer supports.
 - **[TEE and Confidential Computing](https://mengyuanli.com/tee-confidential-computing.html)**
-  Practical hardware-isolated execution: efficient and secure TEE-based systems for cloud and AI workloads, from oblivious memory inside VM-based TEEs to confidential multi-GPU machine learning.
-  *Topics:* AMD SEV-SNP · Intel SGX · confidential VMs and GPUs · ORAM
+  Confidential inference and AI agents built on CPU and GPU TEEs. We reduce the overhead of protected execution to improve efficiency and performance, while strengthening isolation and defenses against side-channel leakage.
+  *Topics:* confidential inference · AI agents · CPU and GPU TEEs · secure memory · side-channel defenses
 - **[System and Hardware Vulnerabilities](https://mengyuanli.com/tee-confidential-computing.html#attacks)**
   Design flaws and side channels that break the security guarantees of systems and hardware, found and disclosed to vendors such as AMD.
   *Topics:* side channels · SEV-SNP · macOS sandboxing · GPUs
 - **[AI Agent Security](https://mengyuanli.com/ai-agent-security.html)**
-  Observing and protecting agent execution with TEEs and runtime monitoring, so that agents can be trusted with sensitive data on shared infrastructure.
-  *Topics:* runtime monitoring · tool isolation · agent memory
+  Protecting agent execution and memory with TEE isolation, remote attestation, and runtime monitoring. We study how to strengthen security while keeping model and tool execution efficient on shared infrastructure.
+  *Topics:* secure agent runtimes · runtime monitoring · tool isolation · verifiable agent memory
 
 **Related:** [SEPT Lab research overview](https://septlab.com/research.html) · [verifiable.pro](https://verifiable.pro/) · [AAV on GitHub](https://github.com/Anything-Anywhere-Verifiable)
 
@@ -334,12 +334,26 @@ Canonical page: https://mengyuanli.com/tee-confidential-computing.html
 
 # TEE and Confidential Computing
 
-Mengyuan Li’s research on trusted execution environments (TEEs) and confidential computing spans four related areas: [TEE-based systems and their performance](https://mengyuanli.com/tee-confidential-computing.html#systems), [attacks on confidential computing platforms](https://mengyuanli.com/tee-confidential-computing.html#attacks), [defenses for secure cloud and AI infrastructure](https://mengyuanli.com/tee-confidential-computing.html#defenses), and [general cloud security](https://mengyuanli.com/tee-confidential-computing.html#cloud).
+Mengyuan Li’s research uses trusted execution environments (TEEs) and confidential computing to build efficient, high-performance AI systems with stronger security. The focus is confidential inference and AI agents that handle sensitive data on shared infrastructure.
 
-Topics: AMD SEV and SEV-SNP · Intel SGX · confidential VMs · cloud GPU security · ciphertext side channels · virtualization · secure networking · serverless platforms
+Topics: confidential inference · AI agents · CPU and GPU TEEs · remote attestation · secure memory · side-channel defenses
+
+## Research focus
+
+My group co-designs systems software and hardware to lower the cost of protected AI execution. For confidential inference, we optimize data movement and GPU checkpointing to reduce overhead and interruptions to model serving. For AI agents, we use TEE isolation and remote attestation to protect agent state and provide evidence of its computational provenance.
+
+Performance and security are joint design goals. Our work on memory isolation and access-pattern protection addresses leakage that can remain within confidential computing systems. Research on [TEE vulnerabilities](https://mengyuanli.com/tee-confidential-computing.html#attacks) and [defenses](https://mengyuanli.com/tee-confidential-computing.html#defenses) strengthens these foundations, while work on [cloud isolation](https://mengyuanli.com/tee-confidential-computing.html#cloud) informs deployment on shared infrastructure.
 
 ## Systems
 
+Selected systems work spans confidential inference and agent memory, supported by efficient confidential VMs, secure memory, and multi-GPU communication.
+
+- **[FLASH: Fault-Led, Attested, Secure Hybrid-Key Checkpoint for Confidential Inference](https://septlab.com/papers/flash.html)**
+  Jonghyun Lee, Taewoon Kang, Yongqin Wang, Rachit Rajat, **Mengyuan Li**, Gunjae Koo, Daniel Wong, Murali Annavaram
+  *2026 ACM SIGOPS Annual Technical Conference (SIGOPS ATC 2026)*
+  To appear.
+  FLASH combines hybrid-key snapshots with GPU write-fault tracking to reduce checkpoint pauses for confidential LLM inference, by up to 9.4× in the evaluated H100/Intel TDX setup.
+  [Overview](https://septlab.com/papers/flash.html) · [PDF](https://septlab.com/papers/flash.pdf) · [BibTeX](https://mengyuanli.com/files/bib/flash-atc26.bib)
 - **[MC-ORAM: A Mask-Assisted and Counter-Based Non-Deterministic ORAM Inside VM-Based TEEs](https://doi.org/10.1109/ISCA66397.2026.00047)**
   Yongqin Wang, Rachit Rajat, Jonghyun Lee, **Mengyuan Li**, Murali Annavaram
   *53rd ACM/IEEE Annual International Symposium on Computer Architecture (ISCA 2026)*
@@ -521,7 +535,7 @@ For open-source projects, visit [Anything, Anywhere, Verifiable (AAV) on GitHub]
 
 **Follow & contribute:** Keep up with verifiable AI at [verifiable.pro](https://verifiable.pro/), and explore or contribute to projects on [Anything, Anywhere, Verifiable’s GitHub](https://github.com/Anything-Anywhere-Verifiable).
 
-**Other directions:** [AI Agent Security](https://mengyuanli.com/ai-agent-security.html) covers runtime monitoring and trusted infrastructure for LLM systems and agents; WAVE also belongs to that direction. [TEE and Confidential Computing](https://mengyuanli.com/tee-confidential-computing.html) covers the secure execution mechanisms that often support deployable verification pipelines.
+**Other directions:** [AI Agent Security](https://mengyuanli.com/ai-agent-security.html) covers efficient, protected agent execution and runtime monitoring; WAVE also belongs to that direction. [TEE and Confidential Computing](https://mengyuanli.com/tee-confidential-computing.html) focuses on high-performance confidential inference and AI agents, strengthening the secure execution foundations of deployable verification pipelines.
 
 **Lab:** The [SEPT Lab research overview](https://septlab.com/research.html) gives the broader lab context for this area.
 
@@ -531,13 +545,15 @@ Canonical page: https://mengyuanli.com/ai-agent-security.html
 
 # AI Agent Security
 
-Mengyuan Li’s research on AI agent security uses trusted execution environments (TEEs) and runtime monitoring to observe agent execution and to build trusted infrastructure for LLM systems and AI agents. The goal is agent backends that remain observable, trustworthy, and resilient when they run on shared cloud infrastructure and handle sensitive data.
+Mengyuan Li’s research builds secure, efficient infrastructure for AI agents and the confidential inference services they use. The goal is to protect sensitive agent state and make execution observable, while preserving the performance needed for practical model and tool use on shared infrastructure.
 
-Topics: secure AI agents · agent runtime monitoring · TEEs for AI agents · trusted infrastructure for LLM systems · trustworthy agent execution
+Topics: secure agent runtimes · confidential inference · TEE isolation and attestation · runtime monitoring · verifiable agent memory
 
 ## Perspective
 
-This direction focuses on monitoring and protecting agent execution rather than only verifying final outputs. It brings together TEEs, confidential computing, and runtime observation to support trustworthy LLM systems and agentic infrastructure.
+Agent security depends on the systems that execute models and tools and retain long-lived memory. We combine trusted execution environment (TEE) isolation with remote attestation to protect agent state and provide evidence about the runtime handling sensitive data. Runtime monitoring complements these mechanisms by making execution behavior observable.
+
+We study how to strengthen these protections with low overhead, connecting secure agent runtimes to [high-performance confidential inference](https://mengyuanli.com/tee-confidential-computing.html). This makes efficiency and security joint goals across the agent’s execution path.
 
 ## Papers
 
@@ -585,7 +601,7 @@ This direction focuses on monitoring and protecting agent execution rather than 
 
 ## Foundations
 
-[TEE and Confidential Computing](https://mengyuanli.com/tee-confidential-computing.html) provide mechanisms for isolated execution, protection of agent state, and secure multi-tenant infrastructure.
+[TEE and Confidential Computing](https://mengyuanli.com/tee-confidential-computing.html) underpin this work on efficient confidential inference and protected agent execution, with CPU and GPU isolation and defenses against side-channel leakage.
 
 [Verifiable AI](https://mengyuanli.com/verifiable-ai.html) is related because agent systems also need execution integrity, verifiable evidence, and trustworthy model-serving pipelines.
 
@@ -597,6 +613,7 @@ Key open problems include:
 - isolating tool execution;
 - protecting long-lived memory and secrets;
 - building trusted infrastructure for LLM systems and agents;
+- reducing the latency and resource costs of protected model and tool execution;
 - defending agent backends against cloud- and hardware-level leakage.
 
 ## Related

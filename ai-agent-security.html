@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>AI Agent Security | Mengyuan Li</title>
-<meta name="description" content="AI agent security research by Mengyuan Li on using TEE and runtime monitoring to monitor agent execution and build trusted infrastructure for LLM systems and AI agents.">
+<meta name="description" content="AI agent security research by Mengyuan Li on efficient protected execution, confidential inference, TEE isolation and attestation, runtime monitoring, and verifiable agent memory.">
 <link rel="canonical" href="https://mengyuanli.com/ai-agent-security.html">
 <link rel="alternate" type="text/markdown" title="LLM-friendly site index (llms.txt)" href="https://mengyuanli.com/llms.txt">
 <link rel="alternate" type="text/markdown" title="Full site text for LLMs (llms-full.txt)" href="https://mengyuanli.com/llms-full.txt">
 <meta property="og:title" content="AI Agent Security | Mengyuan Li">
-<meta property="og:description" content="Using TEE and runtime monitoring to monitor agent execution and build trusted infrastructure for LLM systems and AI agents.">
+<meta property="og:description" content="Efficient, protected AI agent execution and confidential inference with TEE isolation, remote attestation, runtime monitoring, and verifiable memory.">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Mengyuan Li">
 <meta property="og:url" content="https://mengyuanli.com/ai-agent-security.html">
@@ -28,7 +28,7 @@
 <script src="assets/js/site.js" defer></script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
-{"@type":"WebPage","@id":"https://mengyuanli.com/ai-agent-security.html#webpage","url":"https://mengyuanli.com/ai-agent-security.html","name":"AI Agent Security | Mengyuan Li","description":"AI agent security research by Mengyuan Li on using TEE and runtime monitoring to monitor agent execution and build trusted infrastructure for LLM systems and AI agents.","inLanguage":"en","dateModified":"2026-10-28","isPartOf":{"@id":"https://mengyuanli.com/#website"},"breadcrumb":{"@id":"https://mengyuanli.com/ai-agent-security.html#breadcrumb"},"author":{"@id":"https://mengyuanli.com/#person"},"about":[{"@id":"https://mengyuanli.com/#person"},{"@type":"Thing","name":"AI agent security"},{"@type":"Thing","name":"Agent runtime monitoring"},{"@type":"Thing","name":"Trusted execution environments for AI agents"}],"keywords":"AI agent security, secure AI agents, agent runtime monitoring, TEE for AI agents, trusted infrastructure for LLM systems, trustworthy agent execution","mentions":[{"@type":"ScholarlyArticle","@id":"https://mengyuanli.com/#wave-asplos26","name":"WAVE: Leveraging Architecture Observation for Privacy-Preserving Model Oversight"},{"@type":"ScholarlyArticle","@id":"https://mengyuanli.com/#scale-hpca26","name":"SCALE: Tackling Communication Bottlenecks in Confidential Distributed Machine Learning"},{"@type":"ScholarlyArticle","@id":"https://mengyuanli.com/#catchbench-arxiv26","name":"CatchBench: When Can an Agent Failure Be Caught?"},{"@type":"ScholarlyArticle","@id":"https://mengyuanli.com/#skill-reconstruction-arxiv26","name":"Behavioral Skill Reconstruction: Reconstructing Hidden Functionality from LLM Agent Skills"},{"@type":"ScholarlyArticle","@id":"https://mengyuanli.com/#agent-memory-arxiv26","name":"Infrastructure for Valuable, Tradable, and Verifiable Agent Memory"},{"@type":"SoftwareSourceCode","name":"ClawGang","url":"https://clawgang.ai/","codeRepository":"https://github.com/sept-usc/ClawGang","maintainer":{"@id":"https://septlab.com/#lab"}},{"@type":"SoftwareSourceCode","name":"Muse MCP Adapter","codeRepository":"https://github.com/sept-usc/muse-mcp-adapter","maintainer":{"@id":"https://septlab.com/#lab"}},{"@type":"SoftwareSourceCode","name":"WAVE artifact","codeRepository":"https://github.com/sept-usc/Wave","maintainer":{"@id":"https://septlab.com/#lab"}}],"relatedLink":["https://septlab.com/"]},
+{"@type":"WebPage","@id":"https://mengyuanli.com/ai-agent-security.html#webpage","url":"https://mengyuanli.com/ai-agent-security.html","name":"AI Agent Security | Mengyuan Li","description":"AI agent security research by Mengyuan Li on efficient protected execution, confidential inference, TEE isolation and attestation, runtime monitoring, and verifiable agent memory.","inLanguage":"en","dateModified":"2026-11-08","isPartOf":{"@id":"https://mengyuanli.com/#website"},"breadcrumb":{"@id":"https://mengyuanli.com/ai-agent-security.html#breadcrumb"},"author":{"@id":"https://mengyuanli.com/#person"},"about":[{"@id":"https://mengyuanli.com/#person"},{"@type":"Thing","name":"AI agent security"},{"@type":"Thing","name":"Agent runtime monitoring"},{"@type":"Thing","name":"Trusted execution environments for AI agents"},{"@type":"Thing","name":"Confidential inference"},{"@type":"Thing","name":"Efficient AI agent systems"},{"@type":"Thing","name":"Verifiable agent memory"}],"keywords":"AI agent security, efficient AI agents, confidential inference, secure agent runtimes, TEE isolation, remote attestation, runtime monitoring, verifiable agent memory, protected tool execution","mentions":[{"@type":"ScholarlyArticle","@id":"https://mengyuanli.com/#wave-asplos26","name":"WAVE: Leveraging Architecture Observation for Privacy-Preserving Model Oversight"},{"@type":"ScholarlyArticle","@id":"https://mengyuanli.com/#scale-hpca26","name":"SCALE: Tackling Communication Bottlenecks in Confidential Distributed Machine Learning"},{"@type":"ScholarlyArticle","@id":"https://mengyuanli.com/#catchbench-arxiv26","name":"CatchBench: When Can an Agent Failure Be Caught?"},{"@type":"ScholarlyArticle","@id":"https://mengyuanli.com/#skill-reconstruction-arxiv26","name":"Behavioral Skill Reconstruction: Reconstructing Hidden Functionality from LLM Agent Skills"},{"@type":"ScholarlyArticle","@id":"https://mengyuanli.com/#agent-memory-arxiv26","name":"Infrastructure for Valuable, Tradable, and Verifiable Agent Memory"},{"@type":"SoftwareSourceCode","name":"ClawGang","url":"https://clawgang.ai/","codeRepository":"https://github.com/sept-usc/ClawGang","maintainer":{"@id":"https://septlab.com/#lab"}},{"@type":"SoftwareSourceCode","name":"Muse MCP Adapter","codeRepository":"https://github.com/sept-usc/muse-mcp-adapter","maintainer":{"@id":"https://septlab.com/#lab"}},{"@type":"SoftwareSourceCode","name":"WAVE artifact","codeRepository":"https://github.com/sept-usc/Wave","maintainer":{"@id":"https://septlab.com/#lab"}}],"relatedLink":["https://septlab.com/"]},
 {"@type":"BreadcrumbList","@id":"https://mengyuanli.com/ai-agent-security.html#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Mengyuan Li","item":"https://mengyuanli.com/"},{"@type":"ListItem","position":2,"name":"Research","item":"https://mengyuanli.com/#research"},{"@type":"ListItem","position":3,"name":"AI Agent Security","item":"https://mengyuanli.com/ai-agent-security.html"}]}
 ]}
 </script>
@@ -64,14 +64,15 @@
 
 <header class="page-head m"><p class="side" data-export="skip">Research direction</p>
   <h1>AI Agent Security</h1>
-  <p class="lede">Mengyuan Li’s research on AI agent security uses trusted execution environments (TEEs) and runtime monitoring to observe agent execution and to build trusted infrastructure for LLM systems and AI agents. The goal is agent backends that remain observable, trustworthy, and resilient when they run on shared cloud infrastructure and handle sensitive data.</p>
-  <p class="meta">Topics: secure AI agents&nbsp;· agent runtime monitoring&nbsp;· TEEs for AI agents&nbsp;· trusted infrastructure for LLM systems&nbsp;· trustworthy agent execution</p>
+  <p class="lede">Mengyuan Li’s research builds secure, efficient infrastructure for AI agents and the confidential inference services they use. The goal is to protect sensitive agent state and make execution observable, while preserving the performance needed for practical model and tool use on shared infrastructure.</p>
+  <p class="meta">Topics: secure agent runtimes&nbsp;· confidential inference&nbsp;· TEE isolation and attestation&nbsp;· runtime monitoring&nbsp;· verifiable agent memory</p>
 </header>
 
 <section id="perspective">
   <h2 class="sec">Perspective</h2>
 <div class="col prose">
-  <p>This direction focuses on monitoring and protecting agent execution rather than only verifying final outputs. It brings together TEEs, confidential computing, and runtime observation to support trustworthy LLM systems and agentic infrastructure.</p></div>
+  <p>Agent security depends on the systems that execute models and tools and retain long-lived memory. We combine trusted execution environment (TEE) isolation with remote attestation to protect agent state and provide evidence about the runtime handling sensitive data. Runtime monitoring complements these mechanisms by making execution behavior observable.</p>
+  <p>We study how to strengthen these protections with low overhead, connecting secure agent runtimes to <a href="tee-confidential-computing.html">high-performance confidential inference</a>. This makes efficiency and security joint goals across the agent’s execution path.</p></div>
 </section>
 
 <section id="papers">
@@ -130,7 +131,7 @@
 <section id="foundations">
   <h2 class="sec">Foundations</h2>
 <div class="col prose">
-  <p><a href="tee-confidential-computing.html">TEE and Confidential Computing</a> provide mechanisms for isolated execution, protection of agent state, and secure multi-tenant infrastructure.</p>
+  <p><a href="tee-confidential-computing.html">TEE and Confidential Computing</a> underpin this work on efficient confidential inference and protected agent execution, with CPU and GPU isolation and defenses against side-channel leakage.</p>
   <p><a href="verifiable-ai.html">Verifiable AI</a> is related because agent systems also need execution integrity, verifiable evidence, and trustworthy model-serving pipelines.</p></div>
 </section>
 
@@ -143,6 +144,7 @@
     <li>isolating tool execution;</li>
     <li>protecting long-lived memory and secrets;</li>
     <li>building trusted infrastructure for LLM systems and agents;</li>
+    <li>reducing the latency and resource costs of protected model and tool execution;</li>
     <li>defending agent backends against cloud- and hardware-level leakage.</li>
   </ul></div>
 </section>

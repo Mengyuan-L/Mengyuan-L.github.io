@@ -9,7 +9,7 @@
   "job_title": "Assistant Professor of Computer Science",
   "email": "mengyuanli@usc.edu",
   "image": "files/mengyuan-480.jpg",
-  "description": "Assistant Professor of Computer Science at the University of Southern California and leader of SEPT Lab (Security, Privacy, and Trust). Research on verifiable AI systems, trusted execution environments and confidential computing, system and hardware security including side channels, and AI agent security.",
+  "description": "Assistant Professor of Computer Science at the University of Southern California and leader of SEPT Lab (Security, Privacy, and Trust). Research on efficient, high-performance AI systems with stronger security, focusing on confidential inference and AI agents, alongside verifiable AI and system and hardware security.",
   "knows_about": [
    "Verifiable AI systems",
    "Trusted execution environments (TEEs)",
@@ -23,7 +23,10 @@
    "System and hardware security",
    "Cloud security",
    "AI systems security",
-   "AI agent security"
+   "AI agent security",
+   "Confidential inference",
+   "High-performance AI systems",
+   "Secure AI agent runtimes"
   ],
   "awards": [
    "Best Paper Award Runner-Up, ACM CCS 2021 (CROSSLINE)"
@@ -82,5 +85,6 @@
    "url": "https://verifiable.pro/",
    "description": "Public resource maintained by SEPT Lab with news, explainers, and guides on verifiable AI."
   }
- ]
+ ],
+ "date_modified": "2026-11-08"
 }
