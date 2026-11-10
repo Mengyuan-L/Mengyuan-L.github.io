@@ -1,6 +1,6 @@
 # Mengyuan Li
 
-> Mengyuan Li is an Assistant Professor of Computer Science at the University of Southern California (USC), where he leads SEPT Lab (Security, Privacy, and Trust). His research focuses on efficient, high-performance AI systems with stronger security, especially confidential inference and AI agents using trusted execution environments (TEEs) and confidential computing. It also covers verifiable AI and system and hardware security, including side channels.
+> Mengyuan Li is an Assistant Professor of Computer Science at the University of Southern California (USC), where he leads SEPT Lab (Security, Privacy, and Trust). His research focuses on efficient, high-performance AI systems with stronger security, especially confidential inference and AI agents using trusted execution environments (TEEs) and confidential computing. It also covers verifiable AI and vulnerabilities in systems and hardware.
 
 This is the official homepage. The HTML pages are canonical; llms-full.txt contains their full text in Markdown.
 
@@ -25,7 +25,7 @@ Key facts:
 ## Research topics
 
 - [Verifiable AI](https://mengyuanli.com/verifiable-ai.html): zero-knowledge verification of LLM inference (Hollow-LLM Attack, IEEE S&P 2026), privacy-preserving model oversight (WAVE, ASPLOS 2026), plus news and guides at verifiable.pro and open-source projects from Anything, Anywhere, Verifiable (AAV)
-- [TEE and Confidential Computing](https://mengyuanli.com/tee-confidential-computing.html): efficient, high-performance confidential inference and AI agents on CPU and GPU TEEs, with stronger isolation and side-channel defenses; selected systems include FLASH for confidential inference checkpointing, OTRO for oblivious tokenization, verifiable agent memory, and SCALE for confidential multi-GPU communication; foundational work covers confidential VMs, TEE vulnerabilities, and cloud isolation
+- [TEE and Confidential Computing](https://mengyuanli.com/tee-confidential-computing.html): efficient, high-performance confidential inference and AI agents on CPU and GPU TEEs, with research on isolation and TEE defenses; selected systems include FLASH for confidential inference checkpointing, OTRO for oblivious tokenization, verifiable agent memory, and SCALE for confidential multi-GPU communication; foundational work covers confidential VMs, TEE vulnerabilities, and cloud isolation
 - [AI Agent Security](https://mengyuanli.com/ai-agent-security.html): efficient protected agent execution and confidential inference with TEE isolation, remote attestation, and runtime monitoring; papers include WAVE, SCALE, CatchBench, Behavioral Skill Reconstruction, and infrastructure for verifiable agent memory, plus the open-source projects ClawGang and Muse MCP Adapter
 
 ## Teaching
